@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.3">
-    <title>Task – Elixir v1.2.0</title>
+    <title>Task – Elixir v1.3.0-dev</title>
     <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -27,7 +27,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.2.0
+        v1.3.0-dev
       </h2>
     </div>
     
@@ -65,11 +65,11 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.2.0</small>
+        <small class="visible-xs">Elixir v1.3.0-dev</small>
         Task
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/task.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -252,16 +252,6 @@ described in the agents documentation apply to the whole ecosystem.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find/2">find(tasks, msg)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Receives a group of tasks and a message and finds
-a task that matches the given message</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#shutdown/2">shutdown(task, shutdown \\ 5000)</a>
   </div>
   
@@ -367,7 +357,7 @@ a task that matches the given message</p>
     </a>
     <span class="signature">__struct__()</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L152" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/task.ex#L152" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -395,7 +385,7 @@ not use a task process.</p>
     </a>
     <span class="signature">async(fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L212" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/task.ex#L212" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -430,7 +420,7 @@ where <code class="inline">ref</code> is the monitoring reference held by the ta
     </a>
     <span class="signature">async(mod, fun, args)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L275" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/task.ex#L275" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -502,7 +492,7 @@ where <code class="inline">ref</code> is the monitoring reference held by the ta
     </a>
     <span class="signature">await(task, timeout \\ 5000)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L313" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/task.ex#L313" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -535,43 +525,6 @@ the timeout or the crash, use <a href="#yield/2"><code class="inline">yield/2</c
 
   </section>
 </div>
-<div class="detail" id="find/2">
-  <div class="detail-header">
-    <a href="#find/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">find(tasks, msg)</span>
-      
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L356" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
-        
-          <pre><code class="elixir">find([<a href="#t:t/0">t</a>], any) :: {term, <a href="#t:t/0">t</a>} | nil | no_return</code></pre>
-        
-      </div>
-    </div>
-  
-  <section class="docstring">
-    <p>Receives a group of tasks and a message and finds
-a task that matches the given message.</p>
-<p>This function returns a tuple with the returned value
-in case the message matches a task that exited with
-success alongside the matching task. It returns <code class="inline">nil</code>
-if no task was found. It exits if the task has failed.</p>
-<p>This function is useful in situations where multiple
-tasks are spawned and their results are collected
-later on. For example, a <a href="GenServer.html"><code class="inline">GenServer</code></a> can spawn tasks,
-store the tasks in a list and later use <a href="Task.html#find/2"><code class="inline">Task.find/2</code></a>
-to see if incoming messages are from any of the tasks.</p>
-
-  </section>
-</div>
 <div class="detail" id="shutdown/2">
   <div class="detail-header">
     <a href="#shutdown/2" class="detail-link" title="Link to this function">
@@ -579,7 +532,7 @@ to see if incoming messages are from any of the tasks.</p>
     </a>
     <span class="signature">shutdown(task, shutdown \\ 5000)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L544" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/task.ex#L533" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -625,7 +578,7 @@ message already received, this function will block forever awaiting the message.
     </a>
     <span class="signature">start(fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/task.ex#L180" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -655,7 +608,7 @@ be linked to the current process.</p>
     </a>
     <span class="signature">start(mod, fun, args)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L192" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/task.ex#L192" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -685,7 +638,7 @@ be linked to the current process.</p>
     </a>
     <span class="signature">start_link(fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L160" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/task.ex#L160" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -712,7 +665,7 @@ be linked to the current process.</p>
     </a>
     <span class="signature">start_link(mod, fun, args)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L168" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/task.ex#L168" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -739,7 +692,7 @@ be linked to the current process.</p>
     </a>
     <span class="signature">yield(task, timeout \\ 5000)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L399" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/task.ex#L388" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -781,7 +734,7 @@ for the duration of the timeout awaiting the message.</p>
     </a>
     <span class="signature">yield_many(tasks, timeout \\ 5000)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/task.ex#L476" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/task.ex#L465" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
