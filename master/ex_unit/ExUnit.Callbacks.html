@@ -67,7 +67,7 @@
         ExUnit.Callbacks
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/ex_unit/lib/ex_unit/callbacks.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/ex_unit/lib/ex_unit/callbacks.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -97,12 +97,12 @@ test itself. Since the test process exits with reason <code class="inline">:shut
 of times <code class="inline">on_exit/1</code> can be avoided as processes are going to clean
 up on their own.</p>
 <h2>Context</h2>
-<p>If you return <code class="inline">{:ok, &lt;dict&gt;}</code> from <code class="inline">setup_all</code>, the dictionary
+<p>If you return <code class="inline">{:ok, keywords}</code> from <code class="inline">setup_all</code>, the keyword
 will be merged into the current context and be available in all
 subsequent <code class="inline">setup_all</code>, <code class="inline">setup</code> and the test itself.</p>
-<p>Similarly, returning <code class="inline">{:ok, &lt;dict&gt;}</code> from <code class="inline">setup</code>, the dict returned
-will be merged into the current context and be available in all
-subsequent <code class="inline">setup</code> and the <code class="inline">test</code> itself.</p>
+<p>Similarly, returning <code class="inline">{:ok, keywords}</code> from <code class="inline">setup</code>, the keyword
+returned will be merged into the current context and be available
+in all subsequent <code class="inline">setup</code> and the <code class="inline">test</code> itself.</p>
 <p>Returning <code class="inline">:ok</code> leaves the context unchanged in both cases.</p>
 <p>Returning anything else from <code class="inline">setup_all</code> will force all tests to fail,
 while a bad response from <code class="inline">setup</code> causes the current test to fail.</p>
@@ -230,7 +230,7 @@ end, block)</a>
     </a>
     <span class="signature">on_exit(ref \\ make_ref, callback)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/ex_unit/lib/ex_unit/callbacks.ex#L139" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/ex_unit/lib/ex_unit/callbacks.ex#L139" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -277,7 +277,7 @@ guarantee the callback will be invoked only once.</p>
   _
 end, block)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/ex_unit/lib/ex_unit/callbacks.ex#L108" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/ex_unit/lib/ex_unit/callbacks.ex#L108" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -297,7 +297,7 @@ end, block)</span>
   _
 end, block)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/ex_unit/lib/ex_unit/callbacks.ex#L119" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/ex_unit/lib/ex_unit/callbacks.ex#L119" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

@@ -69,7 +69,7 @@
         String
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L3" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L3" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -344,7 +344,7 @@ uppercase and the remainder to lowercase</p>
     <a href="#duplicate/2">duplicate(subject, n)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a binary <code class="inline">subject</code> duplicated <code class="inline">n</code> times</p>
+    <div class="summary-synopsis"><p>Returns a string <code class="inline">subject</code> duplicated <code class="inline">n</code> times</p>
 </div>
   
 </div>
@@ -359,10 +359,10 @@ uppercase and the remainder to lowercase</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#equivalent?/2">equivalent?(left, right)</a>
+    <a href="#equivalent?/2">equivalent?(string1, string2)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">binary</code> is canonically equivalent to ‘another_binary’</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">string1</code> is canonically equivalent to ‘string2’</p>
 </div>
   
 </div>
@@ -382,8 +382,7 @@ uppercase and the remainder to lowercase</p>
   </div>
   
     <div class="summary-synopsis"><p>Returns Unicode graphemes in the string as per Extended Grapheme
-Cluster algorithm outlined in the <a href="http://www.unicode.org/reports/tr29/">Unicode Standard Annex #29,
-Unicode Text Segmentation</a></p>
+Cluster algorithm</p>
 </div>
   
 </div>
@@ -461,7 +460,7 @@ have been removed</p>
     <a href="#next_codepoint/1">next_codepoint(string)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the next codepoint in a String</p>
+    <div class="summary-synopsis"><p>Returns the next codepoint in a string</p>
 </div>
   
 </div>
@@ -485,10 +484,10 @@ have been removed</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#normalize/2">normalize(binary, form)</a>
+    <a href="#normalize/2">normalize(string, form)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts all characters in <code class="inline">binary</code> to Unicode normalization
+    <div class="summary-synopsis"><p>Converts all characters in <code class="inline">string</code> to Unicode normalization
 form identified by <code class="inline">form</code></p>
 </div>
   
@@ -498,8 +497,7 @@ form identified by <code class="inline">form</code></p>
     <a href="#printable?/1">printable?(string)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Checks if a string is printable considering it is encoded
-as UTF-8. Returns <code class="inline">true</code> if so, <code class="inline">false</code> otherwise</p>
+    <div class="summary-synopsis"><p>Checks if a string contains only printable characters</p>
 </div>
   
 </div>
@@ -643,7 +641,7 @@ negative, location is counted from the end of the string</p>
     <a href="#splitter/3">splitter(string, pattern, options \\ [])</a>
   </div>
   
-    <div class="summary-synopsis"><p>Splits a string on demand</p>
+    <div class="summary-synopsis"><p>Returns an enumerable that splits a string on demand</p>
 </div>
   
 </div>
@@ -748,15 +746,6 @@ removed</p>
 </div>
   
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#valid_character?/1">valid_character?(codepoint)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Checks whether <code class="inline">string</code> is a valid character</p>
-</div>
-  
-</div>
 
   </div>
 
@@ -813,7 +802,7 @@ removed</p>
     </a>
     <span class="signature">at(string, position)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1307" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1292" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -856,7 +845,7 @@ nil</code></pre>
     </a>
     <span class="signature">capitalize(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L569" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L568" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -897,7 +886,7 @@ iex&gt; String.capitalize(&quot;olá&quot;)
     </a>
     <span class="signature">chunk(string, trait)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1134" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1117" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -945,7 +934,7 @@ iex&gt; String.chunk(&lt;&lt;?a, ?b, ?c, 0, 0x0ffff::utf8&gt;&gt;, :printable)
     </a>
     <span class="signature">codepoints(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1019" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1018" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -988,7 +977,7 @@ iex&gt; String.codepoints(&quot;é&quot;)
     </a>
     <span class="signature">contains?(string, contents)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1588" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1573" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1030,7 +1019,7 @@ true</code></pre>
     </a>
     <span class="signature">downcase(binary)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L545" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L544" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1066,7 +1055,7 @@ iex&gt; String.downcase(&quot;OLÁ&quot;)
     </a>
     <span class="signature">duplicate(subject, n)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L991" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L990" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1082,7 +1071,7 @@ iex&gt; String.downcase(&quot;OLÁ&quot;)
     </div>
   
   <section class="docstring">
-    <p>Returns a binary <code class="inline">subject</code> duplicated <code class="inline">n</code> times.</p>
+    <p>Returns a string <code class="inline">subject</code> duplicated <code class="inline">n</code> times.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; String.duplicate(&quot;abc&quot;, 0)
 &quot;&quot;
@@ -1102,7 +1091,7 @@ iex&gt; String.duplicate(&quot;abc&quot;, 2)
     </a>
     <span class="signature">ends_with?(string, suffixes)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1530" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1515" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1138,9 +1127,9 @@ false</code></pre>
     <a href="#equivalent?/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">equivalent?(left, right)</span>
+    <span class="signature">equivalent?(string1, string2)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L479" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L478" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1156,10 +1145,10 @@ false</code></pre>
     </div>
   
   <section class="docstring">
-    <p>Returns <code class="inline">true</code> if <code class="inline">binary</code> is canonically equivalent to ‘another_binary’.</p>
+    <p>Returns <code class="inline">true</code> if <code class="inline">string1</code> is canonically equivalent to ‘string2’.</p>
 <p>It performs Normalization Form Canonical Decomposition (NFD) on the
 strings before comparing them. This function is equivalent to:</p>
-<pre><code class="elixir">String.normalize(left, :nfd) == String.normalize(right, :nfd)</code></pre>
+<pre><code class="elixir">String.normalize(string1, :nfd) == String.normalize(string2, :nfd)</code></pre>
 <p>Therefore, if you plan to compare multiple strings, multiple times
 in a row, you may normalize them upfront and compare them directly
 to avoid multiple normalization passes.</p>
@@ -1185,7 +1174,7 @@ false</code></pre>
     </a>
     <span class="signature">first(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1237" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1222" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1219,7 +1208,7 @@ iex&gt; String.first(&quot;եոգլի&quot;)
     </a>
     <span class="signature">graphemes(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1182" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1167" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1236,7 +1225,8 @@ iex&gt; String.first(&quot;եոգլի&quot;)
   
   <section class="docstring">
     <p>Returns Unicode graphemes in the string as per Extended Grapheme
-Cluster algorithm outlined in the <a href="http://www.unicode.org/reports/tr29/">Unicode Standard Annex #29,
+Cluster algorithm.</p>
+<p>The algorithm is outlined in the <a href="http://www.unicode.org/reports/tr29/">Unicode Standard Annex #29,
 Unicode Text Segmentation</a>.</p>
 <p>For details about codepoints and graphemes, see the <a href="String.html#content"><code class="inline">String</code></a> module documentation.</p>
 <h2>Examples</h2>
@@ -1258,7 +1248,7 @@ iex&gt; String.graphemes(&quot;é&quot;)
     </a>
     <span class="signature">jaro_distance(string1, string2)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1740" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1725" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1293,7 +1283,7 @@ iex&gt; String.jaro_distance(&quot;even&quot;, &quot;odd&quot;)
     </a>
     <span class="signature">last(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1258" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1243" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1327,7 +1317,7 @@ iex&gt; String.last(&quot;եոգլի&quot;)
     </a>
     <span class="signature">length(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1281" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1266" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1360,7 +1350,7 @@ iex&gt; String.length(&quot;եոգլի&quot;)
     </a>
     <span class="signature">ljust(subject, len, pad \\ 32)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L849" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L848" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1395,7 +1385,7 @@ iex&gt; String.ljust(&quot;abc&quot;, 5, ?-)
     </a>
     <span class="signature">lstrip(binary)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L757" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L756" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1417,7 +1407,7 @@ have been removed.</p>
     </a>
     <span class="signature">lstrip(string, char)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L769" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L768" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1447,7 +1437,7 @@ have been removed.</p>
     </a>
     <span class="signature">match?(string, regex)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1558" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1543" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1480,7 +1470,7 @@ false</code></pre>
     </a>
     <span class="signature">next_codepoint(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1041" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1040" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1496,7 +1486,7 @@ false</code></pre>
     </div>
   
   <section class="docstring">
-    <p>Returns the next codepoint in a String.</p>
+    <p>Returns the next codepoint in a string.</p>
 <p>The result is a tuple with the codepoint and the
 remainder of the string or <code class="inline">nil</code> in case
 the string reached its end.</p>
@@ -1517,7 +1507,7 @@ be returned by this function.</p>
     </a>
     <span class="signature">next_grapheme(binary)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1200" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1185" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1550,7 +1540,7 @@ the String reached its end.</p>
     </a>
     <span class="signature">next_grapheme_size(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1221" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1206" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1581,9 +1571,9 @@ reached its end.</p>
     <a href="#normalize/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">normalize(binary, form)</span>
+    <span class="signature">normalize(string, form)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L509" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L508" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1599,7 +1589,7 @@ reached its end.</p>
     </div>
   
   <section class="docstring">
-    <p>Converts all characters in <code class="inline">binary</code> to Unicode normalization
+    <p>Converts all characters in <code class="inline">string</code> to Unicode normalization
 form identified by <code class="inline">form</code>.</p>
 <h2>Forms</h2>
 <p>The supported forms are:</p>
@@ -1629,7 +1619,7 @@ iex&gt; String.normalize(&quot;leña&quot;, :nfc)
     </a>
     <span class="signature">printable?(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L219" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L218" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1645,8 +1635,7 @@ iex&gt; String.normalize(&quot;leña&quot;, :nfc)
     </div>
   
   <section class="docstring">
-    <p>Checks if a string is printable considering it is encoded
-as UTF-8. Returns <code class="inline">true</code> if so, <code class="inline">false</code> otherwise.</p>
+    <p>Checks if a string contains only printable characters.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; String.printable?(&quot;abc&quot;)
 true</code></pre>
@@ -1660,7 +1649,7 @@ true</code></pre>
     </a>
     <span class="signature">replace(subject, pattern, replacement, options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L915" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L914" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1718,7 +1707,7 @@ replacement string, or is negative, an <a href="ArgumentError.html"><code class=
     </a>
     <span class="signature">replace_leading(string, match, replacement)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L619" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L618" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1747,7 +1736,7 @@ iex&gt; String.replace_leading(&quot;hello hello world&quot;, &quot;hello &quot;
     </a>
     <span class="signature">replace_prefix(string, match, replacement)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L699" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L698" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1780,7 +1769,7 @@ iex&gt; String.replace_prefix(&quot;hello hello world&quot;, &quot;hello &quot;,
     </a>
     <span class="signature">replace_suffix(string, match, replacement)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L734" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L733" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1813,7 +1802,7 @@ iex&gt; String.replace_suffix(&quot;hello world world&quot;, &quot; world&quot;,
     </a>
     <span class="signature">replace_trailing(string, match, replacement)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L657" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L656" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1842,7 +1831,7 @@ iex&gt; String.replace_trailing(&quot;hello world world&quot;, &quot; world&quot
     </a>
     <span class="signature">reverse(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L965" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L964" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1891,7 +1880,7 @@ one single grapheme.</p>
     </a>
     <span class="signature">rjust(subject, len, pad \\ 32)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L828" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L827" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1927,7 +1916,7 @@ iex&gt; String.rjust(&quot;abc&quot;, 5, ?-)
     </a>
     <span class="signature">rstrip(binary)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L585" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L584" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1958,7 +1947,7 @@ has been removed.</p>
     </a>
     <span class="signature">rstrip(string, char)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L597" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L596" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1988,7 +1977,7 @@ has been removed.</p>
     </a>
     <span class="signature">slice(string, range)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1436" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1421" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2054,7 +2043,7 @@ iex&gt; String.slice(&quot;a&quot;, 1..1500)
     </a>
     <span class="signature">slice(string, start, len)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1365" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1350" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2110,7 +2099,7 @@ iex&gt; String.slice(&quot;a&quot;, 2, 1500)
     </a>
     <span class="signature">split(binary)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L259" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L258" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2147,7 +2136,7 @@ iex&gt; String.split(&quot; foo bar &quot;)
     </a>
     <span class="signature">split(string, pattern, options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L327" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L326" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2220,7 +2209,7 @@ iex&gt; String.split(&quot;1,2 3,4&quot;, pattern)
     </a>
     <span class="signature">split_at(string, position)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L432" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L431" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2269,7 +2258,7 @@ iex&gt; String.split_at &quot;abc&quot;, -1000
     </a>
     <span class="signature">splitter(string, pattern, options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L371" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L370" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2285,9 +2274,9 @@ iex&gt; String.split_at &quot;abc&quot;, -1000
     </div>
   
   <section class="docstring">
-    <p>Splits a string on demand.</p>
-<p>Returns an enumerable that splits the string on
-demand, instead of splitting all data upfront.</p>
+    <p>Returns an enumerable that splits a string on demand.</p>
+<p>This is in contrast to <a href="#split/3"><code class="inline">split/3</code></a> which splits all
+the string upfront.</p>
 <p>Note splitter does not support regular expressions
 (as it is often more efficient to have the regular
 expressions traverse the string at once than in
@@ -2307,7 +2296,7 @@ multiple passes).</p>
     </a>
     <span class="signature">starts_with?(string, prefix)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1502" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1487" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2345,7 +2334,7 @@ false</code></pre>
     </a>
     <span class="signature">strip(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L791" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L790" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2376,7 +2365,7 @@ have been removed.</p>
     </a>
     <span class="signature">strip(string, char)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L806" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L805" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2407,7 +2396,7 @@ removed.</p>
     </a>
     <span class="signature">to_atom(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1640" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1625" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2440,7 +2429,7 @@ that contain Unicode codepoints greater than 0xFF.</p>
     </a>
     <span class="signature">to_char_list(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1612" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1597" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2475,7 +2464,7 @@ strings.</p>
     </a>
     <span class="signature">to_existing_atom(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1663" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1648" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2512,7 +2501,7 @@ iex&gt; String.to_existing_atom(&quot;this_atom_will_never_exist&quot;)
     </a>
     <span class="signature">to_float(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1719" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1704" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2550,7 +2539,7 @@ iex&gt; String.to_float(&quot;3.0&quot;)
     </a>
     <span class="signature">to_integer(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1679" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1664" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2581,7 +2570,7 @@ iex&gt; String.to_float(&quot;3.0&quot;)
     </a>
     <span class="signature">to_integer(string, base)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1695" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1680" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2612,7 +2601,7 @@ iex&gt; String.to_float(&quot;3.0&quot;)
     </a>
     <span class="signature">upcase(binary)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L527" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L526" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2648,7 +2637,7 @@ iex&gt; String.upcase(&quot;olá&quot;)
     </a>
     <span class="signature">valid?(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1062" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/string.ex#L1061" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2676,46 +2665,6 @@ iex&gt; String.valid?(&lt;&lt;0xffff :: 16&gt;&gt;)
 false
 
 iex&gt; String.valid?(&quot;asd&quot; &lt;&gt; &lt;&lt;0xffff :: 16&gt;&gt;)
-false</code></pre>
-
-  </section>
-</div>
-<div class="detail" id="valid_character?/1">
-  <div class="detail-header">
-    <a href="#valid_character?/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">valid_character?(codepoint)</span>
-      
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/string.ex#L1101" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
-        
-          <pre><code class="elixir">valid_character?(<a href="#t:t/0">t</a>) :: boolean</code></pre>
-        
-      </div>
-    </div>
-  
-  <section class="docstring">
-    <p>Checks whether <code class="inline">string</code> is a valid character.</p>
-<p>All characters are codepoints, but some codepoints
-are not valid characters. They may be reserved, private,
-or other.</p>
-<p>More info at: <a href="https://en.wikipedia.org/wiki/Universal_Character_Set_characters#Non-characters">Non-characters – Wikipedia</a></p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; String.valid_character?(&quot;a&quot;)
-true
-
-iex&gt; String.valid_character?(&quot;ø&quot;)
-true
-
-iex&gt; String.valid_character?(&quot;\uFFFF&quot;)
 false</code></pre>
 
   </section>

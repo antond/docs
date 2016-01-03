@@ -69,7 +69,7 @@
         URI
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -148,10 +148,10 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#decode_query/2">decode_query(q, dict \\ %{})</a>
+    <a href="#decode_query/2">decode_query(q, map \\ %{})</a>
   </div>
   
-    <div class="summary-synopsis"><p>Decodes a query string into a dictionary (by default uses a map)</p>
+    <div class="summary-synopsis"><p>Decodes a query string into a map</p>
 </div>
   
 </div>
@@ -282,7 +282,7 @@ the query string in steps</p>
     </a>
     <span class="signature">char_reserved?(c)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L140" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L164" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -301,7 +301,7 @@ the query string in steps</p>
     </a>
     <span class="signature">char_unescaped?(c)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L162" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L186" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -321,7 +321,7 @@ reserved and unreserved characters are kept unescaped.</p>
     </a>
     <span class="signature">char_unreserved?(c)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L149" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L173" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -340,7 +340,7 @@ reserved and unreserved characters are kept unescaped.</p>
     </a>
     <span class="signature">decode(uri)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L218" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L242" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -359,16 +359,16 @@ reserved and unreserved characters are kept unescaped.</p>
     <a href="#decode_query/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">decode_query(q, dict \\ %{})</span>
+    <span class="signature">decode_query(q, map \\ %{})</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L78" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Decodes a query string into a dictionary (by default uses a map).</p>
+    <p>Decodes a query string into a map.</p>
 <p>Given a query string of the form “key1=value1&amp;key2=value2…”, produces a
 map with one entry for each key-value pair. Each key and value will be a
 binary. Keys and values will be percent-unescaped.</p>
@@ -386,7 +386,7 @@ binary. Keys and values will be percent-unescaped.</p>
     </a>
     <span class="signature">decode_www_form(str)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L234" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L258" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -407,7 +407,7 @@ binary. Keys and values will be percent-unescaped.</p>
     </a>
     <span class="signature">default_port(scheme)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -433,7 +433,7 @@ nil</code></pre>
     </a>
     <span class="signature">default_port(scheme, port)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -454,7 +454,7 @@ new URIs.</p>
     </a>
     <span class="signature">encode(str, predicate \\ &amp;char_unescaped?/1)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L176" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L200" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -476,7 +476,7 @@ Accepts <code class="inline">predicate</code> function as an argument to specify
     </a>
     <span class="signature">encode_query(l)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L61" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -503,7 +503,7 @@ iex&gt; URI.encode_query(hd)
     </a>
     <span class="signature">encode_www_form(str)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L189" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L213" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -524,7 +524,7 @@ iex&gt; URI.encode_query(hd)
     </a>
     <span class="signature">parse(uri)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L293" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L317" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -566,7 +566,7 @@ iex&gt; URI.parse(&quot;foo/bar&quot;)
     </a>
     <span class="signature">query_decoder(q)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L96" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L120" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -588,7 +588,7 @@ the query string in steps.</p>
     </a>
     <span class="signature">to_string(uri)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f5babce5bf944c110f74e56d0143d25559b4efb/lib/elixir/lib/uri.ex#L353" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6111af9a6d0be59acccb67e47d2d44e68d7cc62/lib/elixir/lib/uri.ex#L377" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
