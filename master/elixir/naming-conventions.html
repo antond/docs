@@ -69,9 +69,9 @@
 <h2 id="Casing"> Casing</h2><p>Elixir developers must use <code class="inline">snake_case</code> when defining variables, function names, module attributes, etc:</p>
 <pre><code class="elixir">some_map = %{this_is_a_key: &quot;and a value&quot;}
 is_map(some_map)</code></pre>
-<p>Aliases, commonly used as module names, are an exception as they must be capitalized and written in <code class="inline">CamelCase</code>, like <a href="OptionParser.html"><code class="inline">OptionParser</code></a>. For aliases, capital letters are kept in abbreviations, like <code class="inline">ExUnit.CaptureIO</code> or <code class="inline">Mix.SCM</code>.</p>
+<p>Aliases, commonly used as module names, are an exception as they must be capitalized and written in <code class="inline">CamelCase</code>, like <a href="OptionParser.html"><code class="inline">OptionParser</code></a>. For aliases, capital letters are kept in acronyms, like <code class="inline">ExUnit.CaptureIO</code> or <code class="inline">Mix.SCM</code>.</p>
 <p>Atoms can be written either in <code class="inline">:snake_case</code> or <code class="inline">:CamelCase</code>, although the convention is to use the snake case version throughout Elixir.</p>
-<p>Generally speaking, filenames follow the <code class="inline">snake_case</code> convention of the module they define. For example, <code class="inline">MyApp</code> should be defined inside the <code class="inline">my_app.ex</code> file. However this only a convention. At the end of the day any filename can be used as they do not affect the compiled code in any way.</p>
+<p>Generally speaking, filenames follow the <code class="inline">snake_case</code> convention of the module they define. For example, <code class="inline">MyApp</code> should be defined inside the <code class="inline">my_app.ex</code> file. However, this is only a convention. At the end of the day, any filename can be used as they do not affect the compiled code in any way.</p>
 <h2 id="Underscore-_foo-"> Underscore (`_foo`)</h2><p>Elixir relies on underscores in different situations.</p>
 <p>For example, a value that is not meant to be used must be assigned to <code class="inline">_</code> or to a variable starting with underscore:</p>
 <pre><code class="iex elixir">iex&gt; {:ok, _contents} = File.read(&quot;README.md&quot;)</code></pre>
