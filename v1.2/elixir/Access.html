@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.3">
-    <title>Access – Elixir v1.2.0</title>
+    <title>Access – Elixir v1.2.1</title>
     <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -27,7 +27,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.2.0
+        v1.2.1
       </h2>
     </div>
     
@@ -65,13 +65,13 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.2.0</small>
+        <small class="visible-xs">Elixir v1.2.1</small>
         Access
         
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/access.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.2.1/lib/elixir/lib/access.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -79,13 +79,14 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>Dictionary-like access to data structures via the <code class="inline">foo[bar]</code> syntax.</p>
-<p>This module also empowers <a href="Kernel.html"><code class="inline">Kernel</code></a>s nested update functions
-<a href="Kernel.html#get_in/2"><code class="inline">Kernel.get_in/2</code></a>, <a href="Kernel.html#put_in/3"><code class="inline">Kernel.put_in/3</code></a>, <a href="Kernel.html#update_in/3"><code class="inline">Kernel.update_in/3</code></a> and
-<a href="Kernel.html#get_and_update_in/3"><code class="inline">Kernel.get_and_update_in/3</code></a>.</p>
-<h2>Examples</h2>
-<p>Out of the box, Access works with built-in dictionaries: <a href="Keyword.html"><code class="inline">Keyword</code></a>
-and <a href="Map.html"><code class="inline">Map</code></a>:</p>
+          <p>Key-based access to data structures via the <code class="inline">foo[bar]</code> syntax.</p>
+<p>Elixir provides two syntaxes for accessing values. <code class="inline">user[:name]</code>
+is used by dynamic structures, like maps and keywords, while
+<code class="inline">user.name</code> is used by structs. The main difference is that
+<code class="inline">user[:name]</code> won’t raise if the key <code class="inline">:name</code> is missing but
+<code class="inline">user.name</code> will raise if there is no <code class="inline">:name</code> key.</p>
+<h2>Key-based lookups</h2>
+<p>Out of the box, Access works with <a href="Keyword.html"><code class="inline">Keyword</code></a> and <a href="Map.html"><code class="inline">Map</code></a>:</p>
 <pre><code class="iex elixir">iex&gt; keywords = [a: 1, b: 2]
 iex&gt; keywords[:a]
 1
@@ -97,11 +98,53 @@ iex&gt; map[:a]
 iex&gt; star_ratings = %{1.0 =&gt; &quot;★&quot;, 1.5 =&gt; &quot;★☆&quot;, 2.0 =&gt; &quot;★★&quot;}
 iex&gt; star_ratings[1.5]
 &quot;★☆&quot;</code></pre>
+<p>Access can be combined with <a href="Kernel.html#put_in/3"><code class="inline">Kernel.put_in/3</code></a> to put a value
+in a given key:</p>
+<pre><code class="iex elixir">iex&gt; map = %{a: 1, b: 2}
+iex&gt; put_in map[:a], 3
+%{a: 3, b: 2}</code></pre>
+<p>This syntax is very convenient as it can be nested arbitrarily:</p>
+<pre><code class="iex elixir">iex&gt; users = %{&quot;john&quot; =&gt; %{age: 27}, &quot;meg&quot; =&gt; %{age: 23}}
+iex&gt; put_in users[&quot;john&quot;][:age], 28
+%{&quot;john&quot; =&gt; %{age: 28}, &quot;meg&quot; =&gt; %{age: 23}}</code></pre>
 <p>Furthermore, Access transparently ignores <code class="inline">nil</code> values:</p>
 <pre><code class="iex elixir">iex&gt; keywords = [a: 1, b: 2]
 iex&gt; keywords[:c][:unknown]
 nil</code></pre>
-<p>The key comparison must be implemented using the <code class="inline">===</code> operator.</p>
+<p>Since Access is a behaviour, it can be implemented to key-value
+data structures. Access requires the key comparison to be
+implemented using the <code class="inline">===</code> operator.</p>
+<h2>Field-based lookups</h2>
+<p>The Access syntax (<code class="inline">foo[bar]</code>) cannot be used to access fields in
+structs. That’s by design, as Access is meant to be used for
+dynamic key-value structures, like maps and keywords, and not
+by static ones like structs.</p>
+<p>However Elixir already provides a field-based lookup for structs.
+Imagine a struct named <code class="inline">User</code> with name and age fields. The
+following would raise:</p>
+<pre><code class="elixir">user = %User{name: &quot;john&quot;}
+user[:name]
+** (UndefinedFunctionError) undefined function User.fetch/2
+   (User does not implement the Access behaviour)</code></pre>
+<p>Structs instead use the <code class="inline">user.name</code> syntax:</p>
+<pre><code class="elixir">user.name
+#=&gt; &quot;john&quot;</code></pre>
+<p>The same <code class="inline">user.name</code> syntax can also be used by <a href="Kernel.html#put_in/2"><code class="inline">Kernel.put_in/2</code></a>
+to for updating structs fields:</p>
+<pre><code class="elixir">put_in user.name, &quot;mary&quot;
+%User{name: &quot;mary&quot;}</code></pre>
+<p>Differently from <code class="inline">user[:name]</code>, <code class="inline">user.name</code> cannot be extended by
+the developers, and will be always restricted to only maps and
+structs.</p>
+<p>Summing up:</p>
+<ul>
+<li><code class="inline">user[:name]</code> is used by dynamic structures, is extensible and
+does not raise on missing keys
+</li>
+<li><code class="inline">user.name</code> is used by static structures, it is not extensible
+and it will raise on missing keys
+</li>
+</ul>
 
         </section>
       
@@ -244,7 +287,7 @@ nil</code></pre>
     </a>
     <span class="signature">fetch(container, key)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/access.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.1/lib/elixir/lib/access.ex#L115" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -271,7 +314,7 @@ nil</code></pre>
     </a>
     <span class="signature">get(container, key, default \\ nil)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/access.ex#L76" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.1/lib/elixir/lib/access.ex#L148" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -298,7 +341,7 @@ nil</code></pre>
     </a>
     <span class="signature">get_and_update(container, key, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/access.ex#L95" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.1/lib/elixir/lib/access.ex#L167" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -345,7 +388,7 @@ The second element is the container, updated with the value returned by <code cl
     </a>
     <span class="signature">fetch(t, key)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/access.ex#L39" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.1/lib/elixir/lib/access.ex#L94" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -371,7 +414,7 @@ The second element is the container, updated with the value returned by <code cl
     </a>
     <span class="signature">get_and_update(t, key, list)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.0/lib/elixir/lib/access.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.1/lib/elixir/lib/access.ex#L95" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
