@@ -74,7 +74,7 @@ analyze code with typespecs to find bugs.</p>
 <code class="inline">@macrocallback</code> available in modules are handled by the equivalent macros
 defined by this module. See sub-sections “Defining a type” and “Defining a
 specification” below.</p>
-<h2 id="Types-and-their-syntax"> Types and their syntax</h2><p>The type syntax provided by Elixir is fairly similar to <a href="http://www.erlang.org/doc/reference_manual/typespec.html">the one in
+<h2 id="types-and-their-syntax"> Types and their syntax</h2><p>The type syntax provided by Elixir is fairly similar to <a href="http://www.erlang.org/doc/reference_manual/typespec.html">the one in
 Erlang</a>.</p>
 <p>Most of the built-in types provided in Erlang (for example, <code class="inline">pid()</code>) are
 expressed the same way: <code class="inline">pid()</code> or simply <code class="inline">pid</code>. Parameterized types are also
@@ -219,7 +219,7 @@ basic and literal types.</p>
 <p>Any module is also able to define its own type and the modules in
 Elixir are no exception. For example, a string is <code class="inline">String.t</code>, a
 range is <code class="inline">Range.t</code>, any enumerable can be <code class="inline">Enum.t</code> and so on.</p>
-<h2 id="Defining-a-type"> Defining a type</h2><pre><code class="elixir">@type type_name :: type
+<h2 id="defining-a-type"> Defining a type</h2><pre><code class="elixir">@type type_name :: type
 @typep type_name :: type
 @opaque type_name :: type</code></pre>
 <p>A type defined with <code class="inline">@typep</code> is private. An opaque type, defined with
@@ -228,7 +228,7 @@ visible, but the type is still public.</p>
 <p>Types can be parameterized by defining variables as parameters, these variables
 can then be used to define the type.</p>
 <pre><code class="elixir">@type dict(key, value) :: [{key, value}]</code></pre>
-<h2 id="Defining-a-specification"> Defining a specification</h2><pre><code class="elixir">@spec function_name(type1, type2) :: return_type
+<h2 id="defining-a-specification"> Defining a specification</h2><pre><code class="elixir">@spec function_name(type1, type2) :: return_type
 @callback function_name(type1, type2) :: return_type
 @macrocallback macro_name(type1, type2) :: Macro.t</code></pre>
 <p>Callbacks are used to define the callbacks functions of behaviours (see
@@ -241,7 +241,7 @@ function.</p>
 <p>Specifications can be overloaded just like ordinary functions.</p>
 <pre><code class="elixir">@spec function(integer) :: atom
 @spec function(atom)    :: integer</code></pre>
-<h2 id="Notes"> Notes</h2><p>Elixir discourages the use of type <code class="inline">string</code> as it might be confused with
+<h2 id="notes"> Notes</h2><p>Elixir discourages the use of type <code class="inline">string</code> as it might be confused with
 binaries which are referred to as “strings” in Elixir (as opposed to character
 lists). In order to use the type that is called <code class="inline">string</code> in Erlang, one has to
 use the <code class="inline">char_list</code> type which is a synonym for <code class="inline">string</code>. If you use <code class="inline">string</code>,

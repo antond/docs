@@ -66,14 +66,14 @@
 
 <h1>Writing Documentation</h1>
 <p>Elixir treats documentation as a first-class citizen. This means documentation should be easy to write and easy to read. In this document you will learn how to write documentation in Elixir, covering constructs like module attributes, style practices and doctests.</p>
-<h2 id="Markdown"> Markdown</h2><p>Elixir documentation is written using Markdown. There are plenty of guides on Markdown online, we recommend the ones available at GitHub as a getting started point:</p>
+<h2 id="markdown"> Markdown</h2><p>Elixir documentation is written using Markdown. There are plenty of guides on Markdown online, we recommend the ones available at GitHub as a getting started point:</p>
 <ul>
 <li><a href="https://help.github.com/articles/markdown-basics/">https://help.github.com/articles/markdown-basics/</a>
 </li>
 <li><a href="https://help.github.com/articles/github-flavored-markdown/">https://help.github.com/articles/github-flavored-markdown/</a>
 </li>
 </ul>
-<h2 id="Module-Attributes"> Module Attributes</h2><p>Documentation in Elixir is usually attached to module attributes. Let’s see an example:</p>
+<h2 id="module-attributes"> Module Attributes</h2><p>Documentation in Elixir is usually attached to module attributes. Let’s see an example:</p>
 <pre><code class="elixir">defmodule MyApp.Hello do
   @moduledoc &quot;&quot;&quot;
   This is the Hello module.
@@ -95,13 +95,13 @@
   end
 end</code></pre>
 <p>The <code class="inline">@moduledoc</code> attribute is used to attach documentation to the module. <code class="inline">@doc</code> is used before a function to attach documentation to it. Besides the attributes above, <code class="inline">@typedoc</code> can also be used to attach documentation to types defined as part of typespecs.</p>
-<h2 id="Function-Arguments"> Function Arguments</h2><p>When documenting a function, argument names are inferred by the compiler. For example:</p>
+<h2 id="function-arguments"> Function Arguments</h2><p>When documenting a function, argument names are inferred by the compiler. For example:</p>
 <pre><code class="elixir">def size(%HashDict{size: size}) do
   size
 end</code></pre>
 <p>The compiler will infer this argument as <code class="inline">hash_dict</code>. Sometimes the inference will be suboptimal, specially if the function contains multiple clauses with the argument matching on different values each time. You can specify the proper names for documentation by using a bodyless clause:</p>
 <pre><code class="elixir">def size(dict)</code></pre>
-<h2 id="Recommendations"> Recommendations</h2><p>There are a couple tips we recommend developers to follow when writing documentation:</p>
+<h2 id="recommendations"> Recommendations</h2><p>There are a couple tips we recommend developers to follow when writing documentation:</p>
 <ul>
 <li><p>Keep the first paragraph of the documentation concise and simple. Tools like ExDoc uses the first line to generate a summary.</p>
 </li>
@@ -110,9 +110,9 @@ end</code></pre>
 <li>If using headings, always start from the second heading by using <code class="inline">##</code>. The first heading is reserved to the module or function name itself.
 </li>
 </ul>
-<h2 id="Doctests"> Doctests</h2><p>We recommend developers to include examples in their documentation, often under its own <code class="inline">## Examples</code> heading. To ensure examples do not get out of date, Elixir’s test framework (ExUnit) provides a feature called doctests that allows developers to test the examples in their documentation. Doctests work by parsing out code samples starting with <code class="inline">iex&gt;</code> from the documentation. You can read more about it at <code class="inline">ExUnit.DocTest</code>.</p>
+<h2 id="doctests"> Doctests</h2><p>We recommend developers to include examples in their documentation, often under its own <code class="inline">## Examples</code> heading. To ensure examples do not get out of date, Elixir’s test framework (ExUnit) provides a feature called doctests that allows developers to test the examples in their documentation. Doctests work by parsing out code samples starting with <code class="inline">iex&gt;</code> from the documentation. You can read more about it at <code class="inline">ExUnit.DocTest</code>.</p>
 <p>Notice doctests have limitations. When you cannot doctest a function, because it relies on state or side-effects, we recommend developers to include examples directly without the <code class="inline">iex&gt;</code> prompt.</p>
-<h2 id="Privacy"> Privacy</h2><p>Elixir allows developers to hide both modules and functions from the documentation by setting the doc attribute to false:</p>
+<h2 id="privacy"> Privacy</h2><p>Elixir allows developers to hide both modules and functions from the documentation by setting the doc attribute to false:</p>
 <pre><code class="elixir">defmodule MyApp.Hidden do
   @moduledoc false
 
@@ -132,10 +132,10 @@ end</code></pre>
 <li>Start the function name with underscores, for example, <code class="inline">__add__/2</code>, and add <code class="inline">@doc false</code>. The compiler does not import functions with underscore and the underscore will tell users to be wary of using it.
 </li>
 </ul>
-<h2 id="Documentation-Comments"> Documentation != Comments</h2><p>Elixir makes the difference between documentation and code comments. Documentation are for users of your API, be it your co-worker or your future self. Modules and functions must always be documented if they are part of your application public interface (API).</p>
+<h2 id="documentation-comments"> Documentation != Comments</h2><p>Elixir makes the difference between documentation and code comments. Documentation are for users of your API, be it your co-worker or your future self. Modules and functions must always be documented if they are part of your application public interface (API).</p>
 <p>Code comments are for developers reading the code. They are useful to mark improvements, leave notes for developers reading the code (for example, you decided to not call a function due to a bug in a library) and so forth.</p>
 <p>In other words, documentation is required, code comments are optional.</p>
-<h2 id="Code-get_docs-2"> Code.get_docs/2</h2><p>Elixir stores documentation inside pre-defined chunks in the bytecode. It can be accessed from Elixir by using the <a href="Code.html#get_docs/2"><code class="inline">Code.get_docs/2</code></a> function. This also means documentation is only accessed when required and not when modules are loaded by the Virtual Machine. The only downside is that modules defined in-memory, like the ones defined via IEx, cannot have their documentation accessed.</p>
+<h2 id="code-get_docs-2"> Code.get_docs/2</h2><p>Elixir stores documentation inside pre-defined chunks in the bytecode. It can be accessed from Elixir by using the <a href="Code.html#get_docs/2"><code class="inline">Code.get_docs/2</code></a> function. This also means documentation is only accessed when required and not when modules are loaded by the Virtual Machine. The only downside is that modules defined in-memory, like the ones defined via IEx, cannot have their documentation accessed.</p>
 
     <footer class="footer">
       <p>
