@@ -69,7 +69,7 @@
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/f00538bb1757e81d565a62b9fc78fa2f12b1af05/lib/eex/lib/eex/engine.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/cf1bf914b9ce47eb39530c75f5f8b1a7b204866c/lib/eex/lib/eex/engine.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -80,6 +80,8 @@
           <p>Basic EEx engine that ships with Elixir.</p>
 <p>An engine needs to implement three functions:</p>
 <ul>
+<li><p><code class="inline">init(opts)</code> - returns the initial buffer</p>
+</li>
 <li><p><code class="inline">handle_body(quoted)</code> - receives the final built quoted
 expression, should do final post-processing and return a
 quoted expression.</p>
@@ -153,6 +155,15 @@ default implementations for the functions above.</p>
 </div>
   
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#init/1">init(opts)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns an empty string as initial buffer</p>
+</div>
+  
+</div>
 
   </div>
 
@@ -182,6 +193,12 @@ default implementations for the functions above.</p>
   </div>
   
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#c:init/1">init(arg0)</a>
+  </div>
+  
+</div>
 
   </div>
 
@@ -206,7 +223,7 @@ default implementations for the functions above.</p>
     </a>
     <span class="signature">handle_assign(arg)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/f00538bb1757e81d565a62b9fc78fa2f12b1af05/lib/eex/lib/eex/engine.ex#L68" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/cf1bf914b9ce47eb39530c75f5f8b1a7b204866c/lib/eex/lib/eex/engine.ex#L75" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -232,7 +249,7 @@ end</code></pre>
     </a>
     <span class="signature">handle_body(quoted)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/f00538bb1757e81d565a62b9fc78fa2f12b1af05/lib/eex/lib/eex/engine.ex#L95" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/cf1bf914b9ce47eb39530c75f5f8b1a7b204866c/lib/eex/lib/eex/engine.ex#L109" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -250,7 +267,7 @@ end</code></pre>
     </a>
     <span class="signature">handle_expr(buffer, binary, expr)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/f00538bb1757e81d565a62b9fc78fa2f12b1af05/lib/eex/lib/eex/engine.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/cf1bf914b9ce47eb39530c75f5f8b1a7b204866c/lib/eex/lib/eex/engine.ex#L129" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -280,7 +297,7 @@ end</code></pre>
     </a>
     <span class="signature">handle_text(buffer, text)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/f00538bb1757e81d565a62b9fc78fa2f12b1af05/lib/eex/lib/eex/engine.ex#L102" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/cf1bf914b9ce47eb39530c75f5f8b1a7b204866c/lib/eex/lib/eex/engine.ex#L116" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -288,6 +305,24 @@ end</code></pre>
   
   <section class="docstring">
     <p>The default implementation simply concatenates text to the buffer.</p>
+
+  </section>
+</div>
+<div class="detail" id="init/1">
+  <div class="detail-header">
+    <a href="#init/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">init(opts)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/cf1bf914b9ce47eb39530c75f5f8b1a7b204866c/lib/eex/lib/eex/engine.ex#L102" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns an empty string as initial buffer.</p>
 
   </section>
 </div>
@@ -312,7 +347,7 @@ end</code></pre>
     </a>
     <span class="signature">handle_body(arg0)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/f00538bb1757e81d565a62b9fc78fa2f12b1af05/lib/eex/lib/eex/engine.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/cf1bf914b9ce47eb39530c75f5f8b1a7b204866c/lib/eex/lib/eex/engine.ex#L31" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -338,7 +373,7 @@ end</code></pre>
     </a>
     <span class="signature">handle_expr(arg0, arg1, arg2)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/f00538bb1757e81d565a62b9fc78fa2f12b1af05/lib/eex/lib/eex/engine.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/cf1bf914b9ce47eb39530c75f5f8b1a7b204866c/lib/eex/lib/eex/engine.ex#L33" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -364,7 +399,7 @@ end</code></pre>
     </a>
     <span class="signature">handle_text(arg0, arg1)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/f00538bb1757e81d565a62b9fc78fa2f12b1af05/lib/eex/lib/eex/engine.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/cf1bf914b9ce47eb39530c75f5f8b1a7b204866c/lib/eex/lib/eex/engine.ex#L32" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -375,6 +410,32 @@ end</code></pre>
       <div class="specs-list">
         
           <pre><code class="elixir">handle_text(<a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>, <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a></code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="c:init/1">
+  <div class="detail-header">
+    <a href="#c:init/1" class="detail-link" title="Link to this callback">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">init(arg0)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/cf1bf914b9ce47eb39530c75f5f8b1a7b204866c/lib/eex/lib/eex/engine.ex#L30" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">init(<a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a></code></pre>
         
       </div>
     </div>
