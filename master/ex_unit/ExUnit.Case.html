@@ -67,7 +67,7 @@
         ExUnit.Case
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/7f831613d9e484f421c9ceda399739f48db0f492/lib/ex_unit/lib/ex_unit/case.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/8b451940dc044515ddb588401600b96761a65bd6/lib/ex_unit/lib/ex_unit/case.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -166,15 +166,17 @@ precedence.</p>
 <p>The following tags are set automatically by ExUnit and are
 therefore reserved:</p>
 <ul>
-<li><code class="inline">:case</code>  - the test case module
+<li><code class="inline">:case</code>       - the test case module
 </li>
-<li><code class="inline">:test</code>  - the test name
+<li><code class="inline">:test</code>       - the test name
 </li>
-<li><code class="inline">:line</code>  - the line on which the test was defined
+<li><code class="inline">:line</code>       - the line on which the test was defined
 </li>
-<li><code class="inline">:file</code>  - the file on which the test was defined
+<li><code class="inline">:file</code>       - the file on which the test was defined
 </li>
-<li><code class="inline">:async</code> - if the test case is in async mode
+<li><code class="inline">:async</code>      - if the test case is in async mode
+</li>
+<li><code class="inline">:registered</code> - used for <a href="ExUnit.Case.html#register_attribute/3"><code class="inline">ExUnit.Case.register_attribute/3</code></a> values
 </li>
 </ul>
 <p>The following tags customize how tests behaves:</p>
@@ -238,6 +240,22 @@ console backend globally:</p>
           
 
           
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#register_attribute/3">register_attribute(mod, name, opts \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Registers a new attribute to be used during <a href="ExUnit.Case.html#content"><code class="inline">ExUnit.Case</code></a> tests</p>
+</div>
+  
+</div>
+
+  </div>
+
 
           
   <div class="summary-macros summary">
@@ -276,6 +294,49 @@ end, contents)</a>
       
 
       
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="register_attribute/3">
+  <div class="detail-header">
+    <a href="#register_attribute/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">register_attribute(mod, name, opts \\ [])</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/8b451940dc044515ddb588401600b96761a65bd6/lib/ex_unit/lib/ex_unit/case.ex#L350" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Registers a new attribute to be used during <a href="ExUnit.Case.html#content"><code class="inline">ExUnit.Case</code></a> tests.</p>
+<p>The attribute values will be available as a key/value pair in
+<code class="inline">context.registered</code>. The key/value pairs will be cleanred
+after each <code class="inline">ExUnit.Case.test</code> similar to <code class="inline">@tag</code>.</p>
+<p><code class="inline">Module.register_attribute/3</code> is used to register the attribute,
+this function takes the same options.</p>
+<h2>Examples</h2>
+<pre><code class="elixir">defmodule MyTest do
+  use ExUnit.Case
+  ExUnit.Case.register_attribute __MODULE__, :foobar
+
+  @foobar hello: &quot;world&quot;
+  test &quot;using custom test attribute&quot;, context do
+    assert context.registered.hello == &quot;world&quot;
+  end
+end</code></pre>
+
+  </section>
+</div>
+
+        </section>
+      
 
       
         <section id="macros" class="details-list">
@@ -292,7 +353,7 @@ end, contents)</a>
     </a>
     <span class="signature">test(message)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f831613d9e484f421c9ceda399739f48db0f492/lib/ex_unit/lib/ex_unit/case.ex#L273" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b451940dc044515ddb588401600b96761a65bd6/lib/ex_unit/lib/ex_unit/case.ex#L274" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -319,7 +380,7 @@ also tagged with :not_implemented.</p>
   _
 end, contents)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/7f831613d9e484f421c9ceda399739f48db0f492/lib/ex_unit/lib/ex_unit/case.ex#L234" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b451940dc044515ddb588401600b96761a65bd6/lib/ex_unit/lib/ex_unit/case.ex#L235" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
