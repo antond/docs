@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.4">
-    <title>Logger.Translator – Logger v1.3.0-dev</title>
+    <title>Mix.Tasks.Deps.Tree – Mix v1.3.0-dev</title>
     <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -24,14 +24,14 @@
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
     <div class="sidebar-projectDetails">
       <h1 class="sidebar-projectName">
-        Logger
+        Mix
       </h1>
       <h2 class="sidebar-projectVersion">
         v1.3.0-dev
       </h2>
     </div>
     
-      <img src="assets/logo.png" alt="Logger" class="sidebar-projectImage">
+      <img src="assets/logo.png" alt="Mix" class="sidebar-projectImage">
     
   </a>
 
@@ -48,6 +48,8 @@
     
 
     
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
 
     
   </ul>
@@ -61,11 +63,11 @@
 
 
       <h1>
-        <small class="visible-xs">Logger v1.3.0-dev</small>
-        Logger.Translator
+        <small class="visible-xs">Mix v1.3.0-dev</small>
+        Mix.Tasks.Deps.Tree
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/logger/lib/logger/translator.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/tasks/deps.tree.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -73,37 +75,19 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>Default translation for Erlang log messages.</p>
-<p>Logger allows developers to rewrite log messages provided by
-Erlang applications into a format more compatible with Elixir
-log messages by providing a translator.</p>
-<p>A translator is simply a tuple containing a module and a function
-that can be added and removed via the <a href="Logger.html#add_translator/1"><code class="inline">Logger.add_translator/1</code></a> and
-<a href="Logger.html#remove_translator/1"><code class="inline">Logger.remove_translator/1</code></a> functions and is invoked for every Erlang
-message above the minimum log level with four arguments:</p>
+          <p>Prints the dependency tree.</p>
+<pre><code class="elixir">mix deps.tree</code></pre>
+<p>If no dependency is given, it uses the tree defined in the <code class="inline">mix.exs</code> file.</p>
+<h2>Command line options</h2>
 <ul>
-<li><code class="inline">min_level</code> - the current Logger level
+<li><p><code class="inline">--only</code> - the enviroment to show dependencies for</p>
 </li>
-<li><code class="inline">level</code> - the level of the message being translated
+<li><p><code class="inline">--exclude</code> - exclude dependencies which you do not want to see printed.</p>
 </li>
-<li><code class="inline">kind</code> - if the message is a report or a format
-</li>
-<li><code class="inline">message</code> - the message to format. If it is a report, it is a tuple
-with <code class="inline">{report_type, report_data}</code>, if it is a format, it is a
-tuple with <code class="inline">{format_message, format_args}</code>
+<li><code class="inline">--pretty</code> - use Unicode codepoints for formatting the tree.
+Defaults to true except on Windows.
 </li>
 </ul>
-<p>The function must return:</p>
-<ul>
-<li><code class="inline">{:ok, chardata}</code> - if the message was translated with its translation
-</li>
-<li><code class="inline">:skip</code> - if the message is not meant to be translated nor logged
-</li>
-<li><code class="inline">:none</code> - if there is no translation, which triggers the next translator
-</li>
-</ul>
-<p>See the function <a href="#translate/4"><code class="inline">translate/4</code></a> in this module for an example implementation
-and the default messages translated by Logger.</p>
 
         </section>
       
@@ -125,8 +109,11 @@ and the default messages translated by Logger.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#translate/4">translate(min_level, level, kind, message)</a>
+    <a href="#run/1">run(args)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <a href="Mix.Task.html#c:run/1"><code class="inline">Mix.Task.run/1</code></a></p>
+</div>
   
 </div>
 
@@ -150,21 +137,31 @@ and the default messages translated by Logger.</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="translate/4">
+          <div class="detail" id="run/1">
   <div class="detail-header">
-    <a href="#translate/4" class="detail-link" title="Link to this function">
+    <a href="#run/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">translate(min_level, level, kind, message)</span>
+    <span class="signature">run(args)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/logger/lib/logger/translator.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/tasks/deps.tree.ex#L27" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">run(<a href="http://elixir-lang.org/docs/stable/elixir/OptionParser.html#t:argv/0">OptionParser.argv</a>) :: :ok</code></pre>
+        
+      </div>
+    </div>
+  
   <section class="docstring">
-    
+    <p>Callback implementation for <a href="Mix.Task.html#c:run/1"><code class="inline">Mix.Task.run/1</code></a>.</p>
+
   </section>
 </div>
 

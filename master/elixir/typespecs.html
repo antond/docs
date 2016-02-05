@@ -65,23 +65,11 @@
 
 
 <h1>Typespecs</h1>
-<p>Elixir comes with a notation for declaring types and specifications. Elixir is
-dynamically typed, and as such, typespecs are never used by the compiler to
-optimize or modify code. Still, using typespecs is useful as documentation and
-tools such as <a href="http://www.erlang.org/doc/man/dialyzer.html">Dialyzer</a> can
-analyze code with typespecs to find bugs.</p>
-<p>The attributes <code class="inline">@type</code>, <code class="inline">@opaque</code>, <code class="inline">@typep</code>, <code class="inline">@spec</code>, <code class="inline">@callback</code> and
-<code class="inline">@macrocallback</code> available in modules are handled by the equivalent macros
-defined by this module. See sub-sections “Defining a type” and “Defining a
-specification” below.</p>
-<h2 id="types-and-their-syntax"> Types and their syntax</h2><p>The type syntax provided by Elixir is fairly similar to <a href="http://www.erlang.org/doc/reference_manual/typespec.html">the one in
-Erlang</a>.</p>
-<p>Most of the built-in types provided in Erlang (for example, <code class="inline">pid()</code>) are
-expressed the same way: <code class="inline">pid()</code> or simply <code class="inline">pid</code>. Parameterized types are also
-supported (<code class="inline">list(integer)</code>) and so are remote types (<code class="inline">Enum.t</code>).</p>
-<p>Integers and atom literals are allowed as types (ex. <code class="inline">1</code>, <code class="inline">:atom</code> or
-<code class="inline">false</code>). All other types are built of unions of predefined types. Certain
-shorthands are allowed, such as <code class="inline">[...]</code>, <code class="inline">&lt;&lt;&gt;&gt;</code> and <code class="inline">{...}</code>.</p>
+<p>Elixir comes with a notation for declaring types and specifications. Elixir is dynamically typed, and as such, typespecs are never used by the compiler to optimize or modify code. Still, using typespecs is useful as documentation and tools such as <a href="http://www.erlang.org/doc/man/dialyzer.html">Dialyzer</a> can analyze code with typespecs to find bugs.</p>
+<p>The attributes <code class="inline">@type</code>, <code class="inline">@opaque</code>, <code class="inline">@typep</code>, <code class="inline">@spec</code>, <code class="inline">@callback</code> and <code class="inline">@macrocallback</code> are the main mechanism for defining typespecs. See sub-sections “Defining a type” and “Defining a specification” below.</p>
+<h2 id="types-and-their-syntax"> Types and their syntax</h2><p>The type syntax provided by Elixir is fairly similar to <a href="http://www.erlang.org/doc/reference_manual/typespec.html">the one in Erlang</a>.</p>
+<p>Most of the built-in types provided in Erlang (for example, <code class="inline">pid()</code>) are expressed the same way: <code class="inline">pid()</code> or simply <code class="inline">pid</code>. Parameterized types are also supported (<code class="inline">list(integer)</code>) and so are remote types (<code class="inline">Enum.t</code>).</p>
+<p>Integers and atom literals are allowed as types (ex. <code class="inline">1</code>, <code class="inline">:atom</code> or <code class="inline">false</code>). All other types are built of unions of predefined types. Certain shorthands are allowed, such as <code class="inline">[...]</code>, <code class="inline">&lt;&lt;&gt;&gt;</code> and <code class="inline">{...}</code>.</p>
 <h3>Basic types</h3>
 <pre><code class="elixir">type :: any()                   # the top type, the set of all terms
       | none()                  # the bottom type, contains no terms
@@ -136,8 +124,7 @@ shorthands are allowed, such as <code class="inline">[...]</code>, <code class="
       | {}                            ## Tuples
       | {:ok, type}                   # two element tuple with an atom and any type</code></pre>
 <h3>Built-in types</h3>
-<p>These types are also provided by Elixir as shortcuts on top of the
-basic and literal types.</p>
+<p>These types are also provided by Elixir as shortcuts on top of the basic and literal types.</p>
 <table>
 <colgroup>
 <col align="left">
@@ -216,38 +203,26 @@ basic and literal types.</p>
 </tr>
 </table>
 <h3>Remote types</h3>
-<p>Any module is also able to define its own type and the modules in
-Elixir are no exception. For example, a string is <code class="inline">String.t</code>, a
-range is <code class="inline">Range.t</code>, any enumerable can be <code class="inline">Enum.t</code> and so on.</p>
+<p>Any module is also able to define its own type and the modules in Elixir are no exception. For example, a string is <code class="inline">String.t</code>, a range is <code class="inline">Range.t</code>, any enumerable can be <code class="inline">Enum.t</code> and so on.</p>
 <h2 id="defining-a-type"> Defining a type</h2><pre><code class="elixir">@type type_name :: type
 @typep type_name :: type
 @opaque type_name :: type</code></pre>
-<p>A type defined with <code class="inline">@typep</code> is private. An opaque type, defined with
-<code class="inline">@opaque</code> is a type where the internal structure of the type will not be
-visible, but the type is still public.</p>
-<p>Types can be parameterized by defining variables as parameters, these variables
-can then be used to define the type.</p>
+<p>A type defined with <code class="inline">@typep</code> is private. An opaque type, defined with <code class="inline">@opaque</code> is a type where the internal structure of the type will not be visible, but the type is still public.</p>
+<p>Types can be parameterized by defining variables as parameters, these variables can then be used to define the type.</p>
 <pre><code class="elixir">@type dict(key, value) :: [{key, value}]</code></pre>
 <h2 id="defining-a-specification"> Defining a specification</h2><pre><code class="elixir">@spec function_name(type1, type2) :: return_type
 @callback function_name(type1, type2) :: return_type
 @macrocallback macro_name(type1, type2) :: Macro.t</code></pre>
-<p>Callbacks are used to define the callbacks functions of behaviours (see
-<a href="Behaviour.html"><code class="inline">Behaviour</code></a>).</p>
-<p>Guards can be used to restrict type variables given as arguments to the
-function.</p>
+<p>Callbacks are used to define the callbacks functions of behaviours (see <a href="Behaviour.html"><code class="inline">Behaviour</code></a>).</p>
+<p>Guards can be used to restrict type variables given as arguments to the function.</p>
 <pre><code class="elixir">@spec function(arg) :: [arg] when arg: atom</code></pre>
 <p>Type variables with no restriction can also be defined.</p>
 <pre><code class="elixir">@spec function(arg) :: [arg] when arg: var</code></pre>
 <p>Specifications can be overloaded just like ordinary functions.</p>
 <pre><code class="elixir">@spec function(integer) :: atom
 @spec function(atom)    :: integer</code></pre>
-<h2 id="notes"> Notes</h2><p>Elixir discourages the use of type <code class="inline">string</code> as it might be confused with
-binaries which are referred to as “strings” in Elixir (as opposed to character
-lists). In order to use the type that is called <code class="inline">string</code> in Erlang, one has to
-use the <code class="inline">char_list</code> type which is a synonym for <code class="inline">string</code>. If you use <code class="inline">string</code>,
-you’ll get a warning from the compiler.</p>
-<p>If you want to refer to the “string” type (the one operated on by functions in
-the <a href="String.html"><code class="inline">String</code></a> module), use <code class="inline">String.t</code> type instead.</p>
+<h2 id="notes"> Notes</h2><p>Elixir discourages the use of type <code class="inline">string</code> as it might be confused with binaries which are referred to as “strings” in Elixir (as opposed to character lists). In order to use the type that is called <code class="inline">string</code> in Erlang, one has to use the <code class="inline">char_list</code> type which is a synonym for <code class="inline">string</code>. If you use <code class="inline">string</code>, you’ll get a warning from the compiler.</p>
+<p>If you want to refer to the “string” type (the one operated on by functions in the <a href="String.html"><code class="inline">String</code></a> module), use <code class="inline">String.t</code> type instead.</p>
 
     <footer class="footer">
       <p>

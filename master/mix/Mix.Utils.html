@@ -67,7 +67,7 @@
         Mix.Utils
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -96,15 +96,6 @@
       <a href="#functions">Functions</a>
     </h2>
     <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#camelize/1">camelize(value)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Converts the given string to CamelCase format</p>
-</div>
-  
-</div>
-<div class="summary-row">
   <div class="summary-signature">
     <a href="#can_write?/1">can_write?(path)</a>
   </div>
@@ -190,6 +181,15 @@ in the given <code class="inline">at</code> scope</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#print_tree/3">print_tree(nodes, callback, opts \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Prints the given tree according to the callback</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#proxy_config/1">proxy_config(url)</a>
   </div>
   
@@ -226,15 +226,6 @@ in case symlink fails</p>
 </div>
   
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#underscore/1">underscore(value)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Converts the given atom or binary to underscore format</p>
-</div>
-  
-</div>
 
   </div>
 
@@ -256,35 +247,14 @@ in case symlink fails</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="camelize/1">
-  <div class="detail-header">
-    <a href="#camelize/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">camelize(value)</span>
-      
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L181" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-  </div>
-  
-  <section class="docstring">
-    <p>Converts the given string to CamelCase format.</p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Mix.Utils.camelize &quot;foo_bar&quot;
-&quot;FooBar&quot;</code></pre>
-
-  </section>
-</div>
-<div class="detail" id="can_write?/1">
+          <div class="detail" id="can_write?/1">
   <div class="detail-header">
     <a href="#can_write?/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">can_write?(path)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L336" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L338" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -303,7 +273,7 @@ the user input.</p>
     </a>
     <span class="signature">command_to_module(command, at \\ Elixir)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -328,7 +298,7 @@ exists and is loaded, <code class="inline">{:error, reason}</code> otherwise.</p
     </a>
     <span class="signature">command_to_module_name(s)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L222" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L224" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -349,7 +319,7 @@ exists and is loaded, <code class="inline">{:error, reason}</code> otherwise.</p
     </a>
     <span class="signature">extract_files(paths, exts_or_pattern)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L127" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L127" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -373,7 +343,7 @@ the given patterns.</p>
     </a>
     <span class="signature">extract_stale(sources, targets)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L74" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L74" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -391,7 +361,7 @@ the given patterns.</p>
     </a>
     <span class="signature">last_modified(path)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L95" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L95" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -411,7 +381,7 @@ the given patterns.</p>
     </a>
     <span class="signature">mix_home()</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L19" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -437,7 +407,7 @@ stored there.</p>
     </a>
     <span class="signature">mix_paths()</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -457,7 +427,7 @@ paths should be separated by <code class="inline">;</code>, if on unix systems, 
     </a>
     <span class="signature">module_name_to_command(module, nesting \\ 0)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L200" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L202" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -476,6 +446,36 @@ iex&gt; Mix.Utils.module_name_to_command(&quot;Mix.Tasks.Compile.Elixir&quot;, 2
 
   </section>
 </div>
+<div class="detail" id="print_tree/3">
+  <div class="detail-header">
+    <a href="#print_tree/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">print_tree(nodes, callback, opts \\ [])</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L147" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">print_tree([term], (term -> {<a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, [term]}), <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a>) :: :ok</code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Prints the given tree according to the callback.</p>
+<p>The callback will be invoked for each node and it
+must either return <code class="inline">{printed, children}</code> tuple or
+<code class="inline">false</code> if the given node must not be printed.</p>
+
+  </section>
+</div>
 <div class="detail" id="proxy_config/1">
   <div class="detail-header">
     <a href="#proxy_config/1" class="detail-link" title="Link to this function">
@@ -483,7 +483,7 @@ iex&gt; Mix.Utils.module_name_to_command(&quot;Mix.Tasks.Compile.Elixir&quot;, 2
     </a>
     <span class="signature">proxy_config(url)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L392" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L394" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -500,7 +500,7 @@ iex&gt; Mix.Utils.module_name_to_command(&quot;Mix.Tasks.Compile.Elixir&quot;, 2
     </a>
     <span class="signature">read_path(path, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L296" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L298" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -541,7 +541,7 @@ for remote ones.</p>
     </a>
     <span class="signature">stale?(sources, targets)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L67" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L67" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -560,7 +560,7 @@ compared to the given <code class="inline">targets</code>.</p>
     </a>
     <span class="signature">symlink_or_copy(source, target)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L235" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/8b3db09dabad09060749e7f2adf1dad3004b9a44/lib/mix/lib/mix/utils.ex#L237" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -571,42 +571,6 @@ compared to the given <code class="inline">targets</code>.</p>
 in case symlink fails.</p>
 <p>Expects source and target to be absolute paths as it generates
 a relative symlink.</p>
-
-  </section>
-</div>
-<div class="detail" id="underscore/1">
-  <div class="detail-header">
-    <a href="#underscore/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">underscore(value)</span>
-      
-      <a href="https://github.com/elixir-lang/elixir/blob/dcef08de63b3f43de200e87d1d8b327ea098ecf1/lib/mix/lib/mix/utils.ex#L167" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-  </div>
-  
-  <section class="docstring">
-    <p>Converts the given atom or binary to underscore format.</p>
-<p>If an atom is given, it is assumed to be an Elixir module,
-so it is converted to a binary and then processed.</p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Mix.Utils.underscore &quot;FooBar&quot;
-&quot;foo_bar&quot;
-
-iex&gt; Mix.Utils.underscore &quot;Foo.Bar&quot;
-&quot;foo/bar&quot;
-
-iex&gt; Mix.Utils.underscore Foo.Bar
-&quot;foo/bar&quot;</code></pre>
-<p>In general, <code class="inline">underscore</code> can be thought of as the reverse of
-<code class="inline">camelize</code>, however, in some cases formatting may be lost:</p>
-<pre><code class="iex elixir">iex&gt; Mix.Utils.underscore &quot;SAPExample&quot;
-&quot;sap_example&quot;
-
-iex&gt; Mix.Utils.camelize &quot;sap_example&quot;
-&quot;SapExample&quot;</code></pre>
 
   </section>
 </div>
