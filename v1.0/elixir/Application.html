@@ -1,49 +1,78 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
-    <title>Application</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8">
-      relpath = '';
-      if (relpath != '') relpath += '/';
-    </script>
-
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      hljs.initHighlightingOnLoad();
-      hljs.configure({languages: []}); //disable autodetect
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Application – Elixir v1.0.5</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
+  <body data-type="modules">
 
-  <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
 
-    <section id="content">
-      <div class="breadcrumbs">Elixir v1.0.5 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Application.html">Application</a></div>
+  
+  <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Elixir
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.5
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+      <li><a id="protocols-list" href="#full-list">Protocols</a></li>
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
       <h1>
+        <small class="visible-xs">Elixir v1.0.5</small>
         Application
         
+        
+          <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary">Summary</a></li>
-        
-        
-          <li><a href="#types_details">Types</a></li>
-        
-        
-          <li><a href="#functions_details">Functions</a></li>
-        
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
@@ -124,166 +153,249 @@ supervisor is automatically handled by the VM;</p>
       
 
       
-        <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L1" class="view_source">Source</a>
-      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:app/0">app()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:key/0">key()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:start_type/0">start_type()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:value/0">value()</a>
+  </div>
+  
+</div>
 
-      
-        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
-        <table class="summary">
-          <tr>
-  <td class="summary_signature"><a href="#app_dir/1">app_dir(app)</a></td>
+  </div>
+
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#app_dir/1">app_dir(app)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Gets the directory for app</p>
-</td>
+    <div class="summary-synopsis"><p>Gets the directory for app</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#app_dir/2">app_dir(app, path)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#app_dir/2">app_dir(app, path)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns the given path inside <a href="#app_dir/1"><code class="inline">app_dir/1</code></a></p>
-</td>
+    <div class="summary-synopsis"><p>Returns the given path inside <a href="#app_dir/1"><code class="inline">app_dir/1</code></a></p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#delete_env/3">delete_env(app, key, opts \\ [])</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#delete_env/3">delete_env(app, key, opts \\ [])</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Deletes the <code class="inline">key</code> from the given <code class="inline">app</code> environment</p>
-</td>
+    <div class="summary-synopsis"><p>Deletes the <code class="inline">key</code> from the given <code class="inline">app</code> environment</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#ensure_all_started/2">ensure_all_started(app, type \\ :temporary)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#ensure_all_started/2">ensure_all_started(app, type \\ :temporary)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Ensures the given <code class="inline">app</code> and its applications are started</p>
-</td>
+    <div class="summary-synopsis"><p>Ensures the given <code class="inline">app</code> and its applications are started</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#ensure_started/2">ensure_started(app, type \\ :temporary)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#ensure_started/2">ensure_started(app, type \\ :temporary)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Ensures the given <code class="inline">app</code> is started</p>
-</td>
+    <div class="summary-synopsis"><p>Ensures the given <code class="inline">app</code> is started</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#fetch_env/2">fetch_env(app, key)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#fetch_env/2">fetch_env(app, key)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns the value for <code class="inline">key</code> in <code class="inline">app</code>‘s environment in a tuple</p>
-</td>
+    <div class="summary-synopsis"><p>Returns the value for <code class="inline">key</code> in <code class="inline">app</code>‘s environment in a tuple</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#format_error/1">format_error(reason)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#format_error/1">format_error(reason)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Formats the error reason returned by <a href="#start/2"><code class="inline">start/2</code></a>,
+    <div class="summary-synopsis"><p>Formats the error reason returned by <a href="#start/2"><code class="inline">start/2</code></a>,
 <a href="#ensure_started/2"><code class="inline">ensure_started/2</code></a>, <a href="#stop/1"><code class="inline">stop/1</code></a>, <a href="#load/1"><code class="inline">load/1</code></a> and <a href="#unload/1"><code class="inline">unload/1</code></a>,
 returns a string</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#get_all_env/1">get_all_env(app)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_all_env/1">get_all_env(app)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns all key-value pairs for <code class="inline">app</code></p>
-</td>
+    <div class="summary-synopsis"><p>Returns all key-value pairs for <code class="inline">app</code></p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#get_env/3">get_env(app, key, default \\ nil)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_env/3">get_env(app, key, default \\ nil)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns the value for <code class="inline">key</code> in <code class="inline">app</code>‘s environment</p>
-</td>
+    <div class="summary-synopsis"><p>Returns the value for <code class="inline">key</code> in <code class="inline">app</code>‘s environment</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#load/1">load(app)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#load/1">load(app)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Loads the given <code class="inline">app</code></p>
-</td>
+    <div class="summary-synopsis"><p>Loads the given <code class="inline">app</code></p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#put_env/4">put_env(app, key, value, opts \\ [])</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#put_env/4">put_env(app, key, value, opts \\ [])</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Puts the <code class="inline">value</code> in <code class="inline">key</code> for the given <code class="inline">app</code></p>
-</td>
+    <div class="summary-synopsis"><p>Puts the <code class="inline">value</code> in <code class="inline">key</code> for the given <code class="inline">app</code></p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#start/2">start(app, type \\ :temporary)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#start/2">start(app, type \\ :temporary)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Starts the given <code class="inline">app</code></p>
-</td>
+    <div class="summary-synopsis"><p>Starts the given <code class="inline">app</code></p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#stop/1">stop(app)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#stop/1">stop(app)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Stops the given <code class="inline">app</code></p>
-</td>
+    <div class="summary-synopsis"><p>Stops the given <code class="inline">app</code></p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#unload/1">unload(app)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unload/1">unload(app)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Unloads the given <code class="inline">app</code></p>
-</td>
+    <div class="summary-synopsis"><p>Unloads the given <code class="inline">app</code></p>
+</div>
   
-</tr>
+</div>
 
-        </table>
-      
+  </div>
 
-      
-        <section id="types_details" class="details_list">
-          <h2>Types <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></h2>
-          <div class="type_detail">
-  <p class="typespec" id="t:app/0">
-    <a href="#t:app/0">app</a> :: atom
-  </p>
-  
-</div>
-<div class="type_detail">
-  <p class="typespec" id="t:key/0">
-    <a href="#t:key/0">key</a> :: atom
-  </p>
-  
-</div>
-<div class="type_detail">
-  <p class="typespec" id="t:value/0">
-    <a href="#t:value/0">value</a> :: term
-  </p>
-  
-</div>
-<div class="type_detail">
-  <p class="typespec" id="t:start_type/0">
-    <a href="#t:start_type/0">start_type</a> :: :permanent | :transient | :temporary
-  </p>
-  
-</div>
+
+          
+
+          
 
         </section>
       
 
       
-        <section id="functions_details" class="details_list">
-          <h2>Functions</h2>
-          <section class="detail">
-  <div class="detail_header" id="app_dir/1">
-    <span class="signature"><strong>app_dir(app)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#app_dir/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="types" class="types details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div id="t:app/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:app/0">app</a> :: atom</code></pre>
+  
+</div>
+<div id="t:key/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:key/0">key</a> :: atom</code></pre>
+  
+</div>
+<div id="t:start_type/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:start_type/0">start_type</a> :: :permanent | :transient | :temporary</code></pre>
+  
+</div>
+<div id="t:value/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:value/0">value</a> :: term</code></pre>
+  
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="app_dir/1">
+  <div class="detail-header">
+    <a href="#app_dir/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">app_dir(app)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L308" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>app_dir(<a href="#t:app/0">app</a>) :: <a href="String.html#t:t/0">String.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">app_dir(<a href="#t:app/0">app</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Gets the directory for app.</p>
@@ -305,77 +417,85 @@ Application.app_dir(:bar)
 Elixir and also Erlang’s <code class="inline">:code</code> module.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L308" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="app_dir/2">
-    <span class="signature"><strong>app_dir(app, path)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#app_dir/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="app_dir/2">
+  <div class="detail-header">
+    <a href="#app_dir/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">app_dir(app, path)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L319" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>app_dir(<a href="#t:app/0">app</a>, <a href="String.html#t:t/0">String.t</a>) :: <a href="String.html#t:t/0">String.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">app_dir(<a href="#t:app/0">app</a>, <a href="String.html#t:t/0">String.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the given path inside <a href="#app_dir/1"><code class="inline">app_dir/1</code></a>.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L319" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="delete_env/3">
-    <span class="signature"><strong>delete_env(app, key, opts \\ [])</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#delete_env/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="delete_env/3">
+  <div class="detail-header">
+    <a href="#delete_env/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">delete_env(app, key, opts \\ [])</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L178" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>delete_env(<a href="#t:app/0">app</a>, <a href="#t:key/0">key</a>, timeout: timeout, persistent: boolean) :: :ok</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">delete_env(<a href="#t:app/0">app</a>, <a href="#t:key/0">key</a>, timeout: timeout, persistent: boolean) :: :ok</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Deletes the <code class="inline">key</code> from the given <code class="inline">app</code> environment.</p>
 <p>See <a href="#put_env/4"><code class="inline">put_env/4</code></a> for a description of the options.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L178" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="ensure_all_started/2">
-    <span class="signature"><strong>ensure_all_started(app, type \\ :temporary)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#ensure_all_started/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="ensure_all_started/2">
+  <div class="detail-header">
+    <a href="#ensure_all_started/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">ensure_all_started(app, type \\ :temporary)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L205" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>ensure_all_started(<a href="#t:app/0">app</a>, <a href="#t:start_type/0">start_type</a>) :: {:ok, [<a href="#t:app/0">app</a>]} | {:error, {<a href="#t:app/0">app</a>, term}}</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">ensure_all_started(<a href="#t:app/0">app</a>, <a href="#t:start_type/0">start_type</a>) ::
+  {:ok, [<a href="#t:app/0">app</a>]} |
+  {:error, {<a href="#t:app/0">app</a>, term}}</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Ensures the given <code class="inline">app</code> and its applications are started.</p>
@@ -384,26 +504,30 @@ Elixir and also Erlang’s <code class="inline">:code</code> module.</p>
 started.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L205" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="ensure_started/2">
-    <span class="signature"><strong>ensure_started(app, type \\ :temporary)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#ensure_started/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="ensure_started/2">
+  <div class="detail-header">
+    <a href="#ensure_started/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">ensure_started(app, type \\ :temporary)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L193" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>ensure_started(<a href="#t:app/0">app</a>, <a href="#t:start_type/0">start_type</a>) :: :ok | {:error, term}</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">ensure_started(<a href="#t:app/0">app</a>, <a href="#t:start_type/0">start_type</a>) ::
+  :ok |
+  {:error, term}</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Ensures the given <code class="inline">app</code> is started.</p>
@@ -413,26 +537,28 @@ applications need to be explicitly started:</p>
 <pre><code class="elixir">:ok = Application.ensure_started(:my_test_dep)</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L193" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="fetch_env/2">
-    <span class="signature"><strong>fetch_env(app, key)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#fetch_env/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="fetch_env/2">
+  <div class="detail-header">
+    <a href="#fetch_env/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">fetch_env(app, key)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L143" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>fetch_env(<a href="#t:app/0">app</a>, <a href="#t:key/0">key</a>) :: {:ok, <a href="#t:value/0">value</a>} | :error</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">fetch_env(<a href="#t:app/0">app</a>, <a href="#t:key/0">key</a>) :: {:ok, <a href="#t:value/0">value</a>} | :error</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the value for <code class="inline">key</code> in <code class="inline">app</code>‘s environment in a tuple.</p>
@@ -440,26 +566,28 @@ applications need to be explicitly started:</p>
 does not exist, the function returns <code class="inline">:error</code>.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L143" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="format_error/1">
-    <span class="signature"><strong>format_error(reason)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#format_error/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="format_error/1">
+  <div class="detail-header">
+    <a href="#format_error/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">format_error(reason)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L329" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>format_error(any) :: <a href="String.html#t:t/0">String.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">format_error(any) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Formats the error reason returned by <a href="#start/2"><code class="inline">start/2</code></a>,
@@ -467,51 +595,55 @@ does not exist, the function returns <code class="inline">:error</code>.</p>
 returns a string.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L329" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="get_all_env/1">
-    <span class="signature"><strong>get_all_env(app)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#get_all_env/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="get_all_env/1">
+  <div class="detail-header">
+    <a href="#get_all_env/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_all_env(app)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L118" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>get_all_env(<a href="#t:app/0">app</a>) :: [{<a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>}]</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">get_all_env(<a href="#t:app/0">app</a>) :: [{<a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>}]</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns all key-value pairs for <code class="inline">app</code>.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L118" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="get_env/3">
-    <span class="signature"><strong>get_env(app, key, default \\ nil)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#get_env/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="get_env/3">
+  <div class="detail-header">
+    <a href="#get_env/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_env(app, key, default \\ nil)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L129" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>get_env(<a href="#t:app/0">app</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:value/0">value</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">get_env(<a href="#t:app/0">app</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:value/0">value</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the value for <code class="inline">key</code> in <code class="inline">app</code>‘s environment.</p>
@@ -519,26 +651,28 @@ returns a string.</p>
 does not exist, the function returns the <code class="inline">default</code> value.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L129" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="load/1">
-    <span class="signature"><strong>load(app)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#load/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="load/1">
+  <div class="detail-header">
+    <a href="#load/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">load(app)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L268" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>load(<a href="#t:app/0">app</a>) :: :ok | {:error, term}</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">load(<a href="#t:app/0">app</a>) :: :ok | {:error, term}</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Loads the given <code class="inline">app</code>.</p>
@@ -548,26 +682,28 @@ All <code class="inline">:included_applications</code> will also be loaded.</p>
 it does load its environment.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L268" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="put_env/4">
-    <span class="signature"><strong>put_env(app, key, value, opts \\ [])</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#put_env/4" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="put_env/4">
+  <div class="detail-header">
+    <a href="#put_env/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">put_env(app, key, value, opts \\ [])</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L168" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>put_env(<a href="#t:app/0">app</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>, timeout: timeout, persistent: boolean) :: :ok</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">put_env(<a href="#t:app/0">app</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>, timeout: timeout, persistent: boolean) :: :ok</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Puts the <code class="inline">value</code> in <code class="inline">key</code> for the given <code class="inline">app</code>.</p>
@@ -587,26 +723,28 @@ in the application resource file on load. This means persistent values will
 stick after the application is loaded and also on application reload.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L168" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="start/2">
-    <span class="signature"><strong>start(app, type \\ :temporary)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#start/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="start/2">
+  <div class="detail-header">
+    <a href="#start/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">start(app, type \\ :temporary)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L244" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>start(<a href="#t:app/0">app</a>, <a href="#t:start_type/0">start_type</a>) :: :ok | {:error, term}</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">start(<a href="#t:app/0">app</a>, <a href="#t:start_type/0">start_type</a>) :: :ok | {:error, term}</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Starts the given <code class="inline">app</code>.</p>
@@ -639,52 +777,56 @@ be affected.</p>
 supervision tree terminates, the reason is set to <code class="inline">:shutdown</code>, not <code class="inline">:normal</code>.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L244" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="stop/1">
-    <span class="signature"><strong>stop(app)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#stop/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="stop/1">
+  <div class="detail-header">
+    <a href="#stop/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">stop(app)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L254" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>stop(<a href="#t:app/0">app</a>) :: :ok | {:error, term}</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">stop(<a href="#t:app/0">app</a>) :: :ok | {:error, term}</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Stops the given <code class="inline">app</code>.</p>
 <p>When stopped, the application is still loaded.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L254" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="unload/1">
-    <span class="signature"><strong>unload(app)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#unload/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="unload/1">
+  <div class="detail-header">
+    <a href="#unload/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">unload(app)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/application.ex#L279" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>unload(<a href="#t:app/0">app</a>) :: :ok | {:error, term}</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">unload(<a href="#t:app/0">app</a>) :: :ok | {:error, term}</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Unloads the given <code class="inline">app</code>.</p>
@@ -692,10 +834,7 @@ supervision tree terminates, the reason is set to <code class="inline">:shutdown
 Note that the function does not purge the application modules.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/application.ex#L279" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
@@ -703,6 +842,23 @@ Note that the function does not purge the application modules.</p>
       
 
       
-    </section>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
+

@@ -1,49 +1,78 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
-    <title>Supervisor</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8">
-      relpath = '';
-      if (relpath != '') relpath += '/';
-    </script>
-
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      hljs.initHighlightingOnLoad();
-      hljs.configure({languages: []}); //disable autodetect
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Supervisor – Elixir v1.0.5</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
+  <body data-type="modules">
 
-  <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
 
-    <section id="content">
-      <div class="breadcrumbs">Elixir v1.0.5 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Supervisor.html">Supervisor</a></div>
+  
+  <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Elixir
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.5
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+      <li><a id="protocols-list" href="#full-list">Protocols</a></li>
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
       <h1>
+        <small class="visible-xs">Elixir v1.0.5</small>
         Supervisor
         
+        
+          <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/supervisor.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary">Summary</a></li>
-        
-        
-          <li><a href="#types_details">Types</a></li>
-        
-        
-          <li><a href="#functions_details">Functions</a></li>
-        
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
@@ -234,149 +263,252 @@ Read more about it in the <a href="GenServer.html"><code class="inline">GenServe
       
 
       
-        <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/supervisor.ex#L1" class="view_source">Source</a>
-      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:child/0">child()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:name/0">name()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The Supervisor name</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:on_start/0">on_start()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Return values of <code class="inline">start_link</code> functions</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:on_start_child/0">on_start_child()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Return values of <code class="inline">start_child</code> functions</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:options/0">options()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Options used by the <code class="inline">start*</code> functions</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:supervisor/0">supervisor()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The supervisor reference</p>
+</div>
+  
+</div>
 
-      
-        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
-        <table class="summary">
-          <tr>
-  <td class="summary_signature"><a href="#count_children/1">count_children(supervisor)</a></td>
-  
-    <td class="summary_synopsis"><p>Returns a map containing count values for the supervisor</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#delete_child/2">delete_child(supervisor, child_id)</a></td>
-  
-    <td class="summary_synopsis"><p>Deletes the child specification identified by <code class="inline">child_id</code></p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#restart_child/2">restart_child(supervisor, child_id)</a></td>
-  
-    <td class="summary_synopsis"><p>Restarts a child process identified by <code class="inline">child_id</code></p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#start_child/2">start_child(supervisor, child_spec_or_args)</a></td>
-  
-    <td class="summary_synopsis"><p>Dynamically adds and starts a child specification to the supervisor</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#start_link/2">start_link(children, options)</a></td>
-  
-    <td class="summary_synopsis"><p>Starts a supervisor with the given children</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#start_link/3">start_link(module, arg, options \\ [])</a></td>
-  
-    <td class="summary_synopsis"><p>Starts a supervisor module with the given <code class="inline">arg</code></p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#terminate_child/2">terminate_child(supervisor, pid_or_child_id)</a></td>
-  
-    <td class="summary_synopsis"><p>Terminates the given pid or child id</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#which_children/1">which_children(supervisor)</a></td>
-  
-    <td class="summary_synopsis"><p>Returns a list with information about all children</p>
-</td>
-  
-</tr>
+  </div>
 
-        </table>
-      
 
-      
-        <section id="types_details" class="details_list">
-          <h2>Types <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></h2>
-          <div class="type_detail">
-  <p class="typespec" id="t:on_start/0">
-    <a href="#t:on_start/0">on_start</a> :: {:ok, pid} | :ignore | {:error, {:already_started, pid} | {:shutdown, term} | term}
-  </p>
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#count_children/1">count_children(supervisor)</a>
+  </div>
   
-      <div class="typespec_doc"><p>Return values of <code class="inline">start_link</code> functions</p>
+    <div class="summary-synopsis"><p>Returns a map containing count values for the supervisor</p>
 </div>
   
 </div>
-<div class="type_detail">
-  <p class="typespec" id="t:on_start_child/0">
-    <a href="#t:on_start_child/0">on_start_child</a> :: {:ok, <a href="#t:child/0">child</a>} | {:ok, <a href="#t:child/0">child</a>, info :: term} | {:error, {:already_started, <a href="#t:child/0">child</a>} | :already_present | term}
-  </p>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#delete_child/2">delete_child(supervisor, child_id)</a>
+  </div>
   
-      <div class="typespec_doc"><p>Return values of <code class="inline">start_child</code> functions</p>
+    <div class="summary-synopsis"><p>Deletes the child specification identified by <code class="inline">child_id</code></p>
 </div>
   
 </div>
-<div class="type_detail">
-  <p class="typespec" id="t:child/0">
-    <a href="#t:child/0">child</a> :: pid | :undefined
-  </p>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#restart_child/2">restart_child(supervisor, child_id)</a>
+  </div>
   
-</div>
-<div class="type_detail">
-  <p class="typespec" id="t:name/0">
-    <a href="#t:name/0">name</a> :: atom | {:global, term} | {:via, module, term}
-  </p>
-  
-      <div class="typespec_doc"><p>The Supervisor name</p>
+    <div class="summary-synopsis"><p>Restarts a child process identified by <code class="inline">child_id</code></p>
 </div>
   
 </div>
-<div class="type_detail">
-  <p class="typespec" id="t:options/0">
-    <a href="#t:options/0">options</a> :: [name: <a href="#t:name/0">name</a>, strategy: <a href="Supervisor.Spec.html#t:strategy/0">Supervisor.Spec.strategy</a>, max_restarts: non_neg_integer, max_seconds: non_neg_integer]
-  </p>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#start_child/2">start_child(supervisor, child_spec_or_args)</a>
+  </div>
   
-      <div class="typespec_doc"><p>Options used by the <code class="inline">start*</code> functions</p>
+    <div class="summary-synopsis"><p>Dynamically adds and starts a child specification to the supervisor</p>
 </div>
   
 </div>
-<div class="type_detail">
-  <p class="typespec" id="t:supervisor/0">
-    <a href="#t:supervisor/0">supervisor</a> :: pid | <a href="#t:name/0">name</a> | {atom, node}
-  </p>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#start_link/2">start_link(children, options)</a>
+  </div>
   
-      <div class="typespec_doc"><p>The supervisor reference</p>
+    <div class="summary-synopsis"><p>Starts a supervisor with the given children</p>
 </div>
   
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#start_link/3">start_link(module, arg, options \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Starts a supervisor module with the given <code class="inline">arg</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#terminate_child/2">terminate_child(supervisor, pid_or_child_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Terminates the given pid or child id</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#which_children/1">which_children(supervisor)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a list with information about all children</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
 
         </section>
       
 
       
-        <section id="functions_details" class="details_list">
-          <h2>Functions</h2>
-          <section class="detail">
-  <div class="detail_header" id="count_children/1">
-    <span class="signature"><strong>count_children(supervisor)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#count_children/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="types" class="types details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div id="t:child/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:child/0">child</a> :: pid | :undefined</code></pre>
+  
+</div>
+<div id="t:name/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:name/0">name</a> ::
+  atom |
+  {:global, term} |
+  {:via, module, term}</code></pre>
+  
+    <div class="typespec-doc"><p>The Supervisor name</p>
+</div>
+  
+</div>
+<div id="t:on_start/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:on_start/0">on_start</a> ::
+  {:ok, pid} |
+  :ignore |
+  {:error, {:already_started, pid} | {:shutdown, term} | term}</code></pre>
+  
+    <div class="typespec-doc"><p>Return values of <code class="inline">start_link</code> functions</p>
+</div>
+  
+</div>
+<div id="t:on_start_child/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:on_start_child/0">on_start_child</a> ::
+  {:ok, <a href="#t:child/0">child</a>} |
+  {:ok, <a href="#t:child/0">child</a>, info :: term} |
+  {:error, {:already_started, <a href="#t:child/0">child</a>} | :already_present | term}</code></pre>
+  
+    <div class="typespec-doc"><p>Return values of <code class="inline">start_child</code> functions</p>
+</div>
+  
+</div>
+<div id="t:options/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:options/0">options</a> :: [name: <a href="#t:name/0">name</a>, strategy: <a href="Supervisor.Spec.html#t:strategy/0">Supervisor.Spec.strategy</a>, max_restarts: non_neg_integer, max_seconds: non_neg_integer]</code></pre>
+  
+    <div class="typespec-doc"><p>Options used by the <code class="inline">start*</code> functions</p>
+</div>
+  
+</div>
+<div id="t:supervisor/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:supervisor/0">supervisor</a> :: pid | <a href="#t:name/0">name</a> | {atom, node}</code></pre>
+  
+    <div class="typespec-doc"><p>The supervisor reference</p>
+</div>
+  
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="count_children/1">
+  <div class="detail-header">
+    <a href="#count_children/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">count_children(supervisor)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/supervisor.ex#L461" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>count_children(<a href="#t:supervisor/0">supervisor</a>) :: %{specs: non_neg_integer, active: non_neg_integer, supervisors: non_neg_integer, workers: non_neg_integer}</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">count_children(<a href="#t:supervisor/0">supervisor</a>) :: %{specs: non_neg_integer, active: non_neg_integer, supervisors: non_neg_integer, workers: non_neg_integer}</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns a map containing count values for the supervisor.</p>
@@ -396,26 +528,30 @@ is still alive
 </ul>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/supervisor.ex#L461" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="delete_child/2">
-    <span class="signature"><strong>delete_child(supervisor, child_id)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#delete_child/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="delete_child/2">
+  <div class="detail-header">
+    <a href="#delete_child/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">delete_child(supervisor, child_id)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/supervisor.ex#L378" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>delete_child(<a href="#t:supervisor/0">supervisor</a>, <a href="Supervisor.Spec.html#t:child_id/0">Supervisor.Spec.child_id</a>) :: :ok | {:error, error} when error: :not_found | :simple_one_for_one | :running | :restarting</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">delete_child(<a href="#t:supervisor/0">supervisor</a>, <a href="Supervisor.Spec.html#t:child_id/0">Supervisor.Spec.child_id</a>) ::
+  :ok |
+  {:error, error} when error: :not_found | :simple_one_for_one | :running | :restarting</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Deletes the child specification identified by <code class="inline">child_id</code>.</p>
@@ -427,26 +563,31 @@ process is running or being restarted.</p>
 <p>This operation is not supported by <code class="inline">simple_one_for_one</code> supervisors.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/supervisor.ex#L378" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="restart_child/2">
-    <span class="signature"><strong>restart_child(supervisor, child_id)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#restart_child/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="restart_child/2">
+  <div class="detail-header">
+    <a href="#restart_child/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">restart_child(supervisor, child_id)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/supervisor.ex#L409" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>restart_child(<a href="#t:supervisor/0">supervisor</a>, <a href="Supervisor.Spec.html#t:child_id/0">Supervisor.Spec.child_id</a>) :: {:ok, <a href="#t:child/0">child</a>} | {:ok, <a href="#t:child/0">child</a>, term} | {:error, error} when error: :not_found | :simple_one_for_one | :running | :restarting | term</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">restart_child(<a href="#t:supervisor/0">supervisor</a>, <a href="Supervisor.Spec.html#t:child_id/0">Supervisor.Spec.child_id</a>) ::
+  {:ok, <a href="#t:child/0">child</a>} |
+  {:ok, <a href="#t:child/0">child</a>, term} |
+  {:error, error} when error: :not_found | :simple_one_for_one | :running | :restarting | term</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Restarts a child process identified by <code class="inline">child_id</code>.</p>
@@ -466,26 +607,28 @@ or if it fails, the function returns <code class="inline">{:error, error}</code>
 <p>This operation is not supported by <code class="inline">simple_one_for_one</code> supervisors.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/supervisor.ex#L409" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="start_child/2">
-    <span class="signature"><strong>start_child(supervisor, child_spec_or_args)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#start_child/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="start_child/2">
+  <div class="detail-header">
+    <a href="#start_child/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">start_child(supervisor, child_spec_or_args)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/supervisor.ex#L336" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>start_child(<a href="#t:supervisor/0">supervisor</a>, <a href="Supervisor.Spec.html#t:spec/0">Supervisor.Spec.spec</a> | [term]) :: <a href="#t:on_start_child/0">on_start_child</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">start_child(<a href="#t:supervisor/0">supervisor</a>, <a href="Supervisor.Spec.html#t:spec/0">Supervisor.Spec.spec</a> | [term]) :: <a href="#t:on_start_child/0">on_start_child</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Dynamically adds and starts a child specification to the supervisor.</p>
@@ -511,26 +654,28 @@ or if it fails, the child specification is discarded and the function returns
 and child specification.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/supervisor.ex#L336" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="start_link/2">
-    <span class="signature"><strong>start_link(children, options)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#start_link/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="start_link/2">
+  <div class="detail-header">
+    <a href="#start_link/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">start_link(children, options)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/supervisor.ex#L269" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>start_link([tuple], <a href="#t:options/0">options</a>) :: <a href="#t:on_start/0">on_start</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">start_link([tuple], <a href="#t:options/0">options</a>) :: <a href="#t:on_start/0">on_start</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Starts a supervisor with the given children.</p>
@@ -551,31 +696,33 @@ process.</p>
 an erroneous value, the supervisor will first terminate all already
 started child processes with reason <code class="inline">:shutdown</code> and then terminate
 itself and return <code class="inline">{:error, {:shutdown, reason}}</code>.</p>
-<p>Note that the <a href="Supervisor.html"><code class="inline">Supervisor</code></a> is linked to the parent process
+<p>Note that the <a href="Supervisor.html#content"><code class="inline">Supervisor</code></a> is linked to the parent process
 and will exit not only on crashes but also if the parent process
 exits with <code class="inline">:normal</code> reason.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/supervisor.ex#L269" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="start_link/3">
-    <span class="signature"><strong>start_link(module, arg, options \\ [])</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#start_link/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="start_link/3">
+  <div class="detail-header">
+    <a href="#start_link/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">start_link(module, arg, options \\ [])</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/supervisor.ex#L295" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>start_link(module, term, <a href="#t:options/0">options</a>) :: <a href="#t:on_start/0">on_start</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">start_link(module, term, <a href="#t:options/0">options</a>) :: <a href="#t:on_start/0">on_start</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Starts a supervisor module with the given <code class="inline">arg</code>.</p>
@@ -594,26 +741,30 @@ section in the <a href="GenServer.html"><code class="inline">GenServer</code></a
 <p>Other failure conditions are specified in <a href="#start_link/2"><code class="inline">start_link/2</code></a> docs.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/supervisor.ex#L295" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="terminate_child/2">
-    <span class="signature"><strong>terminate_child(supervisor, pid_or_child_id)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#terminate_child/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="terminate_child/2">
+  <div class="detail-header">
+    <a href="#terminate_child/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">terminate_child(supervisor, pid_or_child_id)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/supervisor.ex#L360" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>terminate_child(<a href="#t:supervisor/0">supervisor</a>, pid | <a href="Supervisor.Spec.html#t:child_id/0">Supervisor.Spec.child_id</a>) :: :ok | {:error, error} when error: :not_found | :simple_one_for_one</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">terminate_child(<a href="#t:supervisor/0">supervisor</a>, pid | <a href="Supervisor.Spec.html#t:child_id/0">Supervisor.Spec.child_id</a>) ::
+  :ok |
+  {:error, error} when error: :not_found | :simple_one_for_one</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Terminates the given pid or child id.</p>
@@ -630,26 +781,28 @@ process can also be restarted explicitly by calling <a href="#restart_child/2"><
 pid, the function returns <code class="inline">{:error, :not_found}</code>.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/supervisor.ex#L360" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="which_children/1">
-    <span class="signature"><strong>which_children(supervisor)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#which_children/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="which_children/1">
+  <div class="detail-header">
+    <a href="#which_children/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">which_children(supervisor)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/supervisor.ex#L437" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>which_children(<a href="#t:supervisor/0">supervisor</a>) :: [{<a href="Supervisor.Spec.html#t:child_id/0">Supervisor.Spec.child_id</a> | :undefined, <a href="#t:child/0">child</a> | :restarting, <a href="Supervisor.Spec.html#t:worker/0">Supervisor.Spec.worker</a>, <a href="Supervisor.Spec.html#t:modules/0">Supervisor.Spec.modules</a>}]</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">which_children(<a href="#t:supervisor/0">supervisor</a>) :: [{<a href="Supervisor.Spec.html#t:child_id/0">Supervisor.Spec.child_id</a> | :undefined, <a href="#t:child/0">child</a> | :restarting, <a href="Supervisor.Spec.html#t:worker/0">Supervisor.Spec.worker</a>, <a href="Supervisor.Spec.html#t:modules/0">Supervisor.Spec.modules</a>}]</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns a list with information about all children.</p>
@@ -671,10 +824,7 @@ there is no such process</p>
 </ul>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/supervisor.ex#L437" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
@@ -682,6 +832,23 @@ there is no such process</p>
       
 
       
-    </section>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
+

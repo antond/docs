@@ -1,49 +1,76 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
-    <title>Mix.Config</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8">
-      relpath = '';
-      if (relpath != '') relpath += '/';
-    </script>
-
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      hljs.initHighlightingOnLoad();
-      hljs.configure({languages: []}); //disable autodetect
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Mix.Config – Mix v1.0.5</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
+  <body data-type="modules">
 
-  <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
 
-    <section id="content">
-      <div class="breadcrumbs">Mix v1.0.5 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Mix.html">Mix</a> &rarr; <a href="Mix.Config.html">Config</a></div>
+  
+  <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Mix
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.5
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
       <h1>
+        <small class="visible-xs">Mix v1.0.5</small>
         Mix.Config
         
+        
+          <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/mix/lib/mix/config.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary">Summary</a></li>
-        
-        
-        
-          <li><a href="#functions_details">Functions</a></li>
-        
-        
-          <li><a href="#macros_details">Macros</a></li>
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
@@ -66,86 +93,132 @@ in general.</p>
       
 
       
-        <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/mix/lib/mix/config.ex#L1" class="view_source">Source</a>
-      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
 
-      
-        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
-        <table class="summary">
-          <tr>
-  <td class="summary_signature"><a href="#config/2">config(app, opts)</a></td>
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#merge/2">merge(config1, config2)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Configures the given application</p>
-</td>
+    <div class="summary-synopsis"><p>Merges two configurations</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#config/3">config(app, key, opts)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#persist/1">persist(config)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Configures the given key for the given application</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#import_config/1">import_config(file)</a></td>
-  
-    <td class="summary_synopsis"><p>Imports configuration from the given file</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#merge/2">merge(config1, config2)</a></td>
-  
-    <td class="summary_synopsis"><p>Merges two configurations</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#persist/1">persist(config)</a></td>
-  
-    <td class="summary_synopsis"><p>Persists the given configuration by modifying
+    <div class="summary-synopsis"><p>Persists the given configuration by modifying
 the configured applications environment</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#read!/1">read!(file)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#read!/1">read!(file)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Reads and validates a configuration file</p>
-</td>
+    <div class="summary-synopsis"><p>Reads and validates a configuration file</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#read_wildcard!/2">read_wildcard!(config, path)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#read_wildcard!/2">read_wildcard!(config, path)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Reads many configuration files given by wildcard into a single config</p>
-</td>
+    <div class="summary-synopsis"><p>Reads many configuration files given by wildcard into a single config</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#validate!/1">validate!(config)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#validate!/1">validate!(config)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Validates a configuration</p>
-</td>
+    <div class="summary-synopsis"><p>Validates a configuration</p>
+</div>
   
-</tr>
+</div>
 
-        </table>
+  </div>
+
+
+          
+  <div class="summary-macros summary">
+    <h2>
+      <a href="#macros">Macros</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#config/2">config(app, opts)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Configures the given application</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#config/3">config(app, key, opts)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Configures the given key for the given application</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#import_config/1">import_config(file)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Imports configuration from the given file</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
       
 
       
 
       
-        <section id="functions_details" class="details_list">
-          <h2>Functions</h2>
-          <section class="detail">
-  <div class="detail_header" id="merge/2">
-    <span class="signature"><strong>merge(config1, config2)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#merge/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="merge/2">
+  <div class="detail-header">
+    <a href="#merge/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">merge(config1, config2)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/mix/lib/mix/config.ex#L205" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -161,18 +234,18 @@ iex&gt; Mix.Config.merge([app1: []], [app2: []])
 [app1: [], app2: []]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/mix/lib/mix/config.ex#L205" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="persist/1">
-    <span class="signature"><strong>persist(config)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#persist/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="persist/1">
+  <div class="detail-header">
+    <a href="#persist/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">persist(config)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/mix/lib/mix/config.ex#L160" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -180,79 +253,84 @@ iex&gt; Mix.Config.merge([app1: []], [app2: []])
 the configured applications environment.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/mix/lib/mix/config.ex#L160" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="read!/1">
-    <span class="signature"><strong>read!(file)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#read!/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="read!/1">
+  <div class="detail-header">
+    <a href="#read!/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">read!(file)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/mix/lib/mix/config.ex#L129" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Reads and validates a configuration file.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/mix/lib/mix/config.ex#L129" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="read_wildcard!/2">
-    <span class="signature"><strong>read_wildcard!(config, path)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#read_wildcard!/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="read_wildcard!/2">
+  <div class="detail-header">
+    <a href="#read_wildcard!/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">read_wildcard!(config, path)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/mix/lib/mix/config.ex#L148" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Reads many configuration files given by wildcard into a single config.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/mix/lib/mix/config.ex#L148" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="validate!/1">
-    <span class="signature"><strong>validate!(config)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#validate!/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="validate!/1">
+  <div class="detail-header">
+    <a href="#validate!/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">validate!(config)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/mix/lib/mix/config.ex#L170" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Validates a configuration.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/mix/lib/mix/config.ex#L170" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
 
       
-        <section id="macros_details" class="details_list">
-          <h2>Macros</h2>
-          <section class="detail">
-  <div class="detail_header" id="config/2">
-    <span class="signature"><strong>config(app, opts)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#config/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="macros" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#macros">
+              <i class="icon-link"></i>
+            </a>
+            Macros
+          </h1>
+          <div class="detail" id="config/2">
+  <div class="detail-header">
+    <a href="#config/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">config(app, opts)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/mix/lib/mix/config.ex#L64" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -273,18 +351,18 @@ config :lager,
 <pre><code class="elixir">[log_level: :info, mode: :truncate, threshold: 1024]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/mix/lib/mix/config.ex#L64" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="config/3">
-    <span class="signature"><strong>config(app, key, opts)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#config/3" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="config/3">
+  <div class="detail-header">
+    <a href="#config/3" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">config(app, key, opts)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/mix/lib/mix/config.ex#L94" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -304,18 +382,18 @@ config :ecto, Repo,
 <pre><code class="elixir">[log_level: :info, pool_size: 10]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/mix/lib/mix/config.ex#L94" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="import_config/1">
-    <span class="signature"><strong>import_config(file)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#import_config/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="import_config/1">
+  <div class="detail-header">
+    <a href="#import_config/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">import_config(file)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/mix/lib/mix/config.ex#L119" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -329,15 +407,29 @@ current configuration file is on.</p>
 <pre><code class="elixir">import_config &quot;../apps/*/config/config.exs&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/mix/lib/mix/config.ex#L119" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
 
       
-    </section>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
+

@@ -1,49 +1,78 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
-    <title>Macro</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8">
-      relpath = '';
-      if (relpath != '') relpath += '/';
-    </script>
-
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      hljs.initHighlightingOnLoad();
-      hljs.configure({languages: []}); //disable autodetect
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Macro – Elixir v1.0.5</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
+  <body data-type="modules">
 
-  <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
 
-    <section id="content">
-      <div class="breadcrumbs">Elixir v1.0.5 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Macro.html">Macro</a></div>
+  
+  <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Elixir
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.5
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+      <li><a id="protocols-list" href="#full-list">Protocols</a></li>
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
       <h1>
+        <small class="visible-xs">Elixir v1.0.5</small>
         Macro
         
+        
+          <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L3" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary">Summary</a></li>
-        
-        
-          <li><a href="#types_details">Types</a></li>
-        
-        
-          <li><a href="#functions_details">Functions</a></li>
-        
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
@@ -53,192 +82,292 @@
       
 
       
-        <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L3" class="view_source">Source</a>
-      
-
-      
-        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
-        <table class="summary">
-          <tr>
-  <td class="summary_signature"><a href="#decompose_call/1">decompose_call(arg1)</a></td>
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:expr/0">expr()</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Decomposes a local or remote call into its remote part (when provided),
+    <div class="summary-synopsis"><p>Expr node (remaining ones are literals)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:t/0">t()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Abstract Syntax Tree (AST)</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#decompose_call/1">decompose_call(arg1)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Decomposes a local or remote call into its remote part (when provided),
 function name and argument list</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#escape/2">escape(expr, opts \\ [])</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#escape/2">escape(expr, opts \\ [])</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Recursively escapes a value so it can be inserted
+    <div class="summary-synopsis"><p>Recursively escapes a value so it can be inserted
 into a syntax tree</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#expand/2">expand(tree, env)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#expand/2">expand(tree, env)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Receives an AST node and expands it until it can no longer
+    <div class="summary-synopsis"><p>Receives an AST node and expands it until it can no longer
 be expanded</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#expand_once/2">expand_once(ast, env)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#expand_once/2">expand_once(ast, env)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Receives an AST node and expands it once</p>
-</td>
+    <div class="summary-synopsis"><p>Receives an AST node and expands it once</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#pipe/3">pipe(expr, call_args, position)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#pipe/3">pipe(expr, call_args, position)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Pipes <code class="inline">expr</code> into the <code class="inline">call_args</code> at the given <code class="inline">position</code></p>
-</td>
+    <div class="summary-synopsis"><p>Pipes <code class="inline">expr</code> into the <code class="inline">call_args</code> at the given <code class="inline">position</code></p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#postwalk/2">postwalk(ast, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#postwalk/2">postwalk(ast, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Performs a depth-first, post-order traversal of quoted expressions</p>
-</td>
+    <div class="summary-synopsis"><p>Performs a depth-first, post-order traversal of quoted expressions</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#postwalk/3">postwalk(ast, acc, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#postwalk/3">postwalk(ast, acc, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Performs a depth-first, post-order traversal of quoted expressions
+    <div class="summary-synopsis"><p>Performs a depth-first, post-order traversal of quoted expressions
 using an accumulator</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#prewalk/2">prewalk(ast, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#prewalk/2">prewalk(ast, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Performs a depth-first, pre-order traversal of quoted expressions</p>
-</td>
+    <div class="summary-synopsis"><p>Performs a depth-first, pre-order traversal of quoted expressions</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#prewalk/3">prewalk(ast, acc, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#prewalk/3">prewalk(ast, acc, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Performs a depth-first, pre-order traversal of quoted expressions
+    <div class="summary-synopsis"><p>Performs a depth-first, pre-order traversal of quoted expressions
 using an accumulator</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#to_string/2">to_string(tree, fun \\ fn _ast, string -&gt; string end)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_string/2">to_string(tree, fun \\ fn _ast, string -&gt; string end)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Converts the given expression to a binary</p>
-</td>
+    <div class="summary-synopsis"><p>Converts the given expression to a binary</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#unescape_string/1">unescape_string(chars)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unescape_string/1">unescape_string(chars)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Unescape the given chars</p>
-</td>
+    <div class="summary-synopsis"><p>Unescape the given chars</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#unescape_string/2">unescape_string(chars, map)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unescape_string/2">unescape_string(chars, map)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Unescape the given chars according to the map given</p>
-</td>
+    <div class="summary-synopsis"><p>Unescape the given chars according to the map given</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#unescape_tokens/1">unescape_tokens(tokens)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unescape_tokens/1">unescape_tokens(tokens)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Unescape the given tokens according to the default map</p>
-</td>
+    <div class="summary-synopsis"><p>Unescape the given tokens according to the default map</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#unescape_tokens/2">unescape_tokens(tokens, map)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unescape_tokens/2">unescape_tokens(tokens, map)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Unescape the given tokens according to the given map</p>
-</td>
+    <div class="summary-synopsis"><p>Unescape the given tokens according to the given map</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#unpipe/1">unpipe(expr)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unpipe/1">unpipe(expr)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Breaks a pipeline expression into a list</p>
-</td>
+    <div class="summary-synopsis"><p>Breaks a pipeline expression into a list</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#update_meta/2">update_meta(quoted, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#update_meta/2">update_meta(quoted, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Applies the given function to the node metadata if it contains one</p>
-</td>
+    <div class="summary-synopsis"><p>Applies the given function to the node metadata if it contains one</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#validate/1">validate(expr)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#validate/1">validate(expr)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Validates the given expressions are valid quoted expressions</p>
-</td>
+    <div class="summary-synopsis"><p>Validates the given expressions are valid quoted expressions</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#var/2">var(var, context)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#var/2">var(var, context)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Genrates a AST node representing the variable given
+    <div class="summary-synopsis"><p>Genrates a AST node representing the variable given
 by the atoms <code class="inline">var</code> and <code class="inline">context</code></p>
-</td>
+</div>
   
-</tr>
+</div>
 
-        </table>
-      
+  </div>
 
-      
-        <section id="types_details" class="details_list">
-          <h2>Types <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></h2>
-          <div class="type_detail">
-  <p class="typespec" id="t:t/0">
-    <a href="#t:t/0">t</a> :: <a href="#t:expr/0">expr</a> | {<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>} | atom | number | binary | pid | (... -> any) | [<a href="#t:t/0">t</a>]
-  </p>
-  
-      <div class="typespec_doc"><p>Abstract Syntax Tree (AST)</p>
-</div>
-  
-</div>
-<div class="type_detail">
-  <p class="typespec" id="t:expr/0">
-    <a href="#t:expr/0">expr</a> :: {<a href="#t:expr/0">expr</a> | atom, <a href="Keyword.html#t:t/0">Keyword.t</a>, atom | [<a href="#t:t/0">t</a>]}
-  </p>
-  
-      <div class="typespec_doc"><p>Expr node (remaining ones are literals)</p>
-</div>
-  
-</div>
+
+          
+
+          
 
         </section>
       
 
       
-        <section id="functions_details" class="details_list">
-          <h2>Functions</h2>
-          <section class="detail">
-  <div class="detail_header" id="decompose_call/1">
-    <span class="signature"><strong>decompose_call(arg1)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#decompose_call/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="types" class="types details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div id="t:expr/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:expr/0">expr</a> :: {<a href="#t:expr/0">expr</a> | atom, <a href="Keyword.html#t:t/0">Keyword.t</a>, atom | [<a href="#t:t/0">t</a>]}</code></pre>
+  
+    <div class="typespec-doc"><p>Expr node (remaining ones are literals)</p>
+</div>
+  
+</div>
+<div id="t:t/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:t/0">t</a> ::
+  <a href="#t:expr/0">expr</a> |
+  {<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>} |
+  atom |
+  number |
+  binary |
+  pid |
+  (... -> any) |
+  [<a href="#t:t/0">t</a>]</code></pre>
+  
+    <div class="typespec-doc"><p>Abstract Syntax Tree (AST)</p>
+</div>
+  
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="decompose_call/1">
+  <div class="detail-header">
+    <a href="#decompose_call/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">decompose_call(arg1)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L272" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>decompose_call(<a href="Macro.html#t:t/0">Macro.t</a>) :: {atom, [<a href="Macro.html#t:t/0">Macro.t</a>]} | {<a href="Macro.html#t:t/0">Macro.t</a>, atom, [<a href="Macro.html#t:t/0">Macro.t</a>]} | :error</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">decompose_call(<a href="Macro.html#t:t/0">Macro.t</a>) ::
+  {atom, [<a href="Macro.html#t:t/0">Macro.t</a>]} |
+  {<a href="Macro.html#t:t/0">Macro.t</a>, atom, [<a href="Macro.html#t:t/0">Macro.t</a>]} |
+  :error</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Decomposes a local or remote call into its remote part (when provided),
@@ -261,26 +390,28 @@ iex&gt; Macro.decompose_call(quote do: 42)
 :error</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L272" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="escape/2">
-    <span class="signature"><strong>escape(expr, opts \\ [])</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#escape/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="escape/2">
+  <div class="detail-header">
+    <a href="#escape/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">escape(expr, opts \\ [])</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L306" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>escape(term, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: <a href="Macro.html#t:t/0">Macro.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">escape(term, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: <a href="Macro.html#t:t/0">Macro.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Recursively escapes a value so it can be inserted
@@ -299,18 +430,18 @@ iex&gt; Macro.escape({:unquote, [], [1]}, unquote: true)
 1</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L306" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="expand/2">
-    <span class="signature"><strong>expand(tree, env)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#expand/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="expand/2">
+  <div class="detail-header">
+    <a href="#expand/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">expand(tree, env)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L944" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -320,18 +451,18 @@ be expanded.</p>
 <a href="#expand_once/2"><code class="inline">expand_once/2</code></a> for more information and examples.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L944" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="expand_once/2">
-    <span class="signature"><strong>expand_once(ast, env)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#expand_once/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="expand_once/2">
+  <div class="detail-header">
+    <a href="#expand_once/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">expand_once(ast, env)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L826" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -401,153 +532,167 @@ function as:</p>
 end</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L826" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="pipe/3">
-    <span class="signature"><strong>pipe(expr, call_args, position)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#pipe/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="pipe/3">
+  <div class="detail-header">
+    <a href="#pipe/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">pipe(expr, call_args, position)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L76" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>pipe(<a href="Macro.html#t:t/0">Macro.t</a>, <a href="Macro.html#t:t/0">Macro.t</a>, integer) :: <a href="Macro.html#t:t/0">Macro.t</a> | no_return</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">pipe(<a href="Macro.html#t:t/0">Macro.t</a>, <a href="Macro.html#t:t/0">Macro.t</a>, integer) ::
+  <a href="Macro.html#t:t/0">Macro.t</a> |
+  no_return</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Pipes <code class="inline">expr</code> into the <code class="inline">call_args</code> at the given <code class="inline">position</code>.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L76" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="postwalk/2">
-    <span class="signature"><strong>postwalk(ast, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#postwalk/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="postwalk/2">
+  <div class="detail-header">
+    <a href="#postwalk/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">postwalk(ast, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L207" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>postwalk(<a href="#t:t/0">t</a>, (<a href="#t:t/0">t</a> -> <a href="#t:t/0">t</a>)) :: <a href="#t:t/0">t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">postwalk(<a href="#t:t/0">t</a>, (<a href="#t:t/0">t</a> -> <a href="#t:t/0">t</a>)) :: <a href="#t:t/0">t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Performs a depth-first, post-order traversal of quoted expressions.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L207" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="postwalk/3">
-    <span class="signature"><strong>postwalk(ast, acc, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#postwalk/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="postwalk/3">
+  <div class="detail-header">
+    <a href="#postwalk/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">postwalk(ast, acc, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L216" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>postwalk(<a href="#t:t/0">t</a>, any, (<a href="#t:t/0">t</a>, any -> {<a href="#t:t/0">t</a>, any})) :: {<a href="#t:t/0">t</a>, any}</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">postwalk(<a href="#t:t/0">t</a>, any, (<a href="#t:t/0">t</a>, any -> {<a href="#t:t/0">t</a>, any})) :: {<a href="#t:t/0">t</a>, any}</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Performs a depth-first, post-order traversal of quoted expressions
 using an accumulator.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L216" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="prewalk/2">
-    <span class="signature"><strong>prewalk(ast, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#prewalk/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="prewalk/2">
+  <div class="detail-header">
+    <a href="#prewalk/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">prewalk(ast, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L154" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>prewalk(<a href="#t:t/0">t</a>, (<a href="#t:t/0">t</a> -> <a href="#t:t/0">t</a>)) :: <a href="#t:t/0">t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">prewalk(<a href="#t:t/0">t</a>, (<a href="#t:t/0">t</a> -> <a href="#t:t/0">t</a>)) :: <a href="#t:t/0">t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Performs a depth-first, pre-order traversal of quoted expressions.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L154" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="prewalk/3">
-    <span class="signature"><strong>prewalk(ast, acc, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#prewalk/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="prewalk/3">
+  <div class="detail-header">
+    <a href="#prewalk/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">prewalk(ast, acc, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L163" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>prewalk(<a href="#t:t/0">t</a>, any, (<a href="#t:t/0">t</a>, any -> {<a href="#t:t/0">t</a>, any})) :: {<a href="#t:t/0">t</a>, any}</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">prewalk(<a href="#t:t/0">t</a>, any, (<a href="#t:t/0">t</a>, any -> {<a href="#t:t/0">t</a>, any})) :: {<a href="#t:t/0">t</a>, any}</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Performs a depth-first, pre-order traversal of quoted expressions
 using an accumulator.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L163" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="to_string/2">
-    <span class="signature"><strong>to_string(tree, fun \\ fn _ast, string -&gt; string end)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#to_string/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="to_string/2">
+  <div class="detail-header">
+    <a href="#to_string/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">to_string(tree, fun \\ fn _ast, string -&gt; string end)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L453" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>to_string(<a href="Macro.html#t:t/0">Macro.t</a>, (<a href="Macro.html#t:t/0">Macro.t</a>, <a href="String.html#t:t/0">String.t</a> -> <a href="String.html#t:t/0">String.t</a>)) :: <a href="String.html#t:t/0">String.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">to_string(<a href="Macro.html#t:t/0">Macro.t</a>, (<a href="Macro.html#t:t/0">Macro.t</a>, <a href="String.html#t:t/0">String.t</a> -> <a href="String.html#t:t/0">String.t</a>)) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Converts the given expression to a binary.</p>
@@ -556,26 +701,28 @@ using an accumulator.</p>
 &quot;foo.bar(1, 2, 3)&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L453" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="unescape_string/1">
-    <span class="signature"><strong>unescape_string(chars)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#unescape_string/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="unescape_string/1">
+  <div class="detail-header">
+    <a href="#unescape_string/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">unescape_string(chars)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L368" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>unescape_string(<a href="String.html#t:t/0">String.t</a>) :: <a href="String.html#t:t/0">String.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">unescape_string(<a href="String.html#t:t/0">String.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Unescape the given chars.</p>
@@ -595,26 +742,28 @@ string.</p>
 and return a version with it unescaped.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L368" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="unescape_string/2">
-    <span class="signature"><strong>unescape_string(chars, map)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#unescape_string/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="unescape_string/2">
+  <div class="detail-header">
+    <a href="#unescape_string/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">unescape_string(chars, map)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L412" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>unescape_string(<a href="String.html#t:t/0">String.t</a>, (non_neg_integer -> non_neg_integer | false)) :: <a href="String.html#t:t/0">String.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">unescape_string(<a href="String.html#t:t/0">String.t</a>, (non_neg_integer -> non_neg_integer | false)) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Unescape the given chars according to the map given.</p>
@@ -646,26 +795,28 @@ for <code class="inline">?x</code>.</p>
 <pre><code class="elixir">Macro.unescape_string &quot;example\\n&quot;, &amp;unescape_map(&amp;1)</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L412" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="unescape_tokens/1">
-    <span class="signature"><strong>unescape_tokens(tokens)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#unescape_tokens/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="unescape_tokens/1">
+  <div class="detail-header">
+    <a href="#unescape_tokens/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">unescape_tokens(tokens)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L428" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>unescape_tokens([<a href="Macro.html#t:t/0">Macro.t</a>]) :: [<a href="Macro.html#t:t/0">Macro.t</a>]</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">unescape_tokens([<a href="Macro.html#t:t/0">Macro.t</a>]) :: [<a href="Macro.html#t:t/0">Macro.t</a>]</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Unescape the given tokens according to the default map.</p>
@@ -677,78 +828,84 @@ sigils. Check the implementation of <a href="Kernel.html#sigil_s/2"><code class=
 for examples.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L428" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="unescape_tokens/2">
-    <span class="signature"><strong>unescape_tokens(tokens, map)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#unescape_tokens/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="unescape_tokens/2">
+  <div class="detail-header">
+    <a href="#unescape_tokens/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">unescape_tokens(tokens, map)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L438" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>unescape_tokens([<a href="Macro.html#t:t/0">Macro.t</a>], (non_neg_integer -> non_neg_integer | false)) :: [<a href="Macro.html#t:t/0">Macro.t</a>]</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">unescape_tokens([<a href="Macro.html#t:t/0">Macro.t</a>], (non_neg_integer -> non_neg_integer | false)) :: [<a href="Macro.html#t:t/0">Macro.t</a>]</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Unescape the given tokens according to the given map.</p>
 <p>Check <a href="#unescape_tokens/1"><code class="inline">unescape_tokens/1</code></a> and <a href="#unescape_string/2"><code class="inline">unescape_string/2</code></a> for more information.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L438" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="unpipe/1">
-    <span class="signature"><strong>unpipe(expr)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#unpipe/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="unpipe/1">
+  <div class="detail-header">
+    <a href="#unpipe/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">unpipe(expr)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L60" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>unpipe(<a href="Macro.html#t:t/0">Macro.t</a>) :: [<a href="Macro.html#t:t/0">Macro.t</a>]</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">unpipe(<a href="Macro.html#t:t/0">Macro.t</a>) :: [<a href="Macro.html#t:t/0">Macro.t</a>]</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Breaks a pipeline expression into a list.</p>
 <p>Raises if the pipeline is ill-formed.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L60" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="update_meta/2">
-    <span class="signature"><strong>update_meta(quoted, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#update_meta/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="update_meta/2">
+  <div class="detail-header">
+    <a href="#update_meta/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">update_meta(quoted, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L115" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>update_meta(<a href="#t:t/0">t</a>, (<a href="Keyword.html#t:t/0">Keyword.t</a> -> <a href="Keyword.html#t:t/0">Keyword.t</a>)) :: <a href="#t:t/0">t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">update_meta(<a href="#t:t/0">t</a>, (<a href="Keyword.html#t:t/0">Keyword.t</a> -> <a href="Keyword.html#t:t/0">Keyword.t</a>)) :: <a href="#t:t/0">t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Applies the given function to the node metadata if it contains one.</p>
@@ -762,26 +919,28 @@ iex&gt; Macro.update_meta(quoted, &amp;Keyword.delete(&amp;1, :line))
 {:sample, [], []}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L115" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="validate/1">
-    <span class="signature"><strong>validate(expr)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#validate/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="validate/1">
+  <div class="detail-header">
+    <a href="#validate/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">validate(expr)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L317" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>validate(term) :: :ok | {:error, term}</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">validate(term) :: :ok | {:error, term}</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Validates the given expressions are valid quoted expressions.</p>
@@ -789,26 +948,28 @@ iex&gt; Macro.update_meta(quoted, &amp;Keyword.delete(&amp;1, :line))
 quoted expression.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L317" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="var/2">
-    <span class="signature"><strong>var(var, context)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#var/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="var/2">
+  <div class="detail-header">
+    <a href="#var/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">var(var, context)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/macro.ex#L146" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>var(var, context) :: {var, [], context} when var: atom, context: atom</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">var(var, context) :: {var, [], context} when var: atom, context: atom</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Genrates a AST node representing the variable given
@@ -825,10 +986,7 @@ nil can be given:</p>
 {:foo, [], nil}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/macro.ex#L146" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
@@ -836,6 +994,23 @@ nil can be given:</p>
       
 
       
-    </section>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
+

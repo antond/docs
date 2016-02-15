@@ -1,47 +1,78 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
-    <title>Kernel.SpecialForms</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8">
-      relpath = '';
-      if (relpath != '') relpath += '/';
-    </script>
-
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      hljs.initHighlightingOnLoad();
-      hljs.configure({languages: []}); //disable autodetect
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Kernel.SpecialForms – Elixir v1.0.5</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
+  <body data-type="modules">
 
-  <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
 
-    <section id="content">
-      <div class="breadcrumbs">Elixir v1.0.5 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Kernel.html">Kernel</a> &rarr; <a href="Kernel.SpecialForms.html">SpecialForms</a></div>
+  
+  <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Elixir
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.5
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+      <li><a id="protocols-list" href="#full-list">Protocols</a></li>
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
       <h1>
+        <small class="visible-xs">Elixir v1.0.5</small>
         Kernel.SpecialForms
         
+        
+          <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary">Summary</a></li>
-        
-        
-        
-        
-          <li><a href="#macros_details">Macros</a></li>
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
@@ -64,204 +95,271 @@ in Elixir’s constructs.</p>
       
 
       
-        <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1" class="view_source">Source</a>
-      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
 
-      
-        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
-        <table class="summary">
-          <tr>
-  <td class="summary_signature"><a href="#%/2">%</a></td>
+          
+
+          
+  <div class="summary-macros summary">
+    <h2>
+      <a href="#macros">Macros</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%25/2">%</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a struct</p>
-</td>
+    <div class="summary-synopsis"><p>Creates a struct</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#%{}/1">%{}</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%25%7B%7D/1">%{}</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a map</p>
-</td>
+    <div class="summary-synopsis"><p>Creates a map</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#&amp;/1">&amp;expr</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#&amp;/1">&amp;expr</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Captures or creates an anonymous function</p>
-</td>
+    <div class="summary-synopsis"><p>Captures or creates an anonymous function</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#./2">left . right</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#./2">left . right</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Defines a remote call or an alias</p>
-</td>
+    <div class="summary-synopsis"><p>Defines a remote call or an alias</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#&lt;&lt;&gt;&gt;/1">&lt;&lt;args&gt;&gt;</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%3C%3C%3E%3E/1">&lt;&lt;args&gt;&gt;</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Defines a new bitstring</p>
-</td>
+    <div class="summary-synopsis"><p>Defines a new bitstring</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#^/1">^var</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%5E/1">^var</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Accesses an already bound variable in match clauses</p>
-</td>
+    <div class="summary-synopsis"><p>Accesses an already bound variable in match clauses</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#__CALLER__/0">__CALLER__</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#__CALLER__/0">__CALLER__</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns the current calling environment as a <a href="Macro.Env.html"><code class="inline">Macro.Env</code></a> struct</p>
-</td>
+    <div class="summary-synopsis"><p>Returns the current calling environment as a <a href="Macro.Env.html"><code class="inline">Macro.Env</code></a> struct</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#__DIR__/0">__DIR__</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#__DIR__/0">__DIR__</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns the current directory as a binary</p>
-</td>
+    <div class="summary-synopsis"><p>Returns the current directory as a binary</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#__ENV__/0">__ENV__</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#__ENV__/0">__ENV__</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns the current environment information as a <a href="Macro.Env.html"><code class="inline">Macro.Env</code></a> struct</p>
-</td>
+    <div class="summary-synopsis"><p>Returns the current environment information as a <a href="Macro.Env.html"><code class="inline">Macro.Env</code></a> struct</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#__MODULE__/0">__MODULE__</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#__MODULE__/0">__MODULE__</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns the current module name as an atom or <code class="inline">nil</code> otherwise</p>
-</td>
+    <div class="summary-synopsis"><p>Returns the current module name as an atom or <code class="inline">nil</code> otherwise</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#__aliases__/1">__aliases__(args)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#__aliases__/1">__aliases__(args)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Internal special form to hold aliases information</p>
-</td>
+    <div class="summary-synopsis"><p>Internal special form to hold aliases information</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#__block__/1">__block__(args)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#__block__/1">__block__(args)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Internal special form for block expressions</p>
-</td>
+    <div class="summary-synopsis"><p>Internal special form for block expressions</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#alias/2">alias(module, opts)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#alias/2">alias(module, opts)</a>
+  </div>
   
-    <td class="summary_synopsis"><p><code class="inline">alias</code> is used to setup aliases, often useful with modules names</p>
-</td>
+    <div class="summary-synopsis"><p><code class="inline">alias</code> is used to setup aliases, often useful with modules names</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#case/2">case(condition, clauses)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#case/2">case(condition, clauses)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Matches the given expression against the given clauses</p>
-</td>
+    <div class="summary-synopsis"><p>Matches the given expression against the given clauses</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#cond/1">cond(clauses)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cond/1">cond(clauses)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Evaluates the expression corresponding to the first clause that
+    <div class="summary-synopsis"><p>Evaluates the expression corresponding to the first clause that
 evaluates to truth value</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#fn/1">fn
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#fn/1">fn
   [clauses]
-end</a></td>
+end</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Defines an anonymous function</p>
-</td>
+    <div class="summary-synopsis"><p>Defines an anonymous function</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#for/1">for(args)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#for/1">for(args)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Comprehensions allow you to quickly build a data structure from
+    <div class="summary-synopsis"><p>Comprehensions allow you to quickly build a data structure from
 an enumerable or a bitstring</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#import/2">import(module, opts)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#import/2">import(module, opts)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Imports function and macros from other modules</p>
-</td>
+    <div class="summary-synopsis"><p>Imports function and macros from other modules</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#quote/2">quote(opts, block)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#quote/2">quote(opts, block)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Gets the representation of any expression</p>
-</td>
+    <div class="summary-synopsis"><p>Gets the representation of any expression</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#receive/1">receive(args)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#receive/1">receive(args)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Checks if there is a message matching the given clauses
+    <div class="summary-synopsis"><p>Checks if there is a message matching the given clauses
 in the current process mailbox</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#require/2">require(module, opts)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#require/2">require(module, opts)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Requires a given module to be compiled and loaded</p>
-</td>
+    <div class="summary-synopsis"><p>Requires a given module to be compiled and loaded</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#super/1">super(args)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#super/1">super(args)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Calls the overriden function when overriding it with <code class="inline">defoverridable</code>.
+    <div class="summary-synopsis"><p>Calls the overriden function when overriding it with <code class="inline">defoverridable</code>.
 See <code class="inline">Kernel.defoverridable</code> for more information and documentation</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#try/1">try(args)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#try/1">try(args)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Evaluate the given expressions and handle any error, exit
+    <div class="summary-synopsis"><p>Evaluate the given expressions and handle any error, exit
 or throw that may have happened</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#unquote/1">unquote(expr)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unquote/1">unquote(expr)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Unquotes the given expression from inside a macro</p>
-</td>
+    <div class="summary-synopsis"><p>Unquotes the given expression from inside a macro</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#unquote_splicing/1">unquote_splicing(expr)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unquote_splicing/1">unquote_splicing(expr)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Unquotes the given list expanding its arguments. Similar
+    <div class="summary-synopsis"><p>Unquotes the given list expanding its arguments. Similar
 to unquote</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#{}/1">{args}</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%7B%7D/1">{args}</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a tuple</p>
-</td>
+    <div class="summary-synopsis"><p>Creates a tuple</p>
+</div>
   
-</tr>
+</div>
 
-        </table>
+  </div>
+
+
+          
+
+        </section>
       
 
       
@@ -269,16 +367,24 @@ to unquote</p>
       
 
       
-        <section id="macros_details" class="details_list">
-          <h2>Macros</h2>
-          <section class="detail">
-  <div class="detail_header" id="%/2">
-    <span class="signature"><strong>%</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#%/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="macros" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#macros">
+              <i class="icon-link"></i>
+            </a>
+            Macros
+          </h1>
+          <div class="detail" id="%25/2">
+  <div class="detail-header">
+    <a href="#%25/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">%</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L165" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -325,18 +431,18 @@ see <a href="Kernel.html#struct/2"><code class="inline">Kernel.struct/2</code></
 structs dynamically.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L165" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="%{}/1">
-    <span class="signature"><strong>%{}</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#%{}/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="%25%7B%7D/1">
+  <div class="detail-header">
+    <a href="#%25%7B%7D/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">%{}</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L103" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -379,18 +485,18 @@ for simplicity:</p>
 {:%{}, [], [{:a, :b}, {:c, :d}]}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L103" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="&amp;/1">
-    <span class="signature"><strong>&amp;expr</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#&amp;/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="&amp;/1">
+  <div class="detail-header">
+    <a href="#&amp;/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">&amp;expr</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1352" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -443,18 +549,18 @@ least one placeholder must be present, i.e. it must contain at least
 &amp;(foo(&amp;1, &amp;2); &amp;3 + &amp;4)</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1352" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="./2">
-    <span class="signature"><strong>left . right</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#./2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="./2">
+  <div class="detail-header">
+    <a href="#./2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">left . right</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L464" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -529,18 +635,18 @@ iex&gt; quote do: Module.concat(String, unquote(x))
  [{:__aliases__, [alias: false], [:String]}, Sample]}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L464" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="&lt;&lt;&gt;&gt;/1">
-    <span class="signature"><strong>&lt;&lt;args&gt;&gt;</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#&lt;&lt;&gt;&gt;/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="%3C%3C%3E%3E/1">
+  <div class="detail-header">
+    <a href="#%3C%3C%3E%3E/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">&lt;&lt;args&gt;&gt;</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L365" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -735,18 +841,18 @@ check out
 <a href="http://www.erlang.org/doc/efficiency_guide/binaryhandling.html">Erlang’s Efficiency Guide on handling binaries</a>.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L365" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="^/1">
-    <span class="signature"><strong>^var</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#^/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="%5E/1">
+  <div class="detail-header">
+    <a href="#%5E/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">^var</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L696" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -771,18 +877,18 @@ iex&gt; x
 1</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L696" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="__CALLER__/0">
-    <span class="signature"><strong>__CALLER__</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#__CALLER__/0" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="__CALLER__/0">
+  <div class="detail-header">
+    <a href="#__CALLER__/0" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">__CALLER__</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L665" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -791,18 +897,18 @@ iex&gt; x
 set up aliases, the function and others.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L665" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="__DIR__/0">
-    <span class="signature"><strong>__DIR__</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#__DIR__/0" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="__DIR__/0">
+  <div class="detail-header">
+    <a href="#__DIR__/0" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">__DIR__</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L657" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -811,18 +917,18 @@ set up aliases, the function and others.</p>
 this macro is a convenient shortcut.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L657" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="__ENV__/0">
-    <span class="signature"><strong>__ENV__</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#__ENV__/0" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="__ENV__/0">
+  <div class="detail-header">
+    <a href="#__ENV__/0" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">__ENV__</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L641" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -831,18 +937,18 @@ this macro is a convenient shortcut.</p>
 line numbers, set up aliases, the current function and others.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L641" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="__MODULE__/0">
-    <span class="signature"><strong>__MODULE__</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#__MODULE__/0" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="__MODULE__/0">
+  <div class="detail-header">
+    <a href="#__MODULE__/0" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">__MODULE__</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L649" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -851,18 +957,18 @@ line numbers, set up aliases, the current function and others.</p>
 is a convenient shortcut.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L649" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="__aliases__/1">
-    <span class="signature"><strong>__aliases__(args)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#__aliases__/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="__aliases__/1">
+  <div class="detail-header">
+    <a href="#__aliases__/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">__aliases__(args)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1382" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -889,18 +995,18 @@ in the list is an atom.</p>
 </ol>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1382" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="__block__/1">
-    <span class="signature"><strong>__block__(args)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#__block__/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="__block__/1">
+  <div class="detail-header">
+    <a href="#__block__/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">__block__(args)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1283" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -912,18 +1018,18 @@ and should not be invoked directly:</p>
 {:__block__, [], [1, 2, 3]}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1283" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="alias/2">
-    <span class="signature"><strong>alias(module, opts)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#alias/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="alias/2">
+  <div class="detail-header">
+    <a href="#alias/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">alias(module, opts)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L514" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -959,18 +1065,18 @@ was not explicitly defined.</p>
 setting the <code class="inline">:warn</code> option to true or false.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L514" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="case/2">
-    <span class="signature"><strong>case(condition, clauses)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#case/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="case/2">
+  <div class="detail-header">
+    <a href="#case/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">case(condition, clauses)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1435" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1010,18 +1116,18 @@ case, clauses that do not explicitly bind a value have the variable
 bound to nil.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1435" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="cond/1">
-    <span class="signature"><strong>cond(clauses)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#cond/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="cond/1">
+  <div class="detail-header">
+    <a href="#cond/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">cond(clauses)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1455" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1039,20 +1145,20 @@ evaluates to truth value.</p>
 end</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1455" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="fn/1">
-    <span class="signature"><strong>fn
+</div>
+<div class="detail" id="fn/1">
+  <div class="detail-header">
+    <a href="#fn/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">fn
   [clauses]
-end</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#fn/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+end</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1270" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1063,18 +1169,18 @@ iex&gt; add.(1, 2)
 3</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1270" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="for/1">
-    <span class="signature"><strong>for(args)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#for/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="for/1">
+  <div class="detail-header">
+    <a href="#for/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">for(args)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1258" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1126,18 +1232,18 @@ to easily remove all spaces in a string:</p>
 end</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1258" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="import/2">
-    <span class="signature"><strong>import(module, opts)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#import/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="import/2">
+  <div class="detail-header">
+    <a href="#import/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">import(module, opts)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L633" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1206,18 +1312,18 @@ if an ambiguous call to <code class="inline">foo/1</code> is actually made; that
 errors are emitted lazily, not eagerly.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L633" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="quote/2">
-    <span class="signature"><strong>quote(opts, block)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#quote/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="quote/2">
+  <div class="detail-header">
+    <a href="#quote/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">quote(opts, block)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1152" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1599,18 +1705,18 @@ end</code></pre>
 one desires to inject a value into the quote.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1152" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="receive/1">
-    <span class="signature"><strong>receive(args)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#receive/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="receive/1">
+  <div class="detail-header">
+    <a href="#receive/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">receive(args)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1725" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1655,18 +1761,18 @@ will occur immediately
 special macro. For more information, check the docs for <a href="#case/2"><code class="inline">case/2</code></a>.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1725" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="require/2">
-    <span class="signature"><strong>require(module, opts)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#require/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="require/2">
+  <div class="detail-header">
+    <a href="#require/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">require(module, opts)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L542" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1688,18 +1794,18 @@ end</code></pre>
 up an alias. Please check <code class="inline">alias</code> for more information.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L542" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="super/1">
-    <span class="signature"><strong>super(args)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#super/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="super/1">
+  <div class="detail-header">
+    <a href="#super/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">super(args)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1388" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1707,18 +1813,18 @@ up an alias. Please check <code class="inline">alias</code> for more information
 See <code class="inline">Kernel.defoverridable</code> for more information and documentation.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1388" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="try/1">
-    <span class="signature"><strong>try(args)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#try/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="try/1">
+  <div class="detail-header">
+    <a href="#try/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">try(args)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1676" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1907,18 +2013,18 @@ is to return the variables defined inside <code class="inline">try</code>:</p>
   end</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1676" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="unquote/1">
-    <span class="signature"><strong>unquote(expr)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#unquote/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="unquote/1">
+  <div class="detail-header">
+    <a href="#unquote/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">unquote(expr)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1177" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1937,18 +2043,18 @@ quote do: sum(1, unquote(value), 3)
 #=&gt; {:sum, [], [1, 13, 3]}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1177" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="unquote_splicing/1">
-    <span class="signature"><strong>unquote_splicing(expr)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#unquote_splicing/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="unquote_splicing/1">
+  <div class="detail-header">
+    <a href="#unquote_splicing/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">unquote_splicing(expr)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L1190" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1960,18 +2066,18 @@ quote do: sum(1, unquote_splicing(values), 5)
 #=&gt; {:sum, [], [1, 2, 3, 4, 5]}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L1190" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="{}/1">
-    <span class="signature"><strong>{args}</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#{}/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="%7B%7D/1">
+  <div class="detail-header">
+    <a href="#%7B%7D/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">{args}</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/kernel/special_forms.ex#L43" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -1991,15 +2097,29 @@ iex&gt; quote do: {1, 2, 3}
 {:{}, [], [1,2,3]}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/kernel/special_forms.ex#L43" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
 
       
-    </section>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
+

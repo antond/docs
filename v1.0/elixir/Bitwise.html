@@ -1,47 +1,78 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
-    <title>Bitwise</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8">
-      relpath = '';
-      if (relpath != '') relpath += '/';
-    </script>
-
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      hljs.initHighlightingOnLoad();
-      hljs.configure({languages: []}); //disable autodetect
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Bitwise – Elixir v1.0.5</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
+  <body data-type="modules">
 
-  <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
 
-    <section id="content">
-      <div class="breadcrumbs">Elixir v1.0.5 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Bitwise.html">Bitwise</a></div>
+  
+  <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Elixir
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.5
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+      <li><a id="protocols-list" href="#full-list">Protocols</a></li>
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
       <h1>
+        <small class="visible-xs">Elixir v1.0.5</small>
         Bitwise
         
+        
+          <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary">Summary</a></li>
-        
-        
-        
-        
-          <li><a href="#macros_details">Macros</a></li>
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
@@ -63,195 +94,244 @@ iex&gt; 1 &amp;&amp;&amp; 1
       
 
       
-        <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L1" class="view_source">Source</a>
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+
+          
+  <div class="summary-macros summary">
+    <h2>
+      <a href="#macros">Macros</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#&amp;&amp;&amp;/2">left &amp;&amp;&amp; right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Bitwise and as operator</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%3C%3C%3C/2">left &lt;&lt;&lt; right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Arithmetic bitshift left as operator</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%3E%3E%3E/2">left &gt;&gt;&gt; right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Arithmetic bitshift right as operator</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%5E%5E%5E/2">left ^^^ right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Bitwise xor as operator</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#__using__/1">__using__(options)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Allow a developer to use this module in their programs with
+the following options</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#band/2">band(left, right)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Bitwise and</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#bnot/1">bnot(expr)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Bitwise not</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#bor/2">bor(left, right)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Bitwise or</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#bsl/2">bsl(left, right)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Arithmetic bitshift left</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#bsr/2">bsr(left, right)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Arithmetic bitshift right</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#bxor/2">bxor(left, right)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Bitwise xor</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%7C%7C%7C/2">left ||| right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Bitwise or as operator</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#~~~/1">~~~expr</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Bitwise not as operator</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
       
 
       
-        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
-        <table class="summary">
-          <tr>
-  <td class="summary_signature"><a href="#&amp;&amp;&amp;/2">left &amp;&amp;&amp; right</a></td>
-  
-    <td class="summary_synopsis"><p>Bitwise and as operator</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#&lt;&lt;&lt;/2">left &lt;&lt;&lt; right</a></td>
-  
-    <td class="summary_synopsis"><p>Arithmetic bitshift left as operator</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#&gt;&gt;&gt;/2">left &gt;&gt;&gt; right</a></td>
-  
-    <td class="summary_synopsis"><p>Arithmetic bitshift right as operator</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#^^^/2">left ^^^ right</a></td>
-  
-    <td class="summary_synopsis"><p>Bitwise xor as operator</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#__using__/1">__using__(options)</a></td>
-  
-    <td class="summary_synopsis"><p>Allow a developer to use this module in their programs with
-the following options:</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#band/2">band(left, right)</a></td>
-  
-    <td class="summary_synopsis"><p>Bitwise and</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#bnot/1">bnot(expr)</a></td>
-  
-    <td class="summary_synopsis"><p>Bitwise not</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#bor/2">bor(left, right)</a></td>
-  
-    <td class="summary_synopsis"><p>Bitwise or</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#bsl/2">bsl(left, right)</a></td>
-  
-    <td class="summary_synopsis"><p>Arithmetic bitshift left</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#bsr/2">bsr(left, right)</a></td>
-  
-    <td class="summary_synopsis"><p>Arithmetic bitshift right</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#bxor/2">bxor(left, right)</a></td>
-  
-    <td class="summary_synopsis"><p>Bitwise xor</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#|||/2">left ||| right</a></td>
-  
-    <td class="summary_synopsis"><p>Bitwise or as operator</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#~~~/1">~~~expr</a></td>
-  
-    <td class="summary_synopsis"><p>Bitwise not as operator</p>
-</td>
-  
-</tr>
-
-        </table>
-      
 
       
 
       
-
+        <section id="macros" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#macros">
+              <i class="icon-link"></i>
+            </a>
+            Macros
+          </h1>
+          <div class="detail" id="&amp;&amp;&amp;/2">
+  <div class="detail-header">
+    <a href="#&amp;&amp;&amp;/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">left &amp;&amp;&amp; right</span>
       
-        <section id="macros_details" class="details_list">
-          <h2>Macros</h2>
-          <section class="detail">
-  <div class="detail_header" id="&amp;&amp;&amp;/2">
-    <span class="signature"><strong>left &amp;&amp;&amp; right</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#&amp;&amp;&amp;/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L69" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Bitwise and as operator.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L69" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="&lt;&lt;&lt;/2">
-    <span class="signature"><strong>left &lt;&lt;&lt; right</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#&lt;&lt;&lt;/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="%3C%3C%3C/2">
+  <div class="detail-header">
+    <a href="#%3C%3C%3C/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">left &lt;&lt;&lt; right</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L111" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Arithmetic bitshift left as operator.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L111" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="&gt;&gt;&gt;/2">
-    <span class="signature"><strong>left &gt;&gt;&gt; right</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#&gt;&gt;&gt;/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="%3E%3E%3E/2">
+  <div class="detail-header">
+    <a href="#%3E%3E%3E/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">left &gt;&gt;&gt; right</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L125" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Arithmetic bitshift right as operator.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L125" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="^^^/2">
-    <span class="signature"><strong>left ^^^ right</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#^^^/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="%5E%5E%5E/2">
+  <div class="detail-header">
+    <a href="#%5E%5E%5E/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">left ^^^ right</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L97" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Bitwise xor as operator.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L97" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="__using__/1">
-    <span class="signature"><strong>__using__(options)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#__using__/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="__using__/1">
+  <div class="detail-header">
+    <a href="#__using__/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">__using__(options)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L31" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -265,159 +345,173 @@ the following options:</p>
 </ul>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L31" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="band/2">
-    <span class="signature"><strong>band(left, right)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#band/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="band/2">
+  <div class="detail-header">
+    <a href="#band/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">band(left, right)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L62" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Bitwise and.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L62" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="bnot/1">
-    <span class="signature"><strong>bnot(expr)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#bnot/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="bnot/1">
+  <div class="detail-header">
+    <a href="#bnot/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">bnot(expr)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L48" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Bitwise not.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L48" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="bor/2">
-    <span class="signature"><strong>bor(left, right)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#bor/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="bor/2">
+  <div class="detail-header">
+    <a href="#bor/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">bor(left, right)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L76" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Bitwise or.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L76" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="bsl/2">
-    <span class="signature"><strong>bsl(left, right)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#bsl/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="bsl/2">
+  <div class="detail-header">
+    <a href="#bsl/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">bsl(left, right)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L104" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Arithmetic bitshift left.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L104" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="bsr/2">
-    <span class="signature"><strong>bsr(left, right)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#bsr/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="bsr/2">
+  <div class="detail-header">
+    <a href="#bsr/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">bsr(left, right)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L118" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Arithmetic bitshift right.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L118" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="bxor/2">
-    <span class="signature"><strong>bxor(left, right)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#bxor/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="bxor/2">
+  <div class="detail-header">
+    <a href="#bxor/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">bxor(left, right)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L90" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Bitwise xor.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L90" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="|||/2">
-    <span class="signature"><strong>left ||| right</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#|||/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="%7C%7C%7C/2">
+  <div class="detail-header">
+    <a href="#%7C%7C%7C/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">left ||| right</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L83" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Bitwise or as operator.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L83" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="~~~/1">
-    <span class="signature"><strong>~~~expr</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#~~~/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="~~~/1">
+  <div class="detail-header">
+    <a href="#~~~/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">~~~expr</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/bitwise.ex#L55" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Bitwise not as operator.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/bitwise.ex#L55" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
 
       
-    </section>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
+
