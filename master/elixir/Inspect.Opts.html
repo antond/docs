@@ -70,7 +70,7 @@
         Inspect.Opts
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/b6dc389f5e3eb2286885c172009333ef414d7860/lib/elixir/lib/inspect/algebra.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/09cf448765115297d4f0586212c055731204a155/lib/elixir/lib/inspect/algebra.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -107,7 +107,8 @@ printing to IO devices. Set to 0 to force each item to be printed on its
 own line.</p>
 </li>
 <li><p><code class="inline">:base</code> - print integers as :binary, :octal, :decimal, or :hex, defaults
-to :decimal</p>
+to :decimal. When inspecting binaries any <code class="inline">:base</code> other than <code class="inline">:decimal</code>
+implies <code class="inline">binaries: :as_binaries</code>.</p>
 </li>
 <li><code class="inline">:safe</code> - when <code class="inline">false</code>, failures while inspecting structs will be raised
 as errors instead of being wrapped in the Inspect.Error exception. This
