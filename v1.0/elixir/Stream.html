@@ -1,49 +1,78 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
-    <title>Stream</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8">
-      relpath = '';
-      if (relpath != '') relpath += '/';
-    </script>
-
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      hljs.initHighlightingOnLoad();
-      hljs.configure({languages: []}); //disable autodetect
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Stream – Elixir v1.0.5</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
+  <body data-type="modules">
 
-  <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
 
-    <section id="content">
-      <div class="breadcrumbs">Elixir v1.0.5 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Stream.html">Stream</a></div>
+  
+  <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Elixir
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.5
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+      <li><a id="protocols-list" href="#full-list">Protocols</a></li>
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
       <h1>
+        <small class="visible-xs">Elixir v1.0.5</small>
         Stream
         
+        
+          <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary">Summary</a></li>
-        
-        
-          <li><a href="#types_details">Types</a></li>
-        
-        
-          <li><a href="#functions_details">Functions</a></li>
-        
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
@@ -56,7 +85,7 @@ Elixir’s <a href="Range.html"><code class="inline">Range</code></a> is a strea
 iex&gt; Enum.map range, &amp;(&amp;1 * 2)
 [2,4,6,8,10]</code></pre>
 <p>In the example above, as we mapped over the range, the elements being
-enumerated were created one by one, during enumeration. The <a href="Stream.html"><code class="inline">Stream</code></a>
+enumerated were created one by one, during enumeration. The <a href="Stream.html#content"><code class="inline">Stream</code></a>
 module allows us to map the range, without triggering its enumeration:</p>
 <pre><code class="iex elixir">iex&gt; range = 1..3
 iex&gt; stream = Stream.map(range, &amp;(&amp;1 * 2))
@@ -66,11 +95,11 @@ iex&gt; Enum.map(stream, &amp;(&amp;1 + 1))
 meant to multiply each item in the range by 2. At this point, no
 computation was done yet. Just when <a href="Enum.html#map/2"><code class="inline">Enum.map/2</code></a> is called we
 enumerate over each item in the range, multiplying it by 2 and adding 1.
-We say the functions in <a href="Stream.html"><code class="inline">Stream</code></a> are <em>lazy</em> and the functions in <a href="Enum.html"><code class="inline">Enum</code></a>
+We say the functions in <a href="Stream.html#content"><code class="inline">Stream</code></a> are <em>lazy</em> and the functions in <a href="Enum.html"><code class="inline">Enum</code></a>
 are <em>eager</em>.</p>
 <p>Due to their laziness, streams are useful when working with large
 (or even infinite) collections. When chaining many operations with <a href="Enum.html"><code class="inline">Enum</code></a>,
-intermediate lists are created, while <a href="Stream.html"><code class="inline">Stream</code></a> creates a recipe of
+intermediate lists are created, while <a href="Stream.html#content"><code class="inline">Stream</code></a> creates a recipe of
 computations that are executed at a later moment. Let’s see another
 example:</p>
 <pre><code class="elixir">1..3 |&gt;
@@ -127,332 +156,455 @@ returns an anonymous function may return a struct in future releases.</p>
       
 
       
-        <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L1" class="view_source">Source</a>
-      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:acc/0">acc()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:default/0">default()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:element/0">element()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:index/0">index()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:t/0">t()</a>
+  </div>
+  
+</div>
 
-      
-        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
-        <table class="summary">
-          <tr>
-  <td class="summary_signature"><a href="#chunk/2">chunk(enum, n)</a></td>
+  </div>
+
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#chunk/2">chunk(enum, n)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Shortcut to <code class="inline">chunk(enum, n, n)</code></p>
-</td>
+    <div class="summary-synopsis"><p>Shortcut to <code class="inline">chunk(enum, n, n)</code></p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#chunk/4">chunk(enum, n, step, pad \\ nil)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#chunk/4">chunk(enum, n, step, pad \\ nil)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Streams the enumerable in chunks, containing <code class="inline">n</code> items each, where
+    <div class="summary-synopsis"><p>Streams the enumerable in chunks, containing <code class="inline">n</code> items each, where
 each new chunk starts <code class="inline">step</code> elements into the enumerable</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#chunk_by/2">chunk_by(enum, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#chunk_by/2">chunk_by(enum, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Chunks the <code class="inline">enum</code> by buffering elements for which <code class="inline">fun</code> returns
+    <div class="summary-synopsis"><p>Chunks the <code class="inline">enum</code> by buffering elements for which <code class="inline">fun</code> returns
 the same value and only emit them when <code class="inline">fun</code> returns a new value
 or the <code class="inline">enum</code> finishes</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#concat/1">concat(enumerables)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#concat/1">concat(enumerables)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that enumerates each enumerable in an enumerable</p>
-</td>
+    <div class="summary-synopsis"><p>Creates a stream that enumerates each enumerable in an enumerable</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#concat/2">concat(first, second)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#concat/2">concat(first, second)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that enumerates the first argument, followed by the second</p>
-</td>
+    <div class="summary-synopsis"><p>Creates a stream that enumerates the first argument, followed by the second</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#cycle/1">cycle(enumerable)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cycle/1">cycle(enumerable)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that cycles through the given enumerable,
+    <div class="summary-synopsis"><p>Creates a stream that cycles through the given enumerable,
 infinitely</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#drop/2">drop(enum, n)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#drop/2">drop(enum, n)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Lazily drops the next <code class="inline">n</code> items from the enumerable</p>
-</td>
+    <div class="summary-synopsis"><p>Lazily drops the next <code class="inline">n</code> items from the enumerable</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#drop_while/2">drop_while(enum, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#drop_while/2">drop_while(enum, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Lazily drops elements of the enumerable while the given
+    <div class="summary-synopsis"><p>Lazily drops elements of the enumerable while the given
 function returns <code class="inline">true</code></p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#each/2">each(enum, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#each/2">each(enum, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Execute the given function for each item</p>
-</td>
+    <div class="summary-synopsis"><p>Execute the given function for each item</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#filter/2">filter(enum, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#filter/2">filter(enum, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that filters elements according to
+    <div class="summary-synopsis"><p>Creates a stream that filters elements according to
 the given function on enumeration</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#filter_map/3">filter_map(enum, filter, mapper)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#filter_map/3">filter_map(enum, filter, mapper)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that filters and then maps elements according
+    <div class="summary-synopsis"><p>Creates a stream that filters and then maps elements according
 to given functions</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#flat_map/2">flat_map(enum, mapper)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#flat_map/2">flat_map(enum, mapper)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that will apply the given function on enumeration and
+    <div class="summary-synopsis"><p>Creates a stream that will apply the given function on enumeration and
 flatten the result</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#interval/1">interval(n)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#interval/1">interval(n)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that emits a value every <code class="inline">n</code> milliseconds</p>
-</td>
+    <div class="summary-synopsis"><p>Creates a stream that emits a value every <code class="inline">n</code> milliseconds</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#into/3">into(enum, collectable, transform \\ fn x -&gt; x end)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#into/3">into(enum, collectable, transform \\ fn x -&gt; x end)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Injects the stream values into the given collectable as a side-effect</p>
-</td>
+    <div class="summary-synopsis"><p>Injects the stream values into the given collectable as a side-effect</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#iterate/2">iterate(start_value, next_fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#iterate/2">iterate(start_value, next_fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Emit a sequence of values, starting with <code class="inline">start_value</code>. Successive
+    <div class="summary-synopsis"><p>Emit a sequence of values, starting with <code class="inline">start_value</code>. Successive
 values are generated by calling <code class="inline">next_fun</code> on the previous value</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#map/2">map(enum, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#map/2">map(enum, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that will apply the given function on
+    <div class="summary-synopsis"><p>Creates a stream that will apply the given function on
 enumeration</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#reject/2">reject(enum, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reject/2">reject(enum, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that will reject elements according to
+    <div class="summary-synopsis"><p>Creates a stream that will reject elements according to
 the given function on enumeration</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#repeatedly/1">repeatedly(generator_fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#repeatedly/1">repeatedly(generator_fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns a stream generated by calling <code class="inline">generator_fun</code> repeatedly</p>
-</td>
+    <div class="summary-synopsis"><p>Returns a stream generated by calling <code class="inline">generator_fun</code> repeatedly</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#resource/3">resource(start_fun, next_fun, after_fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#resource/3">resource(start_fun, next_fun, after_fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Emits a sequence of values for the given resource</p>
-</td>
+    <div class="summary-synopsis"><p>Emits a sequence of values for the given resource</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#run/1">run(stream)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#run/1">run(stream)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Runs the given stream</p>
-</td>
+    <div class="summary-synopsis"><p>Runs the given stream</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#scan/2">scan(enum, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#scan/2">scan(enum, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that applies the given function to each
+    <div class="summary-synopsis"><p>Creates a stream that applies the given function to each
 element, emits the result and uses the same result as the accumulator
 for the next computation</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#scan/3">scan(enum, acc, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#scan/3">scan(enum, acc, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that applies the given function to each
+    <div class="summary-synopsis"><p>Creates a stream that applies the given function to each
 element, emits the result and uses the same result as the accumulator
 for the next computation. Uses the given <code class="inline">acc</code> as the starting value</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#take/2">take(enum, n)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#take/2">take(enum, n)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Lazily takes the next <code class="inline">n</code> items from the enumerable and stops
+    <div class="summary-synopsis"><p>Lazily takes the next <code class="inline">n</code> items from the enumerable and stops
 enumeration</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#take_every/2">take_every(enum, n)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#take_every/2">take_every(enum, n)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that takes every <code class="inline">n</code> item from the enumerable</p>
-</td>
+    <div class="summary-synopsis"><p>Creates a stream that takes every <code class="inline">n</code> item from the enumerable</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#take_while/2">take_while(enum, fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#take_while/2">take_while(enum, fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Lazily takes elements of the enumerable while the given
+    <div class="summary-synopsis"><p>Lazily takes elements of the enumerable while the given
 function returns <code class="inline">true</code></p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#timer/1">timer(n)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#timer/1">timer(n)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that emits a single value after <code class="inline">n</code> milliseconds</p>
-</td>
+    <div class="summary-synopsis"><p>Creates a stream that emits a single value after <code class="inline">n</code> milliseconds</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#transform/3">transform(enum, acc, reducer)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#transform/3">transform(enum, acc, reducer)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Transforms an existing stream</p>
-</td>
+    <div class="summary-synopsis"><p>Transforms an existing stream</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#unfold/2">unfold(next_acc, next_fun)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unfold/2">unfold(next_acc, next_fun)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Emits a sequence of values for the given accumulator</p>
-</td>
+    <div class="summary-synopsis"><p>Emits a sequence of values for the given accumulator</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#uniq/2">uniq(enum, fun \\ fn x -&gt; x end)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#uniq/2">uniq(enum, fun \\ fn x -&gt; x end)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream that only emits elements if they are unique</p>
-</td>
+    <div class="summary-synopsis"><p>Creates a stream that only emits elements if they are unique</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#with_index/1">with_index(enum)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#with_index/1">with_index(enum)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Creates a stream where each item in the enumerable will
+    <div class="summary-synopsis"><p>Creates a stream where each item in the enumerable will
 be wrapped in a tuple alongside its index</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#zip/2">zip(left, right)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#zip/2">zip(left, right)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Zips two collections together, lazily</p>
-</td>
+    <div class="summary-synopsis"><p>Zips two collections together, lazily</p>
+</div>
   
-</tr>
+</div>
 
-        </table>
-      
+  </div>
 
-      
-        <section id="types_details" class="details_list">
-          <h2>Types <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></h2>
-          <div class="type_detail">
-  <p class="typespec" id="t:acc/0">
-    <a href="#t:acc/0">acc</a> :: any
-  </p>
-  
-</div>
-<div class="type_detail">
-  <p class="typespec" id="t:element/0">
-    <a href="#t:element/0">element</a> :: any
-  </p>
-  
-</div>
-<div class="type_detail">
-  <p class="typespec" id="t:index/0">
-    <a href="#t:index/0">index</a> :: non_neg_integer
-  </p>
-  
-</div>
-<div class="type_detail">
-  <p class="typespec" id="t:default/0">
-    <a href="#t:default/0">default</a> :: any
-  </p>
-  
-</div>
-<div class="type_detail">
-  <p class="typespec" id="t:t/0">
-    <a href="#t:t/0">t</a> :: %Stream{accs: term, done: term, enum: term, funs: term}
-  </p>
-  
-</div>
+
+          
+
+          
 
         </section>
       
 
       
-        <section id="functions_details" class="details_list">
-          <h2>Functions</h2>
-          <section class="detail">
-  <div class="detail_header" id="chunk/2">
-    <span class="signature"><strong>chunk(enum, n)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#chunk/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="types" class="types details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div id="t:acc/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:acc/0">acc</a> :: any</code></pre>
+  
+</div>
+<div id="t:default/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:default/0">default</a> :: any</code></pre>
+  
+</div>
+<div id="t:element/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:element/0">element</a> :: any</code></pre>
+  
+</div>
+<div id="t:index/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:index/0">index</a> :: non_neg_integer</code></pre>
+  
+</div>
+<div id="t:t/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %Stream{accs: term, done: term, enum: term, funs: term}</code></pre>
+  
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="chunk/2">
+  <div class="detail-header">
+    <a href="#chunk/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">chunk(enum, n)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L125" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>chunk(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, non_neg_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">chunk(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, non_neg_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Shortcut to <code class="inline">chunk(enum, n, n)</code>.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L125" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="chunk/4">
-    <span class="signature"><strong>chunk(enum, n, step, pad \\ nil)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#chunk/4" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="chunk/4">
+  <div class="detail-header">
+    <a href="#chunk/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">chunk(enum, n, step, pad \\ nil)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L157" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>chunk(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, non_neg_integer, non_neg_integer, <a href="Enumerable.html#t:t/0">Enumerable.t</a> | nil) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">chunk(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, non_neg_integer, non_neg_integer, <a href="Enumerable.html#t:t/0">Enumerable.t</a> | nil) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Streams the enumerable in chunks, containing <code class="inline">n</code> items each, where
@@ -479,26 +631,28 @@ iex&gt; Stream.chunk([1, 2, 3, 4, 5, 6], 3, 3, []) |&gt; Enum.to_list
 [[1, 2, 3], [4, 5, 6]]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L157" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="chunk_by/2">
-    <span class="signature"><strong>chunk_by(enum, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#chunk_by/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="chunk_by/2">
+  <div class="detail-header">
+    <a href="#chunk_by/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">chunk_by(enum, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L190" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>chunk_by(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> any)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">chunk_by(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> any)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Chunks the <code class="inline">enum</code> by buffering elements for which <code class="inline">fun</code> returns
@@ -510,26 +664,28 @@ iex&gt; Enum.to_list(stream)
 [[1], [2, 2], [3], [4, 4, 6], [7, 7]]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L190" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="concat/1">
-    <span class="signature"><strong>concat(enumerables)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#concat/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="concat/1">
+  <div class="detail-header">
+    <a href="#concat/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">concat(enumerables)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L779" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>concat(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">concat(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that enumerates each enumerable in an enumerable.</p>
@@ -539,26 +695,28 @@ iex&gt; Enum.to_list(stream)
 [1,2,3,4,5,6,7,8,9]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L779" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="concat/2">
-    <span class="signature"><strong>concat(first, second)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#concat/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="concat/2">
+  <div class="detail-header">
+    <a href="#concat/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">concat(first, second)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L800" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>concat(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, <a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">concat(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, <a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that enumerates the first argument, followed by the second.</p>
@@ -574,26 +732,28 @@ iex&gt; Enum.take(stream, 6)
 [1,2,3,1,2,3]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L800" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="cycle/1">
-    <span class="signature"><strong>cycle(enumerable)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#cycle/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="cycle/1">
+  <div class="detail-header">
+    <a href="#cycle/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">cycle(enumerable)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L891" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>cycle(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">cycle(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that cycles through the given enumerable,
@@ -604,26 +764,28 @@ iex&gt; Enum.take(stream, 5)
 [1,2,3,1,2]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L891" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="drop/2">
-    <span class="signature"><strong>drop(enum, n)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#drop/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="drop/2">
+  <div class="detail-header">
+    <a href="#drop/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">drop(enum, n)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L224" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>drop(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, non_neg_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">drop(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, non_neg_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Lazily drops the next <code class="inline">n</code> items from the enumerable.</p>
@@ -641,26 +803,28 @@ iex&gt; Enum.to_list(stream)
 [1,2,3,4,5]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L224" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="drop_while/2">
-    <span class="signature"><strong>drop_while(enum, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#drop_while/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="drop_while/2">
+  <div class="detail-header">
+    <a href="#drop_while/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">drop_while(enum, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L264" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>drop_while(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> as_boolean(term))) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">drop_while(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> as_boolean(term))) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Lazily drops elements of the enumerable while the given
@@ -671,26 +835,28 @@ iex&gt; Enum.to_list(stream)
 [6,7,8,9,10]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L264" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="each/2">
-    <span class="signature"><strong>each(enum, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#each/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="each/2">
+  <div class="detail-header">
+    <a href="#each/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">each(enum, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L286" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>each(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> term)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">each(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> term)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Execute the given function for each item.</p>
@@ -706,26 +872,28 @@ iex&gt; receive do: (x when is_integer(x) -&gt; x)
 3</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L286" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="filter/2">
-    <span class="signature"><strong>filter(enum, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#filter/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="filter/2">
+  <div class="detail-header">
+    <a href="#filter/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">filter(enum, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L323" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>filter(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> as_boolean(term))) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">filter(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> as_boolean(term))) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that filters elements according to
@@ -736,26 +904,28 @@ iex&gt; Enum.to_list(stream)
 [2]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L323" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="filter_map/3">
-    <span class="signature"><strong>filter_map(enum, filter, mapper)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#filter_map/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="filter_map/3">
+  <div class="detail-header">
+    <a href="#filter_map/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">filter_map(enum, filter, mapper)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L341" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>filter_map(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> as_boolean(term)), (<a href="#t:element/0">element</a> -> any)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">filter_map(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> as_boolean(term)), (<a href="#t:element/0">element</a> -> any)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that filters and then maps elements according
@@ -767,26 +937,28 @@ iex&gt; Enum.to_list(stream)
 [4,8,12]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L341" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="flat_map/2">
-    <span class="signature"><strong>flat_map(enum, mapper)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#flat_map/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="flat_map/2">
+  <div class="detail-header">
+    <a href="#flat_map/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">flat_map(enum, mapper)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L307" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>flat_map(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> <a href="Enumerable.html#t:t/0">Enumerable.t</a>)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">flat_map(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> <a href="Enumerable.html#t:t/0">Enumerable.t</a>)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that will apply the given function on enumeration and
@@ -797,26 +969,28 @@ iex&gt; Enum.to_list(stream)
 [1, 2, 2, 4, 3, 6]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L307" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="interval/1">
-    <span class="signature"><strong>interval(n)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#interval/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="interval/1">
+  <div class="detail-header">
+    <a href="#interval/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">interval(n)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L357" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>interval(non_neg_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">interval(non_neg_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that emits a value every <code class="inline">n</code> milliseconds.</p>
@@ -826,18 +1000,18 @@ iex&gt; Enum.to_list(stream)
 [0,1,2,3,4,5,6,7,8,9]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L357" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="into/3">
-    <span class="signature"><strong>into(enum, collectable, transform \\ fn x -&gt; x end)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#into/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="into/3">
+  <div class="detail-header">
+    <a href="#into/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">into(enum, collectable, transform \\ fn x -&gt; x end)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L371" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -846,26 +1020,28 @@ iex&gt; Enum.to_list(stream)
 is delayed until the stream is executed. See <a href="#run/1"><code class="inline">run/1</code></a> for an example.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L371" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="iterate/2">
-    <span class="signature"><strong>iterate(start_value, next_fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#iterate/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="iterate/2">
+  <div class="detail-header">
+    <a href="#iterate/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">iterate(start_value, next_fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L948" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>iterate(<a href="#t:element/0">element</a>, (<a href="#t:element/0">element</a> -> <a href="#t:element/0">element</a>)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">iterate(<a href="#t:element/0">element</a>, (<a href="#t:element/0">element</a> -> <a href="#t:element/0">element</a>)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Emit a sequence of values, starting with <code class="inline">start_value</code>. Successive
@@ -875,26 +1051,28 @@ values are generated by calling <code class="inline">next_fun</code> on the prev
 [0,1,2,3,4]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L948" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="map/2">
-    <span class="signature"><strong>map(enum, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#map/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="map/2">
+  <div class="detail-header">
+    <a href="#map/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">map(enum, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L414" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>map(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> any)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">map(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> any)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that will apply the given function on
@@ -905,26 +1083,28 @@ iex&gt; Enum.to_list(stream)
 [2,4,6]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L414" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="reject/2">
-    <span class="signature"><strong>reject(enum, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#reject/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="reject/2">
+  <div class="detail-header">
+    <a href="#reject/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">reject(enum, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L430" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>reject(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> as_boolean(term))) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">reject(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> as_boolean(term))) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that will reject elements according to
@@ -935,26 +1115,28 @@ iex&gt; Enum.to_list(stream)
 [1,3]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L430" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="repeatedly/1">
-    <span class="signature"><strong>repeatedly(generator_fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#repeatedly/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="repeatedly/1">
+  <div class="detail-header">
+    <a href="#repeatedly/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">repeatedly(generator_fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L968" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>repeatedly((() -> <a href="#t:element/0">element</a>)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">repeatedly((() -> <a href="#t:element/0">element</a>)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns a stream generated by calling <code class="inline">generator_fun</code> repeatedly.</p>
@@ -963,26 +1145,28 @@ iex&gt; Enum.to_list(stream)
 [0.4435846174457203, 0.7230402056221108, 0.94581636451987]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L968" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="resource/3">
-    <span class="signature"><strong>resource(start_fun, next_fun, after_fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#resource/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="resource/3">
+  <div class="detail-header">
+    <a href="#resource/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">resource(start_fun, next_fun, after_fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L1013" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>resource((() -> <a href="#t:acc/0">acc</a>), (<a href="#t:acc/0">acc</a> -> {<a href="#t:element/0">element</a>, <a href="#t:acc/0">acc</a>} | nil), (<a href="#t:acc/0">acc</a> -> term)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">resource((() -> <a href="#t:acc/0">acc</a>), (<a href="#t:acc/0">acc</a> -> {<a href="#t:element/0">element</a>, <a href="#t:acc/0">acc</a>} | nil), (<a href="#t:acc/0">acc</a> -> term)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Emits a sequence of values for the given resource.</p>
@@ -1007,26 +1191,28 @@ resources.</p>
                 fn file -&gt; File.close(file) end)</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L1013" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="run/1">
-    <span class="signature"><strong>run(stream)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#run/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="run/1">
+  <div class="detail-header">
+    <a href="#run/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">run(stream)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L454" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>run(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: :ok</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">run(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: :ok</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Runs the given stream.</p>
@@ -1043,26 +1229,28 @@ without loading the whole file in memory:</p>
 or <a href="Stream.html#run/1"><code class="inline">Stream.run/1</code></a>.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L454" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="scan/2">
-    <span class="signature"><strong>scan(enum, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#scan/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="scan/2">
+  <div class="detail-header">
+    <a href="#scan/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">scan(enum, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L472" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>scan(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a>, <a href="#t:acc/0">acc</a> -> any)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">scan(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a>, <a href="#t:acc/0">acc</a> -> any)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that applies the given function to each
@@ -1074,26 +1262,28 @@ iex&gt; Enum.to_list(stream)
 [1,3,6,10,15]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L472" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="scan/3">
-    <span class="signature"><strong>scan(enum, acc, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#scan/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="scan/3">
+  <div class="detail-header">
+    <a href="#scan/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">scan(enum, acc, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L489" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>scan(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, <a href="#t:acc/0">acc</a>, (<a href="#t:element/0">element</a>, <a href="#t:acc/0">acc</a> -> any)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">scan(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, <a href="#t:acc/0">acc</a>, (<a href="#t:element/0">element</a>, <a href="#t:acc/0">acc</a> -> any)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that applies the given function to each
@@ -1105,26 +1295,28 @@ iex&gt; Enum.to_list(stream)
 [1,3,6,10,15]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L489" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="take/2">
-    <span class="signature"><strong>take(enum, n)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#take/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="take/2">
+  <div class="detail-header">
+    <a href="#take/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">take(enum, n)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L519" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>take(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, non_neg_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">take(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, non_neg_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Lazily takes the next <code class="inline">n</code> items from the enumerable and stops
@@ -1148,26 +1340,28 @@ iex&gt; Enum.to_list(stream)
 [1,2,3,1,2]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L519" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="take_every/2">
-    <span class="signature"><strong>take_every(enum, n)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#take_every/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="take_every/2">
+  <div class="detail-header">
+    <a href="#take_every/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">take_every(enum, n)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L567" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>take_every(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, non_neg_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">take_every(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, non_neg_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that takes every <code class="inline">n</code> item from the enumerable.</p>
@@ -1178,26 +1372,28 @@ iex&gt; Enum.to_list(stream)
 [1,3,5,7,9]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L567" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="take_while/2">
-    <span class="signature"><strong>take_while(enum, fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#take_while/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="take_while/2">
+  <div class="detail-header">
+    <a href="#take_while/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">take_while(enum, fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L585" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>take_while(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> as_boolean(term))) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">take_while(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> as_boolean(term))) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Lazily takes elements of the enumerable while the given
@@ -1208,26 +1404,28 @@ iex&gt; Enum.to_list(stream)
 [1,2,3,4,5]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L585" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="timer/1">
-    <span class="signature"><strong>timer(n)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#timer/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="timer/1">
+  <div class="detail-header">
+    <a href="#timer/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">timer(n)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L601" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>timer(non_neg_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">timer(non_neg_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that emits a single value after <code class="inline">n</code> milliseconds.</p>
@@ -1237,26 +1435,28 @@ iex&gt; Enum.to_list(stream)
 [0]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L601" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="transform/3">
-    <span class="signature"><strong>transform(enum, acc, reducer)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#transform/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="transform/3">
+  <div class="detail-header">
+    <a href="#transform/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">transform(enum, acc, reducer)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L635" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>transform(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, acc, fun) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a> when fun: (<a href="#t:element/0">element</a>, acc -> {<a href="Enumerable.html#t:t/0">Enumerable.t</a>, acc} | {:halt, acc}), acc: any</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">transform(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, acc, fun) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a> when fun: (<a href="#t:element/0">element</a>, acc -> {<a href="Enumerable.html#t:t/0">Enumerable.t</a>, acc} | {:halt, acc}), acc: any</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Transforms an existing stream.</p>
@@ -1280,26 +1480,28 @@ iex&gt; Enum.to_list(stream)
 [1,2,3]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L635" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="unfold/2">
-    <span class="signature"><strong>unfold(next_acc, next_fun)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#unfold/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="unfold/2">
+  <div class="detail-header">
+    <a href="#unfold/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">unfold(next_acc, next_fun)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L1113" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>unfold(<a href="#t:acc/0">acc</a>, (<a href="#t:acc/0">acc</a> -> {<a href="#t:element/0">element</a>, <a href="#t:acc/0">acc</a>} | nil)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">unfold(<a href="#t:acc/0">acc</a>, (<a href="#t:acc/0">acc</a> -> {<a href="#t:element/0">element</a>, <a href="#t:acc/0">acc</a>} | nil)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Emits a sequence of values for the given accumulator.</p>
@@ -1311,26 +1513,28 @@ accumulator. The enumeration finishes if it returns <code class="inline">nil</co
 [5, 4, 3, 2, 1]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L1113" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="uniq/2">
-    <span class="signature"><strong>uniq(enum, fun \\ fn x -&gt; x end)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#uniq/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="uniq/2">
+  <div class="detail-header">
+    <a href="#uniq/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">uniq(enum, fun \\ fn x -&gt; x end)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L746" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>uniq(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> term)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">uniq(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (<a href="#t:element/0">element</a> -> term)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream that only emits elements if they are unique.</p>
@@ -1346,26 +1550,28 @@ iex&gt; Stream.uniq([{1, :x}, {2, :y}, {1, :z}], fn {x, _} -&gt; x end) |&gt; En
 [{1,:x}, {2,:y}]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L746" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="with_index/1">
-    <span class="signature"><strong>with_index(enum)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#with_index/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="with_index/1">
+  <div class="detail-header">
+    <a href="#with_index/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">with_index(enum)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L762" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>with_index(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">with_index(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Creates a stream where each item in the enumerable will
@@ -1376,26 +1582,28 @@ iex&gt; Enum.to_list(stream)
 [{1,0},{2,1},{3,2}]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L762" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="zip/2">
-    <span class="signature"><strong>zip(left, right)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#zip/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="zip/2">
+  <div class="detail-header">
+    <a href="#zip/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">zip(left, right)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/stream.ex#L818" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>zip(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, <a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">zip(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, <a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Zips two collections together, lazily.</p>
@@ -1407,10 +1615,7 @@ iex&gt; Stream.zip(concat, cycle) |&gt; Enum.to_list
 [{1,:a},{2,:b},{3,:c},{4,:a},{5,:b},{6,:c}]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/stream.ex#L818" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
@@ -1418,6 +1623,23 @@ iex&gt; Stream.zip(concat, cycle) |&gt; Enum.to_list
       
 
       
-    </section>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
+

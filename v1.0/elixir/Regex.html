@@ -1,49 +1,78 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
-    <title>Regex</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8">
-      relpath = '';
-      if (relpath != '') relpath += '/';
-    </script>
-
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      hljs.initHighlightingOnLoad();
-      hljs.configure({languages: []}); //disable autodetect
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Regex – Elixir v1.0.5</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
+  <body data-type="modules">
 
-  <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
 
-    <section id="content">
-      <div class="breadcrumbs">Elixir v1.0.5 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Regex.html">Regex</a></div>
+  
+  <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Elixir
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.5
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+      <li><a id="protocols-list" href="#full-list">Protocols</a></li>
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
       <h1>
+        <small class="visible-xs">Elixir v1.0.5</small>
         Regex
         
+        
+          <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary">Summary</a></li>
-        
-        
-          <li><a href="#types_details">Types</a></li>
-        
-        
-          <li><a href="#functions_details">Functions</a></li>
-        
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
@@ -58,7 +87,7 @@ or using the special form with <a href="Kernel.html#sigil_r/2"><code class="inli
 
 # A regular expression with case insensitive and unicode options
 ~r/foo/iu</code></pre>
-<p>A Regex is represented internally as the <a href="Regex.html"><code class="inline">Regex</code></a> struct. Therefore,
+<p>A Regex is represented internally as the <a href="Regex.html#content"><code class="inline">Regex</code></a> struct. Therefore,
 <code class="inline">%Regex{}</code> can be used whenever there is a need to match on them.</p>
 <h2>Modifiers</h2>
 <p>The modifiers available when creating a Regex are:</p>
@@ -125,156 +154,229 @@ the string</p>
       
 
       
-        <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L1" class="view_source">Source</a>
-      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:t/0">t()</a>
+  </div>
+  
+</div>
 
-      
-        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
-        <table class="summary">
-          <tr>
-  <td class="summary_signature"><a href="#compile!/2">compile!(source, options \\ &quot;&quot;)</a></td>
+  </div>
+
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#compile/2">compile(source, options \\ &quot;&quot;)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Compiles the regular expression according to the given options.
+    <div class="summary-synopsis"><p>Compiles the regular expression</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#compile!/2">compile!(source, options \\ &quot;&quot;)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Compiles the regular expression according to the given options.
 Fails with <a href="Regex.CompileError.html"><code class="inline">Regex.CompileError</code></a> if the regex cannot be compiled</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#compile/2">compile(source, options \\ &quot;&quot;)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#escape/1">escape(string)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Compiles the regular expression</p>
-</td>
+    <div class="summary-synopsis"><p>Escapes a string to be literally matched in a regex</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#escape/1">escape(string)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#match?/2">match?(regex, string)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Escapes a string to be literally matched in a regex</p>
-</td>
+    <div class="summary-synopsis"><p>Returns a boolean indicating whether there was a match or not</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#match?/2">match?(regex, string)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#named_captures/3">named_captures(regex, string, options \\ [])</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns a boolean indicating whether there was a match or not</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#named_captures/3">named_captures(regex, string, options \\ [])</a></td>
-  
-    <td class="summary_synopsis"><p>Returns the given captures as a map or <code class="inline">nil</code> if no captures are
+    <div class="summary-synopsis"><p>Returns the given captures as a map or <code class="inline">nil</code> if no captures are
 found. The option <code class="inline">:return</code> can be set to <code class="inline">:index</code> to get indexes
 back</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#names/1">names(regex)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#names/1">names(regex)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns a list of names in the regex</p>
-</td>
+    <div class="summary-synopsis"><p>Returns a list of names in the regex</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#opts/1">opts(regex)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#opts/1">opts(regex)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns the regex options as a string</p>
-</td>
+    <div class="summary-synopsis"><p>Returns the regex options as a string</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#re_pattern/1">re_pattern(regex)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#re_pattern/1">re_pattern(regex)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns the underlying <code class="inline">re_pattern</code> in the regular expression</p>
-</td>
+    <div class="summary-synopsis"><p>Returns the underlying <code class="inline">re_pattern</code> in the regular expression</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#regex?/1">regex?(regex)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#regex?/1">regex?(regex)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Returns true if the given argument is a regex</p>
-</td>
+    <div class="summary-synopsis"><p>Returns true if the given argument is a regex</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#replace/4">replace(regex, string, replacement, options \\ [])</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#replace/4">replace(regex, string, replacement, options \\ [])</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Receives a regex, a binary and a replacement, returns a new
+    <div class="summary-synopsis"><p>Receives a regex, a binary and a replacement, returns a new
 binary where the all matches are replaced by replacement</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#run/3">run(regex, string, options \\ [])</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#run/3">run(regex, string, options \\ [])</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Runs the regular expression against the given string until the first match.
+    <div class="summary-synopsis"><p>Runs the regular expression against the given string until the first match.
 It returns a list with all captures or <code class="inline">nil</code> if no match occurred</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#scan/3">scan(regex, string, options \\ [])</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#scan/3">scan(regex, string, options \\ [])</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Same as <a href="#run/3"><code class="inline">run/3</code></a>, but scans the target several times collecting all
+    <div class="summary-synopsis"><p>Same as <a href="#run/3"><code class="inline">run/3</code></a>, but scans the target several times collecting all
 matches of the regular expression. A list of lists is returned,
 where each entry in the primary list represents a match and each
 entry in the secondary list represents the captured contents</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#source/1">source(regex)</a></td>
-  
-    <td class="summary_synopsis"><p>Returns the regex source as a binary</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#split/3">split(regex, string, options \\ [])</a></td>
-  
-    <td class="summary_synopsis"><p>Splits the given target into the number of parts specified</p>
-</td>
-  
-</tr>
-
-        </table>
-      
-
-      
-        <section id="types_details" class="details_list">
-          <h2>Types <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></h2>
-          <div class="type_detail">
-  <p class="typespec" id="t:t/0">
-    <a href="#t:t/0">t</a> :: %Regex{re_pattern: term, source: binary, opts: binary}
-  </p>
+</div>
   
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#source/1">source(regex)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the regex source as a binary</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#split/3">split(regex, string, options \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Splits the given target into the number of parts specified</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
 
         </section>
       
 
       
-        <section id="functions_details" class="details_list">
-          <h2>Functions</h2>
-          <section class="detail">
-  <div class="detail_header" id="compile/2">
-    <span class="signature"><strong>compile(source, options \\ &quot;&quot;)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#compile/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="types" class="types details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div id="t:t/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %Regex{re_pattern: term, source: binary, opts: binary}</code></pre>
+  
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="compile/2">
+  <div class="detail-header">
+    <a href="#compile/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">compile(source, options \\ &quot;&quot;)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L107" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>compile(binary, binary | [term]) :: <a href="#t:t/0">t</a></li>
-      
-        <li>compile(binary, binary | [term]) :: {:ok, <a href="#t:t/0">t</a>} | {:error, any}</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">compile(binary, binary | [term]) :: <a href="#t:t/0">t</a></code></pre>
+        
+          <pre><code class="elixir">compile(binary, binary | [term]) ::
+  {:ok, <a href="#t:t/0">t</a>} |
+  {:error, any}</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Compiles the regular expression.</p>
@@ -291,18 +393,18 @@ iex&gt; Regex.compile(&quot;*foo&quot;)
 {:error, {&#39;nothing to repeat&#39;, 0}}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L107" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="compile!/2">
-    <span class="signature"><strong>compile!(source, options \\ &quot;&quot;)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#compile!/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="compile!/2">
+  <div class="detail-header">
+    <a href="#compile!/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">compile!(source, options \\ &quot;&quot;)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L137" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -310,26 +412,28 @@ iex&gt; Regex.compile(&quot;*foo&quot;)
 Fails with <a href="Regex.CompileError.html"><code class="inline">Regex.CompileError</code></a> if the regex cannot be compiled.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L137" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="escape/1">
-    <span class="signature"><strong>escape(string)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#escape/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="escape/1">
+  <div class="detail-header">
+    <a href="#escape/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">escape(string)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L603" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>escape(<a href="String.html#t:t/0">String.t</a>) :: <a href="String.html#t:t/0">String.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">escape(<a href="String.html#t:t/0">String.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Escapes a string to be literally matched in a regex.</p>
@@ -341,26 +445,28 @@ iex&gt; Regex.escape(&quot;\\what if&quot;)
 &quot;\\\\what\\ if&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L603" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="match?/2">
-    <span class="signature"><strong>match?(regex, string)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#match?/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="match?/2">
+  <div class="detail-header">
+    <a href="#match?/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">match?(regex, string)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L157" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>match?(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>) :: boolean</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">match?(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>) :: boolean</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns a boolean indicating whether there was a match or not.</p>
@@ -372,26 +478,28 @@ iex&gt; Regex.match?(~r/foo/, &quot;bar&quot;)
 false</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L157" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="named_captures/3">
-    <span class="signature"><strong>named_captures(regex, string, options \\ [])</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#named_captures/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="named_captures/3">
+  <div class="detail-header">
+    <a href="#named_captures/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">named_captures(regex, string, options \\ [])</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L232" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>named_captures(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, [term]) :: %{} | nil</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">named_captures(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, [term]) :: %{} | nil</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the given captures as a map or <code class="inline">nil</code> if no captures are
@@ -408,26 +516,28 @@ iex&gt; Regex.named_captures(~r/a(?&lt;foo&gt;b)c(?&lt;bar&gt;d)/, &quot;efgh&qu
 nil</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L232" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="names/1">
-    <span class="signature"><strong>names(regex)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#names/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="names/1">
+  <div class="detail-header">
+    <a href="#names/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">names(regex)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L285" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>names(<a href="#t:t/0">t</a>) :: [<a href="String.html#t:t/0">String.t</a>]</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">names(<a href="#t:t/0">t</a>) :: [<a href="String.html#t:t/0">String.t</a>]</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns a list of names in the regex.</p>
@@ -436,26 +546,28 @@ nil</code></pre>
 [&quot;foo&quot;]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L285" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="opts/1">
-    <span class="signature"><strong>opts(regex)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#opts/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="opts/1">
+  <div class="detail-header">
+    <a href="#opts/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">opts(regex)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L271" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>opts(<a href="#t:t/0">t</a>) :: <a href="String.html#t:t/0">String.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">opts(<a href="#t:t/0">t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the regex options as a string.</p>
@@ -464,53 +576,57 @@ nil</code></pre>
 &quot;m&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L271" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="re_pattern/1">
-    <span class="signature"><strong>re_pattern(regex)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#re_pattern/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="re_pattern/1">
+  <div class="detail-header">
+    <a href="#re_pattern/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">re_pattern(regex)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L243" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>re_pattern(<a href="#t:t/0">t</a>) :: term</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">re_pattern(<a href="#t:t/0">t</a>) :: term</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the underlying <code class="inline">re_pattern</code> in the regular expression.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L243" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="regex?/1">
-    <span class="signature"><strong>regex?(regex)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#regex?/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="regex?/1">
+  <div class="detail-header">
+    <a href="#regex?/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">regex?(regex)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L175" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>regex?(any) :: false</li>
-      
-        <li>regex?(<a href="#t:t/0">t</a>) :: true</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">regex?(any) :: false</code></pre>
+        
+          <pre><code class="elixir">regex?(<a href="#t:t/0">t</a>) :: true</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns true if the given argument is a regex.</p>
@@ -522,26 +638,28 @@ iex&gt; Regex.regex?(0)
 false</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L175" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="replace/4">
-    <span class="signature"><strong>replace(regex, string, replacement, options \\ [])</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#replace/4" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="replace/4">
+  <div class="detail-header">
+    <a href="#replace/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">replace(regex, string, replacement, options \\ [])</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L454" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>replace(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, <a href="String.html#t:t/0">String.t</a> | (... -> <a href="String.html#t:t/0">String.t</a>), [term]) :: <a href="String.html#t:t/0">String.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">replace(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, <a href="String.html#t:t/0">String.t</a> | (... -> <a href="String.html#t:t/0">String.t</a>), [term]) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Receives a regex, a binary and a replacement, returns a new
@@ -577,26 +695,31 @@ iex&gt; Regex.replace(~r/a(b|d)c/, &quot;abcadc&quot;, fn _, x -&gt; &quot;[#{x}
 &quot;[b][d]&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L454" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="run/3">
-    <span class="signature"><strong>run(regex, string, options \\ [])</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#run/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="run/3">
+  <div class="detail-header">
+    <a href="#run/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">run(regex, string, options \\ [])</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L201" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>run(<a href="#t:t/0">t</a>, binary, [term]) :: nil | [binary] | [{integer, integer}]</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">run(<a href="#t:t/0">t</a>, binary, [term]) ::
+  nil |
+  [binary] |
+  [{integer, integer}]</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Runs the regular expression against the given string until the first match.
@@ -605,7 +728,7 @@ It returns a list with all captures or <code class="inline">nil</code> if no mat
 <ul>
 <li><code class="inline">:return</code>  - set to <code class="inline">:index</code> to return indexes. Defaults to <code class="inline">:binary</code>.
 </li>
-<li><p><code class="inline">:capture</code> - what to capture in the result. Check the moduledoc for <a href="Regex.html"><code class="inline">Regex</code></a></p>
+<li><p><code class="inline">:capture</code> - what to capture in the result. Check the moduledoc for <a href="Regex.html#content"><code class="inline">Regex</code></a></p>
 <pre><code class="elixir">to see the possible capture values.</code></pre>
 </li>
 </ul>
@@ -620,26 +743,28 @@ iex&gt; Regex.run(~r/c(d)/, &quot;abcd&quot;, return: :index)
 [{2,2},{3,1}]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L201" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="scan/3">
-    <span class="signature"><strong>scan(regex, string, options \\ [])</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#scan/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="scan/3">
+  <div class="detail-header">
+    <a href="#scan/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">scan(regex, string, options \\ [])</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L315" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>scan(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, [term]) :: [[<a href="String.html#t:t/0">String.t</a>]]</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">scan(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, [term]) :: [[<a href="String.html#t:t/0">String.t</a>]]</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Same as <a href="#run/3"><code class="inline">run/3</code></a>, but scans the target several times collecting all
@@ -650,7 +775,7 @@ entry in the secondary list represents the captured contents.</p>
 <ul>
 <li><code class="inline">:return</code>  - set to <code class="inline">:index</code> to return indexes. Defaults to <code class="inline">:binary</code>.
 </li>
-<li><p><code class="inline">:capture</code> - what to capture in the result. Check the moduledoc for <a href="Regex.html"><code class="inline">Regex</code></a></p>
+<li><p><code class="inline">:capture</code> - what to capture in the result. Check the moduledoc for <a href="Regex.html#content"><code class="inline">Regex</code></a></p>
 <pre><code class="elixir">to see the possible capture values.</code></pre>
 </li>
 </ul>
@@ -665,26 +790,28 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
 []</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L315" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="source/1">
-    <span class="signature"><strong>source(regex)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#source/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="source/1">
+  <div class="detail-header">
+    <a href="#source/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">source(regex)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L257" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>source(<a href="#t:t/0">t</a>) :: <a href="String.html#t:t/0">String.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">source(<a href="#t:t/0">t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns the regex source as a binary.</p>
@@ -693,26 +820,28 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
 &quot;foo&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L257" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="split/3">
-    <span class="signature"><strong>split(regex, string, options \\ [])</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#split/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="split/3">
+  <div class="detail-header">
+    <a href="#split/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">split(regex, string, options \\ [])</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/regex.ex#L368" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>split(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, [term]) :: [<a href="String.html#t:t/0">String.t</a>]</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">split(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, [term]) :: [<a href="String.html#t:t/0">String.t</a>]</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Splits the given target into the number of parts specified.</p>
@@ -726,7 +855,7 @@ given pattern.</p>
 <li><p><code class="inline">:trim</code> - when true, remove blank strings from the result.</p>
 </li>
 <li><code class="inline">:on</code> - specifies which captures and order to split the string
-on. Check the moduledoc for <a href="Regex.html"><code class="inline">Regex</code></a> to see the possible capture
+on. Check the moduledoc for <a href="Regex.html#content"><code class="inline">Regex</code></a> to see the possible capture
 values. Defaults to <code class="inline">:first</code> which means captures inside the
 Regex does not affect the split result.
 </li>
@@ -751,10 +880,7 @@ iex&gt; Regex.split(~r/a(?&lt;second&gt;b)c/, &quot;abc&quot;, on: [:second])
 [&quot;a&quot;, &quot;c&quot;]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/regex.ex#L368" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
@@ -762,6 +888,23 @@ iex&gt; Regex.split(~r/a(?&lt;second&gt;b)c/, &quot;abc&quot;, on: [:second])
       
 
       
-    </section>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
+

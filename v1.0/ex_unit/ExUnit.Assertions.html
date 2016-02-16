@@ -1,49 +1,76 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
-    <title>ExUnit.Assertions</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8">
-      relpath = '';
-      if (relpath != '') relpath += '/';
-    </script>
-
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      hljs.initHighlightingOnLoad();
-      hljs.configure({languages: []}); //disable autodetect
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>ExUnit.Assertions – ExUnit v1.0.5</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
+  <body data-type="modules">
 
-  <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
 
-    <section id="content">
-      <div class="breadcrumbs">ExUnit v1.0.5 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="ExUnit.html">ExUnit</a> &rarr; <a href="ExUnit.Assertions.html">Assertions</a></div>
+  
+  <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        ExUnit
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.5
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
       <h1>
+        <small class="visible-xs">ExUnit v1.0.5</small>
         ExUnit.Assertions
         
+        
+          <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L17" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary">Summary</a></li>
-        
-        
-        
-          <li><a href="#functions_details">Functions</a></li>
-        
-        
-          <li><a href="#macros_details">Macros</a></li>
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
@@ -66,150 +93,212 @@ common cases such as checking a floating point number or handling exceptions.</p
       
 
       
-        <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L17" class="view_source">Source</a>
-      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
 
-      
-        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
-        <table class="summary">
-          <tr>
-  <td class="summary_signature"><a href="#assert/1">assert(assertion)</a></td>
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#assert/2">assert(value, message)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Asserts its argument is true</p>
-</td>
+    <div class="summary-synopsis"><p>Asserts <code class="inline">value</code> is true, displaying the given <code class="inline">message</code> otherwise</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#assert/2">assert(value, message)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#assert_in_delta/4">assert_in_delta(val1, val2, delta, message \\ nil)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Asserts <code class="inline">value</code> is true, displaying the given <code class="inline">message</code> otherwise</p>
-</td>
+    <div class="summary-synopsis"><p>Asserts that <code class="inline">val1</code> and <code class="inline">val2</code> differ by no more than <code class="inline">delta</code></p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#assert_in_delta/4">assert_in_delta(val1, val2, delta, message \\ nil)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#assert_raise/2">assert_raise(exception, function)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Asserts that <code class="inline">val1</code> and <code class="inline">val2</code> differ by no more than <code class="inline">delta</code></p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#assert_raise/2">assert_raise(exception, function)</a></td>
-  
-    <td class="summary_synopsis"><p>Asserts the <code class="inline">exception</code> is raised during <code class="inline">function</code> execution.
+    <div class="summary-synopsis"><p>Asserts the <code class="inline">exception</code> is raised during <code class="inline">function</code> execution.
 Returns the rescued exception, fails otherwise</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#assert_raise/3">assert_raise(exception, message, function)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#assert_raise/3">assert_raise(exception, message, function)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Asserts the <code class="inline">exception</code> is raised during <code class="inline">function</code> execution with
+    <div class="summary-synopsis"><p>Asserts the <code class="inline">exception</code> is raised during <code class="inline">function</code> execution with
 the <code class="inline">expected_message</code>. Returns the rescued exception, fails otherwise</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#assert_receive/3">assert_receive(expected, timeout \\ 100, message \\ nil)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#flunk/1">flunk(message \\ &quot;Flunked!&quot;)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Asserts a message was or is going to be received</p>
-</td>
+    <div class="summary-synopsis"><p>Fails with a message</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#assert_received/2">assert_received(expected, message \\ nil)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#refute/2">refute(value, message)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Asserts a message was received and is in the current process’ mailbox.
+    <div class="summary-synopsis"><p>Asserts <code class="inline">value</code> is <code class="inline">nil</code> or <code class="inline">false</code> (that is, <code class="inline">value</code> is not truthy)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#refute_in_delta/4">refute_in_delta(val1, val2, delta, message \\ nil)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Asserts <code class="inline">val1</code> and <code class="inline">val2</code> are not within <code class="inline">delta</code></p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+  <div class="summary-macros summary">
+    <h2>
+      <a href="#macros">Macros</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#assert/1">assert(assertion)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Asserts its argument is true</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#assert_receive/3">assert_receive(expected, timeout \\ 100, message \\ nil)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Asserts a message was or is going to be received</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#assert_received/2">assert_received(expected, message \\ nil)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Asserts a message was received and is in the current process’ mailbox.
 Timeout is set to 0, so there is no waiting time</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#catch_error/1">catch_error(expression)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#catch_error/1">catch_error(expression)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Asserts <code class="inline">expression</code> will cause an error.
+    <div class="summary-synopsis"><p>Asserts <code class="inline">expression</code> will cause an error.
 Returns the error or fails otherwise</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#catch_exit/1">catch_exit(expression)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#catch_exit/1">catch_exit(expression)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Asserts <code class="inline">expression</code> will exit.
+    <div class="summary-synopsis"><p>Asserts <code class="inline">expression</code> will exit.
 Returns the exit status/message or fails otherwise</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#catch_throw/1">catch_throw(expression)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#catch_throw/1">catch_throw(expression)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Asserts <code class="inline">expression</code> will throw a value.
+    <div class="summary-synopsis"><p>Asserts <code class="inline">expression</code> will throw a value.
 Returns the thrown value or fails otherwise</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#flunk/1">flunk(message \\ &quot;Flunked!&quot;)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#refute/1">refute(assertion)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Fails with a message</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#refute/1">refute(assertion)</a></td>
-  
-    <td class="summary_synopsis"><p>This is a negative assertion, failing if its parameter
+    <div class="summary-synopsis"><p>This is a negative assertion, failing if its parameter
 is truthy</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#refute/2">refute(value, message)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#refute_receive/3">refute_receive(not_expected, timeout \\ 100, message \\ nil)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Asserts <code class="inline">value</code> is <code class="inline">nil</code> or <code class="inline">false</code> (that is, <code class="inline">value</code> is not truthy)</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#refute_in_delta/4">refute_in_delta(val1, val2, delta, message \\ nil)</a></td>
-  
-    <td class="summary_synopsis"><p>Asserts <code class="inline">val1</code> and <code class="inline">val2</code> are not within <code class="inline">delta</code></p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#refute_receive/3">refute_receive(not_expected, timeout \\ 100, message \\ nil)</a></td>
-  
-    <td class="summary_synopsis"><p>Asserts <code class="inline">message</code> was not received (and won’t be received) within
+    <div class="summary-synopsis"><p>Asserts <code class="inline">message</code> was not received (and won’t be received) within
 the <code class="inline">timeout</code> period</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#refute_received/2">refute_received(not_expected, message \\ nil)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#refute_received/2">refute_received(not_expected, message \\ nil)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Asserts a message was not received (i.e. it is not in the current process mailbox).
+    <div class="summary-synopsis"><p>Asserts a message was not received (i.e. it is not in the current process mailbox).
 The <code class="inline">not_expected</code> argument must be a match pattern</p>
-</td>
+</div>
   
-</tr>
+</div>
 
-        </table>
+  </div>
+
+
+          
+
+        </section>
       
 
       
 
       
-        <section id="functions_details" class="details_list">
-          <h2>Functions</h2>
-          <section class="detail">
-  <div class="detail_header" id="assert/2">
-    <span class="signature"><strong>assert(value, message)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#assert/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="assert/2">
+  <div class="detail-header">
+    <a href="#assert/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">assert(value, message)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L201" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -218,18 +307,18 @@ The <code class="inline">not_expected</code> argument must be a match pattern</p
 <pre><code class="elixir">assert false, &quot;it will never be true&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L201" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="assert_in_delta/4">
-    <span class="signature"><strong>assert_in_delta(val1, val2, delta, message \\ nil)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#assert_in_delta/4" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="assert_in_delta/4">
+  <div class="detail-header">
+    <a href="#assert_in_delta/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">assert_in_delta(val1, val2, delta, message \\ nil)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L379" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -239,18 +328,18 @@ The <code class="inline">not_expected</code> argument must be a match pattern</p
 assert_in_delta 10, 15, 4</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L379" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="assert_raise/2">
-    <span class="signature"><strong>assert_raise(exception, function)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#assert_raise/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="assert_raise/2">
+  <div class="detail-header">
+    <a href="#assert_raise/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">assert_raise(exception, function)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L348" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -262,18 +351,18 @@ Returns the rescued exception, fails otherwise.</p>
 end</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L348" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="assert_raise/3">
-    <span class="signature"><strong>assert_raise(exception, message, function)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#assert_raise/3" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="assert_raise/3">
+  <div class="detail-header">
+    <a href="#assert_raise/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">assert_raise(exception, message, function)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L322" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -285,26 +374,28 @@ the <code class="inline">expected_message</code>. Returns the rescued exception,
 end</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L322" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="flunk/1">
-    <span class="signature"><strong>flunk(message \\ &quot;Flunked!&quot;)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#flunk/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="flunk/1">
+  <div class="detail-header">
+    <a href="#flunk/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">flunk(message \\ &quot;Flunked!&quot;)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L547" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>flunk(<a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: no_return</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">flunk(<a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: no_return</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Fails with a message.</p>
@@ -312,18 +403,18 @@ end</code></pre>
 <pre><code class="elixir">flunk &quot;This should raise an error&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L547" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="refute/2">
-    <span class="signature"><strong>refute(value, message)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#refute/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="refute/2">
+  <div class="detail-header">
+    <a href="#refute/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">refute(value, message)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L448" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -332,18 +423,18 @@ end</code></pre>
 <pre><code class="elixir">refute true, &quot;This will obviously fail&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L448" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="refute_in_delta/4">
-    <span class="signature"><strong>refute_in_delta(val1, val2, delta, message \\ nil)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#refute_in_delta/4" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="refute_in_delta/4">
+  <div class="detail-header">
+    <a href="#refute_in_delta/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">refute_in_delta(val1, val2, delta, message \\ nil)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L525" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -355,25 +446,30 @@ automatically be appended to it.</p>
 refute_in_delta 10, 11, 2</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L525" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
 
       
-        <section id="macros_details" class="details_list">
-          <h2>Macros</h2>
-          <section class="detail">
-  <div class="detail_header" id="assert/1">
-    <span class="signature"><strong>assert(assertion)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#assert/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="macros" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#macros">
+              <i class="icon-link"></i>
+            </a>
+            Macros
+          </h1>
+          <div class="detail" id="assert/1">
+  <div class="detail-header">
+    <a href="#assert/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">assert(assertion)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L66" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -397,18 +493,18 @@ lhs:  10
 rhs:  15</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L66" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="assert_receive/3">
-    <span class="signature"><strong>assert_receive(expected, timeout \\ 100, message \\ nil)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#assert_receive/3" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="assert_receive/3">
+  <div class="detail-header">
+    <a href="#assert_receive/3" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">assert_receive(expected, timeout \\ 100, message \\ nil)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L239" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -427,18 +523,18 @@ x = 5
 assert_receive {:count, ^x}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L239" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="assert_received/2">
-    <span class="signature"><strong>assert_received(expected, message \\ nil)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#assert_received/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="assert_received/2">
+  <div class="detail-header">
+    <a href="#assert_received/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">assert_received(expected, message \\ nil)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L260" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -453,18 +549,18 @@ assert_received :hello</code></pre>
 assert_received {:hello, _}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L260" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="catch_error/1">
-    <span class="signature"><strong>catch_error(expression)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#catch_error/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="catch_error/1">
+  <div class="detail-header">
+    <a href="#catch_error/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">catch_error(expression)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L422" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -474,18 +570,18 @@ Returns the error or fails otherwise.</p>
 <pre><code class="elixir">assert catch_error(error 1) == 1</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L422" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="catch_exit/1">
-    <span class="signature"><strong>catch_exit(expression)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#catch_exit/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="catch_exit/1">
+  <div class="detail-header">
+    <a href="#catch_exit/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">catch_exit(expression)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L409" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -495,18 +591,18 @@ Returns the exit status/message or fails otherwise.</p>
 <pre><code class="elixir">assert catch_exit(exit 1) == 1</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L409" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="catch_throw/1">
-    <span class="signature"><strong>catch_throw(expression)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#catch_throw/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="catch_throw/1">
+  <div class="detail-header">
+    <a href="#catch_throw/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">catch_throw(expression)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L396" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -516,18 +612,18 @@ Returns the thrown value or fails otherwise.</p>
 <pre><code class="elixir">assert catch_throw(throw 1) == 1</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L396" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="refute/1">
-    <span class="signature"><strong>refute(assertion)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#refute/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="refute/1">
+  <div class="detail-header">
+    <a href="#refute/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">refute(assertion)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L116" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -537,18 +633,18 @@ is truthy.</p>
 <pre><code class="elixir">refute age &lt; 0</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L116" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="refute_receive/3">
-    <span class="signature"><strong>refute_receive(not_expected, timeout \\ 100, message \\ nil)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#refute_receive/3" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="refute_receive/3">
+  <div class="detail-header">
+    <a href="#refute_receive/3" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">refute_receive(not_expected, timeout \\ 100, message \\ nil)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L467" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -561,18 +657,18 @@ the <code class="inline">timeout</code> period.</p>
 <pre><code class="elixir">refute_receive :bye, 1000</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L467" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="refute_received/2">
-    <span class="signature"><strong>refute_received(not_expected, message \\ nil)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#refute_received/2" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="refute_received/2">
+  <div class="detail-header">
+    <a href="#refute_received/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">refute_received(not_expected, message \\ nil)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/ex_unit/lib/ex_unit/assertions.ex#L483" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -584,15 +680,29 @@ The <code class="inline">not_expected</code> argument must be a match pattern.</
 refute_received :bye</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/ex_unit/lib/ex_unit/assertions.ex#L483" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
 
       
-    </section>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
+

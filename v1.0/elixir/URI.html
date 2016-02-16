@@ -1,49 +1,78 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
-    <title>URI</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8">
-      relpath = '';
-      if (relpath != '') relpath += '/';
-    </script>
-
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      hljs.initHighlightingOnLoad();
-      hljs.configure({languages: []}); //disable autodetect
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>URI – Elixir v1.0.5</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
+  <body data-type="modules">
 
-  <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
 
-    <section id="content">
-      <div class="breadcrumbs">Elixir v1.0.5 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="URI.html">URI</a></div>
+  
+  <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Elixir
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.5
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+      <li><a id="protocols-list" href="#full-list">Protocols</a></li>
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
       <h1>
+        <small class="visible-xs">Elixir v1.0.5</small>
         URI
         
+        
+          <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary">Summary</a></li>
-        
-        
-          <li><a href="#types_details">Types</a></li>
-        
-        
-          <li><a href="#functions_details">Functions</a></li>
-        
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
@@ -53,140 +82,209 @@
       
 
       
-        <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L1" class="view_source">Source</a>
-      
-
-      
-        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
-        <table class="summary">
-          <tr>
-  <td class="summary_signature"><a href="#char_reserved?/1">char_reserved?(c)</a></td>
-  
-    <td class="summary_synopsis"><p>Checks if the character is a “reserved” character in a URI</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#char_unescaped?/1">char_unescaped?(c)</a></td>
-  
-    <td class="summary_synopsis"><p>Checks if the character is allowed unescaped in a URI</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#char_unreserved?/1">char_unreserved?(c)</a></td>
-  
-    <td class="summary_synopsis"><p>Checks if the character is a “unreserved” character in a URI</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#decode/1">decode(uri)</a></td>
-  
-    <td class="summary_synopsis"><p>Percent-unescape a URI</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#decode_query/2">decode_query(q, dict \\ %{})</a></td>
-  
-    <td class="summary_synopsis"><p>Decodes a query string into a dictionary (by default uses a map)</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#decode_www_form/1">decode_www_form(str)</a></td>
-  
-    <td class="summary_synopsis"><p>Decode a string as “x-www-urlencoded”</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#default_port/1">default_port(scheme)</a></td>
-  
-    <td class="summary_synopsis"><p>Returns the default port for a given scheme</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#default_port/2">default_port(scheme, port)</a></td>
-  
-    <td class="summary_synopsis"><p>Registers a scheme with a default port</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#encode/2">encode(str, predicate \\ &amp;(char_unescaped? / 1))</a></td>
-  
-    <td class="summary_synopsis"><p>Percent-escape a URI.
-Accepts <code class="inline">predicate</code> function as an argument to specify if char can be left as is</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#encode_query/1">encode_query(l)</a></td>
-  
-    <td class="summary_synopsis"><p>Encodes an enumerable into a query string</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#encode_www_form/1">encode_www_form(str)</a></td>
-  
-    <td class="summary_synopsis"><p>Encode a string as “x-www-urlencoded”</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#normalize_scheme/1">normalize_scheme(scheme)</a></td>
-  
-    <td class="summary_synopsis"><p>Normalizes the scheme according to the spec by downcasing it</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#parse/1">parse(uri)</a></td>
-  
-    <td class="summary_synopsis"><p>Parses a well-formed URI reference into its components</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#query_decoder/1">query_decoder(q)</a></td>
-  
-    <td class="summary_synopsis"><p>Returns an iterator function over the query string that decodes
-the query string in steps</p>
-</td>
-  
-</tr>
-
-        </table>
-      
-
-      
-        <section id="types_details" class="details_list">
-          <h2>Types <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></h2>
-          <div class="type_detail">
-  <p class="typespec" id="t:t/0">
-    <a href="#t:t/0">t</a> :: %URI{authority: term, fragment: term, host: term, path: term, port: term, query: term, scheme: term, userinfo: term}
-  </p>
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:t/0">t()</a>
+  </div>
   
 </div>
+
+  </div>
+
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#char_reserved?/1">char_reserved?(c)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Checks if the character is a “reserved” character in a URI</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#char_unescaped?/1">char_unescaped?(c)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Checks if the character is allowed unescaped in a URI</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#char_unreserved?/1">char_unreserved?(c)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Checks if the character is a “unreserved” character in a URI</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#decode/1">decode(uri)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Percent-unescape a URI</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#decode_query/2">decode_query(q, dict \\ %{})</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Decodes a query string into a dictionary (by default uses a map)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#decode_www_form/1">decode_www_form(str)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Decode a string as “x-www-urlencoded”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#default_port/1">default_port(scheme)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the default port for a given scheme</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#default_port/2">default_port(scheme, port)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Registers a scheme with a default port</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#encode/2">encode(str, predicate \\ &amp;(char_unescaped? / 1))</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Percent-escape a URI.
+Accepts <code class="inline">predicate</code> function as an argument to specify if char can be left as is</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#encode_query/1">encode_query(l)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Encodes an enumerable into a query string</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#encode_www_form/1">encode_www_form(str)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Encode a string as “x-www-urlencoded”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#normalize_scheme/1">normalize_scheme(scheme)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Normalizes the scheme according to the spec by downcasing it</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#parse/1">parse(uri)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Parses a well-formed URI reference into its components</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#query_decoder/1">query_decoder(q)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns an iterator function over the query string that decodes
+the query string in steps</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
 
         </section>
       
 
       
-        <section id="functions_details" class="details_list">
-          <h2>Functions</h2>
-          <section class="detail">
-  <div class="detail_header" id="char_reserved?/1">
-    <span class="signature"><strong>char_reserved?(c)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#char_reserved?/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="types" class="types details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div id="t:t/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %URI{authority: term, fragment: term, host: term, path: term, port: term, query: term, scheme: term, userinfo: term}</code></pre>
+  
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="char_reserved?/1">
+  <div class="detail-header">
+    <a href="#char_reserved?/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">char_reserved?(c)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L158" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -194,18 +292,18 @@ the query string in steps</p>
 <p>Reserved characters are specified in RFC3986, section 2.2.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L158" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="char_unescaped?/1">
-    <span class="signature"><strong>char_unescaped?(c)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#char_unescaped?/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="char_unescaped?/1">
+  <div class="detail-header">
+    <a href="#char_unescaped?/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">char_unescaped?(c)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L180" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -214,18 +312,18 @@ the query string in steps</p>
 reserved and unreserved characters are kept unescaped.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L180" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="char_unreserved?/1">
-    <span class="signature"><strong>char_unreserved?(c)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#char_unreserved?/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="char_unreserved?/1">
+  <div class="detail-header">
+    <a href="#char_unreserved?/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">char_unreserved?(c)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L167" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -233,18 +331,18 @@ reserved and unreserved characters are kept unescaped.</p>
 <p>Unreserved characters are specified in RFC3986, section 2.3.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L167" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="decode/1">
-    <span class="signature"><strong>decode(uri)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#decode/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="decode/1">
+  <div class="detail-header">
+    <a href="#decode/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">decode(uri)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L236" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -254,18 +352,18 @@ reserved and unreserved characters are kept unescaped.</p>
 &quot;http://elixir-lang.org&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L236" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="decode_query/2">
-    <span class="signature"><strong>decode_query(q, dict \\ %{})</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#decode_query/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="decode_query/2">
+  <div class="detail-header">
+    <a href="#decode_query/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">decode_query(q, dict \\ %{})</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L97" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -279,18 +377,18 @@ binary. Keys and values will be percent-unescaped.</p>
 %{&quot;bar&quot; =&gt; &quot;2&quot;, &quot;foo&quot; =&gt; &quot;1&quot;}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L97" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="decode_www_form/1">
-    <span class="signature"><strong>decode_www_form(str)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#decode_www_form/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="decode_www_form/1">
+  <div class="detail-header">
+    <a href="#decode_www_form/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">decode_www_form(str)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L252" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -300,18 +398,18 @@ binary. Keys and values will be percent-unescaped.</p>
 &quot;&lt;all in/&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L252" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="default_port/1">
-    <span class="signature"><strong>default_port(scheme)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#default_port/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="default_port/1">
+  <div class="detail-header">
+    <a href="#default_port/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">default_port(scheme)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L48" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -326,18 +424,18 @@ iex&gt; URI.default_port(&quot;ponzi&quot;)
 nil</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L48" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="default_port/2">
-    <span class="signature"><strong>default_port(scheme, port)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#default_port/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="default_port/2">
+  <div class="detail-header">
+    <a href="#default_port/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">default_port(scheme, port)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L59" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -347,18 +445,18 @@ application start callback in case you want to register
 new URIs.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L59" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="encode/2">
-    <span class="signature"><strong>encode(str, predicate \\ &amp;(char_unescaped? / 1))</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#encode/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="encode/2">
+  <div class="detail-header">
+    <a href="#encode/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">encode(str, predicate \\ &amp;(char_unescaped? / 1))</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L194" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -369,18 +467,18 @@ Accepts <code class="inline">predicate</code> function as an argument to specify
 &quot;ftp://s-ite.tld/?value=put%20it+%D0%B9&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L194" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="encode_query/1">
-    <span class="signature"><strong>encode_query(l)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#encode_query/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="encode_query/1">
+  <div class="detail-header">
+    <a href="#encode_query/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">encode_query(l)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L80" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -396,18 +494,18 @@ iex&gt; URI.encode_query(hd)
 &quot;bar=2&amp;foo=1&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L80" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="encode_www_form/1">
-    <span class="signature"><strong>encode_www_form(str)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#encode_www_form/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="encode_www_form/1">
+  <div class="detail-header">
+    <a href="#encode_www_form/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">encode_www_form(str)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L207" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -417,36 +515,36 @@ iex&gt; URI.encode_query(hd)
 &quot;put%3A+it%2B%D0%B9&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L207" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="normalize_scheme/1">
-    <span class="signature"><strong>normalize_scheme(scheme)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#normalize_scheme/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="normalize_scheme/1">
+  <div class="detail-header">
+    <a href="#normalize_scheme/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">normalize_scheme(scheme)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L24" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Normalizes the scheme according to the spec by downcasing it.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L24" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="parse/1">
-    <span class="signature"><strong>parse(uri)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#parse/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="parse/1">
+  <div class="detail-header">
+    <a href="#parse/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">parse(uri)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L311" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -477,18 +575,18 @@ iex&gt; URI.parse(&quot;foo/bar&quot;)
      port: nil, query: nil, scheme: nil, userinfo: nil}</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L311" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="query_decoder/1">
-    <span class="signature"><strong>query_decoder(q)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#query_decoder/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="query_decoder/1">
+  <div class="detail-header">
+    <a href="#query_decoder/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">query_decoder(q)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/uri.ex#L114" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -499,10 +597,7 @@ the query string in steps.</p>
 [{&quot;foo&quot;, &quot;1&quot;}, {&quot;bar&quot;, &quot;2&quot;}]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/uri.ex#L114" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
@@ -510,6 +605,23 @@ the query string in steps.</p>
       
 
       
-    </section>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
+

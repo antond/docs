@@ -1,47 +1,78 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
-    <title>Float</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8">
-      relpath = '';
-      if (relpath != '') relpath += '/';
-    </script>
-
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      hljs.initHighlightingOnLoad();
-      hljs.configure({languages: []}); //disable autodetect
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Float – Elixir v1.0.5</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
+  <body data-type="modules">
 
-  <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
 
-    <section id="content">
-      <div class="breadcrumbs">Elixir v1.0.5 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Float.html">Float</a></div>
+  
+  <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Elixir
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.5
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
+    
+      <li><a id="protocols-list" href="#full-list">Protocols</a></li>
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
       <h1>
+        <small class="visible-xs">Elixir v1.0.5</small>
         Float
         
+        
+          <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/float.ex#L3" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary">Summary</a></li>
-        
-        
-        
-          <li><a href="#functions_details">Functions</a></li>
-        
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
@@ -51,97 +82,138 @@
       
 
       
-        <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/float.ex#L3" class="view_source">Source</a>
-      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
 
-      
-        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
-        <table class="summary">
-          <tr>
-  <td class="summary_signature"><a href="#ceil/2">ceil(number, precision \\ 0)</a></td>
-  
-    <td class="summary_synopsis"><p>Rounds a float to the largest integer greater than or equal to <code class="inline">num</code></p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#floor/2">floor(number, precision \\ 0)</a></td>
-  
-    <td class="summary_synopsis"><p>Rounds a float to the largest integer less than or equal to <code class="inline">num</code></p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#parse/1">parse(binary)</a></td>
-  
-    <td class="summary_synopsis"><p>Parses a binary into a float</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#round/2">round(number, precision \\ 0)</a></td>
-  
-    <td class="summary_synopsis"><p>Rounds a floating point value to an arbitrary number of fractional digits
-(between 0 and 15)</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#to_char_list/1">to_char_list(number)</a></td>
-  
-    <td class="summary_synopsis"><p>Returns a char list which corresponds to the text representation of the given float</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#to_char_list/2">to_char_list(float, options)</a></td>
-  
-    <td class="summary_synopsis"><p>Returns a list which corresponds to the text representation
-of <code class="inline">float</code></p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#to_string/1">to_string(some_float)</a></td>
-  
-    <td class="summary_synopsis"><p>Returns a binary which corresponds to the text representation
-of <code class="inline">some_float</code></p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#to_string/2">to_string(float, options)</a></td>
-  
-    <td class="summary_synopsis"><p>Returns a binary which corresponds to the text representation
-of <code class="inline">float</code></p>
-</td>
-  
-</tr>
-
-        </table>
-      
-
-      
-
-      
-        <section id="functions_details" class="details_list">
-          <h2>Functions</h2>
-          <section class="detail">
-  <div class="detail_header" id="ceil/2">
-    <span class="signature"><strong>ceil(number, precision \\ 0)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#ceil/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#ceil/2">ceil(number, precision \\ 0)</a>
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
+    <div class="summary-synopsis"><p>Rounds a float to the largest integer greater than or equal to <code class="inline">num</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#floor/2">floor(number, precision \\ 0)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Rounds a float to the largest integer less than or equal to <code class="inline">num</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#parse/1">parse(binary)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Parses a binary into a float</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#round/2">round(number, precision \\ 0)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Rounds a floating point value to an arbitrary number of fractional digits
+(between 0 and 15)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_char_list/1">to_char_list(number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a char list which corresponds to the text representation of the given float</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_char_list/2">to_char_list(float, options)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a list which corresponds to the text representation
+of <code class="inline">float</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_string/1">to_string(some_float)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a binary which corresponds to the text representation
+of <code class="inline">some_float</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_string/2">to_string(float, options)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a binary which corresponds to the text representation
+of <code class="inline">float</code></p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
+
+        </section>
       
-        <li>ceil(float, 0 .. 15) :: float</li>
+
       
-    </ul>
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="ceil/2">
+  <div class="detail-header">
+    <a href="#ceil/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">ceil(number, precision \\ 0)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/float.ex#L117" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">ceil(float, 0 .. 15) :: float</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Rounds a float to the largest integer greater than or equal to <code class="inline">num</code>.</p>
@@ -160,26 +232,28 @@ iex&gt; Float.ceil(34.253, 2)
 34.26</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/float.ex#L117" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="floor/2">
-    <span class="signature"><strong>floor(number, precision \\ 0)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#floor/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="floor/2">
+  <div class="detail-header">
+    <a href="#floor/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">floor(number, precision \\ 0)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/float.ex#L87" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>floor(float, 0 .. 15) :: float</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">floor(float, 0 .. 15) :: float</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Rounds a float to the largest integer less than or equal to <code class="inline">num</code>.</p>
@@ -198,26 +272,28 @@ iex&gt; Float.floor(34.253, 2)
 34.25</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/float.ex#L87" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="parse/1">
-    <span class="signature"><strong>parse(binary)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#parse/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="parse/1">
+  <div class="detail-header">
+    <a href="#parse/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">parse(binary)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/float.ex#L30" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>parse(binary) :: {float, binary} | :error</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">parse(binary) :: {float, binary} | :error</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Parses a binary into a float.</p>
@@ -237,26 +313,28 @@ iex&gt; Float.parse(&quot;pi&quot;)
 :error</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/float.ex#L30" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="round/2">
-    <span class="signature"><strong>round(number, precision \\ 0)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#round/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="round/2">
+  <div class="detail-header">
+    <a href="#round/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">round(number, precision \\ 0)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/float.ex#L149" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>round(float, 0 .. 15) :: float</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">round(float, 0 .. 15) :: float</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Rounds a floating point value to an arbitrary number of fractional digits
@@ -278,26 +356,28 @@ iex&gt; Float.round(-5.5675, 3)
 -5.568</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/float.ex#L149" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="to_char_list/1">
-    <span class="signature"><strong>to_char_list(number)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#to_char_list/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="to_char_list/1">
+  <div class="detail-header">
+    <a href="#to_char_list/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">to_char_list(number)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/float.ex#L171" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>to_char_list(float) :: char_list</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">to_char_list(float) :: char_list</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns a char list which corresponds to the text representation of the given float.</p>
@@ -307,26 +387,28 @@ iex&gt; Float.round(-5.5675, 3)
 &#39;7.00000000000000000000e+00&#39;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/float.ex#L171" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="to_char_list/2">
-    <span class="signature"><strong>to_char_list(float, options)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#to_char_list/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="to_char_list/2">
+  <div class="detail-header">
+    <a href="#to_char_list/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">to_char_list(float, options)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/float.ex#L193" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>to_char_list(float, list) :: char_list</li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">to_char_list(float, list) :: char_list</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns a list which corresponds to the text representation
@@ -346,26 +428,28 @@ of <code class="inline">float</code>.</p>
 &#39;7.1&#39;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/float.ex#L193" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="to_string/1">
-    <span class="signature"><strong>to_string(some_float)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#to_string/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="to_string/1">
+  <div class="detail-header">
+    <a href="#to_string/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">to_string(some_float)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/float.ex#L210" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>to_string(float) :: <a href="String.html#t:t/0">String.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">to_string(float) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns a binary which corresponds to the text representation
@@ -376,26 +460,28 @@ of <code class="inline">some_float</code>.</p>
 &quot;7.00000000000000000000e+00&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/float.ex#L210" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="to_string/2">
-    <span class="signature"><strong>to_string(float, options)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#to_string/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="to_string/2">
+  <div class="detail-header">
+    <a href="#to_string/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">to_string(float, options)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/elixir/lib/float.ex#L232" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
-    <p>Specs:</p>
-    <ul class="spec">
-      
-        <li>to_string(float, list) :: <a href="String.html#t:t/0">String.t</a></li>
-      
-    </ul>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">to_string(float, list) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
     <p>Returns a binary which corresponds to the text representation
@@ -415,10 +501,7 @@ of <code class="inline">float</code>.</p>
 &quot;7.1&quot;</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/elixir/lib/float.ex#L232" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
@@ -426,6 +509,23 @@ of <code class="inline">float</code>.</p>
       
 
       
-    </section>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
+

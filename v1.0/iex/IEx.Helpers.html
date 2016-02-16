@@ -1,54 +1,79 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
-    <title>IEx.Helpers</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript" charset="utf-8">
-      relpath = '';
-      if (relpath != '') relpath += '/';
-    </script>
-
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      hljs.initHighlightingOnLoad();
-      hljs.configure({languages: []}); //disable autodetect
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>IEx.Helpers – IEx v1.0.5</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
   </head>
+  <body data-type="modules">
 
-  <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
 
-    <section id="content">
-      <div class="breadcrumbs">IEx v1.0.5 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="IEx.html">IEx</a> &rarr; <a href="IEx.Helpers.html">Helpers</a></div>
+  
+  <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        IEx
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.5
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
       <h1>
+        <small class="visible-xs">IEx v1.0.5</small>
         IEx.Helpers
         
+        
+          <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
       </h1>
-
-      <ul class="summary_links">
-        
-          <li><a href="#summary">Summary</a></li>
-        
-        
-        
-          <li><a href="#functions_details">Functions</a></li>
-        
-        
-          <li><a href="#macros_details">Macros</a></li>
-        
-        
-      </ul>
 
       
         <section id="moduledoc" class="docstring">
           <p>Welcome to Interactive Elixir. You are currently
-seeing the documentation for the module <a href="IEx.Helpers.html"><code class="inline">IEx.Helpers</code></a>
+seeing the documentation for the module <a href="IEx.Helpers.html#content"><code class="inline">IEx.Helpers</code></a>
 which provides many helpers to make Elixir’s shell
 more joyful to work with.</p>
 <p>This message was triggered by invoking the helper
@@ -108,150 +133,212 @@ followed by a dot, then press tab to trigger autocomplete. For example:</p>
       
 
       
-        <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L1" class="view_source">Source</a>
-      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
 
-      
-        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
-        <table class="summary">
-          <tr>
-  <td class="summary_signature"><a href="#c/2">c(files, path \\ &quot;.&quot;)</a></td>
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#c/2">c(files, path \\ &quot;.&quot;)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Expects a list of files to compile and a path
+    <div class="summary-synopsis"><p>Expects a list of files to compile and a path
 to write their object code to. It returns the name
 of the compiled modules</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#cd/1">cd(directory)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cd/1">cd(directory)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Changes the current working directory to the given path</p>
-</td>
+    <div class="summary-synopsis"><p>Changes the current working directory to the given path</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#clear/0">clear()</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#clear/0">clear()</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Clears the console screen</p>
-</td>
+    <div class="summary-synopsis"><p>Clears the console screen</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#flush/0">flush()</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#flush/0">flush()</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Flushes all messages sent to the shell and prints them out</p>
-</td>
+    <div class="summary-synopsis"><p>Flushes all messages sent to the shell and prints them out</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#h/0">h()</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#h/0">h()</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Prints the documentation for <a href="IEx.Helpers.html"><code class="inline">IEx.Helpers</code></a></p>
-</td>
+    <div class="summary-synopsis"><p>Prints the documentation for <a href="IEx.Helpers.html#content"><code class="inline">IEx.Helpers</code></a></p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#h/1">h(other)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#l/1">l(module)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Prints the documentation for the given module
-or for the given function/arity pair</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#import_file/1">import_file(path)</a></td>
-  
-    <td class="summary_synopsis"><p>Evaluates the contents of the file at <code class="inline">path</code> as if it were directly typed into
-the shell. <code class="inline">path</code> has to be a literal binary</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#l/1">l(module)</a></td>
-  
-    <td class="summary_synopsis"><p>Load the given module’s beam code (and ensures any previous
+    <div class="summary-synopsis"><p>Load the given module’s beam code (and ensures any previous
 old version was properly purged before)</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#ls/1">ls(path \\ &quot;.&quot;)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#ls/1">ls(path \\ &quot;.&quot;)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Produces a simple list of a directory’s contents.
+    <div class="summary-synopsis"><p>Produces a simple list of a directory’s contents.
 If <code class="inline">path</code> points to a file, prints its full path</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#pwd/0">pwd()</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#pwd/0">pwd()</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Prints the current working directory</p>
-</td>
+    <div class="summary-synopsis"><p>Prints the current working directory</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#r/1">r(module)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#r/1">r(module)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Recompiles and reloads the specified module’s source file</p>
-</td>
+    <div class="summary-synopsis"><p>Recompiles and reloads the specified module’s source file</p>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#respawn/0">respawn()</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#respawn/0">respawn()</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Respawns the current shell by starting a new
+    <div class="summary-synopsis"><p>Respawns the current shell by starting a new
 process and a new scope. Returns true if it worked</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#s/1">s(other)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#v/0">v()</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Similar to <a href="#t/1"><code class="inline">t/1</code></a>, only for specs</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#t/1">t(module)</a></td>
-  
-    <td class="summary_synopsis"><p>When given a module, prints specifications (or simply specs) for all the
-types defined in it</p>
-</td>
-  
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#v/0">v()</a></td>
-  
-    <td class="summary_synopsis"><p>Prints the history of expressions evaluated during the session along with
+    <div class="summary-synopsis"><p>Prints the history of expressions evaluated during the session along with
 their results</p>
-</td>
+</div>
   
-</tr>
-<tr>
-  <td class="summary_signature"><a href="#v/1">v(n)</a></td>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#v/1">v(n)</a>
+  </div>
   
-    <td class="summary_synopsis"><p>Retrieves the nth expression’s value from the history</p>
-</td>
+    <div class="summary-synopsis"><p>Retrieves the nth expression’s value from the history</p>
+</div>
   
-</tr>
+</div>
 
-        </table>
+  </div>
+
+
+          
+  <div class="summary-macros summary">
+    <h2>
+      <a href="#macros">Macros</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#h/1">h(other)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Prints the documentation for the given module
+or for the given function/arity pair</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#import_file/1">import_file(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Evaluates the contents of the file at <code class="inline">path</code> as if it were directly typed into
+the shell. <code class="inline">path</code> has to be a literal binary</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#s/1">s(other)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Similar to <a href="#t/1"><code class="inline">t/1</code></a>, only for specs</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t/1">t(module)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>When given a module, prints specifications (or simply specs) for all the
+types defined in it</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
       
 
       
 
       
-        <section id="functions_details" class="details_list">
-          <h2>Functions</h2>
-          <section class="detail">
-  <div class="detail_header" id="c/2">
-    <span class="signature"><strong>c(files, path \\ &quot;.&quot;)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#c/2" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="c/2">
+  <div class="detail-header">
+    <a href="#c/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">c(files, path \\ &quot;.&quot;)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L69" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -267,36 +354,36 @@ c &quot;baz.ex&quot;
 #=&gt; [Baz]</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L69" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="cd/1">
-    <span class="signature"><strong>cd(directory)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#cd/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="cd/1">
+  <div class="detail-header">
+    <a href="#cd/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">cd(directory)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L348" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Changes the current working directory to the given path.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L348" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="clear/0">
-    <span class="signature"><strong>clear()</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#clear/0" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="clear/0">
+  <div class="detail-header">
+    <a href="#clear/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">clear()</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L104" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -306,54 +393,54 @@ on the shell, which means this function is by default
 unavailable on Windows machines.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L104" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="flush/0">
-    <span class="signature"><strong>flush()</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#flush/0" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="flush/0">
+  <div class="detail-header">
+    <a href="#flush/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">flush()</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L315" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Flushes all messages sent to the shell and prints them out.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L315" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="h/0">
-    <span class="signature"><strong>h()</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#h/0" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="h/0">
+  <div class="detail-header">
+    <a href="#h/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">h()</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L116" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
-    <p>Prints the documentation for <a href="IEx.Helpers.html"><code class="inline">IEx.Helpers</code></a>.</p>
+    <p>Prints the documentation for <a href="IEx.Helpers.html#content"><code class="inline">IEx.Helpers</code></a>.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L116" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="l/1">
-    <span class="signature"><strong>l(module)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#l/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="l/1">
+  <div class="detail-header">
+    <a href="#l/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">l(module)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L307" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -361,18 +448,18 @@ unavailable on Windows machines.</p>
 old version was properly purged before).</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L307" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="ls/1">
-    <span class="signature"><strong>ls(path \\ &quot;.&quot;)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#ls/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="ls/1">
+  <div class="detail-header">
+    <a href="#ls/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">ls(path \\ &quot;.&quot;)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L360" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -380,36 +467,36 @@ old version was properly purged before).</p>
 If <code class="inline">path</code> points to a file, prints its full path.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L360" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="pwd/0">
-    <span class="signature"><strong>pwd()</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#pwd/0" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="pwd/0">
+  <div class="detail-header">
+    <a href="#pwd/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">pwd()</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L341" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
     <p>Prints the current working directory.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L341" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="r/1">
-    <span class="signature"><strong>r(module)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#r/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="r/1">
+  <div class="detail-header">
+    <a href="#r/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">r(module)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L278" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -418,18 +505,18 @@ If <code class="inline">path</code> points to a file, prints its full path.</p>
 are recompiled and reloaded.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L278" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="respawn/0">
-    <span class="signature"><strong>respawn()</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#respawn/0" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="respawn/0">
+  <div class="detail-header">
+    <a href="#respawn/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">respawn()</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L424" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -437,18 +524,18 @@ are recompiled and reloaded.</p>
 process and a new scope. Returns true if it worked.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L424" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="v/0">
-    <span class="signature"><strong>v()</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#v/0" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="v/0">
+  <div class="detail-header">
+    <a href="#v/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">v()</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L252" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -456,18 +543,18 @@ process and a new scope. Returns true if it worked.</p>
 their results.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L252" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="v/1">
-    <span class="signature"><strong>v(n)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(function)</span>
-      <a href="#v/1" class="detail_link" title="Link to this function">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="v/1">
+  <div class="detail-header">
+    <a href="#v/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">v(n)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L268" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -476,25 +563,30 @@ their results.</p>
 For instance, v(-1) returns the result of the last evaluated expression.</p>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L268" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
 
       
-        <section id="macros_details" class="details_list">
-          <h2>Macros</h2>
-          <section class="detail">
-  <div class="detail_header" id="h/1">
-    <span class="signature"><strong>h(other)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#h/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+        <section id="macros" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#macros">
+              <i class="icon-link"></i>
+            </a>
+            Macros
+          </h1>
+          <div class="detail" id="h/1">
+  <div class="detail-header">
+    <a href="#h/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">h(other)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L140" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -510,18 +602,18 @@ h Enum.all?/2
 h Enum.all?</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L140" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="import_file/1">
-    <span class="signature"><strong>import_file(path)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#import_file/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="import_file/1">
+  <div class="detail-header">
+    <a href="#import_file/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">import_file(path)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L448" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -539,18 +631,18 @@ iex(2)&gt; value
 13</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L448" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="s/1">
-    <span class="signature"><strong>s(other)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#s/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="s/1">
+  <div class="detail-header">
+    <a href="#s/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">s(other)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L222" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -565,18 +657,18 @@ s(is_atom)
 s(is_atom/1)</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L222" class="view_source">Source</a>
-  
-</section>
-<section class="detail">
-  <div class="detail_header" id="t/1">
-    <span class="signature"><strong>t(module)</strong></span>
-    <div class="detail_header_links">
-      <span class="detail_type">(macro)</span>
-      <a href="#t/1" class="detail_link" title="Link to this macro">#</a>
-      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
-    </div>
+</div>
+<div class="detail" id="t/1">
+  <div class="detail-header">
+    <a href="#t/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t(module)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/1d9548fd285d243721b7eba71912bde2ffd1f6c3\c/lib/iex/lib/iex/helpers.ex#L188" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
   </div>
   
   <section class="docstring">
@@ -589,15 +681,29 @@ t(Enum.t/0)
 t(Enum.t)</code></pre>
 
   </section>
-  
-    <a href="https://github.com/elixir-lang/elixir/blob/v1.0.5/lib/iex/lib/iex/helpers.ex#L188" class="view_source">Source</a>
-  
-</section>
+</div>
 
         </section>
       
 
       
-    </section>
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
+
