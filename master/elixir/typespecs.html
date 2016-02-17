@@ -169,19 +169,43 @@
 <tr>
 <td><code class="inline">nonempty_list()</code></td><td><code class="inline">nonempty_list(any())</code></td>
 </tr>
+<tr>
+<td><code class="inline">iolist()</code></td><td><code class="inline">maybe_improper_list(byte() | binary() | iolist(), binary() | [])</code></td>
+</tr>
+<tr>
+<td><code class="inline">iodata()</code></td><td><code class="inline">iolist()</code> | <code class="inline">binary()</code></td>
+</tr>
+<tr>
+<td><code class="inline">module()</code></td><td><code class="inline">atom()</code> | <code class="inline">tuple()</code></td>
+</tr>
+<tr>
+<td><code class="inline">arity()</code></td><td><code class="inline">0..255</code></td>
+</tr>
+<tr>
+<td><code class="inline">mfa()</code></td><td><code class="inline">{atom(), atom(), arity()}</code></td>
+</tr>
+<tr>
+<td><code class="inline">identifier()</code></td><td><code class="inline">pid()</code> | <code class="inline">port()</code> | <code class="inline">reference()</code></td>
+</tr>
+<tr>
+<td><code class="inline">node()</code></td><td><code class="inline">atom()</code></td>
+</tr>
+<tr>
+<td><code class="inline">timeout()</code></td><td><code class="inline">:infinity</code> | <code class="inline">non_neg_integer()</code></td>
+</tr>
+<tr>
+<td><code class="inline">no_return()</code></td><td><code class="inline">none()</code></td>
+</tr>
+<tr>
+<td><code class="inline">fun()</code></td><td><code class="inline">(... -&gt; any)</code></td>
+</tr>
+<tr>
+<td><code class="inline">struct()</code></td><td><code class="inline">%{__struct__: atom()}</code></td>
+</tr>
+<tr>
+<td><code class="inline">as_boolean(t)</code></td><td><code class="inline">t</code></td>
+</tr>
 </table>
-<p><code class="inline">iolist()</code>              | <code class="inline">maybe_improper_list(byte() | binary() | iolist(), binary() | [])</code>
-<code class="inline">iodata()</code>              | <code class="inline">iolist()</code> | <code class="inline">binary()</code>
-<code class="inline">module()</code>              | <code class="inline">atom()</code> | <code class="inline">tuple()</code>
-<code class="inline">arity()</code>               | <code class="inline">0..255</code>
-<code class="inline">mfa()</code>                 | <code class="inline">{atom(), atom(), arity()}</code>
-<code class="inline">identifier()</code>          | <code class="inline">pid()</code> | <code class="inline">port()</code> | <code class="inline">reference()</code>
-<code class="inline">node()</code>                | <code class="inline">atom()</code>
-<code class="inline">timeout()</code>             | <code class="inline">:infinity</code> | <code class="inline">non_neg_integer()</code>
-<code class="inline">no_return()</code>           | <code class="inline">none()</code>
-<code class="inline">fun()</code>                 | <code class="inline">(... -&gt; any)</code>
-<code class="inline">struct()</code>              | <code class="inline">%{__struct__: atom()}</code>
-<code class="inline">as_boolean(t)</code>         | <code class="inline">t</code></p>
 <h3>Remote types</h3>
 <p>Any module is also able to define its own type and the modules in Elixir are no exception. For example, a string is <code class="inline">String.t</code>, a range is <code class="inline">Range.t</code>, any enumerable can be <code class="inline">Enum.t</code> and so on.</p>
 <h2 id="defining-a-type"> Defining a type</h2><pre><code class="elixir">@type type_name :: type
