@@ -68,7 +68,7 @@
         Mix.Config
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/214e2a3a7defa582a8437d7b3bdfcc2f5f19b6eb/lib/mix/lib/mix/config.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/928302a912e397917be957142a9837ae58610207/lib/mix/lib/mix/config.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -148,9 +148,7 @@ the configured applications environment</p>
     <a href="#read_wildcard!/1">read_wildcard!(path)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Reads many configuration files given by wildcard into a single config.
-Raises an error if <code class="inline">path</code> is a concrete filename (with no wildcards)
-but the corresponding file does not exist</p>
+    <div class="summary-synopsis"><p>Reads many configuration files given by wildcard into a single config</p>
 </div>
   
 </div>
@@ -192,10 +190,10 @@ but the corresponding file does not exist</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#import_config/1">import_config(file)</a>
+    <a href="#import_config/1">import_config(path_or_wildcard)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Imports configuration from the given file</p>
+    <div class="summary-synopsis"><p>Imports configuration from the given file or files</p>
 </div>
   
 </div>
@@ -225,7 +223,7 @@ but the corresponding file does not exist</p>
     </a>
     <span class="signature">merge(config1, config2)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/214e2a3a7defa582a8437d7b3bdfcc2f5f19b6eb/lib/mix/lib/mix/config.ex#L238" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/928302a912e397917be957142a9837ae58610207/lib/mix/lib/mix/config.ex#L262" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -252,7 +250,7 @@ iex&gt; Mix.Config.merge([app1: []], [app2: []])
     </a>
     <span class="signature">persist(config)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/214e2a3a7defa582a8437d7b3bdfcc2f5f19b6eb/lib/mix/lib/mix/config.ex#L191" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/928302a912e397917be957142a9837ae58610207/lib/mix/lib/mix/config.ex#L215" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -261,7 +259,14 @@ iex&gt; Mix.Config.merge([app1: []], [app2: []])
   <section class="docstring">
     <p>Persists the given configuration by modifying
 the configured applications environment.</p>
-<p>Returns the configured apps.</p>
+<p><code class="inline">config</code> should be a list of <code class="inline">{app, app_config}</code> tuples or a
+<code class="inline">%{app =&gt; app_config}</code> map where <code class="inline">app</code> are the applications to
+be configured and <code class="inline">app_config</code> are the configuration (as key-value
+pairs) for each of those applications.</p>
+<p>Returns the configured applications.</p>
+<h2>Examples</h2>
+<pre><code class="elixir">Mix.Config.persist(logger: [level: :error], my_app: [my_config: 1])
+#=&gt; [:logger, :my_app]</code></pre>
 
   </section>
 </div>
@@ -272,7 +277,7 @@ the configured applications environment.</p>
     </a>
     <span class="signature">read!(file)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/214e2a3a7defa582a8437d7b3bdfcc2f5f19b6eb/lib/mix/lib/mix/config.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/928302a912e397917be957142a9837ae58610207/lib/mix/lib/mix/config.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -280,6 +285,9 @@ the configured applications environment.</p>
   
   <section class="docstring">
     <p>Reads and validates a configuration file.</p>
+<p><code class="inline">file</code> is the path to the configuration file to be read. If that file doesn’t
+exist or if there’s an error loading it, a <a href="Mix.Config.LoadError.html"><code class="inline">Mix.Config.LoadError</code></a> exception
+will be raised.</p>
 
   </section>
 </div>
@@ -290,16 +298,17 @@ the configured applications environment.</p>
     </a>
     <span class="signature">read_wildcard!(path)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/214e2a3a7defa582a8437d7b3bdfcc2f5f19b6eb/lib/mix/lib/mix/config.ex#L176" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/928302a912e397917be957142a9837ae58610207/lib/mix/lib/mix/config.ex#L189" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Reads many configuration files given by wildcard into a single config.
-Raises an error if <code class="inline">path</code> is a concrete filename (with no wildcards)
-but the corresponding file does not exist.</p>
+    <p>Reads many configuration files given by wildcard into a single config.</p>
+<p>Raises an error if <code class="inline">path</code> is a concrete filename (with no wildcards)
+but the corresponding file does not exist; if <code class="inline">path</code> matches no files,
+no errors are raised.</p>
 
   </section>
 </div>
@@ -310,7 +319,7 @@ but the corresponding file does not exist.</p>
     </a>
     <span class="signature">validate!(config)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/214e2a3a7defa582a8437d7b3bdfcc2f5f19b6eb/lib/mix/lib/mix/config.ex#L203" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/928302a912e397917be957142a9837ae58610207/lib/mix/lib/mix/config.ex#L227" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -340,7 +349,7 @@ but the corresponding file does not exist.</p>
     </a>
     <span class="signature">config(app, opts)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/214e2a3a7defa582a8437d7b3bdfcc2f5f19b6eb/lib/mix/lib/mix/config.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/928302a912e397917be957142a9837ae58610207/lib/mix/lib/mix/config.ex#L79" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -374,7 +383,7 @@ config :lager,
     </a>
     <span class="signature">config(app, key, opts)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/214e2a3a7defa582a8437d7b3bdfcc2f5f19b6eb/lib/mix/lib/mix/config.ex#L112" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/928302a912e397917be957142a9837ae58610207/lib/mix/lib/mix/config.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -405,18 +414,24 @@ config :ecto, Repo,
     <a href="#import_config/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">import_config(file)</span>
+    <span class="signature">import_config(path_or_wildcard)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/214e2a3a7defa582a8437d7b3bdfcc2f5f19b6eb/lib/mix/lib/mix/config.ex#L136" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/928302a912e397917be957142a9837ae58610207/lib/mix/lib/mix/config.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Imports configuration from the given file.</p>
-<p>The path is expected to be relative to the directory the
-current configuration file is on.</p>
+    <p>Imports configuration from the given file or files.</p>
+<p>If <code class="inline">path_or_wildcard</code> is a wildcard, then all the files
+matching that wildcard will be imported; if no file matches
+the wildcard, no errors are raised. If <code class="inline">path_or_wildcard</code> is
+not a wildcard but a path to a single file, then that file is
+imported; in case the file doesn’t exist, an error is raised.
+This behaviour is analogous to the one for <a href="#read_wildcard!/1"><code class="inline">read_wildcard!/1</code></a>.</p>
+<p>If path/wildcard is a relative path/wildcard, it will be expanded relatively
+to the directory the current configuration file is in.</p>
 <h2>Examples</h2>
 <p>This is often used to emulate configuration across environments:</p>
 <pre><code class="elixir">import_config &quot;#{Mix.env}.exs&quot;</code></pre>
