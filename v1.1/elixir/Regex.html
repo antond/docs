@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Regex – Elixir v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Regex – Elixir v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Regex.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -66,6 +68,7 @@
 
 
       <h1>
+        <small class="visible-xs">Elixir v1.1.1</small>
         Regex
         
         
@@ -185,56 +188,10 @@ the string</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#escape/1">escape(string)</a>
+    <a href="#compile/2">compile(source, options \\ &quot;&quot;)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Escapes a string to be literally matched in a regex</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#regex?/1">regex?(term)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the given <code class="inline">term</code> is a regex.
-Otherwise returns <code class="inline">false</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#names/1">names(regex)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns a list of names in the regex</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#opts/1">opts(regex)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the regex options as a string</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#source/1">source(regex)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the regex source as a binary</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#re_pattern/1">re_pattern(regex)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the underlying <code class="inline">re_pattern</code> in the regular expression</p>
+    <div class="summary-synopsis"><p>Compiles the regular expression</p>
 </div>
   
 </div>
@@ -250,10 +207,10 @@ Fails with <a href="Regex.CompileError.html"><code class="inline">Regex.CompileE
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#compile/2">compile(source, options \\ &quot;&quot;)</a>
+    <a href="#escape/1">escape(string)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Compiles the regular expression</p>
+    <div class="summary-synopsis"><p>Escapes a string to be literally matched in a regex</p>
 </div>
   
 </div>
@@ -279,6 +236,53 @@ back</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#names/1">names(regex)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a list of names in the regex</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#opts/1">opts(regex)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the regex options as a string</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#re_pattern/1">re_pattern(regex)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the underlying <code class="inline">re_pattern</code> in the regular expression</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#regex?/1">regex?(term)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the given <code class="inline">term</code> is a regex.
+Otherwise returns <code class="inline">false</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#replace/4">replace(regex, string, replacement, options \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Receives a regex, a binary and a replacement, returns a new
+binary where all matches are replaced by the replacement</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#run/3">run(regex, string, options \\ [])</a>
   </div>
   
@@ -299,21 +303,20 @@ matches of the regular expression</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#split/3">split(regex, string, options \\ [])</a>
+    <a href="#source/1">source(regex)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Splits the given target based on the given pattern and in the given number of
-parts</p>
+    <div class="summary-synopsis"><p>Returns the regex source as a binary</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#replace/4">replace(regex, string, replacement, options \\ [])</a>
+    <a href="#split/3">split(regex, string, options \\ [])</a>
   </div>
   
-    <div class="summary-synopsis"><p>Receives a regex, a binary and a replacement, returns a new
-binary where all matches are replaced by the replacement</p>
+    <div class="summary-synopsis"><p>Splits the given target based on the given pattern and in the given number of
+parts</p>
 </div>
   
 </div>
@@ -901,18 +904,19 @@ iex&gt; Regex.split(~r/a(?&lt;second&gt;b)c/, &quot;abc&quot;, on: [:second])
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

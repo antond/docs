@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inspect.Algebra – Elixir v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Inspect.Algebra – Elixir v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Inspect.Algebra.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -66,6 +68,7 @@
 
 
       <h1>
+        <small class="visible-xs">Elixir v1.1.1</small>
         Inspect.Algebra
         
         
@@ -166,10 +169,10 @@ by this module and by providing their own rendering functions.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#empty/0">empty()</a>
+    <a href="#break/1">break(s)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a document entity used to represent nothingness</p>
+    <div class="summary-synopsis"><p>Document entity representing a break</p>
 </div>
   
 </div>
@@ -184,24 +187,6 @@ by this module and by providing their own rendering functions.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#break/1">break(s)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Document entity representing a break</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#group/1">group(d)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns a group containing the specified document</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#concat/2">concat(x, y)</a>
   </div>
   
@@ -211,11 +196,10 @@ by this module and by providing their own rendering functions.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_doc/2">to_doc(map, opts)</a>
+    <a href="#empty/0">empty()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts an Elixir structure to an algebra document
-according to the inspect protocol</p>
+    <div class="summary-synopsis"><p>Returns a document entity used to represent nothingness</p>
 </div>
   
 </div>
@@ -231,10 +215,38 @@ using a function that is passed as the first argument</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#format/2">format(d, w)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The formatting function</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#glue/2">glue(x, y)</a>
   </div>
   
     <div class="summary-synopsis"><p>Inserts a break between two docs. See <a href="#break/1"><code class="inline">break/1</code></a> for more info</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#glue/3">glue(x, g, y)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Inserts a break, passed as the second argument, between two docs,
+the first and the third arguments</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#group/1">group(d)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a group containing the specified document</p>
 </div>
   
 </div>
@@ -249,15 +261,6 @@ using a function that is passed as the first argument</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#space/2">space(x, y)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Inserts a mandatory single space between two document entities</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#nest/2">nest(x, i)</a>
   </div>
   
@@ -267,20 +270,10 @@ using a function that is passed as the first argument</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#format/2">format(d, w)</a>
+    <a href="#space/2">space(x, y)</a>
   </div>
   
-    <div class="summary-synopsis"><p>The formatting function</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#glue/3">glue(x, g, y)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Inserts a break, passed as the second argument, between two docs,
-the first and the third arguments</p>
+    <div class="summary-synopsis"><p>Inserts a mandatory single space between two document entities</p>
 </div>
   
 </div>
@@ -299,6 +292,16 @@ the first and the third arguments</p>
   </div>
   
     <div class="summary-synopsis"><p>Maps and glues a collection of items</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_doc/2">to_doc(map, opts)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Converts an Elixir structure to an algebra document
+according to the inspect protocol</p>
 </div>
   
 </div>
@@ -880,18 +883,19 @@ according to the inspect protocol.</p>
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

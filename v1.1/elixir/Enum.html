@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Enum – Elixir v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Enum – Elixir v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Enum.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -66,6 +68,7 @@
 
 
       <h1>
+        <small class="visible-xs">Elixir v1.1.1</small>
         Enum
         
         
@@ -146,284 +149,6 @@ forever. For example:</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_list/1">to_list(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Converts <code class="inline">collection</code> to a list</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#uniq/1">uniq(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Enumerates the collection, removing all duplicated elements</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#dedup/1">dedup(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Enumerates the collection, returning a list where all consecutive
-duplicated elements are collapsed to a single element</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#concat/1">concat(enumerables)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Given an enumerable of enumerables, concatenates the enumerables into a single list</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#unzip/1">unzip(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Opposite of <a href="Enum.html#zip/2"><code class="inline">Enum.zip/2</code></a>; takes a list of two-element tuples and returns a
-tuple with two lists, each of which is formed by the first and second element
-of each tuple, respectively</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#empty?/1">empty?(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the collection is empty, otherwise <code class="inline">false</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#shuffle/1">shuffle(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns a list of collection elements shuffled</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#random/1">random(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns a random element of a collection.
-Raises <code class="inline">EmptyError</code> if the collection is empty</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#min_max/1">min_max(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns a tuple with the minimum and maximum values.
-Raises <code class="inline">EmptyError</code> if the collection is empty</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#with_index/1">with_index(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the collection with each element wrapped in a tuple
-alongside its index</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#count/1">count(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the collection’s size</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#max/1">max(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the maximum value.
-Raises <code class="inline">EmptyError</code> if the collection is empty</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#min/1">min(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the minimum value.
-Raises <code class="inline">EmptyError</code> if the collection is empty</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#sum/1">sum(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the sum of all values</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#reverse/1">reverse(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Reverses the collection</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#sort/1">sort(collection)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Sorts the collection according to Elixir’s term ordering</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#scan/2">scan(enum, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Applies the given function to each element in the collection,
-storing the result in a list and passing it as the accumulator
-for the next computation</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#member?/2">member?(collection, value)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Checks if <code class="inline">value</code> exists within the <code class="inline">collection</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#concat/2">concat(left, right)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Concatenates the enumerable on the right with the enumerable on the left</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#drop_while/2">drop_while(collection, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Drops items at the beginning of <code class="inline">collection</code> while <code class="inline">fun</code> returns a truthy value</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#drop/2">drop(collection, count)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Drops the first <code class="inline">count</code> items from <code class="inline">collection</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#uniq_by/2">uniq_by(collection, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Enumerates the collection, removing all duplicated elements</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#dedup_by/2">dedup_by(collection, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Enumerates the collection, returning a list where all consecutive
-duplicated elements are collapsed to a single element</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#filter/2">filter(collection, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Filters the collection, i.e. returns only those elements
-for which <code class="inline">fun</code> returns a truthy value</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#fetch!/2">fetch!(collection, n)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Finds the element at the given index (zero-based)</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#fetch/2">fetch(collection, n)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Finds the element at the given index (zero-based)</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#into/2">into(collection, list)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Inserts the given enumerable into a collectable</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#intersperse/2">intersperse(collection, element)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Intersperses <code class="inline">element</code> between each element of the enumeration</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#reduce/2">reduce(collection, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Invokes <code class="inline">fun</code> for each element in the collection passing that element and the
-accumulator <code class="inline">acc</code> as arguments. <code class="inline">fun</code>‘s return value is stored in <code class="inline">acc</code>.
-The first element of the collection is used as the initial value of <code class="inline">acc</code>.
-If you wish to use another value for <code class="inline">acc</code>, use <a href="Enumerable.html#reduce/3"><code class="inline">Enumerable.reduce/3</code></a>.
-This function won’t call the specified function for enumerables that are 1-element long.
-Returns the accumulator</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#all?/2">all?(collection, fun \\ fn x -&gt; x end)</a>
   </div>
   
@@ -444,92 +169,65 @@ at least one invocation returns a truthy value. Returns <code class="inline">fal
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#each/2">each(collection, fun)</a>
+    <a href="#at/3">at(collection, n, default \\ nil)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Invokes the given <code class="inline">fun</code> for each item in the <code class="inline">collection</code>.
-Returns <code class="inline">:ok</code></p>
+    <div class="summary-synopsis"><p>Finds the element at the given index (zero-based)</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#join/2">join(collection, joiner \\ &quot;&quot;)</a>
+    <a href="#chunk/2">chunk(collection, n)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Joins the given <code class="inline">collection</code> into a binary using <code class="inline">joiner</code> as a separator.
-If <code class="inline">joiner</code> is not passed at all, it defaults to the empty binary</p>
+    <div class="summary-synopsis"><p>Shortcut to <code class="inline">chunk(collection, n, n)</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#partition/2">partition(collection, fun)</a>
+    <a href="#chunk/4">chunk(collection, n, step, pad \\ nil)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Partitions <code class="inline">collection</code> into two collections, where the first one contains elements
-for which <code class="inline">fun</code> returns a truthy value, and the second one — for which <code class="inline">fun</code>
-returns <code class="inline">false</code> or <code class="inline">nil</code></p>
+    <div class="summary-synopsis"><p>Returns a collection of lists containing <code class="inline">n</code> items each, where
+each new chunk starts <code class="inline">step</code> elements into the collection</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#take_every/2">take_every(collection, nth)</a>
+    <a href="#chunk_by/2">chunk_by(collection, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a collection of every <code class="inline">nth</code> item in the collection,
-starting with the first element</p>
+    <div class="summary-synopsis"><p>Splits <code class="inline">collection</code> on every element for which <code class="inline">fun</code> returns a new value</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#flat_map/2">flat_map(collection, fun)</a>
+    <a href="#concat/1">concat(enumerables)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a new collection appending the result of invoking <code class="inline">fun</code>
-on each corresponding item of <code class="inline">collection</code></p>
+    <div class="summary-synopsis"><p>Given an enumerable of enumerables, concatenates the enumerables into a single list</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#map/2">map(collection, fun)</a>
+    <a href="#concat/2">concat(left, right)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a new collection, where each item is the result
-of invoking <code class="inline">fun</code> on each corresponding item of <code class="inline">collection</code></p>
+    <div class="summary-synopsis"><p>Concatenates the enumerable on the right with the enumerable on the left</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#slice/2">slice(collection, range)</a>
+    <a href="#count/1">count(collection)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a subset list of the given collection. Drops elements
-until element position <code class="inline">range.first</code>, then takes elements until element
-position <code class="inline">range.last</code> (inclusive)</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#min_max_by/2">min_max_by(collection, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns a tuple with the minimum and maximum values as calculated by the given function.
-Raises <code class="inline">EmptyError</code> if the collection is empty</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#reject/2">reject(collection, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns elements of collection for which <code class="inline">fun</code> returns <code class="inline">false</code> or <code class="inline">nil</code></p>
+    <div class="summary-synopsis"><p>Returns the collection’s size</p>
 </div>
   
 </div>
@@ -545,41 +243,105 @@ Raises <code class="inline">EmptyError</code> if the collection is empty</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#max_by/2">max_by(collection, fun)</a>
+    <a href="#dedup/1">dedup(collection)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the maximum value as calculated by the given function.
-Raises <code class="inline">EmptyError</code> if the collection is empty</p>
+    <div class="summary-synopsis"><p>Enumerates the collection, returning a list where all consecutive
+duplicated elements are collapsed to a single element</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#min_by/2">min_by(collection, fun)</a>
+    <a href="#dedup_by/2">dedup_by(collection, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the minimum value as calculated by the given function.
-Raises <code class="inline">EmptyError</code> if the collection is empty</p>
+    <div class="summary-synopsis"><p>Enumerates the collection, returning a list where all consecutive
+duplicated elements are collapsed to a single element</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#reverse/2">reverse(collection, tail)</a>
+    <a href="#drop/2">drop(collection, count)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Reverses the collection and appends the tail.
-This is an optimization for
-<code class="inline">Enum.concat(Enum.reverse(collection), tail)</code></p>
+    <div class="summary-synopsis"><p>Drops the first <code class="inline">count</code> items from <code class="inline">collection</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#chunk/2">chunk(collection, n)</a>
+    <a href="#drop_while/2">drop_while(collection, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Shortcut to <code class="inline">chunk(collection, n, n)</code></p>
+    <div class="summary-synopsis"><p>Drops items at the beginning of <code class="inline">collection</code> while <code class="inline">fun</code> returns a truthy value</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#each/2">each(collection, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Invokes the given <code class="inline">fun</code> for each item in the <code class="inline">collection</code>.
+Returns <code class="inline">:ok</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#empty?/1">empty?(collection)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the collection is empty, otherwise <code class="inline">false</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#fetch/2">fetch(collection, n)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Finds the element at the given index (zero-based)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#fetch!/2">fetch!(collection, n)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Finds the element at the given index (zero-based)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#filter/2">filter(collection, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Filters the collection, i.e. returns only those elements
+for which <code class="inline">fun</code> returns a truthy value</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#filter_map/3">filter_map(collection, filter, mapper)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Filters the collection and maps its values in one pass</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#find/3">find(collection, default \\ nil, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the first item for which <code class="inline">fun</code> returns a truthy value. If no such
+item is found, returns <code class="inline">default</code></p>
 </div>
   
 </div>
@@ -595,107 +357,57 @@ of the element instead of the element itself</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#sort/2">sort(collection, fun)</a>
+    <a href="#find_value/3">find_value(collection, default \\ nil, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Sorts the collection by the given function</p>
+    <div class="summary-synopsis"><p>Similar to <a href="#find/3"><code class="inline">find/3</code></a>, but returns the value of the function
+invocation instead of the element itself</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#split_while/2">split_while(collection, fun)</a>
+    <a href="#flat_map/2">flat_map(collection, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Splits <code class="inline">collection</code> in two at the position of the element for which <code class="inline">fun</code> returns <code class="inline">false</code> for the
-first time</p>
+    <div class="summary-synopsis"><p>Returns a new collection appending the result of invoking <code class="inline">fun</code>
+on each corresponding item of <code class="inline">collection</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#chunk_by/2">chunk_by(collection, fun)</a>
+    <a href="#flat_map_reduce/3">flat_map_reduce(collection, acc, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Splits <code class="inline">collection</code> on every element for which <code class="inline">fun</code> returns a new value</p>
+    <div class="summary-synopsis"><p>Maps and reduces a collection, flattening the given results</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#split/2">split(collection, count)</a>
+    <a href="#group_by/3">group_by(collection, dict \\ %{}, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Splits the enumerable into two collections, leaving <code class="inline">count</code>
-elements in the first one. If <code class="inline">count</code> is a negative number,
-it starts counting from the back to the beginning of the
-collection</p>
+    <div class="summary-synopsis"><p>Splits <code class="inline">collection</code> into groups based on <code class="inline">fun</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#take_random/2">take_random(collection, count)</a>
+    <a href="#intersperse/2">intersperse(collection, element)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes random items from a collection</p>
+    <div class="summary-synopsis"><p>Intersperses <code class="inline">element</code> between each element of the enumeration</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#take/2">take(collection, count)</a>
+    <a href="#into/2">into(collection, list)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Takes the first <code class="inline">count</code> items from the collection</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#take_while/2">take_while(collection, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Takes the items from the beginning of <code class="inline">collection</code> while <code class="inline">fun</code> returns a truthy value</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#zip/2">zip(collection1, collection2)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Zips corresponding elements from two collections into one list
-of tuples</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#scan/3">scan(enum, acc, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Applies the given function to each element in the collection,
-storing the result in a list and passing it as the accumulator
-for the next computation. Uses the given <code class="inline">acc</code> as the starting value</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#filter_map/3">filter_map(collection, filter, mapper)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Filters the collection and maps its values in one pass</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#at/3">at(collection, n, default \\ nil)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Finds the element at the given index (zero-based)</p>
+    <div class="summary-synopsis"><p>Inserts the given enumerable into a collectable</p>
 </div>
   
 </div>
@@ -711,24 +423,21 @@ according to the transformation function</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#reduce/3">reduce(collection, acc, fun)</a>
+    <a href="#join/2">join(collection, joiner \\ &quot;&quot;)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Invokes <code class="inline">fun</code> for each element in the collection passing that element and the
-accumulator <code class="inline">acc</code> as arguments. <code class="inline">fun</code>‘s return value is stored in <code class="inline">acc</code>.
-Returns the accumulator</p>
+    <div class="summary-synopsis"><p>Joins the given <code class="inline">collection</code> into a binary using <code class="inline">joiner</code> as a separator.
+If <code class="inline">joiner</code> is not passed at all, it defaults to the empty binary</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#map_reduce/3">map_reduce(collection, acc, fun)</a>
+    <a href="#map/2">map(enumerable, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Invokes the given <code class="inline">fun</code> for each item in the <code class="inline">collection</code>
-while also keeping an accumulator. Returns a tuple where
-the first element is the mapped collection and the second
-one is the final accumulator</p>
+    <div class="summary-synopsis"><p>Returns a new collection, where each item is the result
+of invoking <code class="inline">fun</code> on each corresponding item of <code class="inline">collection</code></p>
 </div>
   
 </div>
@@ -747,10 +456,128 @@ empty binary</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#flat_map_reduce/3">flat_map_reduce(collection, acc, fun)</a>
+    <a href="#map_reduce/3">map_reduce(collection, acc, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Maps and reduces a collection, flattening the given results</p>
+    <div class="summary-synopsis"><p>Invokes the given <code class="inline">fun</code> for each item in the <code class="inline">collection</code>
+while also keeping an accumulator. Returns a tuple where
+the first element is the mapped collection and the second
+one is the final accumulator</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#max/1">max(collection)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the maximum value.
+Raises <code class="inline">EmptyError</code> if the collection is empty</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#max_by/2">max_by(collection, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the maximum value as calculated by the given function.
+Raises <code class="inline">EmptyError</code> if the collection is empty</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#member?/2">member?(collection, value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Checks if <code class="inline">value</code> exists within the <code class="inline">collection</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#min/1">min(collection)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the minimum value.
+Raises <code class="inline">EmptyError</code> if the collection is empty</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#min_by/2">min_by(collection, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the minimum value as calculated by the given function.
+Raises <code class="inline">EmptyError</code> if the collection is empty</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#min_max/1">min_max(collection)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a tuple with the minimum and maximum values.
+Raises <code class="inline">EmptyError</code> if the collection is empty</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#min_max_by/2">min_max_by(collection, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a tuple with the minimum and maximum values as calculated by the given function.
+Raises <code class="inline">EmptyError</code> if the collection is empty</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#partition/2">partition(collection, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Partitions <code class="inline">collection</code> into two collections, where the first one contains elements
+for which <code class="inline">fun</code> returns a truthy value, and the second one — for which <code class="inline">fun</code>
+returns <code class="inline">false</code> or <code class="inline">nil</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#random/1">random(collection)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a random element of a collection.
+Raises <code class="inline">EmptyError</code> if the collection is empty</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce/2">reduce(collection, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Invokes <code class="inline">fun</code> for each element in the collection passing that element and the
+accumulator <code class="inline">acc</code> as arguments. <code class="inline">fun</code>‘s return value is stored in <code class="inline">acc</code>.
+The first element of the collection is used as the initial value of <code class="inline">acc</code>.
+If you wish to use another value for <code class="inline">acc</code>, use <a href="Enumerable.html#reduce/3"><code class="inline">Enumerable.reduce/3</code></a>.
+This function won’t call the specified function for enumerables that are 1-element long.
+Returns the accumulator</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reduce/3">reduce(collection, acc, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Invokes <code class="inline">fun</code> for each element in the collection passing that element and the
+accumulator <code class="inline">acc</code> as arguments. <code class="inline">fun</code>‘s return value is stored in <code class="inline">acc</code>.
+Returns the accumulator</p>
 </div>
   
 </div>
@@ -765,21 +592,30 @@ empty binary</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#slice/3">slice(collection, start, count)</a>
+    <a href="#reject/2">reject(collection, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a subset list of the given collection. Drops elements
-until element position <code class="inline">start</code>, then takes <code class="inline">count</code> elements</p>
+    <div class="summary-synopsis"><p>Returns elements of collection for which <code class="inline">fun</code> returns <code class="inline">false</code> or <code class="inline">nil</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find/3">find(collection, default \\ nil, fun)</a>
+    <a href="#reverse/1">reverse(collection)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the first item for which <code class="inline">fun</code> returns a truthy value. If no such
-item is found, returns <code class="inline">default</code></p>
+    <div class="summary-synopsis"><p>Reverses the collection</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reverse/2">reverse(collection, tail)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Reverses the collection and appends the tail.
+This is an optimization for
+<code class="inline">Enum.concat(Enum.reverse(collection), tail)</code></p>
 </div>
   
 </div>
@@ -797,11 +633,71 @@ of the collection</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find_value/3">find_value(collection, default \\ nil, fun)</a>
+    <a href="#scan/2">scan(enum, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Similar to <a href="#find/3"><code class="inline">find/3</code></a>, but returns the value of the function
-invocation instead of the element itself</p>
+    <div class="summary-synopsis"><p>Applies the given function to each element in the collection,
+storing the result in a list and passing it as the accumulator
+for the next computation</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#scan/3">scan(enum, acc, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Applies the given function to each element in the collection,
+storing the result in a list and passing it as the accumulator
+for the next computation. Uses the given <code class="inline">acc</code> as the starting value</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#shuffle/1">shuffle(collection)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a list of collection elements shuffled</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#slice/2">slice(collection, range)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a subset list of the given collection. Drops elements
+until element position <code class="inline">range.first</code>, then takes elements until element
+position <code class="inline">range.last</code> (inclusive)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#slice/3">slice(collection, start, count)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a subset list of the given collection. Drops elements
+until element position <code class="inline">start</code>, then takes <code class="inline">count</code> elements</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sort/1">sort(collection)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Sorts the collection according to Elixir’s term ordering</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sort/2">sort(collection, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Sorts the collection by the given function</p>
 </div>
   
 </div>
@@ -816,20 +712,127 @@ invocation instead of the element itself</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#group_by/3">group_by(collection, dict \\ %{}, fun)</a>
+    <a href="#split/2">split(collection, count)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Splits <code class="inline">collection</code> into groups based on <code class="inline">fun</code></p>
+    <div class="summary-synopsis"><p>Splits the enumerable into two collections, leaving <code class="inline">count</code>
+elements in the first one. If <code class="inline">count</code> is a negative number,
+it starts counting from the back to the beginning of the
+collection</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#chunk/4">chunk(collection, n, step, pad \\ nil)</a>
+    <a href="#split_while/2">split_while(collection, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a collection of lists containing <code class="inline">n</code> items each, where
-each new chunk starts <code class="inline">step</code> elements into the collection</p>
+    <div class="summary-synopsis"><p>Splits <code class="inline">collection</code> in two at the position of the element for which <code class="inline">fun</code> returns <code class="inline">false</code> for the
+first time</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sum/1">sum(collection)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the sum of all values</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#take/2">take(collection, count)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Takes the first <code class="inline">count</code> items from the collection</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#take_every/2">take_every(collection, nth)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a collection of every <code class="inline">nth</code> item in the collection,
+starting with the first element</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#take_random/2">take_random(collection, count)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Takes random items from a collection</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#take_while/2">take_while(collection, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Takes the items from the beginning of <code class="inline">collection</code> while <code class="inline">fun</code> returns a truthy value</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_list/1">to_list(collection)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Converts <code class="inline">collection</code> to a list</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#uniq/1">uniq(collection)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Enumerates the collection, removing all duplicated elements</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#uniq_by/2">uniq_by(collection, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Enumerates the collection, removing all duplicated elements</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unzip/1">unzip(collection)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Opposite of <a href="Enum.html#zip/2"><code class="inline">Enum.zip/2</code></a>; takes a list of two-element tuples and returns a
+tuple with two lists, each of which is formed by the first and second element
+of each tuple, respectively</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#with_index/1">with_index(collection)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the collection with each element wrapped in a tuple
+alongside its index</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#zip/2">zip(collection1, collection2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Zips corresponding elements from two collections into one list
+of tuples</p>
 </div>
   
 </div>
@@ -853,8 +856,8 @@ each new chunk starts <code class="inline">step</code> elements into the collect
             Types
           </h1>
           <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+            <div id="t:default/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:default/0">default</a> :: any</code></pre>
   
 </div>
 <div id="t:element/0" class="type-detail">
@@ -865,8 +868,8 @@ each new chunk starts <code class="inline">step</code> elements into the collect
   <pre><code class="elixir"><a href="#t:index/0">index</a> :: non_neg_integer</code></pre>
   
 </div>
-<div id="t:default/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:default/0">default</a> :: any</code></pre>
+<div id="t:t/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:t/0">t</a> :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
   
 </div>
 
@@ -1782,7 +1785,7 @@ iex&gt; Enum.flat_map_reduce(enum, 0, fn i, acc -&gt;
     </a>
     <span class="signature">group_by(collection, dict \\ %{}, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1368" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1374" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1951,7 +1954,7 @@ iex&gt; Enum.join([1, 2, 3], &quot; = &quot;)
     <a href="#map/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">map(collection, fun)</span>
+    <span class="signature">map(enumerable, fun)</span>
       
       <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1042" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -1988,7 +1991,7 @@ iex&gt; Enum.map([a: 1, b: 2], fn({k, v}) -&gt; {k, -v} end)
     </a>
     <span class="signature">map_join(collection, joiner \\ &quot;&quot;, mapper)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1070" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1076" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2027,7 +2030,7 @@ iex&gt; Enum.map_join([1, 2, 3], &quot; = &quot;, &amp;(&amp;1 * 2))
     </a>
     <span class="signature">map_reduce(collection, acc, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1101" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1107" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2062,7 +2065,7 @@ tuple.</p>
     </a>
     <span class="signature">max(collection)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1130" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2093,7 +2096,7 @@ Raises <code class="inline">EmptyError</code> if the collection is empty.</p>
     </a>
     <span class="signature">max_by(collection, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1139" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1145" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2126,7 +2129,7 @@ Raises <code class="inline">EmptyError</code> if the collection is empty.</p>
     </a>
     <span class="signature">member?(collection, value)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1185" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1191" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2164,7 +2167,7 @@ false</code></pre>
     </a>
     <span class="signature">min(collection)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1212" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1218" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2195,7 +2198,7 @@ Raises <code class="inline">EmptyError</code> if the collection is empty.</p>
     </a>
     <span class="signature">min_by(collection, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1227" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1233" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2228,7 +2231,7 @@ Raises <code class="inline">EmptyError</code> if the collection is empty.</p>
     </a>
     <span class="signature">min_max(collection)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1265" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1271" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2259,7 +2262,7 @@ Raises <code class="inline">EmptyError</code> if the collection is empty.</p>
     </a>
     <span class="signature">min_max_by(collection, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1291" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1297" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2292,7 +2295,7 @@ Raises <code class="inline">EmptyError</code> if the collection is empty.</p>
     </a>
     <span class="signature">partition(collection, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1340" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1346" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2324,7 +2327,7 @@ returns <code class="inline">false</code> or <code class="inline">nil</code>.</p
     </a>
     <span class="signature">random(collection)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1575" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1581" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2368,7 +2371,7 @@ iex&gt; Enum.random([1, 2, 3])
     </a>
     <span class="signature">reduce(collection, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1423" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1429" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2406,7 +2409,7 @@ is the length of the enumerable.</p>
     </a>
     <span class="signature">reduce(collection, acc, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1386" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1392" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2438,7 +2441,7 @@ Returns the accumulator.</p>
     </a>
     <span class="signature">reduce_while(collection, acc, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1461" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1467" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2464,7 +2467,7 @@ Returns the accumulator.</p>
     </a>
     <span class="signature">reject(collection, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1475" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1481" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2494,7 +2497,7 @@ Returns the accumulator.</p>
     </a>
     <span class="signature">reverse(collection)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1493" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1499" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2524,7 +2527,7 @@ Returns the accumulator.</p>
     </a>
     <span class="signature">reverse(collection, tail)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1513" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1519" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2556,7 +2559,7 @@ This is an optimization for
     </a>
     <span class="signature">reverse_slice(collection, start, count)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1536" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1542" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2589,7 +2592,7 @@ of the collection.</p>
     </a>
     <span class="signature">scan(enum, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1594" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1600" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2621,7 +2624,7 @@ for the next computation.</p>
     </a>
     <span class="signature">scan(enum, acc, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1611" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1617" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2653,7 +2656,7 @@ for the next computation. Uses the given <code class="inline">acc</code> as the 
     </a>
     <span class="signature">shuffle(collection)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1636" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1642" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2691,7 +2694,7 @@ iex&gt; Enum.shuffle([1, 2, 3])
     </a>
     <span class="signature">slice(collection, range)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1723" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1729" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2739,7 +2742,7 @@ iex&gt; Enum.slice(1..10, 6..5)
     </a>
     <span class="signature">slice(collection, start, count)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1664" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1670" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2778,7 +2781,7 @@ iex&gt; Enum.slice(1..10, 5, 0)
     </a>
     <span class="signature">sort(collection)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1758" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1764" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2809,7 +2812,7 @@ iex&gt; Enum.slice(1..10, 5, 0)
     </a>
     <span class="signature">sort(collection, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1791" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1797" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2849,7 +2852,7 @@ the order of equal terms may be shuffled:</p>
     </a>
     <span class="signature">sort_by(collection, mapper, sorter \\ &amp;&lt;=/2)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1832" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1838" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2896,7 +2899,7 @@ but now in sorted order.</p>
     </a>
     <span class="signature">split(collection, count)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1868" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1874" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2944,7 +2947,7 @@ iex&gt; Enum.split([1, 2, 3], -5)
     </a>
     <span class="signature">split_while(collection, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1900" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1906" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2975,7 +2978,7 @@ first time.</p>
     </a>
     <span class="signature">sum(collection)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1324" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1330" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3006,7 +3009,7 @@ first time.</p>
     </a>
     <span class="signature">take(collection, count)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1941" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L1947" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3049,7 +3052,7 @@ iex&gt; Enum.take([1, 2, 3], -1)
     </a>
     <span class="signature">take_every(collection, nth)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2008" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2014" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3089,7 +3092,7 @@ iex&gt; Enum.take_every([1, 2, 3], 1)
     </a>
     <span class="signature">take_random(collection, count)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2036" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2042" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3126,7 +3129,7 @@ iex&gt; Enum.take_random(?a..?z, 5)
     </a>
     <span class="signature">take_while(collection, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2098" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2104" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3156,7 +3159,7 @@ iex&gt; Enum.take_random(?a..?z, 5)
     </a>
     <span class="signature">to_list(collection)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2131" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3186,7 +3189,7 @@ iex&gt; Enum.take_random(?a..?z, 5)
     </a>
     <span class="signature">uniq(collection)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2143" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2149" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3216,7 +3219,7 @@ iex&gt; Enum.take_random(?a..?z, 5)
     </a>
     <span class="signature">uniq_by(collection, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2165" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2171" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3246,7 +3249,7 @@ iex&gt; Enum.take_random(?a..?z, 5)
     </a>
     <span class="signature">unzip(collection)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2192" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2198" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3283,7 +3286,7 @@ iex&gt; Enum.unzip(%{a: 1, b: 2})
     </a>
     <span class="signature">with_index(collection)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2235" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2241" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3314,7 +3317,7 @@ alongside its index.</p>
     </a>
     <span class="signature">zip(collection1, collection2)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2216" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.1.1/lib/elixir/lib/enum.ex#L2222" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3353,18 +3356,19 @@ iex&gt; Enum.zip([1, 2, 3, 4, 5], [:a, :b, :c])
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>System – Elixir v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>System – Elixir v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/System.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -66,6 +68,7 @@
 
 
       <h1>
+        <small class="visible-xs">Elixir v1.1.1</small>
         System
         
         
@@ -101,145 +104,10 @@ with the VM or the host system.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#cwd!/0">cwd!()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Current working directory, exception on error</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#cwd/0">cwd()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Current working directory</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#build_info/0">build_info()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Elixir build information</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#version/0">version()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Elixir version information</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#get_pid/0">get_pid()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Erlang VM process identifier</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#stacktrace/0">stacktrace()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Last exception stacktrace</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#argv/0">argv()</a>
   </div>
   
     <div class="summary-synopsis"><p>Lists command line arguments</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#get_env/0">get_env()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>System environment variables</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#user_home!/0">user_home!()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>User home directory, exception on error</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#user_home/0">user_home()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>User home directory</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#tmp_dir!/0">tmp_dir!()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Writable temporary directory, exception on error</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#tmp_dir/0">tmp_dir()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Writable temporary directory</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#delete_env/1">delete_env(varname)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Deletes an environment variable</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#get_env/1">get_env(varname)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Environment variable value</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#halt/1">halt(status \\ 0)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Halts the Erlang runtime system</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#find_executable/1">find_executable(program)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Locates an executable on the system</p>
 </div>
   
 </div>
@@ -263,6 +131,96 @@ with the VM or the host system.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#build_info/0">build_info()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Elixir build information</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cmd/3">cmd(command, args, opts \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Executes the given <code class="inline">command</code> with <code class="inline">args</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cwd/0">cwd()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Current working directory</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cwd!/0">cwd!()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Current working directory, exception on error</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#delete_env/1">delete_env(varname)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Deletes an environment variable</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#find_executable/1">find_executable(program)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Locates an executable on the system</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_env/0">get_env()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>System environment variables</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_env/1">get_env(varname)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Environment variable value</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_pid/0">get_pid()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Erlang VM process identifier</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#halt/1">halt(status \\ 0)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Halts the Erlang runtime system</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#put_env/1">put_env(dict)</a>
   </div>
   
@@ -281,10 +239,55 @@ with the VM or the host system.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#cmd/3">cmd(command, args, opts \\ [])</a>
+    <a href="#stacktrace/0">stacktrace()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Executes the given <code class="inline">command</code> with <code class="inline">args</code></p>
+    <div class="summary-synopsis"><p>Last exception stacktrace</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#tmp_dir/0">tmp_dir()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Writable temporary directory</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#tmp_dir!/0">tmp_dir!()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Writable temporary directory, exception on error</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_home/0">user_home()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>User home directory</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_home!/0">user_home!()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>User home directory, exception on error</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#version/0">version()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Elixir version information</p>
 </div>
   
 </div>
@@ -957,18 +960,19 @@ instead of returning <code class="inline">nil</code> if no user home is set.</p>
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Version – Elixir v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Version – Elixir v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Version.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -66,6 +68,7 @@
 
 
       <h1>
+        <small class="visible-xs">Elixir v1.1.1</small>
         Version
         
         
@@ -221,19 +224,12 @@ their corresponding translation.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#parse_requirement/1">parse_requirement(string)</a>
+    <a href="#compare/2">compare(version1, version2)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Parses a version requirement string into a <a href="Version.Requirement.html"><code class="inline">Version.Requirement</code></a></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#parse/1">parse(string)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Parses a version string into a <a href="Version.html#content"><code class="inline">Version</code></a></p>
+    <div class="summary-synopsis"><p>Compares two versions. Returns <code class="inline">:gt</code> if first version is greater than
+the second and <code class="inline">:lt</code> for vice versa. If the two versions are equal <code class="inline">:eq</code>
+is returned</p>
 </div>
   
 </div>
@@ -248,12 +244,19 @@ their corresponding translation.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#compare/2">compare(version1, version2)</a>
+    <a href="#parse/1">parse(string)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Compares two versions. Returns <code class="inline">:gt</code> if first version is greater than
-the second and <code class="inline">:lt</code> for vice versa. If the two versions are equal <code class="inline">:eq</code>
-is returned</p>
+    <div class="summary-synopsis"><p>Parses a version string into a <a href="Version.html#content"><code class="inline">Version</code></a></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#parse_requirement/1">parse_requirement(string)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Parses a version requirement string into a <a href="Version.Requirement.html"><code class="inline">Version.Requirement</code></a></p>
 </div>
   
 </div>
@@ -277,16 +280,16 @@ is returned</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:version/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:version/0">version</a> :: <a href="String.html#t:t/0">String.t</a> | <a href="#t:t/0">t</a></code></pre>
-  
-</div>
-<div id="t:requirement/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:requirement/0">requirement</a> :: <a href="String.html#t:t/0">String.t</a> | <a href="Version.Requirement.html#t:t/0">Version.Requirement.t</a></code></pre>
+            <div id="t:build/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:build/0">build</a> :: <a href="String.html#t:t/0">String.t</a> | nil</code></pre>
   
 </div>
 <div id="t:major/0" class="type-detail">
   <pre><code class="elixir"><a href="#t:major/0">major</a> :: <a href="String.html#t:t/0">String.t</a> | non_neg_integer</code></pre>
+  
+</div>
+<div id="t:matchable/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:matchable/0">matchable</a> :: {major :: <a href="#t:major/0">major</a>, minor :: <a href="#t:minor/0">minor</a>, patch :: <a href="#t:patch/0">patch</a>, pre :: <a href="#t:pre/0">pre</a>}</code></pre>
   
 </div>
 <div id="t:minor/0" class="type-detail">
@@ -301,16 +304,16 @@ is returned</p>
   <pre><code class="elixir"><a href="#t:pre/0">pre</a> :: [<a href="String.html#t:t/0">String.t</a> | non_neg_integer]</code></pre>
   
 </div>
-<div id="t:build/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:build/0">build</a> :: <a href="String.html#t:t/0">String.t</a> | nil</code></pre>
-  
-</div>
-<div id="t:matchable/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:matchable/0">matchable</a> :: {major :: <a href="#t:major/0">major</a>, minor :: <a href="#t:minor/0">minor</a>, patch :: <a href="#t:patch/0">patch</a>, pre :: <a href="#t:pre/0">pre</a>}</code></pre>
+<div id="t:requirement/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:requirement/0">requirement</a> :: <a href="String.html#t:t/0">String.t</a> | <a href="Version.Requirement.html#t:t/0">Version.Requirement.t</a></code></pre>
   
 </div>
 <div id="t:t/0" class="type-detail">
   <pre><code class="elixir"><a href="#t:t/0">t</a> :: %Version{major: <a href="#t:major/0">major</a>, minor: <a href="#t:minor/0">minor</a>, patch: <a href="#t:patch/0">patch</a>, pre: <a href="#t:pre/0">pre</a>, build: <a href="#t:build/0">build</a>}</code></pre>
+  
+</div>
+<div id="t:version/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:version/0">version</a> :: <a href="String.html#t:t/0">String.t</a> | <a href="#t:t/0">t</a></code></pre>
   
 </div>
 
@@ -491,18 +494,19 @@ iex&gt; Version.parse_requirement(&quot;== == 2.0.1&quot;)
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

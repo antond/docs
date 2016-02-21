@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ExUnit – ExUnit v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>ExUnit – ExUnit v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -64,6 +66,7 @@
 
 
       <h1>
+        <small class="visible-xs">ExUnit v1.1.1</small>
         ExUnit
         
         
@@ -159,16 +162,6 @@ files. See <code class="inline">Mix.Tasks.Test</code> for more information.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#run/0">run()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>API used to run the tests. It is invoked automatically
-if ExUnit is started via <a href="ExUnit.html#start/1"><code class="inline">ExUnit.start/1</code></a></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#configuration/0">configuration()</a>
   </div>
   
@@ -182,6 +175,16 @@ if ExUnit is started via <a href="ExUnit.html#start/1"><code class="inline">ExUn
   </div>
   
     <div class="summary-synopsis"><p>Configures ExUnit</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#run/0">run()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>API used to run the tests. It is invoked automatically
+if ExUnit is started via <a href="ExUnit.html#start/1"><code class="inline">ExUnit.start/1</code></a></p>
 </div>
   
 </div>
@@ -216,7 +219,11 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
             Types
           </h1>
           <div class="types-list">
-            <div id="t:state/0" class="type-detail">
+            <div id="t:failed/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:failed/0">failed</a> :: {<a href="http://elixir-lang.org/docs/stable/elixir/Exception.html#t:kind/0">Exception.kind</a>, reason :: term, stacktrace :: [tuple]}</code></pre>
+  
+</div>
+<div id="t:state/0" class="type-detail">
   <pre><code class="elixir"><a href="#t:state/0">state</a> ::
   nil |
   {:failed, <a href="#t:failed/0">failed</a>} |
@@ -225,10 +232,6 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
   
     <div class="typespec-doc"><p>The state returned by ExUnit.Test and ExUnit.TestCase</p>
 </div>
-  
-</div>
-<div id="t:failed/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:failed/0">failed</a> :: {<a href="http://elixir-lang.org/docs/stable/elixir/Exception.html#t:kind/0">Exception.kind</a>, reason :: term, stacktrace :: [tuple]}</code></pre>
   
 </div>
 
@@ -374,18 +377,19 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

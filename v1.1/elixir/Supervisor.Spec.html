@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Supervisor.Spec – Elixir v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Supervisor.Spec – Elixir v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Supervisor.Spec.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -66,6 +68,7 @@
 
 
       <h1>
+        <small class="visible-xs">Elixir v1.1.1</small>
         Supervisor.Spec
         
         
@@ -225,6 +228,15 @@ unconditionally terminated using <code class="inline">Process.exit(child, :kill)
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#t:spec/0">spec()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The supervisor specification</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#t:strategy/0">strategy()</a>
   </div>
   
@@ -238,15 +250,6 @@ unconditionally terminated using <code class="inline">Process.exit(child, :kill)
   </div>
   
     <div class="summary-synopsis"><p>Supported worker values</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:spec/0">spec()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>The supervisor specification</p>
 </div>
   
 </div>
@@ -309,14 +312,17 @@ with the given arguments</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:strategy/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:strategy/0">strategy</a> ::
-  :simple_one_for_one |
-  :one_for_one |
-  :one_for_all |
-  :rest_for_one</code></pre>
+            <div id="t:child_id/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:child_id/0">child_id</a> :: term</code></pre>
   
-    <div class="typespec-doc"><p>Supported strategies</p>
+    <div class="typespec-doc"><p>Supported id values</p>
+</div>
+  
+</div>
+<div id="t:modules/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:modules/0">modules</a> :: :dynamic | [module]</code></pre>
+  
+    <div class="typespec-doc"><p>Supported module values</p>
 </div>
   
 </div>
@@ -334,31 +340,28 @@ with the given arguments</p>
 </div>
   
 </div>
-<div id="t:worker/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:worker/0">worker</a> :: :worker | :supervisor</code></pre>
-  
-    <div class="typespec-doc"><p>Supported worker values</p>
-</div>
-  
-</div>
-<div id="t:modules/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:modules/0">modules</a> :: :dynamic | [module]</code></pre>
-  
-    <div class="typespec-doc"><p>Supported module values</p>
-</div>
-  
-</div>
-<div id="t:child_id/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:child_id/0">child_id</a> :: term</code></pre>
-  
-    <div class="typespec-doc"><p>Supported id values</p>
-</div>
-  
-</div>
 <div id="t:spec/0" class="type-detail">
   <pre><code class="elixir"><a href="#t:spec/0">spec</a> :: {<a href="#t:child_id/0">child_id</a>, start_fun :: {module, atom, [term]}, <a href="#t:restart/0">restart</a>, <a href="#t:shutdown/0">shutdown</a>, <a href="#t:worker/0">worker</a>, <a href="#t:modules/0">modules</a>}</code></pre>
   
     <div class="typespec-doc"><p>The supervisor specification</p>
+</div>
+  
+</div>
+<div id="t:strategy/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:strategy/0">strategy</a> ::
+  :simple_one_for_one |
+  :one_for_one |
+  :one_for_all |
+  :rest_for_one</code></pre>
+  
+    <div class="typespec-doc"><p>Supported strategies</p>
+</div>
+  
+</div>
+<div id="t:worker/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:worker/0">worker</a> :: :worker | :supervisor</code></pre>
+  
+    <div class="typespec-doc"><p>Supported worker values</p>
 </div>
   
 </div>
@@ -510,18 +513,19 @@ the options.</p>
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

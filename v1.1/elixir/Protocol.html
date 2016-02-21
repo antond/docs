@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Protocol – Elixir v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Protocol – Elixir v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Protocol.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -66,6 +68,7 @@
 
 
       <h1>
+        <small class="visible-xs">Elixir v1.1.1</small>
         Protocol
         
         
@@ -99,6 +102,16 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#assert_impl!/2">assert_impl!(protocol, base)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Checks if the given module is loaded and is an implementation
+of the given protocol</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#assert_protocol!/1">assert_protocol!(module)</a>
   </div>
   
@@ -108,10 +121,11 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#extract_protocols/1">extract_protocols(paths)</a>
+    <a href="#consolidate/2">consolidate(protocol, types)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Extracts all protocols from the given paths</p>
+    <div class="summary-synopsis"><p>Receives a protocol and a list of implementations and
+consolidates the given protocol</p>
 </div>
   
 </div>
@@ -121,16 +135,6 @@
   </div>
   
     <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the protocol was consolidated</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#assert_impl!/2">assert_impl!(protocol, base)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Checks if the given module is loaded and is an implementation
-of the given protocol</p>
 </div>
   
 </div>
@@ -146,11 +150,10 @@ the given paths</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#consolidate/2">consolidate(protocol, types)</a>
+    <a href="#extract_protocols/1">extract_protocols(paths)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Receives a protocol and a list of implementations and
-consolidates the given protocol</p>
+    <div class="summary-synopsis"><p>Extracts all protocols from the given paths</p>
 </div>
   
 </div>
@@ -465,18 +468,19 @@ defines the protocol functions with the appropriate callbacks.</p>
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

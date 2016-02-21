@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>File – Elixir v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>File – Elixir v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/File.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -66,6 +68,7 @@
 
 
       <h1>
+        <small class="visible-xs">Elixir v1.1.1</small>
         File
         
         
@@ -184,6 +187,160 @@ about such options and other performance considerations.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#cd/1">cd(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Sets the current working directory</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cd!/1">cd!(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The same as <a href="#cd/1"><code class="inline">cd/1</code></a>, but raises an exception if it fails</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cd!/2">cd!(path, function)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Changes the current directory to the given <code class="inline">path</code>,
+executes the given function and then revert back
+to the previous path regardless if there is an exception</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#chgrp/2">chgrp(path, gid)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Changes the user group given by the group id <code class="inline">gid</code>
+for a given <code class="inline">file</code>. Returns <code class="inline">:ok</code> on success, or
+<code class="inline">{:error, reason}</code> on failure</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#chgrp!/2">chgrp!(path, gid)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#chgrp/2"><code class="inline">chgrp/2</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#chmod/2">chmod(path, mode)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Changes the <code class="inline">mode</code> for a given <code class="inline">file</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#chmod!/2">chmod!(path, mode)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#chmod/2"><code class="inline">chmod/2</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#chown/2">chown(path, uid)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Changes the owner given by the user id <code class="inline">uid</code>
+for a given <code class="inline">file</code>. Returns <code class="inline">:ok</code> on success,
+or <code class="inline">{:error, reason}</code> on failure</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#chown!/2">chown!(path, uid)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#chown/2"><code class="inline">chown/2</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#close/1">close(io_device)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Closes the file referenced by <code class="inline">io_device</code>. It mostly returns <code class="inline">:ok</code>, except
+for some severe errors such as out of memory</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#copy/3">copy(source, destination, bytes_count \\ :infinity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Copies the contents of <code class="inline">source</code> to <code class="inline">destination</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#copy!/3">copy!(source, destination, bytes_count \\ :infinity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The same as <a href="#copy/3"><code class="inline">copy/3</code></a> but raises an <a href="File.CopyError.html"><code class="inline">File.CopyError</code></a> if it fails.
+Returns the <code class="inline">bytes_copied</code> otherwise</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cp/3">cp(source, destination, callback \\ fn _, _ -&gt; true end)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Copies the contents in <code class="inline">source</code> to <code class="inline">destination</code> preserving its mode</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cp!/3">cp!(source, destination, callback \\ fn _, _ -&gt; true end)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The same as <a href="#cp/3"><code class="inline">cp/3</code></a>, but raises <a href="File.CopyError.html"><code class="inline">File.CopyError</code></a> if it fails.
+Returns <code class="inline">:ok</code> otherwise</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cp_r/3">cp_r(source, destination, callback \\ fn _, _ -&gt; true end)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Copies the contents in source to destination</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cp_r!/3">cp_r!(source, destination, callback \\ fn _, _ -&gt; true end)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The same as <a href="#cp_r/3"><code class="inline">cp_r/3</code></a>, but raises <a href="File.CopyError.html"><code class="inline">File.CopyError</code></a> if it fails.
+Returns the list of copied files otherwise</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#cwd/0">cwd()</a>
   </div>
   
@@ -202,22 +359,10 @@ about such options and other performance considerations.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#close/1">close(io_device)</a>
+    <a href="#dir?/1">dir?(path)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Closes the file referenced by <code class="inline">io_device</code>. It mostly returns <code class="inline">:ok</code>, except
-for some severe errors such as out of memory</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#rm_rf/1">rm_rf(path)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Removes files and directories recursively at the given <code class="inline">path</code>.
-Symlinks are not followed but simply removed, non-existing
-files are simply ignored (i.e. doesn’t make this function fail)</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the path is a directory</p>
 </div>
   
 </div>
@@ -234,19 +379,124 @@ symbolic link, named pipe or device file</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#dir?/1">dir?(path)</a>
+    <a href="#ln_s/2">ln_s(existing, new)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the path is a directory</p>
+    <div class="summary-synopsis"><p>Creates a symbolic link <code class="inline">new</code> to the file or directory <code class="inline">existing</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#regular?/1">regular?(path)</a>
+    <a href="#ls/1">ls(path \\ &quot;.&quot;)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the path is a regular file</p>
+    <div class="summary-synopsis"><p>Returns list of files in the given directory</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#ls!/1">ls!(path \\ &quot;.&quot;)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The same as <a href="#ls/1"><code class="inline">ls/1</code></a> but raises <a href="File.Error.html"><code class="inline">File.Error</code></a>
+in case of an error</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#lstat/2">lstat(path, opts \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns information about the <code class="inline">path</code>. If the file is a symlink sets
+the <code class="inline">type</code> to <code class="inline">:symlink</code> and returns <a href="File.Stat.html"><code class="inline">File.Stat</code></a> for the link. For any
+other file, returns exactly the same values as <a href="#stat/2"><code class="inline">stat/2</code></a></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#lstat!/2">lstat!(path, opts \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#lstat/2"><code class="inline">lstat/2</code></a> but returns the <a href="File.Stat.html"><code class="inline">File.Stat</code></a> directly and
+throws <a href="File.Error.html"><code class="inline">File.Error</code></a> if an error is returned</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#mkdir/1">mkdir(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Tries to create the directory <code class="inline">path</code>. Missing parent directories are not created.
+Returns <code class="inline">:ok</code> if successful, or <code class="inline">{:error, reason}</code> if an error occurs</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#mkdir!/1">mkdir!(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#mkdir/1"><code class="inline">mkdir/1</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#mkdir_p/1">mkdir_p(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Tries to create the directory <code class="inline">path</code>. Missing parent directories are created.
+Returns <code class="inline">:ok</code> if successful, or <code class="inline">{:error, reason}</code> if an error occurs</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#mkdir_p!/1">mkdir_p!(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#mkdir_p/1"><code class="inline">mkdir_p/1</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#open/2">open(path, modes \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Opens the given <code class="inline">path</code> according to the given list of modes</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#open/3">open(path, modes, function)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Similar to <a href="#open/2"><code class="inline">open/2</code></a> but expects a function as last argument</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#open!/2">open!(path, modes \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#open/2"><code class="inline">open/2</code></a> but raises an error if file could not be opened</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#open!/3">open!(path, modes, function)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#open/3"><code class="inline">open/3</code></a> but raises an error if file could not be opened</p>
 </div>
   
 </div>
@@ -272,183 +522,10 @@ of <code class="inline">path</code>, or <code class="inline">{:error, reason}</c
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#ls/1">ls(path \\ &quot;.&quot;)</a>
+    <a href="#regular?/1">regular?(path)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns list of files in the given directory</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#mkdir!/1">mkdir!(path)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#mkdir/1"><code class="inline">mkdir/1</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#mkdir_p!/1">mkdir_p!(path)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#mkdir_p/1"><code class="inline">mkdir_p/1</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#rm!/1">rm!(path)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#rm/1"><code class="inline">rm/1</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#rm_rf!/1">rm_rf!(path)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#rm_rf/1"><code class="inline">rm_rf/1</code></a> but raises <a href="File.Error.html"><code class="inline">File.Error</code></a> in case of failures,
-otherwise the list of files or directories removed</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#rmdir!/1">rmdir!(path)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#rmdir/1"><code class="inline">rmdir/1</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#cd/1">cd(path)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Sets the current working directory</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#cd!/1">cd!(path)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>The same as <a href="#cd/1"><code class="inline">cd/1</code></a>, but raises an exception if it fails</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#ls!/1">ls!(path \\ &quot;.&quot;)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>The same as <a href="#ls/1"><code class="inline">ls/1</code></a> but raises <a href="File.Error.html"><code class="inline">File.Error</code></a>
-in case of an error</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#mkdir_p/1">mkdir_p(path)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Tries to create the directory <code class="inline">path</code>. Missing parent directories are created.
-Returns <code class="inline">:ok</code> if successful, or <code class="inline">{:error, reason}</code> if an error occurs</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#mkdir/1">mkdir(path)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Tries to create the directory <code class="inline">path</code>. Missing parent directories are not created.
-Returns <code class="inline">:ok</code> if successful, or <code class="inline">{:error, reason}</code> if an error occurs</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#rmdir/1">rmdir(path)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Tries to delete the dir at <code class="inline">path</code>.
-Returns <code class="inline">:ok</code> if successful, or <code class="inline">{:error, reason}</code> if an error occurs</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#rm/1">rm(path)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Tries to delete the file <code class="inline">path</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#chmod/2">chmod(path, mode)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Changes the <code class="inline">mode</code> for a given <code class="inline">file</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#cd!/2">cd!(path, function)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Changes the current directory to the given <code class="inline">path</code>,
-executes the given function and then revert back
-to the previous path regardless if there is an exception</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#chown/2">chown(path, uid)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Changes the owner given by the user id <code class="inline">uid</code>
-for a given <code class="inline">file</code>. Returns <code class="inline">:ok</code> on success,
-or <code class="inline">{:error, reason}</code> on failure</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#chgrp/2">chgrp(path, gid)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Changes the user group given by the group id <code class="inline">gid</code>
-for a given <code class="inline">file</code>. Returns <code class="inline">:ok</code> on success, or
-<code class="inline">{:error, reason}</code> on failure</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#ln_s/2">ln_s(existing, new)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Creates a symbolic link <code class="inline">new</code> to the file or directory <code class="inline">existing</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#open/2">open(path, modes \\ [])</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Opens the given <code class="inline">path</code> according to the given list of modes</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the path is a regular file</p>
 </div>
   
 </div>
@@ -466,6 +543,64 @@ it’s directory</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#rm/1">rm(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Tries to delete the file <code class="inline">path</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#rm!/1">rm!(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#rm/1"><code class="inline">rm/1</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#rm_rf/1">rm_rf(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Removes files and directories recursively at the given <code class="inline">path</code>.
+Symlinks are not followed but simply removed, non-existing
+files are simply ignored (i.e. doesn’t make this function fail)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#rm_rf!/1">rm_rf!(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#rm_rf/1"><code class="inline">rm_rf/1</code></a> but raises <a href="File.Error.html"><code class="inline">File.Error</code></a> in case of failures,
+otherwise the list of files or directories removed</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#rmdir/1">rmdir(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Tries to delete the dir at <code class="inline">path</code>.
+Returns <code class="inline">:ok</code> if successful, or <code class="inline">{:error, reason}</code> if an error occurs</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#rmdir!/1">rmdir!(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#rmdir/1"><code class="inline">rmdir/1</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#stat/2">stat(path, opts \\ [])</a>
   </div>
   
@@ -473,63 +608,6 @@ it’s directory</p>
 returns a <code class="inline">{:ok, info}</code> tuple, where info is a
 <a href="File.Stat.html"><code class="inline">File.Stat</code></a> struct. Returns <code class="inline">{:error, reason}</code> with
 the same reasons as <a href="#read/1"><code class="inline">read/1</code></a> if a failure occurs</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#lstat/2">lstat(path, opts \\ [])</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns information about the <code class="inline">path</code>. If the file is a symlink sets
-the <code class="inline">type</code> to <code class="inline">:symlink</code> and returns <a href="File.Stat.html"><code class="inline">File.Stat</code></a> for the link. For any
-other file, returns exactly the same values as <a href="#stat/2"><code class="inline">stat/2</code></a></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#chgrp!/2">chgrp!(path, gid)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#chgrp/2"><code class="inline">chgrp/2</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#chmod!/2">chmod!(path, mode)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#chmod/2"><code class="inline">chmod/2</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#chown!/2">chown!(path, uid)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#chown/2"><code class="inline">chown/2</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#lstat!/2">lstat!(path, opts \\ [])</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#lstat/2"><code class="inline">lstat/2</code></a> but returns the <a href="File.Stat.html"><code class="inline">File.Stat</code></a> directly and
-throws <a href="File.Error.html"><code class="inline">File.Error</code></a> if an error is returned</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#open!/2">open!(path, modes \\ [])</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#open/2"><code class="inline">open/2</code></a> but raises an error if file could not be opened</p>
 </div>
   
 </div>
@@ -545,10 +623,10 @@ throws <a href="File.Error.html"><code class="inline">File.Error</code></a> if a
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#touch!/2">touch!(path, time \\ :calendar.universal_time())</a>
+    <a href="#stream!/3">stream!(path, modes \\ [], line_or_bytes \\ :line)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Same as <a href="#touch/2"><code class="inline">touch/2</code></a> but raises an exception if it fails</p>
+    <div class="summary-synopsis"><p>Returns a <a href="File.Stream.html"><code class="inline">File.Stream</code></a> for the given <code class="inline">path</code> with the given <code class="inline">modes</code></p>
 </div>
   
 </div>
@@ -564,104 +642,10 @@ the given file</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#cp/3">cp(source, destination, callback \\ fn _, _ -&gt; true end)</a>
+    <a href="#touch!/2">touch!(path, time \\ :calendar.universal_time())</a>
   </div>
   
-    <div class="summary-synopsis"><p>Copies the contents in <code class="inline">source</code> to <code class="inline">destination</code> preserving its mode</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#cp_r/3">cp_r(source, destination, callback \\ fn _, _ -&gt; true end)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Copies the contents in source to destination</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#copy/3">copy(source, destination, bytes_count \\ :infinity)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Copies the contents of <code class="inline">source</code> to <code class="inline">destination</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#stream!/3">stream!(path, modes \\ [], line_or_bytes \\ :line)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns a <a href="File.Stream.html"><code class="inline">File.Stream</code></a> for the given <code class="inline">path</code> with the given <code class="inline">modes</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#open!/3">open!(path, modes, function)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#open/3"><code class="inline">open/3</code></a> but raises an error if file could not be opened</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#write!/3">write!(path, content, modes \\ [])</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#write/3"><code class="inline">write/3</code></a> but raises an exception if it fails, returns <code class="inline">:ok</code> otherwise</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#write_stat!/3">write_stat!(path, stat, opts \\ [])</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#write_stat/3"><code class="inline">write_stat/3</code></a> but raises an exception if it fails.
-Returns <code class="inline">:ok</code> otherwise</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#open/3">open(path, modes, function)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Similar to <a href="#open/2"><code class="inline">open/2</code></a> but expects a function as last argument</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#copy!/3">copy!(source, destination, bytes_count \\ :infinity)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>The same as <a href="#copy/3"><code class="inline">copy/3</code></a> but raises an <a href="File.CopyError.html"><code class="inline">File.CopyError</code></a> if it fails.
-Returns the <code class="inline">bytes_copied</code> otherwise</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#cp!/3">cp!(source, destination, callback \\ fn _, _ -&gt; true end)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>The same as <a href="#cp/3"><code class="inline">cp/3</code></a>, but raises <a href="File.CopyError.html"><code class="inline">File.CopyError</code></a> if it fails.
-Returns <code class="inline">:ok</code> otherwise</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#cp_r!/3">cp_r!(source, destination, callback \\ fn _, _ -&gt; true end)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>The same as <a href="#cp_r/3"><code class="inline">cp_r/3</code></a>, but raises <a href="File.CopyError.html"><code class="inline">File.CopyError</code></a> if it fails.
-Returns the list of copied files otherwise</p>
+    <div class="summary-synopsis"><p>Same as <a href="#touch/2"><code class="inline">touch/2</code></a> but raises an exception if it fails</p>
 </div>
   
 </div>
@@ -676,11 +660,30 @@ Returns the list of copied files otherwise</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#write!/3">write!(path, content, modes \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#write/3"><code class="inline">write/3</code></a> but raises an exception if it fails, returns <code class="inline">:ok</code> otherwise</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#write_stat/3">write_stat(path, stat, opts \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Writes the given <a href="File.Stat.html"><code class="inline">File.Stat</code></a> back to the filesystem at the given
 path. Returns <code class="inline">:ok</code> or <code class="inline">{:error, reason}</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#write_stat!/3">write_stat!(path, stat, opts \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#write_stat/3"><code class="inline">write_stat/3</code></a> but raises an exception if it fails.
+Returns <code class="inline">:ok</code> otherwise</p>
 </div>
   
 </div>
@@ -704,16 +707,8 @@ path. Returns <code class="inline">:ok</code> or <code class="inline">{:error, r
             Types
           </h1>
           <div class="types-list">
-            <div id="t:posix/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:posix/0">posix</a> :: :file.posix</code></pre>
-  
-</div>
-<div id="t:io_device/0" class="type-detail">
+            <div id="t:io_device/0" class="type-detail">
   <pre><code class="elixir"><a href="#t:io_device/0">io_device</a> :: :file.io_device</code></pre>
-  
-</div>
-<div id="t:stat_options/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:stat_options/0">stat_options</a> :: [{:time, :local | :universal | :posix}]</code></pre>
   
 </div>
 <div id="t:mode/0" class="type-detail">
@@ -731,6 +726,14 @@ path. Returns <code class="inline">:ok</code> or <code class="inline">{:error, r
   {:encoding, :latin1 | :unicode | :utf16 | :utf32 | :utf8 | {:utf16, :big | :little} | {:utf32, :big | :little}} |
   {:read_ahead, pos_integer} |
   {:delayed_write, non_neg_integer, non_neg_integer}</code></pre>
+  
+</div>
+<div id="t:posix/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:posix/0">posix</a> :: :file.posix</code></pre>
+  
+</div>
+<div id="t:stat_options/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:stat_options/0">stat_options</a> :: [{:time, :local | :universal | :posix}]</code></pre>
   
 </div>
 
@@ -2579,18 +2582,19 @@ Returns <code class="inline">:ok</code> otherwise.</p>
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

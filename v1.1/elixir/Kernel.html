@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kernel – Elixir v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Kernel – Elixir v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Kernel.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -66,6 +68,7 @@
 
 
       <h1>
+        <small class="visible-xs">Elixir v1.1.1</small>
         Kernel
         
         
@@ -118,47 +121,28 @@ the function:</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#make_ref/0">make_ref()</a>
+    <a href="#!=/2">left != right</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns an almost unique reference</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the two items are not equal</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#node/0">node()</a>
+    <a href="#!==/2">left !== right</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns an atom representing the name of the local node.
-If the node is not alive, <code class="inline">:nonode@nohost</code> is returned instead</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the two items do not match</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#self/0">self()</a>
+    <a href="#*/2">left * right</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the pid (process identifier) of the calling process</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#throw/1">throw(term)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>A non-local return from a function. Check <a href="Kernel.SpecialForms.html#try/1"><code class="inline">Kernel.SpecialForms.try/1</code></a> for more information</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#-/1">-value</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Arithmetic unary minus</p>
+    <div class="summary-synopsis"><p>Arithmetic multiplication</p>
 </div>
   
 </div>
@@ -173,10 +157,260 @@ If the node is not alive, <code class="inline">:nonode@nohost</code> is returned
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#not/1">not arg</a>
+    <a href="#+/2">left + right</a>
   </div>
   
-    <div class="summary-synopsis"><p>Boolean not</p>
+    <div class="summary-synopsis"><p>Arithmetic addition</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#++/2">left ++ right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Concatenates two lists</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#-/1">-value</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Arithmetic unary minus</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#-/2">left - right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Arithmetic subtraction</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#--/2">left -- right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Removes the first occurrence of an item on the left list
+for each item on the right</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#//2">left / right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Arithmetic division</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%3C/2">left &lt; right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if left is less than right</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%3C=/2">left &lt;= right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if left is less than or equal to right</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#==/2">left == right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the two items are equal</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#===/2">left === right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the two items are match</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#=~/2">left =~ right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Matches the term on the left against the regular expression or string on the
+right. Returns <code class="inline">true</code> if <code class="inline">left</code> matches <code class="inline">right</code> (if it’s a regular expression)
+or contains <code class="inline">right</code> (if it’s a string)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%3E/2">left &gt; right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if left is more than right</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%3E=/2">left &gt;= right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if left is more than or equal to right</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#abs/1">abs(number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns an integer or float which is the arithmetical absolute value of <code class="inline">number</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#apply/2">apply(fun, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Invokes the given <code class="inline">fun</code> with the array of arguments <code class="inline">args</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#apply/3">apply(module, fun, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Invokes the given <code class="inline">fun</code> from <code class="inline">module</code> with the array of arguments <code class="inline">args</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#binary_part/3">binary_part(binary, start, length)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Extracts the part of the binary starting at <code class="inline">start</code> with length <code class="inline">length</code>.
+Binaries are zero-indexed</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#bit_size/1">bit_size(bitstring)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns an integer which is the size in bits of <code class="inline">bitstring</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#byte_size/1">byte_size(binary)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the number of bytes needed to contain <code class="inline">bitstring</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#div/2">div(left, right)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Performs an integer division</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#elem/2">elem(tuple, index)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Gets the element at the zero-based <code class="inline">index</code> in <code class="inline">tuple</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#exit/1">exit(reason)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Stops the execution of the calling process with the given reason</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#function_exported?/3">function_exported?(module, function, arity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">module</code> is loaded and contains a
+public <code class="inline">function</code> with the given <code class="inline">arity</code>, otherwise <code class="inline">false</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_and_update_in/3">get_and_update_in(data, keys, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Gets a value and updates a nested structure</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_in/2">get_in(data, keys)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Gets a value from a nested structure</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#hd/1">hd(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the head of a list; raises <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the list is empty</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#inspect/2">inspect(arg, opts \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Inspects the given argument according to the <a href="Inspect.html"><code class="inline">Inspect</code></a> protocol.
+The second argument is a keyword list with options to control
+inspection</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#is_atom/1">is_atom(term)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is an atom; otherwise returns <code class="inline">false</code></p>
 </div>
   
 </div>
@@ -200,6 +434,16 @@ If the node is not alive, <code class="inline">:nonode@nohost</code> is returned
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#is_boolean/1">is_boolean(term)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is either the atom <code class="inline">true</code> or the atom <code class="inline">false</code> (i.e.,
+a boolean); otherwise returns <code class="inline">false</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#is_float/1">is_float(term)</a>
   </div>
   
@@ -218,6 +462,25 @@ If the node is not alive, <code class="inline">:nonode@nohost</code> is returned
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#is_function/2">is_function(term, arity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a function that can be applied with <code class="inline">arity</code> number of arguments;
+otherwise returns <code class="inline">false</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#is_integer/1">is_integer(term)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is an integer; otherwise returns <code class="inline">false</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#is_list/1">is_list(term)</a>
   </div>
   
@@ -231,6 +494,16 @@ If the node is not alive, <code class="inline">:nonode@nohost</code> is returned
   </div>
   
     <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a map; otherwise returns <code class="inline">false</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#is_number/1">is_number(term)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is either an integer or a floating point number;
+otherwise returns <code class="inline">false</code></p>
 </div>
   
 </div>
@@ -272,80 +545,6 @@ If the node is not alive, <code class="inline">:nonode@nohost</code> is returned
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#is_atom/1">is_atom(term)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is an atom; otherwise returns <code class="inline">false</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#is_integer/1">is_integer(term)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is an integer; otherwise returns <code class="inline">false</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#is_number/1">is_number(term)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is either an integer or a floating point number;
-otherwise returns <code class="inline">false</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#is_boolean/1">is_boolean(term)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is either the atom <code class="inline">true</code> or the atom <code class="inline">false</code> (i.e.,
-a boolean); otherwise returns <code class="inline">false</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#abs/1">abs(number)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns an integer or float which is the arithmetical absolute value of <code class="inline">number</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#bit_size/1">bit_size(bitstring)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns an integer which is the size in bits of <code class="inline">bitstring</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#hd/1">hd(list)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the head of a list; raises <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the list is empty</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#trunc/1">trunc(number)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the integer part of <code class="inline">number</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#length/1">length(list)</a>
   </div>
   
@@ -355,21 +554,20 @@ a boolean); otherwise returns <code class="inline">false</code></p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#node/1">node(arg)</a>
+    <a href="#macro_exported?/3">macro_exported?(module, macro, arity)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the node where the given argument is located.
-The argument can be a pid, a reference, or a port.
-If the local node is not alive, <code class="inline">:nonode@nohost</code> is returned</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">module</code> is loaded and contains a
+public <code class="inline">macro</code> with the given <code class="inline">arity</code>, otherwise <code class="inline">false</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#byte_size/1">byte_size(binary)</a>
+    <a href="#make_ref/0">make_ref()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the number of bytes needed to contain <code class="inline">bitstring</code></p>
+    <div class="summary-synopsis"><p>Returns an almost unique reference</p>
 </div>
   
 </div>
@@ -379,283 +577,6 @@ If the local node is not alive, <code class="inline">:nonode@nohost</code> is re
   </div>
   
     <div class="summary-synopsis"><p>Returns the size of a map</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#tuple_size/1">tuple_size(tuple)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the size of a tuple</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#tl/1">tl(list)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the tail of a list. Raises <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the list is empty</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#round/1">round(number)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Rounds a number to the nearest integer</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#spawn/1">spawn(fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Spawns the given function and returns its pid</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#spawn_link/1">spawn_link(fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Spawns the given function, links it to the current process and returns its pid</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#spawn_monitor/1">spawn_monitor(fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Spawns the given function, monitors it and returns its pid
-and monitoring reference</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#exit/1">exit(reason)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Stops the execution of the calling process with the given reason</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#+/2">left + right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Arithmetic addition</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#//2">left / right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Arithmetic division</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#*/2">left * right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Arithmetic multiplication</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#-/2">left - right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Arithmetic subtraction</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#rem/2">rem(left, right)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Computes the remainder of an integer division</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#++/2">left ++ right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Concatenates two lists</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#struct/2">struct(struct, kv \\ [])</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Creates and updates structs</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#get_in/2">get_in(data, keys)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Gets a value from a nested structure</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#elem/2">elem(tuple, index)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Gets the element at the zero-based <code class="inline">index</code> in <code class="inline">tuple</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#inspect/2">inspect(arg, opts \\ [])</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Inspects the given argument according to the <a href="Inspect.html"><code class="inline">Inspect</code></a> protocol.
-The second argument is a keyword list with options to control
-inspection</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#apply/2">apply(fun, args)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Invokes the given <code class="inline">fun</code> with the array of arguments <code class="inline">args</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#=~/2">left =~ right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Matches the term on the left against the regular expression or string on the
-right. Returns <code class="inline">true</code> if <code class="inline">left</code> matches <code class="inline">right</code> (if it’s a regular expression)
-or contains <code class="inline">right</code> (if it’s a string)</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#div/2">div(left, right)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Performs an integer division</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#--/2">left -- right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Removes the first occurrence of an item on the left list
-for each item on the right</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#is_function/2">is_function(term, arity)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a function that can be applied with <code class="inline">arity</code> number of arguments;
-otherwise returns <code class="inline">false</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#%3C=/2">left &lt;= right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if left is less than or equal to right</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#%3C/2">left &lt; right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if left is less than right</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#%3E=/2">left &gt;= right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if left is more than or equal to right</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#%3E/2">left &gt; right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if left is more than right</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#==/2">left == right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the two items are equal</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#===/2">left === right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the two items are match</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#!=/2">left != right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the two items are not equal</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#!==/2">left !== right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if the two items do not match</p>
 </div>
   
 </div>
@@ -683,29 +604,31 @@ first one is returned</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#send/2">send(dest, msg)</a>
+    <a href="#node/0">node()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Sends a message to the given <code class="inline">dest</code> and returns the message</p>
+    <div class="summary-synopsis"><p>Returns an atom representing the name of the local node.
+If the node is not alive, <code class="inline">:nonode@nohost</code> is returned instead</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#binary_part/3">binary_part(binary, start, length)</a>
+    <a href="#node/1">node(arg)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Extracts the part of the binary starting at <code class="inline">start</code> with length <code class="inline">length</code>.
-Binaries are zero-indexed</p>
+    <div class="summary-synopsis"><p>Returns the node where the given argument is located.
+The argument can be a pid, a reference, or a port.
+If the local node is not alive, <code class="inline">:nonode@nohost</code> is returned</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#get_and_update_in/3">get_and_update_in(data, keys, fun)</a>
+    <a href="#not/1">not arg</a>
   </div>
   
-    <div class="summary-synopsis"><p>Gets a value and updates a nested structure</p>
+    <div class="summary-synopsis"><p>Boolean not</p>
 </div>
   
 </div>
@@ -720,15 +643,6 @@ Binaries are zero-indexed</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#apply/3">apply(module, fun, args)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Invokes the given <code class="inline">fun</code> from <code class="inline">module</code> with the array of arguments <code class="inline">args</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#put_in/3">put_in(data, keys, value)</a>
   </div>
   
@@ -738,21 +652,46 @@ Binaries are zero-indexed</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#function_exported?/3">function_exported?(module, function, arity)</a>
+    <a href="#rem/2">rem(left, right)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">module</code> is loaded and contains a
-public <code class="inline">function</code> with the given <code class="inline">arity</code>, otherwise <code class="inline">false</code></p>
+    <div class="summary-synopsis"><p>Computes the remainder of an integer division</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#macro_exported?/3">macro_exported?(module, macro, arity)</a>
+    <a href="#round/1">round(number)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">module</code> is loaded and contains a
-public <code class="inline">macro</code> with the given <code class="inline">arity</code>, otherwise <code class="inline">false</code></p>
+    <div class="summary-synopsis"><p>Rounds a number to the nearest integer</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#self/0">self()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the pid (process identifier) of the calling process</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#send/2">send(dest, msg)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Sends a message to the given <code class="inline">dest</code> and returns the message</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#spawn/1">spawn(fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Spawns the given function and returns its pid</p>
 </div>
   
 </div>
@@ -768,6 +707,15 @@ and returns its pid</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#spawn_link/1">spawn_link(fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Spawns the given function, links it to the current process and returns its pid</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#spawn_link/3">spawn_link(module, fun, args)</a>
   </div>
   
@@ -778,11 +726,66 @@ links it to the current process and returns its pid</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#spawn_monitor/1">spawn_monitor(fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Spawns the given function, monitors it and returns its pid
+and monitoring reference</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#spawn_monitor/3">spawn_monitor(module, fun, args)</a>
   </div>
   
     <div class="summary-synopsis"><p>Spawns the given module and function passing the given args,
 monitors it and returns its pid and monitoring reference</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#struct/2">struct(struct, kv \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Creates and updates structs</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#throw/1">throw(term)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>A non-local return from a function. Check <a href="Kernel.SpecialForms.html#try/1"><code class="inline">Kernel.SpecialForms.try/1</code></a> for more information</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#tl/1">tl(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the tail of a list. Raises <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the list is empty</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#trunc/1">trunc(number)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the integer part of <code class="inline">number</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#tuple_size/1">tuple_size(tuple)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the size of a tuple</p>
 </div>
   
 </div>
@@ -815,56 +818,31 @@ monitors it and returns its pid and monitoring reference</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_char_list/1">to_char_list(arg)</a>
+    <a href="#&amp;&amp;/2">left &amp;&amp; right</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts the argument to a char list according to the <a href="List.Chars.html"><code class="inline">List.Chars</code></a> protocol</p>
+    <div class="summary-synopsis"><p>Provides a short-circuit operator that evaluates and returns
+the second expression only if the first one evaluates to <code class="inline">true</code>
+(i.e., it is not <code class="inline">nil</code> nor <code class="inline">false</code>). Returns the first expression
+otherwise</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_string/1">to_string(arg)</a>
+    <a href="#../2">first .. last</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts the argument to a string according to the
-<a href="String.Chars.html"><code class="inline">String.Chars</code></a> protocol</p>
+    <div class="summary-synopsis"><p>Returns a range with the specified start and end</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#defstruct/1">defstruct(fields)</a>
+    <a href="#%3C%3E/2">left &lt;&gt; right</a>
   </div>
   
-    <div class="summary-synopsis"><p>Defines a struct</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#defexception/1">defexception(fields)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Defines an exception</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#defoverridable/1">defoverridable(keywords)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Makes the given functions in the current module overridable</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#raise/1">raise(msg)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Raises an exception</p>
+    <div class="summary-synopsis"><p>Concatenates two binaries</p>
 </div>
   
 </div>
@@ -874,24 +852,6 @@ monitors it and returns its pid and monitoring reference</p>
   </div>
   
     <div class="summary-synopsis"><p>Reads and writes attributes of the current module</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#is_nil/1">is_nil(term)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is <code class="inline">nil</code>, <code class="inline">false</code> otherwise</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#binding/1">binding(context \\ nil)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the binding for the given context as a keyword list</p>
 </div>
   
 </div>
@@ -908,16 +868,6 @@ the macro is expanded</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#match?/2">match?(pattern, expr)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>A convenience macro that checks if the right side (an expression) matches the
-left side (a pattern)</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#and/2">left and right</a>
   </div>
   
@@ -927,38 +877,10 @@ left side (a pattern)</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#or/2">left or right</a>
+    <a href="#binding/1">binding(context \\ nil)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Boolean or</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#in/2">left in right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Checks if the element on the left-hand side is a member of the
-collection on the right-hand side</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#%3C%3E/2">left &lt;&gt; right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Concatenates two binaries</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#defdelegate/2">defdelegate(funs, opts)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Defines a function that delegates to another module</p>
+    <div class="summary-synopsis"><p>Returns the binding for the given context as a keyword list</p>
 </div>
   
 </div>
@@ -973,28 +895,37 @@ collection on the right-hand side</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#defdelegate/2">defdelegate(funs, opts)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Defines a function that delegates to another module</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#defexception/1">defexception(fields)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Defines an exception</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#defimpl/3">defimpl(name, opts, do_block \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Defines an implementation for the given protocol</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#defmacro/2">defmacro(call, expr \\ nil)</a>
   </div>
   
     <div class="summary-synopsis"><p>Defines a macro with the given name and body</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#defmodule/2">defmodule(alias, list)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Defines a module given by name with the given contents</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#defp/2">defp(call, expr \\ nil)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Defines a private function with the given name and body</p>
 </div>
   
 </div>
@@ -1009,10 +940,46 @@ collection on the right-hand side</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#defmodule/2">defmodule(alias, list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Defines a module given by name with the given contents</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#defoverridable/1">defoverridable(keywords)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Makes the given functions in the current module overridable</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#defp/2">defp(call, expr \\ nil)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Defines a private function with the given name and body</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#defprotocol/2">defprotocol(name, list)</a>
   </div>
   
     <div class="summary-synopsis"><p>Defines a protocol</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#defstruct/1">defstruct(fields)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Defines a struct</p>
 </div>
   
 </div>
@@ -1032,6 +999,98 @@ right one to the matching term in the left one</p>
   </div>
   
     <div class="summary-synopsis"><p>Gets a value and updates a nested data structure via the given <code class="inline">path</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#if/2">if(condition, clauses)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Provides an <code class="inline">if</code> macro</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#in/2">left in right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Checks if the element on the left-hand side is a member of the
+collection on the right-hand side</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#is_nil/1">is_nil(term)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <code class="inline">term</code> is <code class="inline">nil</code>, <code class="inline">false</code> otherwise</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#match?/2">match?(pattern, expr)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>A convenience macro that checks if the right side (an expression) matches the
+left side (a pattern)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#or/2">left or right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Boolean or</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#put_in/2">put_in(path, value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Puts a value in a nested structure via the given <code class="inline">path</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#raise/1">raise(msg)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Raises an exception</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#raise/2">raise(exception, attrs)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Raises an exception</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reraise/2">reraise(msg, stacktrace)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Raises an exception preserving a previous stacktrace</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reraise/3">reraise(exception, attrs, stacktrace)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Raises an exception preserving a previous stacktrace</p>
 </div>
   
 </div>
@@ -1109,42 +1168,20 @@ right one to the matching term in the left one</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#%7C%3E/2">left |&gt; right</a>
+    <a href="#to_char_list/1">to_char_list(arg)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Pipe operator</p>
+    <div class="summary-synopsis"><p>Converts the argument to a char list according to the <a href="List.Chars.html"><code class="inline">List.Chars</code></a> protocol</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#&amp;&amp;/2">left &amp;&amp; right</a>
+    <a href="#to_string/1">to_string(arg)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Provides a short-circuit operator that evaluates and returns
-the second expression only if the first one evaluates to <code class="inline">true</code>
-(i.e., it is not <code class="inline">nil</code> nor <code class="inline">false</code>). Returns the first expression
-otherwise</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#%7C%7C/2">left || right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Provides a short-circuit operator that evaluates and returns the second
-expression only if the first one does not evaluate to <code class="inline">true</code> (i.e., it
-is either <code class="inline">nil</code> or <code class="inline">false</code>). Returns the first expression otherwise</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#if/2">if(condition, clauses)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Provides an <code class="inline">if</code> macro</p>
+    <div class="summary-synopsis"><p>Converts the argument to a string according to the
+<a href="String.Chars.html"><code class="inline">String.Chars</code></a> protocol</p>
 </div>
   
 </div>
@@ -1154,42 +1191,6 @@ is either <code class="inline">nil</code> or <code class="inline">false</code>).
   </div>
   
     <div class="summary-synopsis"><p>Provides an <code class="inline">unless</code> macro</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#put_in/2">put_in(path, value)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Puts a value in a nested structure via the given <code class="inline">path</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#reraise/2">reraise(msg, stacktrace)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Raises an exception preserving a previous stacktrace</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#raise/2">raise(exception, attrs)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Raises an exception</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#../2">first .. last</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns a range with the specified start and end</p>
 </div>
   
 </div>
@@ -1223,19 +1224,21 @@ not be hygienized</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#defimpl/3">defimpl(name, opts, do_block \\ [])</a>
+    <a href="#%7C%3E/2">left |&gt; right</a>
   </div>
   
-    <div class="summary-synopsis"><p>Defines an implementation for the given protocol</p>
+    <div class="summary-synopsis"><p>Pipe operator</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#reraise/3">reraise(exception, attrs, stacktrace)</a>
+    <a href="#%7C%7C/2">left || right</a>
   </div>
   
-    <div class="summary-synopsis"><p>Raises an exception preserving a previous stacktrace</p>
+    <div class="summary-synopsis"><p>Provides a short-circuit operator that evaluates and returns the second
+expression only if the first one does not evaluate to <code class="inline">true</code> (i.e., it
+is either <code class="inline">nil</code> or <code class="inline">false</code>). Returns the first expression otherwise</p>
 </div>
   
 </div>
@@ -5647,18 +5650,19 @@ not only booleans.</p>
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

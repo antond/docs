@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GenServer – Elixir v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>GenServer – Elixir v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/GenServer.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -66,6 +68,7 @@
 
 
       <h1>
+        <small class="visible-xs">Elixir v1.1.1</small>
         GenServer
         
           <small>behaviour</small>
@@ -263,6 +266,33 @@ in Erlang can also provide extra insight.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#t:from/0">from()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Tuple describing the client of a call request</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:name/0">name()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The GenServer name</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:on_start/0">on_start()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Return values of <code class="inline">start*</code> functions</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#t:option/0">option()</a>
   </div>
   
@@ -281,37 +311,10 @@ in Erlang can also provide extra insight.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:on_start/0">on_start()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Return values of <code class="inline">start*</code> functions</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:name/0">name()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>The GenServer name</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#t:server/0">server()</a>
   </div>
   
     <div class="summary-synopsis"><p>The server reference</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:from/0">from()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Tuple describing the client of a call request</p>
 </div>
   
 </div>
@@ -325,34 +328,6 @@ in Erlang can also provide extra insight.</p>
       <a href="#functions">Functions</a>
     </h2>
     <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#whereis/1">whereis(pid)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the <code class="inline">pid</code> or <code class="inline">{name, node}</code> of a GenServer process.
-Returns <code class="inline">nil</code> if no process is associated with the given name</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#reply/2">reply(client, reply)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Replies to a client</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#cast/2">cast(server, request)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Sends an asynchronous request to the <code class="inline">server</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
   <div class="summary-signature">
     <a href="#abcast/3">abcast(nodes \\ nodes(), name, request)</a>
   </div>
@@ -372,10 +347,28 @@ Returns <code class="inline">nil</code> if no process is associated with the giv
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#start_link/3">start_link(module, args, options \\ [])</a>
+    <a href="#cast/2">cast(server, request)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Starts a <a href="GenServer.html#content"><code class="inline">GenServer</code></a> process linked to the current process</p>
+    <div class="summary-synopsis"><p>Sends an asynchronous request to the <code class="inline">server</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#multi_call/4">multi_call(nodes \\ nodes(), name, request, timeout \\ :infinity)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Calls all servers locally registered as <code class="inline">name</code> at the specified <code class="inline">nodes</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#reply/2">reply(client, reply)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Replies to a client</p>
 </div>
   
 </div>
@@ -390,10 +383,20 @@ Returns <code class="inline">nil</code> if no process is associated with the giv
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#multi_call/4">multi_call(nodes \\ nodes(), name, request, timeout \\ :infinity)</a>
+    <a href="#start_link/3">start_link(module, args, options \\ [])</a>
   </div>
   
-    <div class="summary-synopsis"><p>Calls all servers locally registered as <code class="inline">name</code> at the specified <code class="inline">nodes</code></p>
+    <div class="summary-synopsis"><p>Starts a <a href="GenServer.html#content"><code class="inline">GenServer</code></a> process linked to the current process</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#whereis/1">whereis(pid)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the <code class="inline">pid</code> or <code class="inline">{name, node}</code> of a GenServer process.
+Returns <code class="inline">nil</code> if no process is associated with the given name</p>
 </div>
   
 </div>
@@ -409,43 +412,6 @@ Returns <code class="inline">nil</code> if no process is associated with the giv
       <a href="#callbacks">Callbacks</a>
     </h2>
     <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#c:init/1">init(args)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Invoked when the server is started. <a href="#start_link/3"><code class="inline">start_link/3</code></a> (or <a href="#start/3"><code class="inline">start/3</code></a>) will
-block until it returns</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#c:handle_info/2">handle_info(msg, state)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Invoked to handle all other messages</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#c:handle_cast/2">handle_cast(request, state)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Invoked to handle asynchronous <a href="#cast/2"><code class="inline">cast/2</code></a> messages</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#c:terminate/2">terminate(reason, state)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Invoked when the server is about to exit. It should do any cleanup required</p>
-</div>
-  
-</div>
-<div class="summary-row">
   <div class="summary-signature">
     <a href="#c:code_change/3">code_change(old_vsn, state, extra)</a>
   </div>
@@ -466,6 +432,43 @@ reply is received (unless the call times out or nodes are disconnected)</p>
 </div>
   
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#c:handle_cast/2">handle_cast(request, state)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Invoked to handle asynchronous <a href="#cast/2"><code class="inline">cast/2</code></a> messages</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#c:handle_info/2">handle_info(msg, state)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Invoked to handle all other messages</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#c:init/1">init(args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Invoked when the server is started. <a href="#start_link/3"><code class="inline">start_link/3</code></a> (or <a href="#start/3"><code class="inline">start/3</code></a>) will
+block until it returns</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#c:terminate/2">terminate(reason, state)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Invoked when the server is about to exit. It should do any cleanup required</p>
+</div>
+  
+</div>
 
   </div>
 
@@ -482,13 +485,19 @@ reply is received (unless the call times out or nodes are disconnected)</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:on_start/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:on_start/0">on_start</a> ::
-  {:ok, pid} |
-  :ignore |
-  {:error, {:already_started, pid} | term}</code></pre>
+            <div id="t:debug/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:debug/0">debug</a> :: [:trace | :log | :statistics | {:log_to_file, <a href="Path.html#t:t/0">Path.t</a>}]</code></pre>
   
-    <div class="typespec-doc"><p>Return values of <code class="inline">start*</code> functions</p>
+    <div class="typespec-doc"><p>Debug options supported by the <code class="inline">start*</code> functions</p>
+</div>
+  
+</div>
+<div id="t:from/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:from/0">from</a> :: {pid, tag :: term}</code></pre>
+  
+    <div class="typespec-doc"><p>Tuple describing the client of a call request.</p>
+<p><code class="inline">pid</code> is the pid of the caller and <code class="inline">tag</code> is a unique term used to identify the
+call.</p>
 </div>
   
 </div>
@@ -502,10 +511,13 @@ reply is received (unless the call times out or nodes are disconnected)</p>
 </div>
   
 </div>
-<div id="t:options/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:options/0">options</a> :: [<a href="#t:option/0">option</a>]</code></pre>
+<div id="t:on_start/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:on_start/0">on_start</a> ::
+  {:ok, pid} |
+  :ignore |
+  {:error, {:already_started, pid} | term}</code></pre>
   
-    <div class="typespec-doc"><p>Options used by the <code class="inline">start*</code> functions</p>
+    <div class="typespec-doc"><p>Return values of <code class="inline">start*</code> functions</p>
 </div>
   
 </div>
@@ -520,10 +532,10 @@ reply is received (unless the call times out or nodes are disconnected)</p>
 </div>
   
 </div>
-<div id="t:debug/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:debug/0">debug</a> :: [:trace | :log | :statistics | {:log_to_file, <a href="Path.html#t:t/0">Path.t</a>}]</code></pre>
+<div id="t:options/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:options/0">options</a> :: [<a href="#t:option/0">option</a>]</code></pre>
   
-    <div class="typespec-doc"><p>Debug options supported by the <code class="inline">start*</code> functions</p>
+    <div class="typespec-doc"><p>Options used by the <code class="inline">start*</code> functions</p>
 </div>
   
 </div>
@@ -531,15 +543,6 @@ reply is received (unless the call times out or nodes are disconnected)</p>
   <pre><code class="elixir"><a href="#t:server/0">server</a> :: pid | <a href="#t:name/0">name</a> | {atom, node}</code></pre>
   
     <div class="typespec-doc"><p>The server reference</p>
-</div>
-  
-</div>
-<div id="t:from/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:from/0">from</a> :: {pid, tag :: term}</code></pre>
-  
-    <div class="typespec-doc"><p>Tuple describing the client of a call request.</p>
-<p><code class="inline">pid</code> is the pid of the caller and <code class="inline">tag</code> is a unique term used to identify the
-call.</p>
 </div>
   
 </div>
@@ -1182,18 +1185,19 @@ logged.</p>
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

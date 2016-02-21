@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mix.Task – Mix v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Mix.Task – Mix v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/mix/Mix.Task.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -64,6 +66,7 @@
 
 
       <h1>
+        <small class="visible-xs">Mix v1.1.1</small>
         Mix.Task
         
           <small>behaviour</small>
@@ -145,19 +148,10 @@ task’s module.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#clear/0">clear()</a>
+    <a href="#alias?/1">alias?(task)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Clears all invoked tasks, allowing them to be reinvoked</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#load_all/0">load_all()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Loads all tasks in all code paths</p>
+    <div class="summary-synopsis"><p>Checks if an alias called <code class="inline">task</code> exists</p>
 </div>
   
 </div>
@@ -172,10 +166,55 @@ task’s module.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#alias?/1">alias?(task)</a>
+    <a href="#clear/0">clear()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Checks if an alias called <code class="inline">task</code> exists</p>
+    <div class="summary-synopsis"><p>Clears all invoked tasks, allowing them to be reinvoked</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get/1">get(task)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Receives a task name and returns the task module if found</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get!/1">get!(task)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Receives a task name and retrieves the task module</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#load_all/0">load_all()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Loads all tasks in all code paths</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#load_tasks/1">load_tasks(dirs)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Loads all tasks in the given <code class="inline">paths</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#moduledoc/1">moduledoc(module)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Gets the moduledoc for the given task <code class="inline">module</code></p>
 </div>
   
 </div>
@@ -191,10 +230,19 @@ umbrella projects</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#moduledoc/1">moduledoc(module)</a>
+    <a href="#reenable/1">reenable(task)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Gets the moduledoc for the given task <code class="inline">module</code></p>
+    <div class="summary-synopsis"><p>Reenables a given task so it can be executed again down the stack</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#run/2">run(task, args \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Runs a <code class="inline">task</code> with the given <code class="inline">args</code></p>
 </div>
   
 </div>
@@ -204,42 +252,6 @@ umbrella projects</p>
   </div>
   
     <div class="summary-synopsis"><p>Gets the shortdoc for the given task <code class="inline">module</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#load_tasks/1">load_tasks(dirs)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Loads all tasks in the given <code class="inline">paths</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#get!/1">get!(task)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Receives a task name and retrieves the task module</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#get/1">get(task)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Receives a task name and returns the task module if found</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#reenable/1">reenable(task)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Reenables a given task so it can be executed again down the stack</p>
 </div>
   
 </div>
@@ -258,15 +270,6 @@ umbrella projects</p>
   </div>
   
     <div class="summary-synopsis"><p>Returns the task name for the given <code class="inline">module</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#run/2">run(task, args \\ [])</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Runs a <code class="inline">task</code> with the given <code class="inline">args</code></p>
 </div>
   
 </div>
@@ -307,12 +310,12 @@ a list of command line args</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:task_name/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:task_name/0">task_name</a> :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a> | atom</code></pre>
+            <div id="t:task_module/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:task_module/0">task_module</a> :: atom</code></pre>
   
 </div>
-<div id="t:task_module/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:task_module/0">task_module</a> :: atom</code></pre>
+<div id="t:task_name/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:task_name/0">task_name</a> :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a> | atom</code></pre>
   
 </div>
 
@@ -786,18 +789,19 @@ a list of command line args.</p>
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

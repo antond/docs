@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mix.Project – Mix v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Mix.Project – Mix v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/mix/Mix.Project.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -64,6 +66,7 @@
 
 
       <h1>
+        <small class="visible-xs">Mix v1.1.1</small>
         Mix.Project
         
         
@@ -123,60 +126,6 @@ etc.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#get/0">get()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Retrieves the current project if there is one</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#config_files/0">config_files()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns a list of project configuration files for this project</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#config/0">config()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the project configuration</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#get!/0">get!()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Same as <a href="#get/0"><code class="inline">get/0</code></a>, but raises an exception if there is no current project</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#umbrella?/1">umbrella?(config \\ config())</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if project is an umbrella project</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#load_paths/1">load_paths(config \\ config())</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns all load paths for this project</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#app_path/1">app_path(config \\ config())</a>
   </div>
   
@@ -190,33 +139,6 @@ etc.</p>
   </div>
   
     <div class="summary-synopsis"><p>Returns the build path for this project</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#deps_path/1">deps_path(config \\ config())</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the path to store dependencies for this project</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#compile_path/1">compile_path(config \\ config())</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the paths this project compiles to</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#manifest_path/1">manifest_path(config \\ config())</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>The path to store manifests</p>
 </div>
   
 </div>
@@ -240,6 +162,42 @@ etc.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#compile_path/1">compile_path(config \\ config())</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the paths this project compiles to</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#config/0">config()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the project configuration</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#config_files/0">config_files()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a list of project configuration files for this project</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#deps_path/1">deps_path(config \\ config())</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the path to store dependencies for this project</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#ensure_structure/2">ensure_structure(config \\ config(), opts \\ [])</a>
   </div>
   
@@ -249,10 +207,55 @@ etc.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#get/0">get()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieves the current project if there is one</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get!/0">get!()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Same as <a href="#get/0"><code class="inline">get/0</code></a>, but raises an exception if there is no current project</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#in_project/4">in_project(app, path, post_config \\ [], fun)</a>
   </div>
   
     <div class="summary-synopsis"><p>Runs the given <code class="inline">fun</code> inside the given project</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#load_paths/1">load_paths(config \\ config())</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns all load paths for this project</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#manifest_path/1">manifest_path(config \\ config())</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The path to store manifests</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#umbrella?/1">umbrella?(config \\ config())</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if project is an umbrella project</p>
 </div>
   
 </div>
@@ -624,18 +627,19 @@ in future releases.</p>
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

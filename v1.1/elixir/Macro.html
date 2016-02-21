@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Macro – Elixir v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Macro – Elixir v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Macro.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -66,6 +68,7 @@
 
 
       <h1>
+        <small class="visible-xs">Elixir v1.1.1</small>
         Macro
         
         
@@ -106,19 +109,19 @@ syntax can be used.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:t/0">t()</a>
+    <a href="#t:expr/0">expr()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Abstract Syntax Tree (AST)</p>
+    <div class="summary-synopsis"><p>Expr node (remaining ones are literals)</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:expr/0">expr()</a>
+    <a href="#t:t/0">t()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Expr node (remaining ones are literals)</p>
+    <div class="summary-synopsis"><p>Abstract Syntax Tree (AST)</p>
 </div>
   
 </div>
@@ -133,112 +136,11 @@ syntax can be used.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#unpipe/1">unpipe(expr)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Breaks a pipeline expression into a list</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#decompose_call/1">decompose_call(ast)</a>
   </div>
   
     <div class="summary-synopsis"><p>Decomposes a local or remote call into its remote part (when provided),
 function name and argument list</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#unescape_string/1">unescape_string(chars)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Unescapes the given chars</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#unescape_tokens/1">unescape_tokens(tokens)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Unescapes the given tokens according to the default map</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#validate/1">validate(expr)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Validates the given expressions are valid quoted expressions</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#update_meta/2">update_meta(quoted, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Applies the given function to the node metadata if it contains one</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#to_string/2">to_string(tree, fun \\ fn _ast, string -&gt; string end)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Converts the given expression to a binary</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#var/2">var(var, context)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Generates an AST node representing the variable given
-by the atoms <code class="inline">var</code> and <code class="inline">context</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#postwalk/2">postwalk(ast, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Performs a depth-first, post-order traversal of quoted expressions</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#prewalk/2">prewalk(ast, fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Performs a depth-first, pre-order traversal of quoted expressions</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#expand_once/2">expand_once(ast, env)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Receives an AST node and expands it once</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#expand/2">expand(tree, env)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Receives an AST node and expands it until it can no longer
-be expanded</p>
 </div>
   
 </div>
@@ -254,19 +156,38 @@ into a syntax tree</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#unescape_string/2">unescape_string(chars, map)</a>
+    <a href="#expand/2">expand(tree, env)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Unescapes the given chars according to the map given</p>
+    <div class="summary-synopsis"><p>Receives an AST node and expands it until it can no longer
+be expanded</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#unescape_tokens/2">unescape_tokens(tokens, map)</a>
+    <a href="#expand_once/2">expand_once(ast, env)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Unescapes the given tokens according to the given map</p>
+    <div class="summary-synopsis"><p>Receives an AST node and expands it once</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#pipe/3">pipe(expr, call_args, position)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Pipes <code class="inline">expr</code> into the <code class="inline">call_args</code> at the given <code class="inline">position</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#postwalk/2">postwalk(ast, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Performs a depth-first, post-order traversal of quoted expressions</p>
 </div>
   
 </div>
@@ -282,6 +203,15 @@ using an accumulator</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#prewalk/2">prewalk(ast, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Performs a depth-first, pre-order traversal of quoted expressions</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#prewalk/3">prewalk(ast, acc, fun)</a>
   </div>
   
@@ -292,10 +222,83 @@ using an accumulator</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#pipe/3">pipe(expr, call_args, position)</a>
+    <a href="#to_string/2">to_string(tree, fun \\ fn _ast, string -&gt; string end)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Pipes <code class="inline">expr</code> into the <code class="inline">call_args</code> at the given <code class="inline">position</code></p>
+    <div class="summary-synopsis"><p>Converts the given expression to a binary</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unescape_string/1">unescape_string(chars)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Unescapes the given chars</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unescape_string/2">unescape_string(chars, map)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Unescapes the given chars according to the map given</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unescape_tokens/1">unescape_tokens(tokens)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Unescapes the given tokens according to the default map</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unescape_tokens/2">unescape_tokens(tokens, map)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Unescapes the given tokens according to the given map</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unpipe/1">unpipe(expr)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Breaks a pipeline expression into a list</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#update_meta/2">update_meta(quoted, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Applies the given function to the node metadata if it contains one</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#validate/1">validate(expr)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Validates the given expressions are valid quoted expressions</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#var/2">var(var, context)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Generates an AST node representing the variable given
+by the atoms <code class="inline">var</code> and <code class="inline">context</code></p>
 </div>
   
 </div>
@@ -319,7 +322,14 @@ using an accumulator</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:t/0" class="type-detail">
+            <div id="t:expr/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:expr/0">expr</a> :: {<a href="#t:expr/0">expr</a> | atom, <a href="Keyword.html#t:t/0">Keyword.t</a>, atom | [<a href="#t:t/0">t</a>]}</code></pre>
+  
+    <div class="typespec-doc"><p>Expr node (remaining ones are literals)</p>
+</div>
+  
+</div>
+<div id="t:t/0" class="type-detail">
   <pre><code class="elixir"><a href="#t:t/0">t</a> ::
   <a href="#t:expr/0">expr</a> |
   {<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>} |
@@ -331,13 +341,6 @@ using an accumulator</p>
   [<a href="#t:t/0">t</a>]</code></pre>
   
     <div class="typespec-doc"><p>Abstract Syntax Tree (AST)</p>
-</div>
-  
-</div>
-<div id="t:expr/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:expr/0">expr</a> :: {<a href="#t:expr/0">expr</a> | atom, <a href="Keyword.html#t:t/0">Keyword.t</a>, atom | [<a href="#t:t/0">t</a>]}</code></pre>
-  
-    <div class="typespec-doc"><p>Expr node (remaining ones are literals)</p>
 </div>
   
 </div>
@@ -1008,18 +1011,19 @@ nil can be given:</p>
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 

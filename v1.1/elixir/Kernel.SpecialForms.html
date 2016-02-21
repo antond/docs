@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kernel.SpecialForms – Elixir v1.1.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.10.0-dev">
-    <link rel="stylesheet" href="dist/app.css" />
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Kernel.SpecialForms – Elixir v1.1.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Kernel.SpecialForms.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -66,6 +68,7 @@
 
 
       <h1>
+        <small class="visible-xs">Elixir v1.1.1</small>
         Kernel.SpecialForms
         
         
@@ -114,6 +117,78 @@ in Elixir’s constructs.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#%25/2">%</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Creates a struct</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%25%7B%7D/1">%{}</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Creates a map</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#&amp;/1">&amp;expr</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Captures or creates an anonymous function</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#./2">left . right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Defines a remote call or an alias</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#::/2">left :: right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Used by types and bitstrings to specify types</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%3C%3C%3E%3E/1">&lt;&lt;args&gt;&gt;</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Defines a new bitstring</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#=/2">left = right</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Matches the value on the right against the pattern on the left</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#%5E/1">^var</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Accesses an already bound variable in match clauses. Also known as the pin operator</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#__CALLER__/0">__CALLER__</a>
   </div>
   
@@ -150,75 +225,47 @@ in Elixir’s constructs.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#%5E/1">^var</a>
+    <a href="#__aliases__/1">__aliases__(args)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Accesses an already bound variable in match clauses. Also known as the pin operator</p>
+    <div class="summary-synopsis"><p>Internal special form to hold aliases information</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#super/1">super(args)</a>
+    <a href="#__block__/1">__block__(args)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Calls the overriden function when overriding it with <a href="Kernel.html#defoverridable/1"><code class="inline">Kernel.defoverridable/1</code></a></p>
+    <div class="summary-synopsis"><p>Internal special form for block expressions</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#&amp;/1">&amp;expr</a>
+    <a href="#alias/2">alias(module, opts)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Captures or creates an anonymous function</p>
+    <div class="summary-synopsis"><p><code class="inline">alias</code> is used to setup aliases, often useful with modules names</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#receive/1">receive(args)</a>
+    <a href="#case/2">case(condition, clauses)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Checks if there is a message matching the given clauses
-in the current process mailbox</p>
+    <div class="summary-synopsis"><p>Matches the given expression against the given clauses</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#for/1">for(args)</a>
+    <a href="#cond/1">cond(clauses)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Comprehensions allow you to quickly build a data structure from
-an enumerable or a bitstring</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#%25%7B%7D/1">%{}</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Creates a map</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#%7B%7D/1">{args}</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Creates a tuple</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#%3C%3C%3E%3E/1">&lt;&lt;args&gt;&gt;</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Defines a new bitstring</p>
+    <div class="summary-synopsis"><p>Evaluates the expression corresponding to the first clause that
+evaluates to a truthy value</p>
 </div>
   
 </div>
@@ -235,11 +282,57 @@ end</a>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#cond/1">cond(clauses)</a>
+    <a href="#for/1">for(args)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Evaluates the expression corresponding to the first clause that
-evaluates to a truthy value</p>
+    <div class="summary-synopsis"><p>Comprehensions allow you to quickly build a data structure from
+an enumerable or a bitstring</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#import/2">import(module, opts)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Imports function and macros from other modules</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#quote/2">quote(opts, block)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Gets the representation of any expression</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#receive/1">receive(args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Checks if there is a message matching the given clauses
+in the current process mailbox</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#require/2">require(module, opts)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Requires a given module to be compiled and loaded</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#super/1">super(args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Calls the overriden function when overriding it with <a href="Kernel.html#defoverridable/1"><code class="inline">Kernel.defoverridable/1</code></a></p>
 </div>
   
 </div>
@@ -250,24 +343,6 @@ evaluates to a truthy value</p>
   
     <div class="summary-synopsis"><p>Evaluates the given expressions and handle any error, exit
 or throw that may have happened</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#__block__/1">__block__(args)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Internal special form for block expressions</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#__aliases__/1">__aliases__(args)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Internal special form to hold aliases information</p>
 </div>
   
 </div>
@@ -292,82 +367,10 @@ to unquote</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#%25/2">%</a>
+    <a href="#%7B%7D/1">{args}</a>
   </div>
   
-    <div class="summary-synopsis"><p>Creates a struct</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#./2">left . right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Defines a remote call or an alias</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#quote/2">quote(opts, block)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Gets the representation of any expression</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#import/2">import(module, opts)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Imports function and macros from other modules</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#case/2">case(condition, clauses)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Matches the given expression against the given clauses</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#=/2">left = right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Matches the value on the right against the pattern on the left</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#require/2">require(module, opts)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Requires a given module to be compiled and loaded</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#::/2">left :: right</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Used by types and bitstrings to specify types</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#alias/2">alias(module, opts)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p><code class="inline">alias</code> is used to setup aliases, often useful with modules names</p>
+    <div class="summary-synopsis"><p>Creates a tuple</p>
 </div>
   
 </div>
@@ -678,7 +681,7 @@ function or of a type itself:</p>
 of a given bit segment:</p>
 <pre><code class="elixir">&lt;&lt;int::integer-little, rest::bits&gt;&gt; = bits</code></pre>
 <p>Read the documentation for <a href="Kernel.Typespec.html"><code class="inline">Kernel.Typespec</code></a> and
-<a href="#&lt;&lt;&gt;&gt;/1"><code class="inline">&lt;&lt;&gt;&gt;/1</code></a> for more information on typespecs and
+<a href="#%3C%3C%3E%3E/1"><code class="inline">&lt;&lt;&gt;&gt;/1</code></a> for more information on typespecs and
 bitstrings respectively.</p>
 
   </section>
@@ -2176,18 +2179,19 @@ iex&gt; quote do: {1, 2, 3}
       <p>
         <span class="line">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0-dev),
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
         </span>
         <span class="line">
           designed by
           <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
           </span>
       </p>
+      <button class="night-mode-toggle" />
     </footer>
   </div>
 </section>
 </div>
-    <script src="dist/app.js"></script>
+  <script src="dist/app-6d2e071366.js"></script>
   </body>
 </html>
 
