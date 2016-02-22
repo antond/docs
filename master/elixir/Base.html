@@ -8,6 +8,8 @@
     <title>Base – Elixir v1.3.0-dev</title>
     <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
     
+      <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Base.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -70,7 +72,7 @@
         Base
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -246,7 +248,7 @@ according to <a href="http://tools.ietf.org/html/rfc4648">RFC 4648</a>.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#encode64/1">encode64(data)</a>
+    <a href="#encode64/2">encode64(data, opts \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Encodes a binary string into a base 64 encoded string</p>
@@ -305,7 +307,7 @@ into a binary string</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#url_encode64/1">url_encode64(data)</a>
+    <a href="#url_encode64/2">url_encode64(data, opts \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Encodes a binary string into a base 64 encoded string with URL and filename
@@ -341,7 +343,7 @@ safe alphabet</p>
     </a>
     <span class="signature">decode16(string, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L184" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L193" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -380,7 +382,7 @@ iex&gt; Base.decode16(&quot;666f6F626172&quot;, case: :mixed)
     </a>
     <span class="signature">decode16!(string, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L214" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L223" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -421,7 +423,7 @@ iex&gt; Base.decode16!(&quot;666f6F626172&quot;, case: :mixed)
     </a>
     <span class="signature">decode32(string, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L389" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L466" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -441,6 +443,8 @@ iex&gt; Base.decode16!(&quot;666f6F626172&quot;, case: :mixed)
 <p>Accepts an atom <code class="inline">:upper</code> (default) for decoding from upper case characters or
 <code class="inline">:lower</code> for lower case characters. <code class="inline">:mixed</code> can be given for mixed case
 characters.</p>
+<p>Accepts <code class="inline">padding: false</code> option which will ignore padding from
+the input string.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Base.decode32(&quot;MZXW6YTBOI======&quot;)
 {:ok, &quot;foobar&quot;}
@@ -449,6 +453,9 @@ iex&gt; Base.decode32(&quot;mzxw6ytboi======&quot;, case: :lower)
 {:ok, &quot;foobar&quot;}
 
 iex&gt; Base.decode32(&quot;mzXW6ytBOi======&quot;, case: :mixed)
+{:ok, &quot;foobar&quot;}
+
+iex&gt; Base.decode32(&quot;MZXW6YTBOI&quot;, padding: false)
 {:ok, &quot;foobar&quot;}</code></pre>
 
   </section>
@@ -460,7 +467,7 @@ iex&gt; Base.decode32(&quot;mzXW6ytBOi======&quot;, case: :mixed)
     </a>
     <span class="signature">decode32!(string, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L419" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L502" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -480,6 +487,8 @@ iex&gt; Base.decode32(&quot;mzXW6ytBOi======&quot;, case: :mixed)
 <p>Accepts an atom <code class="inline">:upper</code> (default) for decoding from upper case characters or
 <code class="inline">:lower</code> for lower case characters. <code class="inline">:mixed</code> can be given for mixed case
 characters.</p>
+<p>Accepts <code class="inline">padding: false</code> option which will ignore padding from
+the input string.</p>
 <p>An <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised if the padding is incorrect or
 a non-alphabet character is present in the string.</p>
 <h2>Examples</h2>
@@ -490,6 +499,9 @@ iex&gt; Base.decode32!(&quot;mzxw6ytboi======&quot;, case: :lower)
 &quot;foobar&quot;
 
 iex&gt; Base.decode32!(&quot;mzXW6ytBOi======&quot;, case: :mixed)
+&quot;foobar&quot;
+
+iex&gt; Base.decode32!(&quot;MZXW6YTBOI&quot;, padding: false)
 &quot;foobar&quot;</code></pre>
 
   </section>
@@ -501,7 +513,7 @@ iex&gt; Base.decode32!(&quot;mzXW6ytBOi======&quot;, case: :mixed)
     </a>
     <span class="signature">decode64(string, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L255" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L285" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -520,11 +532,20 @@ iex&gt; Base.decode32!(&quot;mzXW6ytBOi======&quot;, case: :mixed)
     <p>Decodes a base 64 encoded string into a binary string.</p>
 <p>Accepts <code class="inline">ignore: :whitespace</code> option which will ignore all the
 whitespace characters in the input string.</p>
+<p>Accepts <code class="inline">padding: false</code> option which will ignore padding from
+the input string.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Base.decode64(&quot;Zm9vYmFy&quot;)
 {:ok, &quot;foobar&quot;}
+
 iex&gt; Base.decode64(&quot;Zm9vYmFy\n&quot;, ignore: :whitespace)
-{:ok, &quot;foobar&quot;}</code></pre>
+{:ok, &quot;foobar&quot;}
+
+iex&gt; Base.decode64(&quot;Zm9vYg==&quot;)
+{:ok, &quot;foob&quot;}
+
+iex&gt; Base.decode64(&quot;Zm9vYg&quot;, padding: false)
+{:ok, &quot;foob&quot;}</code></pre>
 
   </section>
 </div>
@@ -535,7 +556,7 @@ iex&gt; Base.decode64(&quot;Zm9vYmFy\n&quot;, ignore: :whitespace)
     </a>
     <span class="signature">decode64!(string, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L280" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L320" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -554,13 +575,22 @@ iex&gt; Base.decode64(&quot;Zm9vYmFy\n&quot;, ignore: :whitespace)
     <p>Decodes a base 64 encoded string into a binary string.</p>
 <p>Accepts <code class="inline">ignore: :whitespace</code> option which will ignore all the
 whitespace characters in the input string.</p>
+<p>Accepts <code class="inline">padding: false</code> option which will ignore padding from
+the input string.</p>
 <p>An <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised if the padding is incorrect or
 a non-alphabet character is present in the string.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Base.decode64!(&quot;Zm9vYmFy&quot;)
 &quot;foobar&quot;
+
 iex&gt; Base.decode64!(&quot;Zm9vYmFy\n&quot;, ignore: :whitespace)
-&quot;foobar&quot;</code></pre>
+&quot;foobar&quot;
+
+iex&gt; Base.decode64!(&quot;Zm9vYg==&quot;)
+&quot;foob&quot;
+
+iex&gt; Base.decode64!(&quot;Zm9vYg&quot;, padding: false)
+&quot;foob&quot;</code></pre>
 
   </section>
 </div>
@@ -571,7 +601,7 @@ iex&gt; Base.decode64!(&quot;Zm9vYmFy\n&quot;, ignore: :whitespace)
     </a>
     <span class="signature">encode16(data, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L158" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L167" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -606,7 +636,7 @@ iex&gt; Base.encode16(&quot;foobar&quot;, case: :lower)
     </a>
     <span class="signature">encode32(data, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L363" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L433" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -625,23 +655,28 @@ iex&gt; Base.encode16(&quot;foobar&quot;, case: :lower)
     <p>Encodes a binary string into a base 32 encoded string.</p>
 <p>Accepts an atom <code class="inline">:upper</code> (default) for encoding to upper case characters or
 <code class="inline">:lower</code> for lower case characters.</p>
+<p>Accepts <code class="inline">padding: false</code> option which will omit padding from
+the output string.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Base.encode32(&quot;foobar&quot;)
 &quot;MZXW6YTBOI======&quot;
 
 iex&gt; Base.encode32(&quot;foobar&quot;, case: :lower)
-&quot;mzxw6ytboi======&quot;</code></pre>
+&quot;mzxw6ytboi======&quot;
+
+iex&gt; Base.encode32(&quot;foobar&quot;, padding: false)
+&quot;MZXW6YTBOI&quot;</code></pre>
 
   </section>
 </div>
-<div class="detail" id="encode64/1">
+<div class="detail" id="encode64/2">
   <div class="detail-header">
-    <a href="#encode64/1" class="detail-link" title="Link to this function">
+    <a href="#encode64/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">encode64(data)</span>
+    <span class="signature">encode64(data, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L235" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L254" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -651,16 +686,24 @@ iex&gt; Base.encode32(&quot;foobar&quot;, case: :lower)
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">encode64(binary) :: binary</code></pre>
+          <pre><code class="elixir">encode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
         
       </div>
     </div>
   
   <section class="docstring">
     <p>Encodes a binary string into a base 64 encoded string.</p>
+<p>Accepts <code class="inline">padding: false</code> option which will omit padding from
+the output string.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Base.encode64(&quot;foobar&quot;)
-&quot;Zm9vYmFy&quot;</code></pre>
+&quot;Zm9vYmFy&quot;
+
+iex&gt; Base.encode64(&quot;foob&quot;)
+&quot;Zm9vYg==&quot;
+
+iex&gt; Base.encode64(&quot;foob&quot;, padding: false)
+&quot;Zm9vYg&quot;</code></pre>
 
   </section>
 </div>
@@ -671,7 +714,7 @@ iex&gt; Base.encode32(&quot;foobar&quot;, case: :lower)
     </a>
     <span class="signature">hex_decode32(string, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L475" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L566" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -694,6 +737,8 @@ into a binary string.</p>
 <p>Accepts an atom <code class="inline">:upper</code> (default) for decoding from upper case characters or
 <code class="inline">:lower</code> for lower case characters. <code class="inline">:mixed</code> can be given for mixed case
 characters.</p>
+<p>Accepts <code class="inline">padding: false</code> option which will ignore padding from
+the input string.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Base.hex_decode32(&quot;CPNMUOJ1E8======&quot;)
 {:ok, &quot;foobar&quot;}
@@ -702,6 +747,9 @@ iex&gt; Base.hex_decode32(&quot;cpnmuoj1e8======&quot;, case: :lower)
 {:ok, &quot;foobar&quot;}
 
 iex&gt; Base.hex_decode32(&quot;cpnMuOJ1E8======&quot;, case: :mixed)
+{:ok, &quot;foobar&quot;}
+
+iex&gt; Base.hex_decode32(&quot;CPNMUOJ1E8&quot;, padding: false)
 {:ok, &quot;foobar&quot;}</code></pre>
 
   </section>
@@ -713,7 +761,7 @@ iex&gt; Base.hex_decode32(&quot;cpnMuOJ1E8======&quot;, case: :mixed)
     </a>
     <span class="signature">hex_decode32!(string, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L506" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L603" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -734,6 +782,8 @@ into a binary string.</p>
 <p>Accepts an atom <code class="inline">:upper</code> (default) for decoding from upper case characters or
 <code class="inline">:lower</code> for lower case characters. <code class="inline">:mixed</code> can be given for mixed case
 characters.</p>
+<p>Accepts <code class="inline">padding: false</code> option which will ignore padding from
+the input string.</p>
 <p>An <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised if the padding is incorrect or
 a non-alphabet character is present in the string.</p>
 <h2>Examples</h2>
@@ -744,6 +794,9 @@ iex&gt; Base.hex_decode32!(&quot;cpnmuoj1e8======&quot;, case: :lower)
 &quot;foobar&quot;
 
 iex&gt; Base.hex_decode32!(&quot;cpnMuOJ1E8======&quot;, case: :mixed)
+&quot;foobar&quot;
+
+iex&gt; Base.hex_decode32!(&quot;CPNMUOJ1E8&quot;, padding: false)
 &quot;foobar&quot;</code></pre>
 
   </section>
@@ -755,7 +808,7 @@ iex&gt; Base.hex_decode32!(&quot;cpnMuOJ1E8======&quot;, case: :mixed)
     </a>
     <span class="signature">hex_encode32(data, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L448" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L532" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -775,12 +828,17 @@ iex&gt; Base.hex_decode32!(&quot;cpnMuOJ1E8======&quot;, case: :mixed)
 extended hexadecimal alphabet.</p>
 <p>Accepts an atom <code class="inline">:upper</code> (default) for encoding to upper case characters or
 <code class="inline">:lower</code> for lower case characters.</p>
+<p>Accepts <code class="inline">padding: false</code> option which will omit padding from
+the output string.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Base.hex_encode32(&quot;foobar&quot;)
 &quot;CPNMUOJ1E8======&quot;
 
 iex&gt; Base.hex_encode32(&quot;foobar&quot;, case: :lower)
-&quot;cpnmuoj1e8======&quot;</code></pre>
+&quot;cpnmuoj1e8======&quot;
+
+iex&gt; Base.hex_encode32(&quot;foobar&quot;, padding: false)
+&quot;CPNMUOJ1E8&quot;</code></pre>
 
   </section>
 </div>
@@ -791,7 +849,7 @@ iex&gt; Base.hex_encode32(&quot;foobar&quot;, case: :lower)
     </a>
     <span class="signature">url_decode64(string, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L316" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L372" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -813,10 +871,16 @@ iex&gt; Base.hex_encode32(&quot;foobar&quot;, case: :lower)
 into a binary string.</p>
 <p>Accepts <code class="inline">ignore: :whitespace</code> option which will ignore all the
 whitespace characters in the input string.</p>
+<p>Accepts <code class="inline">padding: false</code> option which will ignore padding from
+the input string.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Base.url_decode64(&quot;_3_-_A==&quot;)
 {:ok, &lt;&lt;255, 127, 254, 252&gt;&gt;}
+
 iex&gt; Base.url_decode64(&quot;_3_-_A==\n&quot;, ignore: :whitespace)
+{:ok, &lt;&lt;255, 127, 254, 252&gt;&gt;}
+
+iex&gt; Base.url_decode64(&quot;_3_-_A&quot;, padding: false)
 {:ok, &lt;&lt;255, 127, 254, 252&gt;&gt;}</code></pre>
 
   </section>
@@ -828,7 +892,7 @@ iex&gt; Base.url_decode64(&quot;_3_-_A==\n&quot;, ignore: :whitespace)
     </a>
     <span class="signature">url_decode64!(string, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L342" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L405" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -848,24 +912,30 @@ iex&gt; Base.url_decode64(&quot;_3_-_A==\n&quot;, ignore: :whitespace)
 into a binary string.</p>
 <p>Accepts <code class="inline">ignore: :whitespace</code> option which will ignore all the
 whitespace characters in the input string.</p>
+<p>Accepts <code class="inline">padding: false</code> option which will ignore padding from
+the input string.</p>
 <p>An <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised if the padding is incorrect or
 a non-alphabet character is present in the string.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Base.url_decode64!(&quot;_3_-_A==&quot;)
 &lt;&lt;255, 127, 254, 252&gt;&gt;
+
 iex&gt; Base.url_decode64!(&quot;_3_-_A==\n&quot;, ignore: :whitespace)
+&lt;&lt;255, 127, 254, 252&gt;&gt;
+
+iex&gt; Base.url_decode64!(&quot;_3_-_A&quot;, padding: false)
 &lt;&lt;255, 127, 254, 252&gt;&gt;</code></pre>
 
   </section>
 </div>
-<div class="detail" id="url_encode64/1">
+<div class="detail" id="url_encode64/2">
   <div class="detail-header">
-    <a href="#url_encode64/1" class="detail-link" title="Link to this function">
+    <a href="#url_encode64/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">url_encode64(data)</span>
+    <span class="signature">url_encode64(data, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/610ab28d973d469189bafb2258be576aad75eabe/lib/elixir/lib/base.ex#L295" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/base.ex#L343" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -875,7 +945,7 @@ iex&gt; Base.url_decode64!(&quot;_3_-_A==\n&quot;, ignore: :whitespace)
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">url_encode64(binary) :: binary</code></pre>
+          <pre><code class="elixir">url_encode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
         
       </div>
     </div>
@@ -883,9 +953,14 @@ iex&gt; Base.url_decode64!(&quot;_3_-_A==\n&quot;, ignore: :whitespace)
   <section class="docstring">
     <p>Encodes a binary string into a base 64 encoded string with URL and filename
 safe alphabet.</p>
+<p>Accepts <code class="inline">padding: false</code> option which will omit padding from
+the output string.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Base.url_encode64(&lt;&lt;255, 127, 254, 252&gt;&gt;)
-&quot;_3_-_A==&quot;</code></pre>
+&quot;_3_-_A==&quot;
+
+iex&gt; Base.url_encode64(&lt;&lt;255, 127, 254, 252&gt;&gt;, padding: false)
+&quot;_3_-_A&quot;</code></pre>
 
   </section>
 </div>
