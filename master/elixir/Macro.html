@@ -72,7 +72,7 @@
         Macro
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L3" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L3" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -84,12 +84,43 @@
 <h2>Custom Sigils</h2>
 <p>To create a custom sigil, define a function with the name
 <code class="inline">sigil_{identifier}</code> that takes two arguments. The first argument will be
-the interpolated string, the second will be a char list containing any
-modifiers.</p>
+the string, the second will be a char list containing any modifiers. If the
+sigil is lower case (such as <code class="inline">sigil_x</code>) then the string argument will allow
+interpolation. If the sigil is upper case (such as <code class="inline">sigil_X</code>) then the string
+will not be interpolated.</p>
 <p>Valid modifiers include only lower and upper case letters. Other characters
 will cause a syntax error.</p>
 <p>The module containing the custom sigil must be imported before the sigil
 syntax can be used.</p>
+<h3>Examples</h3>
+<pre><code class="elixir">defmodule MySigils do
+  defmacro sigil_x(term, [?r]) do
+    quote do: unquote(term) |&gt; String.reverse()
+  end
+  defmacro sigil_x(term, _modifiers) do
+    term
+  end
+  defmacro sigil_X(term, [?r]) do
+    quote do: unquote(term) |&gt; String.reverse()
+  end
+  defmacro sigil_X(term, _modifiers) do
+    term
+  end
+end
+
+import MySigils
+
+~x(with #{&quot;inter&quot; &lt;&gt; &quot;polation&quot;})
+#=&gt;&quot;with interpolation&quot;
+
+~x(with #{&quot;inter&quot; &lt;&gt; &quot;polation&quot;})r
+#=&gt;&quot;noitalopretni htiw&quot;
+
+~X(without #{&quot;interpolation&quot;})
+#=&gt;&quot;without \#{&quot;interpolation&quot;}&quot;
+
+~X(without #{&quot;interpolation&quot;})r
+#=&gt;&quot;}\&quot;noitalopretni\&quot;{# tuohtiw&quot;</code></pre>
 
         </section>
       
@@ -386,7 +417,7 @@ by the atoms <code class="inline">var</code> and <code class="inline">context</c
     </a>
     <span class="signature">camelize(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L1133" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L1166" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -416,7 +447,7 @@ by the atoms <code class="inline">var</code> and <code class="inline">context</c
     </a>
     <span class="signature">decompose_call(ast)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L279" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L312" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -463,7 +494,7 @@ iex&gt; Macro.decompose_call(quote do: 42)
     </a>
     <span class="signature">escape(expr, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L315" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L348" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -503,7 +534,7 @@ iex&gt; Macro.escape({:unquote, [], [1]}, unquote: true)
     </a>
     <span class="signature">expand(tree, env)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L1051" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L1084" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -524,7 +555,7 @@ it out for more information and examples.</p>
     </a>
     <span class="signature">expand_once(ast, env)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L933" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L966" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -605,7 +636,7 @@ end</code></pre>
     </a>
     <span class="signature">pipe(expr, call_args, position)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L86" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L119" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -634,7 +665,7 @@ end</code></pre>
     </a>
     <span class="signature">postwalk(ast, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L241" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L274" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -661,7 +692,7 @@ end</code></pre>
     </a>
     <span class="signature">postwalk(ast, acc, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L250" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L283" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -689,7 +720,7 @@ using an accumulator.</p>
     </a>
     <span class="signature">prewalk(ast, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L224" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L257" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -716,7 +747,7 @@ using an accumulator.</p>
     </a>
     <span class="signature">prewalk(ast, acc, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L233" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L266" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -744,7 +775,7 @@ using an accumulator.</p>
     </a>
     <span class="signature">to_string(tree, fun \\ fn _ast, string -&gt; string end)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L465" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L498" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -774,7 +805,7 @@ using an accumulator.</p>
     </a>
     <span class="signature">traverse(ast, acc, pre, post)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L208" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -802,7 +833,7 @@ using an accumulator.</p>
     </a>
     <span class="signature">underscore(atom)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L1090" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L1123" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -838,7 +869,7 @@ iex&gt; Macro.camelize &quot;sap_example&quot;
     </a>
     <span class="signature">unescape_string(chars)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L378" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L411" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -880,7 +911,7 @@ and return a version with it unescaped.</p>
     </a>
     <span class="signature">unescape_string(chars, map)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L424" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L457" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -935,7 +966,7 @@ function returns <code class="inline">true</code> for <code class="inline">?u</c
     </a>
     <span class="signature">unescape_tokens(tokens)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L440" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L473" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -968,7 +999,7 @@ for examples.</p>
     </a>
     <span class="signature">unescape_tokens(tokens, map)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L450" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L483" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -996,7 +1027,7 @@ for examples.</p>
     </a>
     <span class="signature">unpipe(expr)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L103" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1024,7 +1055,7 @@ for examples.</p>
     </a>
     <span class="signature">update_meta(quoted, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L135" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L168" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1059,7 +1090,7 @@ iex&gt; Macro.update_meta(quoted, &amp;Keyword.delete(&amp;1, :line))
     </a>
     <span class="signature">validate(expr)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L326" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L359" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1088,7 +1119,7 @@ quoted expression.</p>
     </a>
     <span class="signature">var(var, context)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5e0b05de1816dd4ab8ad9660132e07a83ab1b5cb/lib/elixir/lib/macro.ex#L166" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/elixir/lib/macro.ex#L199" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
