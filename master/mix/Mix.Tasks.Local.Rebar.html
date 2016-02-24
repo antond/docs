@@ -70,7 +70,7 @@
         Mix.Tasks.Local.Rebar
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/mix/lib/mix/tasks/local.rebar.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/mix/lib/mix/tasks/local.rebar.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -81,17 +81,19 @@
           <p>Fetches a copy of <code class="inline">rebar</code> or <code class="inline">rebar3</code> from the given path or url.</p>
 <p>It defaults to safely download a rebar copy from
 <a href="https://aws.amazon.com/s3/">Amazon S3</a>. However, a URL can be given
-as argument, usually from an existing local copy of rebar. If not
-specified both <code class="inline">rebar</code> and <code class="inline">rebar3</code> will be fetched.</p>
+as argument, usually from an existing local copy of rebar:</p>
+<pre><code class="elixir">mix local.rebar rebar path/to/rebar
+mix local.rebar rebar3 path/to/rebar</code></pre>
+<p>If not specified both <code class="inline">rebar</code> and <code class="inline">rebar3</code> will be fetched.</p>
 <p>The local copy is stored in your <code class="inline">MIX_HOME</code> (defaults to <code class="inline">~/.mix</code>).
 This version of rebar will be used as required by <code class="inline">mix deps.compile</code>.</p>
 <h2>Command line options</h2>
 <ul>
-<li><p><code class="inline">--sha512</code> - checks the archive matches the given sha512 checksum</p>
-</li>
 <li><p><code class="inline">rebar PATH</code> - specify a path or url for <code class="inline">rebar</code></p>
 </li>
 <li><p><code class="inline">rebar3 PATH</code> - specify a path or url for <code class="inline">rebar3</code></p>
+</li>
+<li><p><code class="inline">--sha512</code> - checks the archive matches the given sha512 checksum</p>
 </li>
 <li><code class="inline">--force</code> - forces installation without a shell prompt; primarily
 intended for automation in build systems like <code class="inline">make</code>
@@ -156,7 +158,7 @@ to use for fetching <code class="inline">rebar</code> please set the <code class
     </a>
     <span class="signature">run(argv)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/51fd58dfafc4ed7a91754b21ce312a66095012b5/lib/mix/lib/mix/tasks/local.rebar.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/mix/lib/mix/tasks/local.rebar.ex#L45" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
