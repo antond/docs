@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.4">
-    <title>Mix.Tasks.Deps.Check – Mix v1.3.0-dev</title>
+    <title>Mix.Tasks.Escript.Uninstall – Mix v1.3.0-dev</title>
     <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
     
-      <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Tasks.Deps.Check.html" />
+      <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Tasks.Escript.Uninstall.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -67,10 +67,10 @@
 
       <h1>
         <small class="visible-xs">Mix v1.3.0-dev</small>
-        Mix.Tasks.Deps.Check
+        Mix.Tasks.Escript.Uninstall
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/deps.check.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/escript.uninstall.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -78,15 +78,8 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>Checks if all dependencies are valid and if not, abort.
-Prints the invalid dependencies’ status before aborting.</p>
-<p>This task is not shown in <code class="inline">mix help</code> but it is part
-of the <code class="inline">mix</code> public API and can be depended on.</p>
-<h2>Command line options</h2>
-<ul>
-<li><code class="inline">--no-compile</code> - do not compile dependencies
-</li>
-</ul>
+          <p>Uninstall local escripts:</p>
+<pre><code class="elixir">mix escript.uninstall escript_name</code></pre>
 
         </section>
       
@@ -108,7 +101,7 @@ of the <code class="inline">mix</code> public API and can be depended on.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#run/1">run(args)</a>
+    <a href="#run/1">run(argv)</a>
   </div>
   
     <div class="summary-synopsis"><p>Callback implementation for <a href="Mix.Task.html#c:run/1"><code class="inline">Mix.Task.run/1</code></a></p>
@@ -141,9 +134,9 @@ of the <code class="inline">mix</code> public API and can be depended on.</p>
     <a href="#run/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">run(args)</span>
+    <span class="signature">run(argv)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/deps.check.ex#L20" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/escript.uninstall.ex#L13" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

@@ -74,7 +74,7 @@
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -98,7 +98,7 @@ another can write it to a file, while a third one can keep the
 messages in memory (like a buffer) until they are read.</p>
 <p>As an example, let’s have a GenEvent that accumulates messages until
 they are collected by an explicit call.</p>
-<pre><code class="elixir"># Define a Event Handler
+<pre><code class="elixir"># Define an Event Handler
 defmodule LoggerHandler do
   use GenEvent
 
@@ -266,7 +266,7 @@ the <a href="GenServer.html"><code class="inline">GenServer</code></a> module.</
     <a href="#ack_notify/2">ack_notify(manager, event)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Sends a ack event notification to the event <code class="inline">manager</code></p>
+    <div class="summary-synopsis"><p>Sends an ack event notification to the event <code class="inline">manager</code></p>
 </div>
   
 </div>
@@ -404,7 +404,7 @@ the <a href="GenServer.html"><code class="inline">GenServer</code></a> module.</
   </div>
   
     <div class="summary-synopsis"><p>Invoked to change the state of the handler when a different version of the
-handler’s module module is loaded (hot code swapping) and the state’s term
+handler’s module is loaded (hot code swapping) and the state’s term
 structure should be changed</p>
 </div>
   
@@ -443,7 +443,7 @@ all clause</p>
     <a href="#c:init/1">init(args)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Invoked when the handler is added to the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> process. <a href="#add_handler/3"><code class="inline">add_handler/3</code></a>,
+    <div class="summary-synopsis"><p>Invoked when the handler is added to the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> process. <a href="#add_handler/3"><code class="inline">add_handler/3</code></a>
 (and <a href="#add_mon_handler/3"><code class="inline">add_mon_handler/3</code></a>) will block until it returns</p>
 </div>
   
@@ -533,7 +533,7 @@ all clause</p>
     </a>
     <span class="signature">ack_notify(manager, event)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L538" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L538" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -549,7 +549,7 @@ all clause</p>
     </div>
   
   <section class="docstring">
-    <p>Sends a ack event notification to the event <code class="inline">manager</code>.</p>
+    <p>Sends an ack event notification to the event <code class="inline">manager</code>.</p>
 <p>In other words, this function only returns <code class="inline">:ok</code> as soon as the
 event manager starts processing this event, but it does not wait
 for event handlers to process the sent event.</p>
@@ -565,7 +565,7 @@ to Elixir’s GenEvent and does not work with Erlang ones.</p>
     </a>
     <span class="signature">add_handler(manager, handler, args)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L429" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L429" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -605,7 +605,7 @@ of <a href="Module.html"><code class="inline">Module</code></a> must be used. Th
     </a>
     <span class="signature">add_mon_handler(manager, handler, args)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L474" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L474" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -644,7 +644,7 @@ manager is terminating</p>
 <li><p><code class="inline">{:swapped, new_handler, pid}</code> - if the process pid has replaced the
 event handler by another</p>
 </li>
-<li>a term - if the event handler is removed due to an error. Which term
+<li><code class="inline">term</code> - if the event handler is removed due to an error. Which term
 depends on the error
 </li>
 </ul>
@@ -670,7 +670,7 @@ module (it is not backwards compatible with Erlang’s <code class="inline">:gen
     </a>
     <span class="signature">call(manager, handler, request, timeout \\ 5000)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L554" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L554" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -705,7 +705,7 @@ If the specified event handler is not installed, the function returns
     </a>
     <span class="signature">notify(manager, event)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L489" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L489" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -737,7 +737,7 @@ event manager does not exist, unless it is specified as an atom.</p>
     </a>
     <span class="signature">remove_handler(manager, handler, args)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L573" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L573" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -769,7 +769,7 @@ installed, the function returns <code class="inline">{:error, :not_found}</code>
     </a>
     <span class="signature">start(options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L371" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L371" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -797,7 +797,7 @@ installed, the function returns <code class="inline">{:error, :not_found}</code>
     </a>
     <span class="signature">start_link(options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L361" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L361" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -834,7 +834,7 @@ process exits with <code class="inline">:normal</code> reason.</p>
     </a>
     <span class="signature">stop(manager, reason \\ :normal, timeout \\ :infinity)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L630" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L630" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -869,7 +869,7 @@ If the reason is any other than <code class="inline">:normal</code>, <code class
     </a>
     <span class="signature">stream(manager, options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L404" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L404" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -906,7 +906,7 @@ with Erlang ones.</p>
     </a>
     <span class="signature">swap_handler(manager, handler1, args1, handler2, args2)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L594" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L594" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -945,7 +945,7 @@ function returns <code class="inline">:ok</code>.</p>
     </a>
     <span class="signature">swap_mon_handler(manager, handler1, args1, handler2, args2)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L604" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L604" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -975,7 +975,7 @@ function returns <code class="inline">:ok</code>.</p>
     </a>
     <span class="signature">sync_notify(manager, event)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L523" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L523" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1005,7 +1005,7 @@ invokes the <code class="inline">handle_event/2</code> callback on each installe
     </a>
     <span class="signature">which_handlers(manager)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L612" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L612" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1046,7 +1046,7 @@ invokes the <code class="inline">handle_event/2</code> callback on each installe
     </a>
     <span class="signature">code_change(old_vsn, state, extra)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L280" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L280" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1063,7 +1063,7 @@ invokes the <code class="inline">handle_event/2</code> callback on each installe
   
   <section class="docstring">
     <p>Invoked to change the state of the handler when a different version of the
-handler’s module module is loaded (hot code swapping) and the state’s term
+handler’s module is loaded (hot code swapping) and the state’s term
 structure should be changed.</p>
 <p><code class="inline">old_vsn</code> is the previous version of the module (defined by the <code class="inline">@vsn</code>
 attribute) when upgrading. When downgrading the previous version is wrapped in
@@ -1084,7 +1084,7 @@ effects.</p>
     </a>
     <span class="signature">handle_call(request, state)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L203" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L203" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1124,7 +1124,7 @@ reason <code class="inline">:remove_handler</code> and state <code class="inline
     </a>
     <span class="signature">handle_event(event, state)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L180" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1169,7 +1169,7 @@ calls <code class="inline">terminate/2</code> with reason <code class="inline">:
     </a>
     <span class="signature">handle_info(msg, state)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L217" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L217" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1203,7 +1203,7 @@ all clause.</p>
     </a>
     <span class="signature">init(args)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L152" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L152" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1222,7 +1222,7 @@ all clause.</p>
     </div>
   
   <section class="docstring">
-    <p>Invoked when the handler is added to the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> process. <a href="#add_handler/3"><code class="inline">add_handler/3</code></a>,
+    <p>Invoked when the handler is added to the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> process. <a href="#add_handler/3"><code class="inline">add_handler/3</code></a>
 (and <a href="#add_mon_handler/3"><code class="inline">add_mon_handler/3</code></a>) will block until it returns.</p>
 <p><code class="inline">args</code> is the argument term (third argument) passed to <a href="#add_handler/3"><code class="inline">add_handler/3</code></a>.</p>
 <p>Returning <code class="inline">{:ok, state}</code> will cause <a href="#add_handler/3"><code class="inline">add_handler/3</code></a> to return <code class="inline">:ok</code> and the
@@ -1242,7 +1242,7 @@ its loop. See <code class="inline">handle_event/2</code> for more information on
     </a>
     <span class="signature">terminate(reason, state)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/4407170349aa12c58664cab2122374167e827f5e/lib/elixir/lib/gen_event.ex#L260" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/elixir/lib/gen_event.ex#L260" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1290,7 +1290,7 @@ reason and so not call the handlers’ <code class="inline">terminate/2</code>. 
 <em>NOT</em> trap exits by default and an exit signal is sent when a linked process
 exits or its node is disconnected. Therefore it is not guaranteed that
 <code class="inline">terminate/2</code> is called when a <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> exits.</p>
-<p>Care should be taken to cleanup because the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> can continue is loop
+<p>Care should be taken to cleanup because the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> can continue to loop
 after removing the handler. This is different to most other OTP behaviours.
 For example if the handler controls a <code class="inline">port</code> (e.g. <code class="inline">:gen_tcp.socket</code>) or
 <code class="inline">File.io_device</code>, it will be need to be closed in <code class="inline">terminate/2</code> as the

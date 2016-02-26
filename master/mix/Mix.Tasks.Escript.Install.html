@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.4">
-    <title>Mix.Tasks.Archive.Install – Mix v1.3.0-dev</title>
+    <title>Mix.Tasks.Escript.Install – Mix v1.3.0-dev</title>
     <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
     
-      <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Tasks.Archive.Install.html" />
+      <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Tasks.Escript.Install.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -67,10 +67,10 @@
 
       <h1>
         <small class="visible-xs">Mix v1.3.0-dev</small>
-        Mix.Tasks.Archive.Install
+        Mix.Tasks.Escript.Install
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/archive.install.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/escript.install.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -78,21 +78,22 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>Installs an archive locally.</p>
-<p>If no argument is supplied but there is an archive in the project’s root directory
-(created with <code class="inline">mix archive.build</code>), then the archive will be installed
+          <p>Install an escript locally.</p>
+<p>If no argument is supplied but there is an escript in the project’s root directory
+(created with <code class="inline">mix escript.build</code>), then the escript will be installed
 locally. For example:</p>
-<pre><code class="elixir">mix do archive.build, archive.install</code></pre>
-<p>The argument can be an archive located at some URL:</p>
-<pre><code class="elixir">mix archive.install http://example.com/foo.ez</code></pre>
-<p>After installation, the tasks in the archive are available locally:</p>
-<pre><code class="elixir">mix some_task</code></pre>
+<pre><code class="elixir">mix do escript.build, escript.install</code></pre>
+<p>If an argument is provided, it should be a local path or a URL to a prebuilt escript.</p>
+<pre><code class="elixir">mix escript.install escript
+mix escript.install path/to/escript
+mix escript.install https://example.com/myescript</code></pre>
+<p>After installation, the escript can be invoked as</p>
+<pre><code class="elixir">~/.mix/escripts/foo</code></pre>
+<p>For convenience, consider adding <code class="inline">~/.mix/escripts</code> directory to your <code class="inline">PATH</code> environment variable.</p>
 <h2>Command line options</h2>
 <ul>
-<li><p><code class="inline">--sha512</code> - checks the archive matches the given sha512 checksum</p>
-</li>
 <li><code class="inline">--force</code> - forces installation without a shell prompt; primarily
-intended for automation in build systems like <code class="inline">make</code>
+intended for automation in build systems like make
 </li>
 </ul>
 
@@ -134,7 +135,7 @@ intended for automation in build systems like <code class="inline">make</code>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#check_path_or_url/1">check_path_or_url(path_or_url)</a>
+    <a href="#check_path_or_url/1">check_path_or_url()</a>
   </div>
   
     <div class="summary-synopsis"><p>Callback implementation for <a href="Mix.Local.Installer.html#c:check_path_or_url/1"><code class="inline">Mix.Local.Installer.check_path_or_url/1</code></a></p>
@@ -187,7 +188,7 @@ intended for automation in build systems like <code class="inline">make</code>
     </a>
     <span class="signature">after_install(dst, previous)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/archive.install.ex#L68" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/escript.install.ex#L57" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -205,7 +206,7 @@ intended for automation in build systems like <code class="inline">make</code>
     </a>
     <span class="signature">before_install(src, dst_path)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/archive.install.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/escript.install.ex#L52" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -221,9 +222,9 @@ intended for automation in build systems like <code class="inline">make</code>
     <a href="#check_path_or_url/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">check_path_or_url(path_or_url)</span>
+    <span class="signature">check_path_or_url()</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/archive.install.ex#L42" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/escript.install.ex#L46" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -241,7 +242,7 @@ intended for automation in build systems like <code class="inline">make</code>
     </a>
     <span class="signature">find_previous_versions(src, dst)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/archive.install.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/escript.install.ex#L48" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -259,7 +260,7 @@ intended for automation in build systems like <code class="inline">make</code>
     </a>
     <span class="signature">run(argv)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/archive.install.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c039ddac7473d2701d1ba928f9e161a0576d1d29/lib/mix/lib/mix/tasks/escript.install.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
