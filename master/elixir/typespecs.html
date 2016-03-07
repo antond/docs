@@ -229,6 +229,7 @@
 @spec function(atom)    :: integer</code></pre>
 <h2 id="notes"> Notes</h2><p>Elixir discourages the use of type <code class="inline">string</code> as it might be confused with binaries which are referred to as “strings” in Elixir (as opposed to character lists). In order to use the type that is called <code class="inline">string</code> in Erlang, one has to use the <code class="inline">char_list</code> type which is a synonym for <code class="inline">string</code>. If you use <code class="inline">string</code>, you’ll get a warning from the compiler.</p>
 <p>If you want to refer to the “string” type (the one operated on by functions in the <a href="String.html"><code class="inline">String</code></a> module), use <code class="inline">String.t</code> type instead.</p>
+<p>In map and struct type declarations such as <code class="inline">%{key: value}</code> or <code class="inline">%Struct{key: value}</code>, the key, value pair type information is not used by the current version of dialyzer.</p>
 
     <footer class="footer">
       <p>
