@@ -99,11 +99,11 @@
 end</code></pre>
 <p>The <code class="inline">@moduledoc</code> attribute is used to add documentation to the module. <code class="inline">@doc</code> is used before a function to provide documentation for it. Besides the attributes above, <code class="inline">@typedoc</code> can also be used to attach documentation to types defined as part of typespecs.</p>
 <h2 id="function-arguments"> Function Arguments</h2><p>When documenting a function, argument names are inferred by the compiler. For example:</p>
-<pre><code class="elixir">def size(%HashDict{size: size}) do
+<pre><code class="elixir">def size(%{size: size}) do
   size
 end</code></pre>
-<p>The compiler will infer this argument as <code class="inline">hash_dict</code>. Sometimes the inference will be suboptimal, specially if the function contains multiple clauses with the argument matching on different values each time. You can specify the proper names for documentation by using a bodyless clause:</p>
-<pre><code class="elixir">def size(dict)</code></pre>
+<p>The compiler will infer this argument as <code class="inline">map</code>. Sometimes the inference will be suboptimal, specially if the function contains multiple clauses with the argument matching on different values each time. You can specify the proper names for documentation by using a bodyless clause:</p>
+<pre><code class="elixir">def size(map)</code></pre>
 <h2 id="recommendations"> Recommendations</h2><p>There are a couple tips we recommend developers to follow when writing documentation:</p>
 <ul>
 <li><p>Keep the first paragraph of the documentation concise and simple, typically one-line. Tools like ExDoc uses the first line to generate a summary.</p>
@@ -115,29 +115,33 @@ end</code></pre>
 </ul>
 <h2 id="doctests"> Doctests</h2><p>We recommend developers to include examples in their documentation, often under its own <code class="inline">## Examples</code> heading. To ensure examples do not get out of date, Elixir’s test framework (ExUnit) provides a feature called doctests that allows developers to test the examples in their documentation. Doctests work by parsing out code samples starting with <code class="inline">iex&gt;</code> from the documentation. You can read more about it at <code class="inline">ExUnit.DocTest</code>.</p>
 <p>Notice doctests have limitations. When you cannot doctest a function, because it relies on state or side-effects, we recommend developers to include examples directly without the <code class="inline">iex&gt;</code> prompt.</p>
-<h2 id="privacy"> Privacy</h2><p>Elixir allows developers to hide both modules and functions from the documentation by setting the doc attribute to false:</p>
+<h2 id="documentation-comments"> Documentation != Comments</h2><p>Elixir treats documentation and code comments as different concepts. Documentation are for users of your Application Programming Interface (API), be it your co-worker or your future self. Modules and functions must always be documented if they are part of your API.</p>
+<p>Code comments are for developers reading the code. They are useful to mark improvements, leave notes for developers reading the code (for example, you decided to not call a function due to a bug in a library) and so forth.</p>
+<p>In other words, documentation is required, code comments are optional.</p>
+<h2 id="privacy"> Privacy</h2><p>Elixir does not allow developers to document private functions. That’s because private functions only exist inside the module that define them and cannot be accessed externally.</p>
+<p>Luckily, Elixir allows developers to hide modules and functions from the documentation. For example, one common practice for documenting internal behaviour is to set the <code class="inline">@moduledoc</code> attribute to false while documenting each function:</p>
 <pre><code class="elixir">defmodule MyApp.Hidden do
   @moduledoc false
 
-  def this_will_be_ignored_by_tools do
+  @doc &quot;&quot;&quot;
+  This does something.
+  &quot;&quot;&quot;
+  def function_that_wont_be_part_of_docs do
     # ...
   end
 end</code></pre>
-<p>Notice that, although developers can add <code class="inline">@doc false</code> to functions, it does not make the function private:</p>
+<p>Similarly, developers can add <code class="inline">@doc false</code> to functions they do not want to publicly expose:</p>
 <pre><code class="elixir">defmodule MyApp.Sample do
   @doc false
   def add(a, b), do: a + b
 end</code></pre>
-<p>The function above can still be invoked as <code class="inline">MyApp.Sample.add(1, 2)</code>. Not only that, if the <code class="inline">MyApp.Sample</code> is imported, the <code class="inline">add/2</code> function will also be imported into the caller. For those reasons, be cautious when adding <code class="inline">@doc false</code> to functions, instead prefer one of:</p>
+<p>However keep in mind adding <code class="inline">@doc false</code> does not make the function private. The function above can still be invoked as <code class="inline">MyApp.Sample.add(1, 2)</code>. Not only that, if the <code class="inline">MyApp.Sample</code> is imported, the <code class="inline">add/2</code> function will also be imported into the caller. For those reasons, be cautious when adding <code class="inline">@doc false</code> to functions, instead prefer one of:</p>
 <ul>
-<li><p>Move the undocumented function to a module with <code class="inline">@moduledoc false</code>, like <code class="inline">MyApp.Hidden</code>, ensuring the function won’t be accidentally exposed or imported. In fact, you can use <code class="inline">@moduledoc false</code> to hide a whole module and still document each function with <code class="inline">@doc</code>. Tools will still ignore the module.</p>
+<li><p>Move the undocumented function to a module with <code class="inline">@moduledoc false</code>, like <code class="inline">MyApp.Hidden</code>, ensuring the function won’t be accidentally exposed or imported. Remember you can use <code class="inline">@moduledoc false</code> to hide a whole module and still document each function with <code class="inline">@doc</code>. Tools will still ignore the module.</p>
 </li>
-<li>Start the function name with underscores, for example, <code class="inline">__add__/2</code>, and add <code class="inline">@doc false</code>. The compiler does not import functions with underscore and the underscore will hint users to be wary of using then.
+<li>Start the function name with underscores, for example, <code class="inline">__add__/2</code>, and add <code class="inline">@doc false</code>. The compiler does not import functions with underscore and the underscore will hint of its intended private usage.
 </li>
 </ul>
-<h2 id="documentation-comments"> Documentation != Comments</h2><p>Elixir treats documentation and code comments as different concepts. Documentation are for users of your API, be it your co-worker or your future self. Modules and functions must always be documented if they are part of your application public interface (API).</p>
-<p>Code comments are for developers reading the code. They are useful to mark improvements, leave notes for developers reading the code (for example, you decided to not call a function due to a bug in a library) and so forth.</p>
-<p>In other words, documentation is required, code comments are optional.</p>
 <h2 id="code-get_docs-2"> Code.get_docs/2</h2><p>Elixir stores documentation inside pre-defined chunks in the bytecode. It can be accessed from Elixir by using the <a href="Code.html#get_docs/2"><code class="inline">Code.get_docs/2</code></a> function. This also means documentation is only accessed when required and not when modules are loaded by the Virtual Machine. The only downside is that modules defined in-memory, like the ones defined in IEx, cannot have their documentation accessed as they do not have their bytecode written to disk.</p>
 
     <footer class="footer">

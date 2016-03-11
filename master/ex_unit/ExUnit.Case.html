@@ -70,7 +70,7 @@
         ExUnit.Case
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/a2ba2b70dee283b7520a5a307f88edee6185f54d/lib/ex_unit/lib/ex_unit/case.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/07df74f89b795a398ac0a5c696dcd97bc616d06a/lib/ex_unit/lib/ex_unit/case.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -112,14 +112,14 @@ useful for sharing information between callbacks and tests:</p>
     {:ok, [pid: pid]}
   end
 
-  test &quot;stores key-values&quot;, context do
+  test &quot;stores key-value pairs&quot;, context do
     assert KV.put(context[:pid], :hello, :world) == :ok
     assert KV.get(context[:pid], :hello) == :world
   end
 end</code></pre>
 <p>As the context is a map, it can be pattern matched on to extract
 information:</p>
-<pre><code class="elixir">test &quot;stores key-values&quot;, %{pid: pid} do
+<pre><code class="elixir">test &quot;stores key-value pairs&quot;, %{pid: pid} do
   assert KV.put(pid, :hello, :world) == :ok
   assert KV.get(pid, :hello) == :world
 end</code></pre>
@@ -311,7 +311,7 @@ end, contents)</a>
     </a>
     <span class="signature">register_attribute(mod, name, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/a2ba2b70dee283b7520a5a307f88edee6185f54d/lib/ex_unit/lib/ex_unit/case.ex#L350" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/07df74f89b795a398ac0a5c696dcd97bc616d06a/lib/ex_unit/lib/ex_unit/case.ex#L350" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -356,7 +356,7 @@ end</code></pre>
     </a>
     <span class="signature">test(message)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/a2ba2b70dee283b7520a5a307f88edee6185f54d/lib/ex_unit/lib/ex_unit/case.ex#L274" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/07df74f89b795a398ac0a5c696dcd97bc616d06a/lib/ex_unit/lib/ex_unit/case.ex#L274" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -383,7 +383,7 @@ also tagged with :not_implemented.</p>
   _
 end, contents)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/a2ba2b70dee283b7520a5a307f88edee6185f54d/lib/ex_unit/lib/ex_unit/case.ex#L235" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/07df74f89b795a398ac0a5c696dcd97bc616d06a/lib/ex_unit/lib/ex_unit/case.ex#L235" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
