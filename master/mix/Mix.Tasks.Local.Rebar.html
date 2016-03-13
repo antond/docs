@@ -70,7 +70,7 @@
         Mix.Tasks.Local.Rebar
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/0111cb64aa1ec3e89fa2d8cc355f5a27646402a9/lib/mix/lib/mix/tasks/local.rebar.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/5f285a9a0ae64bff3e61c89e07a1bff41433d7ae/lib/mix/lib/mix/tasks/local.rebar.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -79,9 +79,9 @@
       
         <section id="moduledoc" class="docstring">
           <p>Fetches a copy of <code class="inline">rebar</code> or <code class="inline">rebar3</code> from the given path or url.</p>
-<p>It defaults to safely download a rebar copy from
-<a href="https://aws.amazon.com/s3/">Amazon S3</a>. However, a URL can be given
-as argument, usually from an existing local copy of rebar:</p>
+<p>It defaults to safely download a rebar copy from  Hex’s CDN.
+However, a URL can be given as argument, usually from an existing
+local copy of rebar:</p>
 <pre><code class="elixir">mix local.rebar rebar path/to/rebar
 mix local.rebar rebar3 path/to/rebar</code></pre>
 <p>If not specified both <code class="inline">rebar</code> and <code class="inline">rebar3</code> will be fetched.</p>
@@ -100,7 +100,7 @@ intended for automation in build systems like <code class="inline">make</code>
 </li>
 </ul>
 <h2>Mirrors</h2>
-<p>If you want to change the <a href="http://s3.amazonaws.com/s3.hex.pm">default mirror</a>
+<p>If you want to change the <a href="http://s3.hex.pm.global.prod.fastly.net">default mirror</a>
 to use for fetching <code class="inline">rebar</code> please set the <code class="inline">HEX_CDN</code> environment variable.</p>
 
         </section>
@@ -158,7 +158,7 @@ to use for fetching <code class="inline">rebar</code> please set the <code class
     </a>
     <span class="signature">run(argv)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/0111cb64aa1ec3e89fa2d8cc355f5a27646402a9/lib/mix/lib/mix/tasks/local.rebar.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/5f285a9a0ae64bff3e61c89e07a1bff41433d7ae/lib/mix/lib/mix/tasks/local.rebar.ex#L45" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
