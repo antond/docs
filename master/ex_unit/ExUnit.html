@@ -70,7 +70,7 @@
         ExUnit
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/5f285a9a0ae64bff3e61c89e07a1bff41433d7ae/lib/ex_unit/lib/ex_unit.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/762c4a31a55ca737d6c6f6cde3cc009fc3f92462/lib/ex_unit/lib/ex_unit.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -89,7 +89,8 @@ ExUnit.start
 # 2) Create a new test module (test case) and use &quot;ExUnit.Case&quot;.
 defmodule AssertionTest do
   # 3) Notice we pass &quot;async: true&quot;, this runs the test case
-  #    concurrently with other test cases
+  #    concurrently with other test cases. The individual tests
+  #    within each test case are still run serially.
   use ExUnit.Case, async: true
 
   # 4) Use the &quot;test&quot; macro instead of &quot;def&quot; for clarity.
@@ -253,7 +254,7 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
     </a>
     <span class="signature">configuration()</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5f285a9a0ae64bff3e61c89e07a1bff41433d7ae/lib/ex_unit/lib/ex_unit.ex#L221" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/762c4a31a55ca737d6c6f6cde3cc009fc3f92462/lib/ex_unit/lib/ex_unit.ex#L222" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -271,7 +272,7 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
     </a>
     <span class="signature">configure(options)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5f285a9a0ae64bff3e61c89e07a1bff41433d7ae/lib/ex_unit/lib/ex_unit.ex#L212" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/762c4a31a55ca737d6c6f6cde3cc009fc3f92462/lib/ex_unit/lib/ex_unit.ex#L213" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -331,7 +332,7 @@ on formatting and reporters (defaults to 20)</p>
     </a>
     <span class="signature">run()</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5f285a9a0ae64bff3e61c89e07a1bff41433d7ae/lib/ex_unit/lib/ex_unit.ex#L232" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/762c4a31a55ca737d6c6f6cde3cc009fc3f92462/lib/ex_unit/lib/ex_unit.ex#L233" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -352,7 +353,7 @@ of failures and the number of skipped tests.</p>
     </a>
     <span class="signature">start(options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/5f285a9a0ae64bff3e61c89e07a1bff41433d7ae/lib/ex_unit/lib/ex_unit.ex#L147" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/762c4a31a55ca737d6c6f6cde3cc009fc3f92462/lib/ex_unit/lib/ex_unit.ex#L148" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
