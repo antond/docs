@@ -70,7 +70,7 @@
         Mix.Tasks.Test
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/c9b0bc8356760e646dbe27b6c82c3f7fff8e7cc9/lib/mix/lib/mix/tasks/test.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/e8fd324e29e9c70d9b80d1365d697ae0e0786029/lib/mix/lib/mix/tasks/test.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -143,6 +143,10 @@ line number:</p>
 <pre><code class="elixir">mix test test/some/particular/file_test.exs:12</code></pre>
 <p>Which is equivalent to:</p>
 <pre><code class="elixir">mix test --only line:12 test/some/particular/file_test.exs</code></pre>
+<p>Note that line filter takes the closest test on or before the given line number.
+In the case a single file contains more than one test module (test case),
+line filter applies to every test case before the given line number, thus more
+than one test might be taken for the run.</p>
 <h2>Configuration</h2>
 <ul>
 <li><p><code class="inline">:test_paths</code> - list of paths containing test files, defaults to
@@ -229,7 +233,7 @@ test suite is done or <code class="inline">nil</code>.</p>
     </a>
     <span class="signature">run(args)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/c9b0bc8356760e646dbe27b6c82c3f7fff8e7cc9/lib/mix/lib/mix/tasks/test.ex#L146" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e8fd324e29e9c70d9b80d1365d697ae0e0786029/lib/mix/lib/mix/tasks/test.ex#L151" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
