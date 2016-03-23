@@ -74,7 +74,7 @@
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/dcecf7bfe564f0e1c13a16d943ee4c3c5970d68b/lib/elixir/lib/access.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/e74c1fa02fecf9e847e3842eca0e0ef2b6ace7e4/lib/elixir/lib/access.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -255,6 +255,12 @@ to be used alongside <a href="Kernel.html#put_in/2"><code class="inline">Kernel.
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#c:get/3">get(t, key, value)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#c:get_and_update/3">get_and_update(t, key, list)</a>
   </div>
   
@@ -313,7 +319,7 @@ to be used alongside <a href="Kernel.html#put_in/2"><code class="inline">Kernel.
     </a>
     <span class="signature">fetch(container, key)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcecf7bfe564f0e1c13a16d943ee4c3c5970d68b/lib/elixir/lib/access.ex#L131" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e74c1fa02fecf9e847e3842eca0e0ef2b6ace7e4/lib/elixir/lib/access.ex#L132" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -340,7 +346,7 @@ to be used alongside <a href="Kernel.html#put_in/2"><code class="inline">Kernel.
     </a>
     <span class="signature">get(container, key, default \\ nil)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcecf7bfe564f0e1c13a16d943ee4c3c5970d68b/lib/elixir/lib/access.ex#L164" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e74c1fa02fecf9e847e3842eca0e0ef2b6ace7e4/lib/elixir/lib/access.ex#L165" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -367,7 +373,7 @@ to be used alongside <a href="Kernel.html#put_in/2"><code class="inline">Kernel.
     </a>
     <span class="signature">get_and_update(container, key, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcecf7bfe564f0e1c13a16d943ee4c3c5970d68b/lib/elixir/lib/access.ex#L183" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e74c1fa02fecf9e847e3842eca0e0ef2b6ace7e4/lib/elixir/lib/access.ex#L184" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -377,7 +383,7 @@ to be used alongside <a href="Kernel.html#put_in/2"><code class="inline">Kernel.
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">get_and_update(<a href="#t:t/0">t</a>, term, (term -> {get, term})) :: {get, <a href="#t:t/0">t</a>} when get: var</code></pre>
+          <pre><code class="elixir">get_and_update(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {get, <a href="#t:value/0">value</a>})) :: {get, <a href="#t:t/0">t</a>} when get: var</code></pre>
         
       </div>
     </div>
@@ -400,7 +406,7 @@ The second element is the container, updated with the value returned by <code cl
     </a>
     <span class="signature">pop(container, key)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcecf7bfe564f0e1c13a16d943ee4c3c5970d68b/lib/elixir/lib/access.ex#L205" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e74c1fa02fecf9e847e3842eca0e0ef2b6ace7e4/lib/elixir/lib/access.ex#L206" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -431,7 +437,7 @@ The second element is the container, updated with the value returned by <code cl
     </a>
     <span class="signature">fetch(t, key)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcecf7bfe564f0e1c13a16d943ee4c3c5970d68b/lib/elixir/lib/access.ex#L109" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e74c1fa02fecf9e847e3842eca0e0ef2b6ace7e4/lib/elixir/lib/access.ex#L109" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -450,6 +456,32 @@ The second element is the container, updated with the value returned by <code cl
     
   </section>
 </div>
+<div class="detail" id="c:get/3">
+  <div class="detail-header">
+    <a href="#c:get/3" class="detail-link" title="Link to this callback">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get(t, key, value)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/e74c1fa02fecf9e847e3842eca0e0ef2b6ace7e4/lib/elixir/lib/access.ex#L110" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">get(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:value/0">value</a></code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
 <div class="detail" id="c:get_and_update/3">
   <div class="detail-header">
     <a href="#c:get_and_update/3" class="detail-link" title="Link to this callback">
@@ -457,7 +489,7 @@ The second element is the container, updated with the value returned by <code cl
     </a>
     <span class="signature">get_and_update(t, key, list)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcecf7bfe564f0e1c13a16d943ee4c3c5970d68b/lib/elixir/lib/access.ex#L110" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e74c1fa02fecf9e847e3842eca0e0ef2b6ace7e4/lib/elixir/lib/access.ex#L111" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -483,7 +515,7 @@ The second element is the container, updated with the value returned by <code cl
     </a>
     <span class="signature">pop(t, key)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dcecf7bfe564f0e1c13a16d943ee4c3c5970d68b/lib/elixir/lib/access.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e74c1fa02fecf9e847e3842eca0e0ef2b6ace7e4/lib/elixir/lib/access.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
