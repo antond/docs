@@ -72,7 +72,7 @@
         Version
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/c350283a9b5ed85bfd86d510b28b7fccd04d657d/lib/elixir/lib/version.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/69b7584f9210b96ebdf0c1818bb4859ab3a56136/lib/elixir/lib/version.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -310,6 +310,15 @@ is returned</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#parse!/1">parse!(string)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Parses a version string into a <a href="Version.html#content"><code class="inline">Version</code></a></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#parse_requirement/1">parse_requirement(string)</a>
   </div>
   
@@ -393,7 +402,7 @@ is returned</p>
     </a>
     <span class="signature">compare(version1, version2)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/c350283a9b5ed85bfd86d510b28b7fccd04d657d/lib/elixir/lib/version.ex#L195" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/69b7584f9210b96ebdf0c1818bb4859ab3a56136/lib/elixir/lib/version.ex#L195" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -433,7 +442,7 @@ iex&gt; Version.compare(&quot;invalid&quot;, &quot;2.0.1&quot;)
     </a>
     <span class="signature">compile_requirement(req)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/c350283a9b5ed85bfd86d510b28b7fccd04d657d/lib/elixir/lib/version.ex#L269" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/69b7584f9210b96ebdf0c1818bb4859ab3a56136/lib/elixir/lib/version.ex#L291" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -465,7 +474,7 @@ compiled match_spec, nor can it be stored on disk).</p>
     </a>
     <span class="signature">match?(version, requirement, opts \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/c350283a9b5ed85bfd86d510b28b7fccd04d657d/lib/elixir/lib/version.ex#L152" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/69b7584f9210b96ebdf0c1818bb4859ab3a56136/lib/elixir/lib/version.ex#L152" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -516,7 +525,7 @@ iex&gt; Version.match?(&quot;2.0.0&quot;, &quot;== ==1.0.0&quot;)
     </a>
     <span class="signature">parse(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/c350283a9b5ed85bfd86d510b28b7fccd04d657d/lib/elixir/lib/version.ex#L225" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/69b7584f9210b96ebdf0c1818bb4859ab3a56136/lib/elixir/lib/version.ex#L225" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -543,6 +552,40 @@ iex&gt; Version.parse(&quot;2.0-alpha1&quot;)
 
   </section>
 </div>
+<div class="detail" id="parse!/1">
+  <div class="detail-header">
+    <a href="#parse!/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">parse!(string)</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/69b7584f9210b96ebdf0c1818bb4859ab3a56136/lib/elixir/lib/version.ex#L251" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">parse!(<a href="String.html#t:t/0">String.t</a>) :: <a href="#t:t/0">t</a> | no_return</code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Parses a version string into a <a href="Version.html#content"><code class="inline">Version</code></a>.</p>
+<p>If <code class="inline">string</code> is an invalid version, an <code class="inline">InvalidVersionError</code> is raised.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Version.parse!(&quot;2.0.1-alpha1&quot;)
+#Version&lt;2.0.1-alpha1&gt;
+
+iex&gt; Version.parse!(&quot;2.0-alpha1&quot;)
+** (Version.InvalidVersionError) 2.0-alpha1</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="parse_requirement/1">
   <div class="detail-header">
     <a href="#parse_requirement/1" class="detail-link" title="Link to this function">
@@ -550,7 +593,7 @@ iex&gt; Version.parse(&quot;2.0-alpha1&quot;)
     </a>
     <span class="signature">parse_requirement(string)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/c350283a9b5ed85bfd86d510b28b7fccd04d657d/lib/elixir/lib/version.ex#L250" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/69b7584f9210b96ebdf0c1818bb4859ab3a56136/lib/elixir/lib/version.ex#L272" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
