@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.4">
-    <title>Date – Elixir v1.3.0-dev</title>
+    <title>Mix.Tasks.Archive.Check – Mix v1.3.0-dev</title>
     <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
     
-      <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Date.html" />
+      <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Tasks.Archive.Check.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -27,14 +27,14 @@
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
     <div class="sidebar-projectDetails">
       <h1 class="sidebar-projectName">
-        Elixir
+        Mix
       </h1>
       <h2 class="sidebar-projectVersion">
         v1.3.0-dev
       </h2>
     </div>
     
-      <img src="assets/logo.png" alt="Elixir" class="sidebar-projectImage">
+      <img src="assets/logo.png" alt="Mix" class="sidebar-projectImage">
     
   </a>
 
@@ -55,8 +55,6 @@
     
 
     
-      <li><a id="protocols-list" href="#full-list">Protocols</a></li>
-    
   </ul>
 
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -68,11 +66,11 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.0-dev</small>
-        Date
+        <small class="visible-xs">Mix v1.3.0-dev</small>
+        Mix.Tasks.Archive.Check
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/calendar.ex#L60" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/mix/lib/mix/tasks/archive.check.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -80,7 +78,11 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>A date implementation.</p>
+          <p>Checks all archives are available.</p>
+<p>Mix projects can specify required archives using
+the <code class="inline">:archives</code> option:</p>
+<pre><code class="elixir">archives: [{:foo, &quot;~&gt; 1.0.0&quot;}]</code></pre>
+<p>This task guarantees this option is respected.</p>
 
         </section>
       
@@ -94,14 +96,19 @@
             Summary
           </h1>
           
-  <div class="summary-types summary">
+
+          
+  <div class="summary-functions summary">
     <h2>
-      <a href="#types">Types</a>
+      <a href="#functions">Functions</a>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:t/0">t()</a>
+    <a href="#run/1">run()</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <a href="Mix.Task.html#c:run/1"><code class="inline">Mix.Task.run/1</code></a></p>
+</div>
   
 </div>
 
@@ -112,29 +119,39 @@
 
           
 
-          
-
         </section>
       
 
       
-        <section id="types" class="types details-list">
+
+      
+        <section id="functions" class="details-list">
           <h1 class="section-heading">
-            <a class="hover-link" href="#types">
+            <a class="hover-link" href="#functions">
               <i class="icon-link"></i>
             </a>
-            Types
+            Functions
           </h1>
-          <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %Date{calendar: <a href="Calendar.html#t:calendar/0">Calendar.calendar</a>, day: <a href="Calendar.html#t:day/0">Calendar.day</a>, month: <a href="Calendar.html#t:month/0">Calendar.month</a>, year: <a href="Calendar.html#t:year/0">Calendar.year</a>}</code></pre>
+          <div class="detail" id="run/1">
+  <div class="detail-header">
+    <a href="#run/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">run()</span>
+      
+      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/mix/lib/mix/tasks/archive.check.ex#L14" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
   
+  <section class="docstring">
+    <p>Callback implementation for <a href="Mix.Task.html#c:run/1"><code class="inline">Mix.Task.run/1</code></a>.</p>
+
+  </section>
 </div>
 
-          </div>
         </section>
-      
-
       
 
       
