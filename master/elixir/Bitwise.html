@@ -72,7 +72,7 @@
         Bitwise
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -80,27 +80,31 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>This module provides macro-based operators that perform calculations
-on (sets of) bits.</p>
-<p>In general, you should <code class="inline">use</code> the Bitwise module as a whole:</p>
+          <p>A set of macros that perform calculations on bits.</p>
+<p>The macros in this module come in two flavors: named or
+operators. For example:</p>
 <pre><code class="iex elixir">iex&gt; use Bitwise
-iex&gt; bnot 1
+iex&gt; bnot 1   # named
 -2
-iex&gt; 1 &amp;&amp;&amp; 1
+iex&gt; 1 &amp;&amp;&amp; 1  # operator
 1</code></pre>
-<p>When used, it accepts the following options:</p>
+<p>If you prefer to use only operators or skip them, you can
+pass the following options:</p>
 <ul>
 <li><code class="inline">:only_operators</code> - include only operators
 </li>
-<li><p><code class="inline">:skip_operators</code> - skip operators</p>
-<p>iex&gt; use Bitwise, only_operators: true
-iex&gt; 1 &amp;&amp;&amp; 1
-1</p>
+<li><code class="inline">:skip_operators</code> - skip operators
 </li>
 </ul>
-<p>These macros can be used in guards:</p>
+<p>For example:</p>
+<pre><code class="iex elixir">iex&gt; use Bitwise, only_operators: true
+iex&gt; 1 &amp;&amp;&amp; 1
+1</code></pre>
+<p>When invoked with no options, <code class="inline">use Bitwise</code> is equivalent
+to <code class="inline">import Bitwise</code>.</p>
+<p>All bitwise macros can be used in guards:</p>
 <pre><code class="iex elixir">iex&gt; use Bitwise
-iex&gt; odd? = fn(int) when band(int, 1) == 1 -&gt; true; (_) -&gt; false end
+iex&gt; odd? = fn int when band(int, 1) == 1 -&gt; true; _ -&gt; false end
 iex&gt; odd?.(1)
 true</code></pre>
 
@@ -260,7 +264,7 @@ true</code></pre>
     </a>
     <span class="signature">left &amp;&amp;&amp; right</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L93" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L98" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -280,7 +284,7 @@ true</code></pre>
     </a>
     <span class="signature">left &lt;&lt;&lt; right</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L171" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L176" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -306,7 +310,7 @@ iex&gt; -1 &lt;&lt;&lt; -2
     </a>
     <span class="signature">left &gt;&gt;&gt; right</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L205" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L210" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -332,7 +336,7 @@ iex&gt; -1 &gt;&gt;&gt; -2
     </a>
     <span class="signature">left ^^^ right</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L137" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L142" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -352,7 +356,7 @@ iex&gt; -1 &gt;&gt;&gt; -2
     </a>
     <span class="signature">band(left, right)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L82" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L87" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -372,7 +376,7 @@ iex&gt; -1 &gt;&gt;&gt; -2
     </a>
     <span class="signature">bnot(expr)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -394,7 +398,7 @@ iex&gt; bnot(2) &amp;&amp;&amp; 3
     </a>
     <span class="signature">bor(left, right)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L109" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -414,7 +418,7 @@ iex&gt; bnot(2) &amp;&amp;&amp; 3
     </a>
     <span class="signature">bsl(left, right)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L154" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -440,7 +444,7 @@ iex&gt; bsl(-1, -2)
     </a>
     <span class="signature">bsr(left, right)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L188" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L193" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -466,7 +470,7 @@ iex&gt; bsr(-1, -2)
     </a>
     <span class="signature">bxor(left, right)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L126" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L131" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -486,7 +490,7 @@ iex&gt; bsr(-1, -2)
     </a>
     <span class="signature">left ||| right</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L120" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -506,7 +510,7 @@ iex&gt; bsr(-1, -2)
     </a>
     <span class="signature">~~~expr</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/dba24a35a4a7a5f77aba7dc534b0ae2f00b1e9e9/lib/elixir/lib/bitwise.ex#L71" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e86e44da3425cf8d66cd698187c655739a2e447b/lib/elixir/lib/bitwise.ex#L76" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
