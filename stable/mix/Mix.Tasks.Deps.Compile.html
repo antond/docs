@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.4">
-    <title>Mix.Tasks.Deps.Compile – Mix v1.2.3</title>
+    <title>Mix.Tasks.Deps.Compile – Mix v1.2.4</title>
     <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/mix/Mix.Tasks.Deps.Compile.html" />
@@ -30,7 +30,7 @@
         Mix
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.2.3
+        v1.2.4
       </h2>
     </div>
     
@@ -66,11 +66,11 @@
 
 
       <h1>
-        <small class="visible-xs">Mix v1.2.3</small>
+        <small class="visible-xs">Mix v1.2.4</small>
         Mix.Tasks.Deps.Compile
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.2.3/lib/mix/lib/mix/tasks/deps.compile.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.2.4/lib/mix/lib/mix/tasks/deps.compile.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -79,8 +79,8 @@
       
         <section id="moduledoc" class="docstring">
           <p>Compiles dependencies.</p>
-<p>By default, compile all dependencies. A list of dependencies can
-be given to force the compilation of specific dependencies.</p>
+<p>By default, compile all dependencies. A list of dependencies
+can be given to force the compilation of specific dependencies.</p>
 <p>This task attempts to detect if the project contains one of
 the following files and act accordingly:</p>
 <ul>
@@ -96,6 +96,12 @@ the following files and act accordingly:</p>
 <p>The compilation can be customized by passing a <code class="inline">compile</code> option
 in the dependency:</p>
 <pre><code class="elixir">{:some_dependency, &quot;0.1.0&quot;, compile: &quot;command to compile&quot;}</code></pre>
+<p>If a list of dependencies is given, Mix will attempt to compile
+them as is. For example, if project <code class="inline">a</code> depends on <code class="inline">b</code>, calling
+<code class="inline">mix deps.compile a</code> will compile <code class="inline">a</code> even if <code class="inline">b</code> is out of
+date. This is to allow parts of the dependency tree to be
+recompiled without propagating those changes upstream. To ensure
+<code class="inline">b</code> is included in the compilation step, pass <code class="inline">--include-children</code>.</p>
 
         </section>
       
@@ -152,7 +158,7 @@ in the dependency:</p>
     </a>
     <span class="signature">run(args)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.3/lib/mix/lib/mix/tasks/deps.compile.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.2.4/lib/mix/lib/mix/tasks/deps.compile.ex#L39" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
