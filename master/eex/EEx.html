@@ -70,7 +70,7 @@
         EEx
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/de3f5df7fdcda79e2661f9cee6005707e7e8d030/lib/eex/lib/eex.ex#L9" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/b9efe3e6f1157c131b6d31afbd1812b36e373738/lib/eex/lib/eex.ex#L9" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -102,7 +102,7 @@ Elixir code inside a string in a robust way.</p>
 </li>
 </ol>
 <h2>Options</h2>
-<p>All functions in this module accepts EEx-related options.
+<p>All functions in this module accept EEx-related options.
 They are:</p>
 <ul>
 <li><code class="inline">:line</code> - the line to be used as the template start. Defaults to 1.
@@ -147,7 +147,7 @@ in a template:</p>
 &quot;1&quot;</code></pre>
 <p>In other words, <code class="inline">&lt;%= @foo %&gt;</code> translates to:</p>
 <pre><code class="elixir">&lt;%= {:ok, v} = Access.fetch(assigns, :foo); v %&gt;</code></pre>
-<p>The assigns extension is useful when the number of variables
+<p>The <code class="inline">assigns</code> extension is useful when the number of variables
 required by the template is not specified at compilation time.</p>
 
         </section>
@@ -259,7 +259,7 @@ that can be evaluated by Elixir or compiled to a function</p>
     </a>
     <span class="signature">compile_file(filename, options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/de3f5df7fdcda79e2661f9cee6005707e7e8d030/lib/eex/lib/eex.ex#L177" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b9efe3e6f1157c131b6d31afbd1812b36e373738/lib/eex/lib/eex.ex#L177" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -278,7 +278,7 @@ that can be evaluated by Elixir or compiled to a function.</p>
     </a>
     <span class="signature">compile_string(source, options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/de3f5df7fdcda79e2661f9cee6005707e7e8d030/lib/eex/lib/eex.ex#L169" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b9efe3e6f1157c131b6d31afbd1812b36e373738/lib/eex/lib/eex.ex#L169" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -297,7 +297,7 @@ that can be evaluated by Elixir or compiled to a function.</p>
     </a>
     <span class="signature">eval_file(filename, bindings \\ [], options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/de3f5df7fdcda79e2661f9cee6005707e7e8d030/lib/eex/lib/eex.ex#L208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b9efe3e6f1157c131b6d31afbd1812b36e373738/lib/eex/lib/eex.ex#L208" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -321,7 +321,7 @@ EEx.eval_file &quot;sample.eex&quot;, [bar: &quot;baz&quot;] #=&gt; &quot;foo ba
     </a>
     <span class="signature">eval_string(source, bindings \\ [], options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/de3f5df7fdcda79e2661f9cee6005707e7e8d030/lib/eex/lib/eex.ex#L191" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b9efe3e6f1157c131b6d31afbd1812b36e373738/lib/eex/lib/eex.ex#L191" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -354,7 +354,7 @@ EEx.eval_file &quot;sample.eex&quot;, [bar: &quot;baz&quot;] #=&gt; &quot;foo ba
     </a>
     <span class="signature">function_from_file(kind, name, file, args \\ [], options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/de3f5df7fdcda79e2661f9cee6005707e7e8d030/lib/eex/lib/eex.ex#L150" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b9efe3e6f1157c131b6d31afbd1812b36e373738/lib/eex/lib/eex.ex#L150" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -388,7 +388,7 @@ Sample.sample(1, 2) #=&gt; &quot;3&quot;</code></pre>
     </a>
     <span class="signature">function_from_string(kind, name, source, args \\ [], options \\ [])</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/de3f5df7fdcda79e2661f9cee6005707e7e8d030/lib/eex/lib/eex.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b9efe3e6f1157c131b6d31afbd1812b36e373738/lib/eex/lib/eex.ex#L113" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
