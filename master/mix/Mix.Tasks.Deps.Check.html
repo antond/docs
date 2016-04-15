@@ -70,7 +70,7 @@
         Mix.Tasks.Deps.Check
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/tasks/deps.check.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/tasks/deps.check.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -78,15 +78,19 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>Checks if all dependencies are valid and if not, abort.
-Prints the invalid dependencies’ status before aborting.</p>
+          <p>Checks if all dependencies are valid, loading them along
+the way.</p>
+<p>If there is an invalid dependency, its status is printed
+before aborting.</p>
 <p>This task is not shown in <code class="inline">mix help</code> but it is part
 of the <code class="inline">mix</code> public API and can be depended on.</p>
 <h2>Command line options</h2>
 <ul>
-<li><code class="inline">--no-compile</code> - do not compile dependencies
-</li>
 <li><code class="inline">--no-archives-check</code> - do not check archives
+</li>
+<li><code class="inline">--no-deps-check</code> - do not check deps
+</li>
+<li><code class="inline">--no-compile</code> - do not compile dependencies
 </li>
 </ul>
 
@@ -145,7 +149,7 @@ of the <code class="inline">mix</code> public API and can be depended on.</p>
     </a>
     <span class="signature">run(args)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/tasks/deps.check.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/tasks/deps.check.ex#L25" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

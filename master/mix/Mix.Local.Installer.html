@@ -72,7 +72,7 @@
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/local/installer.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/local/installer.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -142,7 +142,7 @@ escripts</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#c:after_install/2">after_install(arg0, list)</a>
+    <a href="#c:after_install/3">after_install(arg0, binary, list)</a>
   </div>
   
     <div class="summary-synopsis"><p>Custom actions to be performed after the installation has succeeded</p>
@@ -200,7 +200,7 @@ escripts</p>
     </a>
     <span class="signature">install(arg, argv, switches)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/local/installer.ex#L34" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/local/installer.ex#L34" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -229,7 +229,7 @@ for customizing certain steps in the installation process.</p>
     </a>
     <span class="signature">print_list(type, items)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/local/installer.ex#L141" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/local/installer.ex#L144" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -257,7 +257,7 @@ escripts.</p>
     </a>
     <span class="signature">uninstall(type, argv)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/local/installer.ex#L155" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/local/installer.ex#L158" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -291,14 +291,14 @@ escripts.</p>
             </a>
             Callbacks
           </h1>
-          <div class="detail" id="c:after_install/2">
+          <div class="detail" id="c:after_install/3">
   <div class="detail-header">
-    <a href="#c:after_install/2" class="detail-link" title="Link to this callback">
+    <a href="#c:after_install/3" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">after_install(arg0, list)</span>
+    <span class="signature">after_install(arg0, binary, list)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/local/installer.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/local/installer.ex#L25" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -308,7 +308,9 @@ escripts.</p>
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">after_install(<a href="http://elixir-lang.org/docs/stable/elixir/Path.html#t:t/0">Path.t</a>, [<a href="http://elixir-lang.org/docs/stable/elixir/Path.html#t:t/0">Path.t</a>]) :: term</code></pre>
+          <pre><code class="elixir">after_install(<a href="http://elixir-lang.org/docs/stable/elixir/Path.html#t:t/0">Path.t</a>, binary, [<a href="http://elixir-lang.org/docs/stable/elixir/Path.html#t:t/0">Path.t</a>]) ::
+  :ok |
+  {:error, <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>}</code></pre>
         
       </div>
     </div>
@@ -325,7 +327,7 @@ escripts.</p>
     </a>
     <span class="signature">before_install(arg0, arg1)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/local/installer.ex#L20" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/local/installer.ex#L20" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -354,7 +356,7 @@ escripts.</p>
     </a>
     <span class="signature">check_path_or_url(arg0)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/local/installer.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/local/installer.ex#L10" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -381,7 +383,7 @@ escripts.</p>
     </a>
     <span class="signature">find_previous_versions(arg0, arg1)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/local/installer.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/local/installer.ex#L15" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

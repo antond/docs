@@ -70,7 +70,7 @@
         Mix.Tasks.Escript.Install
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/tasks/escript.install.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/tasks/escript.install.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -89,7 +89,9 @@ mix escript.install path/to/escript
 mix escript.install https://example.com/myescript</code></pre>
 <p>After installation, the escript can be invoked as</p>
 <pre><code class="elixir">~/.mix/escripts/foo</code></pre>
-<p>For convenience, consider adding <code class="inline">~/.mix/escripts</code> directory to your <code class="inline">PATH</code> environment variable.</p>
+<p>For convenience, consider adding <code class="inline">~/.mix/escripts</code> directory to your
+<code class="inline">PATH</code> environment variable. For more information, check the wikipedia
+article on PATH: <a href="https://en.wikipedia.org/wiki/PATH_(variable">https://en.wikipedia.org/wiki/PATH_(variable</a>)</p>
 <h2>Command line options</h2>
 <ul>
 <li><code class="inline">--force</code> - forces installation without a shell prompt; primarily
@@ -117,10 +119,10 @@ intended for automation in build systems like make
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#after_install/2">after_install(dst, previous)</a>
+    <a href="#after_install/3">after_install(dst, binary, previous)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Callback implementation for <a href="Mix.Local.Installer.html#c:after_install/2"><code class="inline">Mix.Local.Installer.after_install/2</code></a></p>
+    <div class="summary-synopsis"><p>Callback implementation for <a href="Mix.Local.Installer.html#c:after_install/3"><code class="inline">Mix.Local.Installer.after_install/3</code></a></p>
 </div>
   
 </div>
@@ -181,21 +183,21 @@ intended for automation in build systems like make
             </a>
             Functions
           </h1>
-          <div class="detail" id="after_install/2">
+          <div class="detail" id="after_install/3">
   <div class="detail-header">
-    <a href="#after_install/2" class="detail-link" title="Link to this function">
+    <a href="#after_install/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">after_install(dst, previous)</span>
+    <span class="signature">after_install(dst, binary, previous)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/tasks/escript.install.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/tasks/escript.install.ex#L60" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
   </div>
   
   <section class="docstring">
-    <p>Callback implementation for <a href="Mix.Local.Installer.html#c:after_install/2"><code class="inline">Mix.Local.Installer.after_install/2</code></a>.</p>
+    <p>Callback implementation for <a href="Mix.Local.Installer.html#c:after_install/3"><code class="inline">Mix.Local.Installer.after_install/3</code></a>.</p>
 
   </section>
 </div>
@@ -206,7 +208,7 @@ intended for automation in build systems like make
     </a>
     <span class="signature">before_install(src, dst_path)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/tasks/escript.install.ex#L52" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/tasks/escript.install.ex#L54" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -224,7 +226,7 @@ intended for automation in build systems like make
     </a>
     <span class="signature">check_path_or_url()</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/tasks/escript.install.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/tasks/escript.install.ex#L48" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -242,7 +244,7 @@ intended for automation in build systems like make
     </a>
     <span class="signature">find_previous_versions(src, dst)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/tasks/escript.install.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/tasks/escript.install.ex#L50" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -260,7 +262,7 @@ intended for automation in build systems like make
     </a>
     <span class="signature">run(argv)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/eba153d0398c6d4ac39951e76c0e4618b52b950d/lib/mix/lib/mix/tasks/escript.install.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/tasks/escript.install.ex#L42" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
