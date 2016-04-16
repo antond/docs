@@ -74,7 +74,7 @@
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/elixir/lib/access.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/2b0230839ed4bc9777c646d8359d05a33416aa6b/lib/elixir/lib/access.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -82,7 +82,7 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>Key-based access to data structures via the <code class="inline">foo[bar]</code> bracket syntax.</p>
+          <p>Key-based access to data structures using the <code class="inline">data[key]</code> syntax.</p>
 <p>Elixir provides two syntaxes for accessing values. <code class="inline">user[:name]</code>
 is used by dynamic structures, like maps and keywords, while
 <code class="inline">user.name</code> is used by structs. The main difference is that
@@ -121,8 +121,9 @@ iex&gt; put_in users[&quot;john&quot;][:age], 28
 iex&gt; keywords[:c][:unknown]
 nil</code></pre>
 <p>Since Access is a behaviour, it can be implemented to key-value
-data structures. Access requires the key comparison to be
-implemented using the <code class="inline">===</code> operator.</p>
+data structures. The implementation should be added to the
+module that defines the struct being access. Access requires the
+key comparison to be implemented using the <code class="inline">===</code> operator.</p>
 <h2>Field-based lookups</h2>
 <p>The Access syntax (<code class="inline">foo[bar]</code>) cannot be used to access fields in
 structs. That’s by design, as Access is meant to be used for
@@ -319,7 +320,7 @@ to be used alongside <a href="Kernel.html#put_in/2"><code class="inline">Kernel.
     </a>
     <span class="signature">fetch(container, key)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/elixir/lib/access.ex#L132" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2b0230839ed4bc9777c646d8359d05a33416aa6b/lib/elixir/lib/access.ex#L133" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -346,7 +347,7 @@ to be used alongside <a href="Kernel.html#put_in/2"><code class="inline">Kernel.
     </a>
     <span class="signature">get(container, key, default \\ nil)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/elixir/lib/access.ex#L165" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2b0230839ed4bc9777c646d8359d05a33416aa6b/lib/elixir/lib/access.ex#L166" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -373,7 +374,7 @@ to be used alongside <a href="Kernel.html#put_in/2"><code class="inline">Kernel.
     </a>
     <span class="signature">get_and_update(container, key, fun)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/elixir/lib/access.ex#L184" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2b0230839ed4bc9777c646d8359d05a33416aa6b/lib/elixir/lib/access.ex#L185" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -406,7 +407,7 @@ The second element is the container, updated with the value returned by <code cl
     </a>
     <span class="signature">pop(container, key)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/elixir/lib/access.ex#L206" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2b0230839ed4bc9777c646d8359d05a33416aa6b/lib/elixir/lib/access.ex#L207" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -437,7 +438,7 @@ The second element is the container, updated with the value returned by <code cl
     </a>
     <span class="signature">fetch(t, key)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/elixir/lib/access.ex#L109" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2b0230839ed4bc9777c646d8359d05a33416aa6b/lib/elixir/lib/access.ex#L110" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -463,7 +464,7 @@ The second element is the container, updated with the value returned by <code cl
     </a>
     <span class="signature">get(t, key, value)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/elixir/lib/access.ex#L110" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2b0230839ed4bc9777c646d8359d05a33416aa6b/lib/elixir/lib/access.ex#L111" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -489,7 +490,7 @@ The second element is the container, updated with the value returned by <code cl
     </a>
     <span class="signature">get_and_update(t, key, list)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/elixir/lib/access.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2b0230839ed4bc9777c646d8359d05a33416aa6b/lib/elixir/lib/access.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -515,7 +516,7 @@ The second element is the container, updated with the value returned by <code cl
     </a>
     <span class="signature">pop(t, key)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/elixir/lib/access.ex#L112" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2b0230839ed4bc9777c646d8359d05a33416aa6b/lib/elixir/lib/access.ex#L113" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

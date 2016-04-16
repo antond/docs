@@ -70,7 +70,7 @@
         Mix.Tasks.App.Start
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/tasks/app.start.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/2b0230839ed4bc9777c646d8359d05a33416aa6b/lib/mix/lib/mix/tasks/app.start.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -84,6 +84,18 @@
 or the <code class="inline">--permanent</code> flag is given, it is started as permanent,
 which guarantee the node will shutdown in case the application
 crashes permanently.</p>
+<h2>Configuration</h2>
+<ul>
+<li><p><code class="inline">:start_permanent</code> - the application and all of its children
+applications are started in permanent mode</p>
+</li>
+<li><p><code class="inline">:consolidate_protocols</code> - when <code class="inline">true</code>, loads consolidated
+protocols before start</p>
+</li>
+<li><code class="inline">:elixir</code> - matches the current elixir version against the
+given requirement
+</li>
+</ul>
 <h2>Command line options</h2>
 <ul>
 <li><code class="inline">--force</code> - force compilation regardless of compilation times
@@ -161,7 +173,7 @@ crashes permanently.</p>
     </a>
     <span class="signature">run(args)</span>
       
-      <a href="https://github.com/elixir-lang/elixir/blob/e6e52d6d1e224b697c5b46726ed06b186d86ab23/lib/mix/lib/mix/tasks/app.start.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2b0230839ed4bc9777c646d8359d05a33416aa6b/lib/mix/lib/mix/tasks/app.start.ex#L42" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
